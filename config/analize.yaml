@@ -1,0 +1,11 @@
+problems:
+  - name: Arithmetic/Integer
+    cache: "Arithmetic_Integer - Rosetta Code.html"
+    url: https://rosettacode.org/wiki/Arithmetic/Integer
+    targets:
+      - "sum a+b"
+      - "difference a-b"
+      - "product a*b"
+      - "integer quotient a/b"
+      - "remainder a%b"
+      - "exponentiation (if the operator exists)"

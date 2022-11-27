@@ -6,7 +6,7 @@ module Zettacode
   module Parse
     def self.call(filepath)
       raw_content, to_folder = read_content_from filepath
-      dirty_examples = scrap_examples_from raw_content
+      dirty_examples, dirty_global = scrap_examples_from raw_content
       clean_examples = clean dirty_examples
       save_files clean_examples, to_folder
     end
@@ -16,7 +16,7 @@ module Zettacode
       puts " #{text}"
     end
 
-    def self.read_content_from(filepath)
+    def self.read_content_from(filepath, basefolder = Zettacode::BASEFOLDER)
       if File.directory? filepath
         echo "ERROR", "Can't parse directories!"
         exit 1
@@ -32,12 +32,11 @@ module Zettacode
       name.tr!("/", ".")
       name.tr!(" ", "_")
       name.downcase!
-      folder = File.join(Zettacode::OUTPUT_FOLDER, name)
+      folder = File.join(basefolder, name)
       FileUtils.mkdir_p(folder) unless Dir.exist? folder
       [content, folder]
     end
 
-    require "debug"
     def self.scrap_examples_from(content)
       global = { task: nil, lines: [] }
       examples = []
@@ -52,7 +51,6 @@ module Zettacode
           examples << example unless example.nil?
           example = {lang: line, code: []}
         elsif line.downcase.start_with? "{{out}}"
-          binding.break
           section = :out
         elsif section == :out
           next
@@ -65,7 +63,7 @@ module Zettacode
         end
       end
       examples << example
-      examples
+      [examples, global]
     end
 
     def self.clean(dirty_examples)

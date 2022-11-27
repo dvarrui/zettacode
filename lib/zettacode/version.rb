@@ -2,5 +2,5 @@
 
 module Zettacode
   VERSION = "0.1.7"
-  OUTPUT_FOLDER = "files.zettacode"
+  BASEFOLDER = "files.zettacode"
 end

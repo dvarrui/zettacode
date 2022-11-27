@@ -13,7 +13,7 @@ class ParseTest < Test::Unit::TestCase
     # clean_examples = clean dirty_examples
     # save_files clean_examples, to_folder
 
-    assert_equal "false", to_folder
-    assert_equal 13, raw_content.size
+    assert_equal "test/temp/hello_world.text", to_folder
+    assert_equal 135835, raw_content.size
   end
 end

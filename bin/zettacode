@@ -2,4 +2,4 @@
 
 require_relative "../lib/zettacode/parse/parse"
 
-parse = Zettacode::Parse.call(ARGV.first || "NODATA")
+Zettacode::Parse.call(ARGV.first || "NODATA")

@@ -8,8 +8,4 @@ class ZettacodeTest < Test::Unit::TestCase
       ::Zettacode.const_defined?(:VERSION)
     end
   end
-
-  test "something useful" do
-    assert_equal("expected", "actual")
-  end
 end

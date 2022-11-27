@@ -34,7 +34,7 @@ module Zettacode
         # 2. Find every LANG (a href ="#LANG")
         langs = []
         document = Nokogiri::HTML(response.body)
-        document.css('h2 > span').each do |e|
+        document.css("h2 > span").each do |e|
           id = e.attribute("id")
           langs << id unless id.nil?
         end
@@ -42,7 +42,7 @@ module Zettacode
         puts langs.join("\n")
 
         langs = []
-        elems = document.css('a')
+        elems = document.css("a")
         elems.each do |e|
           href = e.attribute("href")
           filter = /\/wiki\/Category:([\w\d.-_]+)/

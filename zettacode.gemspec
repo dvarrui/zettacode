@@ -26,12 +26,11 @@ Gem::Specification.new do |spec|
     end
   end
   spec.bindir = "bin"
-  spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.executables << ["zettacode", "zcode", "zcode-scrap", "zcode-parse"]
 
   spec.require_paths = ["lib"]
 
-  #spec.files = Dir.glob(File.join("lib", "**", "*.*"))
+  # spec.files = Dir.glob(File.join("lib", "**", "*.*"))
 
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"

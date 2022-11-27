@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.summary = "Manage files from Rosetta Code web site."
   spec.description = "Magage files from Rosetta Code web site."
   spec.homepage = "https://github.com/dvarrui/zettacode"
-  spec.required_ruby_version = ">= 3.1.0"
+  spec.required_ruby_version = ">= 3.0.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage

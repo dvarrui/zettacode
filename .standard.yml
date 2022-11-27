@@ -1,0 +1,4 @@
+ignore:
+  - "private/**/*"
+  - lib/zettacode/parse/parse.rb
+  - lib/zettacode/scrap/scrap.rb

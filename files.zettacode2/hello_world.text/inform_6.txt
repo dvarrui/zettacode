@@ -1,3 +1,0 @@
-<syntaxhighlight lang="inform 6">[Main;
-  print "Hello world!^";
-];

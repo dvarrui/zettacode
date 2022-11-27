@@ -1,8 +1,0 @@
-
-Local a, b
-Prompt a, b
-Disp "Sum: " &amp; string(a + b)
-Disp "Difference: " &amp; string(a - b)
-Disp "Product: " &amp; string(a * b)
-Disp "Integer quotient: " &amp; string(intDiv(a, b))
-Disp "Remainder: " &amp; string(remain(a, b))

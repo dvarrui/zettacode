@@ -1,3 +1,0 @@
-word.}}
-uses "console";
-Console.println( "Goodby, World!" );

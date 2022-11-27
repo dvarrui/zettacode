@@ -1,4 +1,0 @@
-Displays it in a text file or console/terminal.
-function main() {
-  Konsol:Log("Hello world!")
-}

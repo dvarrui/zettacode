@@ -1,2 +1,0 @@
-{{VI snippet}}<br/>
-[[File:LabVIEW_Arithmetic_Integer.png]]

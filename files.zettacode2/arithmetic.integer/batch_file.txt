@@ -1,7 +1,0 @@
-{{works with|Windows 7| or later, haven't checked earlier versions}}
-
-set /p equation=
-set /a result=%equation%
-echo %result%
-pause
-

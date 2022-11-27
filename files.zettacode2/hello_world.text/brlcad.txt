@@ -1,6 +1,0 @@
-
-The mged utility can output text to the terminal:
-
-
-echo Hello world!
-

@@ -1,4 +1,0 @@
-Note that a string starts with a single and ends with a double quote
-
-'Hello World!",nl
-

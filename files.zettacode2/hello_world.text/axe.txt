@@ -1,2 +1,0 @@
-Note that the i here is the imaginary ''i'', not the lowercase letter i.
-Disp "Hello world!",i

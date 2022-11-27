@@ -1,2 +1,0 @@
-program: hello_world 
-  output: "Hello  world!"

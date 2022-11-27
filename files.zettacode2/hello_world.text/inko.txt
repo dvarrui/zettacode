@@ -1,4 +1,0 @@
-import std::stdio::stdout
-
-stdout.print('Hello, world!')
-

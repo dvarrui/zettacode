@@ -1,9 +1,0 @@
-Output to terminal:
-puts("Hello world!");
-
-Without the newline terminator: 
-
-puts(nonewline: "Hello world!");
-
-Output to arbitrary open, writable file, for example the standard error channel:
-puts(stderr, "Hello world!");

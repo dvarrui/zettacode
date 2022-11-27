@@ -1,2 +1,0 @@
-Use reflection to get all functions defined on numbers taking number and returning number.
-a=3 b=7 func:_bbf__number_number_number =>f.name.<b> '(' a b ')' ' => ' f(a b) nl

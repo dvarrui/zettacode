@@ -1,6 +1,0 @@
-{{works with|The Amsterdam Compiler Kit - B|V6.1pre1}}
-main()
-{
-    putstr("Hello world!*n");
-    return(0);
-}

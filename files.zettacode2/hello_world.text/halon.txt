@@ -1,3 +1,0 @@
-If the code in run in the REPL the output will be to stdout otherwise syslog LOG_DEBUG will be used.
-
-echo "Hello world!";

@@ -1,4 +1,0 @@
-With the printl() function:
-printl("Hello world!")
-Or via "fast print":
-> "Hello world!"

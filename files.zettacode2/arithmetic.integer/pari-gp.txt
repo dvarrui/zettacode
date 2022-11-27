@@ -1,9 +1,0 @@
-Integer division with <code>\</code> rounds to <math>-\infty</math>. There also exists the <code>\/</code> round-to-nearest (ties to <math>+\infty</math>) operator.  Ordinary division <code>/</code> does not round but returns rationals if given integers with a non-integral quotient.
-arith(a,b)={
-  print(a+b);
-  print(a-b);
-  print(a*b);
-  print(a\b);
-  print(a%b);
-  print(a^b);
-};

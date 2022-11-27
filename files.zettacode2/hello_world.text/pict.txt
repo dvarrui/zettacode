@@ -1,6 +1,0 @@
-Using the syntax sugared version:
-(prNL "Hello World!");
-Using the channel syntax:
-new done: ^[]
-run ( prNL!["Hello World!" (rchan done)]
-    | done?_ = () )

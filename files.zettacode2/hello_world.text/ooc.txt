@@ -1,8 +1,0 @@
-To print a String, either call its println() method:
-main: func {
-  "Hello world!" println()
-}
-Or call the free println() function with the String as the argument.
-main: func {
-  println("Hello world!")
-}

@@ -1,2 +1,0 @@
-{{works with|newLisp|6.1 and after}}
-(println "Hello world!")

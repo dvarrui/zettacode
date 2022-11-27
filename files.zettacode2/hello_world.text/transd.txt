@@ -1,2 +1,0 @@
-
-(textout "Hello, World!")

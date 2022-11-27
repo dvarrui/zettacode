@@ -1,8 +1,0 @@
-
-$$ MODE TUSCRIPT
-PRINT "Hello world!"
-
-Output:
-
-Hello world!
-

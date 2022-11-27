@@ -22,14 +22,13 @@ module Zettacode
         exit 1
       end
 
-      echo "Reading", filepath
+      echo "Parsing", filepath
       content = File.read(filepath)
       title = /<title>([\w\d\s._-]+.[\w\d\s._-]+)<\/title>/
       name = title.match(content).captures.first
       name.tr!("/", ".")
       name.tr!(" ", "_")
       name.downcase!
-      echo "Parsing", name
       folder = File.join("data", name)
       FileUtils.mkdir(folder) unless Dir.exist? folder
       [content, name]

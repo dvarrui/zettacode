@@ -1,7 +1,6 @@
 require "yaml"
 require "httparty"
 require "nokogiri"
-require "debug"
 
 module Zettacode
   class Scrap

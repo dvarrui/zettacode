@@ -11,7 +11,7 @@
 
 This repository has two sections:
 1. `zettacode` app source code
-2. [Repository of processed files](zettacode.files) usign `zettacode`
+2. [Repository of processed files](zettacode.files) usign `zettacode`. Every time, I will use `zettacode`, I will save results into `zettacode.files` folder.
 
 # 1. Zettacode application
 

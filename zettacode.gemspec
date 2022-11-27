@@ -26,7 +26,10 @@ Gem::Specification.new do |spec|
     end
   end
   spec.bindir = "bin"
-  spec.executables << ["zettacode", "zcode", "zcode-scrap", "zcode-parse"]
+  spec.executables << "zettacode"
+  spec.executables << "zcode"
+  spec.executables << "zcode-scrap"
+  spec.executables << "zcode-parse"
 
   spec.require_paths = ["lib"]
 
@@ -34,7 +37,9 @@ Gem::Specification.new do |spec|
 
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"
+  spec.add_runtime_dependency "colorize", "~> 0.8"
   spec.add_runtime_dependency "httparty", "~> 0.20"
+  spec.add_runtime_dependency "optparse", "~> 0.2"
   spec.add_runtime_dependency "nokogiri", "~> 1.13"
   spec.add_runtime_dependency "thor", "~> 1.2"
 

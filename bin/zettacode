@@ -1,5 +1,24 @@
 #!/usr/bin/env ruby
-
+require "optparse"
 require_relative "../lib/zettacode/parse/parse"
+require_relative "../lib/zettacode/scrap/scrap"
 
-Zettacode::Parse.call(ARGV.first || "NODATA")
+options = {}
+OptionParser.new do |opts|
+  opts.banner = "Usage: zettacode [--parse FILENAME]"
+
+  opts.on("-p", "--parse", "Parse FILENAME") do |p|
+    options[:parse] = p
+  end
+  opts.on("-s", "--scrap", "Scrap RosettaCode URLs") do |s|
+    options[:scrap] = s
+  end
+end.parse!
+
+if options[:parse]
+  Zettacode::Parse.call(ARGV.first || "NODATA")
+elsif options[:scrap]
+  scrap = Zettacode::Scrap.new("config/scrap.yaml")
+  scrap.load_settings
+  scrap.find_langs
+end

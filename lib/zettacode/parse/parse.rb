@@ -1,8 +1,14 @@
+require "colorize"
 require "fileutils"
 require "debug"
 
 module Zettacode
   module Parse
+    def self.echo(title, text)
+      print title.rjust(12).colorize(:green)
+      puts " #{text}"
+    end
+
     def self.call(filepath)
       content, name = read_content_from filepath
       dirty_examples = scrap_examples_from content
@@ -12,18 +18,18 @@ module Zettacode
 
     def self.read_content_from(filepath)
       unless File.exist?(filepath)
-        puts "==> Zettacode: [ERROR] File not found! (#{filepath})"
+        echo "ERROR", "File not found! (#{filepath})"
         exit 1
       end
 
-      puts "==> Zettacode: Reading... #{filepath}"
+      echo "Reading", filepath
       content = File.read(filepath)
       title = /<title>([\w\d\s._-]+.[\w\d\s._-]+)<\/title>/
       name = title.match(content).captures.first
       name.tr!("/", ".")
       name.tr!(" ", "_")
       name.downcase!
-      puts "==> Zettacode: Parsing... #{name}"
+      echo "Parsing", name
       folder = File.join("data", name)
       FileUtils.mkdir(folder) unless Dir.exist? folder
       [content, name]
@@ -65,7 +71,7 @@ module Zettacode
         # Clean syntaxhighlight tag
         lines.each do |line|
           # &lt;syntaxhighlight lang="LANG"&gt;
-          filter = /&lt;syntaxhighlight\s+lang=\"([\w\d]+)\"&gt;/
+          filter = /&lt;syntaxhighlight\s+lang="([\w\d]+)"&gt;/
           value = filter.match(line)&.captures&.first
           unless value.nil?
             syntax = value
@@ -101,7 +107,8 @@ module Zettacode
         filepath = File.join(folder, "#{example[:filename]}.txt")
         File.open(filepath, 'w') { |file| file.write(example[:code]) }
       end
-      puts "==> ZettaCode: Saving.... #{examples.size} files into #{folder} folder"
+      echo "Folder", folder
+      echo "Saving", "#{examples.size} files"
     end
   end
 end

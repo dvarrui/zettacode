@@ -1,11 +1,13 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-NAME = "zettacode-opensuse"
+VMNAME = "zettacode-opensuse"
+BOXNAME = "opensuse/Leap-15.2.x86_64"
+
 Vagrant.configure("2") do |config|
-  config.vm.define NAME do |i|
-    i.vm.box = "generic/opensuse15"
-    i.vm.hostname = NAME
+  config.vm.define VMNAME do |i|
+    i.vm.box = BOXNAME
+    i.vm.hostname = VMNAME
     # i.vm.network "public_network", bridge: [ "eth0" ]
     # i.vm.network "public_network", bridge: [ "wlan0" ]
     i.vm.network :forwarded_port, guest: 22, host: 2231

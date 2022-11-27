@@ -22,7 +22,7 @@ Vagrant.configure("2") do |config|
       lsb_release -d
     SHELL
     i.vm.provider "virtualbox" do |v|
-      v.name = NAME
+      v.name = VMNAME
       v.memory = 2048
     end
   end

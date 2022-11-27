@@ -44,7 +44,7 @@ module Zettacode
         elems = document.css("a")
         elems.each do |e|
           href = e.attribute("href")
-          filter = /\/wiki\/Category:([\w\d.-_]+)/
+          filter = /\/wiki\/Category:([\w.-]+)/
           items = filter.match(href)&.captures
           langs << items.first unless items.nil?
         end

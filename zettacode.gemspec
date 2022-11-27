@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.summary = "Manage files from Rosetta Code web site."
   spec.description = "Magage files from Rosetta Code web site."
   spec.homepage = "https://github.com/dvarrui/zettacode"
-  spec.required_ruby_version = ">= 3.0.0"
+  spec.required_ruby_version = ">= 2.7.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
@@ -32,8 +32,6 @@ Gem::Specification.new do |spec|
 
   # spec.files = Dir.glob(File.join("lib", "**", "*.*"))
 
-  # Uncomment to register a new dependency of your gem
-  # spec.add_dependency "example-gem", "~> 1.0"
   spec.add_runtime_dependency "colorize", "~> 0.8"
   spec.add_runtime_dependency "httparty", "~> 0.20"
   spec.add_runtime_dependency "optparse", "~> 0.2"

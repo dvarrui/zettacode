@@ -31,7 +31,7 @@ module Zettacode
       name.tr!(" ", "_")
       name.downcase!
       folder = File.join(Zettacode::OUTPUT_FOLDER, name)
-      FileUtils.mkdir(folder) unless Dir.exist? folder
+      FileUtils.mkdir_p(folder) unless Dir.exist? folder
       [content, folder]
     end
 

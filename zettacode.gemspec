@@ -38,7 +38,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "httparty", "~> 0.20"
   spec.add_runtime_dependency "optparse", "~> 0.2"
   spec.add_runtime_dependency "nokogiri", "~> 1.13"
-  # spec.add_runtime_dependency "thor", "~> 1.2"
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html

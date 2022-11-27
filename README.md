@@ -26,7 +26,7 @@ Features:
 ## 1.1 Installation
 
 * Install Ruby on your host.
-* `ruby -v`, check current Ruby version (Require version >= 3.1.0) 
+* `ruby -v`, check current Ruby version (Require version >= 2.7.0) 
 * `gem install zettacode`, to install "zettacode" gem.
 * `zettacode -v`, show current version.
 

@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.summary = "Manage files from Rosetta Code web site."
   spec.description = "Magage files from Rosetta Code web site."
   spec.homepage = "https://github.com/dvarrui/zettacode"
-  spec.required_ruby_version = ">= 2.6.0"
+  spec.required_ruby_version = ">= 3.1.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
@@ -38,7 +38,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "httparty", "~> 0.20"
   spec.add_runtime_dependency "optparse", "~> 0.2"
   spec.add_runtime_dependency "nokogiri", "~> 1.13"
-  spec.add_runtime_dependency "thor", "~> 1.2"
+  # spec.add_runtime_dependency "thor", "~> 1.2"
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html

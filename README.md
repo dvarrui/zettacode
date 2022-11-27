@@ -1,29 +1,47 @@
+
+```
+ _____    _   _           ____          _      
+|__  /___| |_| |_ __ _   / ___|___   __| | ___
+  / // _ \ __| __/ _` | | |   / _ \ / _` |/ _ \
+ / /|  __/ |_| || (_| | | |__| (_) | (_| |  __/
+/____\___|\__|\__\__,_|  \____\___/ \__,_|\___|
+```
+
 # Zettacode
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/zettacode`. To experiment with that code, run `bin/console` for an interactive prompt.
+This repository has two sections:
+1. `zettacode` app source code
+2. Extracted code files using the application.
 
-TODO: Delete this and the text above, and describe your gem
+# 1. Zettacode application
 
-## Installation
+`zettacode` is an application that helps us perform various tasks with files from the [rosettacode.org](https://rosettacode.org/wiki/Rosetta_Code) website.
 
-Install the gem and add to the application's Gemfile by executing:
+Features:
 
-    $ bundle add zettacode
+* Free license
+* Multiplatform
+* Command Application
 
-If bundler is not being used to manage dependencies, install the gem by executing:
+## 1.1 Installation
 
-    $ gem install zettacode
+* Install Ruby on your host.
+* `ruby -v`, check current Ruby version.
+* `gem install zettacode`, to install "zettacode" gem.
+* `zettacode -v`, show current version.
 
-## Usage
+## 1.2 Usage
 
-TODO: Write usage instructions here
+**Parse local XML file**
+* Goto [RosettaCode](https://rosettacode.org/wiki/Special:Export) export page.
+* Add 1 page manually and export.
+* `zettacode --parse PATH/TO/XML/FILE`, execute Zettacode to parse XML file into code files.
+* The files are created in the `zettacode.files` folder.
 
-## Development
+> **TODO**:
+> Next version will include Scrap RosettaCode function
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test-unit` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+## 1.3 Contributing
 
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/zettacode.
+Bug reports and pull requests are welcome on GitHub at https://github.com/dvarrui/zettacode.

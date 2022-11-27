@@ -10,10 +10,10 @@ module Zettacode
     end
 
     def self.call(filepath)
-      content, name = read_content_from filepath
+      content, to_folder = read_content_from filepath
       dirty_examples = scrap_examples_from content
       clean_examples = clean dirty_examples
-      save_files_to name, clean_examples
+      save_files clean_examples, to_folder
     end
 
     def self.read_content_from(filepath)
@@ -29,9 +29,9 @@ module Zettacode
       name.tr!("/", ".")
       name.tr!(" ", "_")
       name.downcase!
-      folder = File.join("data", name)
+      folder = File.join("zettacode.files", name)
       FileUtils.mkdir(folder) unless Dir.exist? folder
-      [content, name]
+      [content, folder]
     end
 
     def self.scrap_examples_from(content)
@@ -72,15 +72,15 @@ module Zettacode
           # &lt;syntaxhighlight lang="LANG"&gt;
           filter = /&lt;syntaxhighlight\s+lang="([\w\d]+)"&gt;/
           value = filter.match(line)&.captures&.first
-          unless value.nil?
-            syntax = value
-            line.gsub!("&lt;syntaxhighlight lang=\"#{value}\"&gt;", "")
-          else
+          if value.nil?
             line.tr!("</text>", "")
             line.tr!("</revision>", "")
             line.tr!("</page>", "")
             line.tr!("</mediawiki>", "")
             line = nil if line.strip.start_with? "<sha1>"
+          else
+            syntax = value
+            line.gsub!("&lt;syntaxhighlight lang=\"#{value}\"&gt;", "")
           end
         end
 
@@ -95,16 +95,16 @@ module Zettacode
           filename: filename,
           syntax: syntax,
           code: code,
-          raw: raw }
+          raw: raw
+        }
       end
       examples
     end
 
-    def self.save_files_to(name, examples)
-      folder = File.join("data", name)
+    def self.save_files(examples, folder)
       examples.each do |example|
         filepath = File.join(folder, "#{example[:filename]}.txt")
-        File.open(filepath, 'w') { |file| file.write(example[:code]) }
+        File.open(filepath, "w") { |file| file.write(example[:code]) }
       end
       echo "Folder", folder
       echo "Saving", "#{examples.size} files"

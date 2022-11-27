@@ -1,0 +1,27 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+NAME = "zettacode-opensuse"
+Vagrant.configure("2") do |config|
+  config.vm.define NAME do |i|
+    i.vm.box = "generic/opensuse15"
+    i.vm.hostname = NAME
+    # i.vm.network "public_network", bridge: [ "eth0" ]
+    # i.vm.network "public_network", bridge: [ "wlan0" ]
+    i.vm.network :forwarded_port, guest: 22, host: 2231
+    i.vm.synced_folder "./", "/vagrant"
+    i.vm.provision "shell", inline: <<-SHELL
+      zypper refresh
+      zypper in -y vim tree nmap
+      zypper in -y neofetch lsb-release
+
+      gem install zettacode
+
+      lsb_release -d
+    SHELL
+    i.vm.provider "virtualbox" do |v|
+      v.name = NAME
+      v.memory = 2048
+    end
+  end
+end

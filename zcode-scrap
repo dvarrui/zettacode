@@ -1,7 +1,0 @@
-#!/usr/bin/env ruby
-
-require_relative "../lib/zettacode/scrap/scrap"
-
-scrap = Zettacode::Scrap.new("config/scrap.yaml")
-scrap.load_settings
-scrap.find_langs

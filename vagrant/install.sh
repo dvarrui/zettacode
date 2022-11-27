@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 
 APPNAME=zettacode
-REPO_URL=https://github.com/dvarrui/$APPNAME
+REPOURL=https://github.com/dvarrui/$APPNAME
 
 apt update
 apt install -y vim tree nmap
 apt install -y neofetch
 
-echo "[INFO] Install ruby and $APPNAME"
+echo "[INFO] Install ruby and $APPNAME gem"
 apt install -y ruby irb
-gem install $APP_NAME
+gem install $APPNAME
 
-echo "[INFO] Download $APPNAME"
+echo "[INFO] Download repo"
 apt install -y git
-git clone $REPO_URL
+git clone $REPOURL
 chown -R vagrant:vagrant $APPNAME
 
 echo "[INFO] Configure motd"

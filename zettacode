@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require "optparse"
-require "zettacode"
+require_relative "lib/zettacode"
 
 options = {}
 OptionParser.new do |opts|

@@ -5,10 +5,14 @@ require_relative "../version"
 module Zettacode
   module Parse
     def self.call(filepath)
-      raw_content, to_folder = read_content_from filepath
+      raw_content, folder = read_content_from filepath
       dirty_examples, dirty_global = scrap_examples_from raw_content
-      clean_examples = clean dirty_examples
-      save_files clean_examples, to_folder
+
+      global = clean_global dirty_global
+      save_global global, to: folder
+
+      examples = clean_examples dirty_examples
+      save_examples examples, to: folder
     end
 
     def self.echo(title, text)
@@ -66,7 +70,11 @@ module Zettacode
       [examples, global]
     end
 
-    def self.clean(dirty_examples)
+    def self.clean_global(dirty_global)
+      dirty_global
+    end
+
+    def self.clean_examples(dirty_examples)
       examples = []
       dirty_examples.each do |example|
         # lang = /header\|([\w\d\s.\-_*\(\)]+)/.match(example[:lang])&.captures&.first
@@ -114,7 +122,12 @@ module Zettacode
       examples
     end
 
-    def self.save_files(examples, folder)
+    def self.save_global(global, to: 'folder')
+      true
+    end
+
+    def self.save_examples(examples, to: 'folder')
+      folder = to
       examples.each do |example|
         filepath = File.join(folder, "#{example[:filename]}.txt")
         File.open(filepath, "w") { |file| file.write(example[:code]) }

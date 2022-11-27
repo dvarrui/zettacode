@@ -11,7 +11,7 @@
 
 This repository has two sections:
 1. `zettacode` app source code
-2. Extracted code files using the application.
+2. [Repository of processed files](zettacode.files) usign `zettacode`
 
 # 1. Zettacode application
 

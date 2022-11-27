@@ -4,16 +4,16 @@ require_relative "../version"
 
 module Zettacode
   module Parse
-    def self.echo(title, text)
-      print title.rjust(12).colorize(:green)
-      puts " #{text}"
-    end
-
     def self.call(filepath)
       raw_content, to_folder = read_content_from filepath
       dirty_examples = scrap_examples_from raw_content
       clean_examples = clean dirty_examples
       save_files clean_examples, to_folder
+    end
+
+    def self.echo(title, text)
+      print title.rjust(12).colorize(:green)
+      puts " #{text}"
     end
 
     def self.read_content_from(filepath)
@@ -37,22 +37,31 @@ module Zettacode
       [content, folder]
     end
 
+    require "debug"
     def self.scrap_examples_from(content)
+      global = { task: nil, lines: [] }
       examples = []
       example = nil
-      skip = true
+      section = :skip
       content.split("\n").each do |line|
-        if line.start_with? "=={{header|"
-          skip = false
+        if section == :skip && line.strip.start_with?("<text bytes=")
+          section = :global
+          global[:taks] = line.split(">")&.last
+        elsif line.start_with? "=={{header|"
+          section = :code
           examples << example unless example.nil?
           example = {lang: line, code: []}
         elsif line.downcase.start_with? "{{out}}"
-          skip = true
+          binding.break
+          section = :out
+        elsif section == :out
           next
-        elsif skip
-          next
-        else
+        elsif section == :global
+          global[:lines] << line
+        elsif section == :code
           example[:code] << line
+        else
+          echo "ERROR", "XML malformed!"
         end
       end
       examples << example

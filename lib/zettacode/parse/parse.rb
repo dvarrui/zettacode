@@ -29,7 +29,7 @@ module Zettacode
       name.tr!("/", ".")
       name.tr!(" ", "_")
       name.downcase!
-      folder = File.join("zettacode.files", name)
+      folder = File.join("files.zettacode", name)
       FileUtils.mkdir(folder) unless Dir.exist? folder
       [content, folder]
     end

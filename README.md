@@ -11,9 +11,9 @@
 
 This repository has two sections:
 1. `zettacode` app source code
-2. [Repository of processed files](zettacode.files) usign `zettacode`. Every time, I will use `zettacode`, I will save results into `files.zettacode` folder.
+2. [Repository of processed files](files.zettacode) usign `zettacode`. Every time, I use it, I will save outputs into `files.zettacode` folder.
 
-# 1. Zettacode application
+# 1. Application
 
 `zettacode` is an application that helps us perform various tasks with files from the [rosettacode.org](https://rosettacode.org/wiki/Rosetta_Code) website.
 

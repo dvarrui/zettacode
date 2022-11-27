@@ -1,0 +1,6 @@
+U   u :
+(NL "Ho Wod!")
+U  c :
+w do: ^[]
+u ( NL!["H W!" (c )]
+    | ?_ = () )

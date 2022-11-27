@@ -1,0 +1,30 @@
+
+DOSSEG
+.MODEL TINY
+.DATA
+TXT DB "H !$"
+.CODE
+START:
+	MOV , @DATA
+	MOV , 
+	
+	MOV , 09		  uu fuc
+	MOV , OFFSET TXT	  ff
+	INT 21			 uu  TXT
+	
+	MOV AX, 4C00 		  bc  DOS
+	INT 21
+END START
+
+W A86  NASM :
+   100
+
+   , 
+   , 9
+   21
+
+   , 4c00
+   21
+
+:
+  b "H !$"

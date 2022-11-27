@@ -1,0 +1,22 @@
+{{Lb|Mcf.Sc}}
+{{ |Vu Bc|VB6 S}}
+Vu Bc 6  cu   c GUI c,      f  Mcf.Sc Lb   f      c c.
+Oo Ec
+
+P Dc Fuc AcC Lb "32." () A L
+P Dc Fuc FC Lb "32." () A L
+'  fc   "Mcf Sc Ru" (cu.)
+
+Sub M()
+  C AcC
+  D FSO A Sc.FSObjc
+  D SI A Sc.TS
+  D SOu A Sc.TS
+  S FSO = N Sc.FSObjc
+  S SI = FSO.GSS(SI)
+  S SOu = FSO.GSS(SOu)
+  SOu.W "H !"  bNL
+  SOu.W "   qu ."
+  SI.R 1
+  C FC
+E Sub

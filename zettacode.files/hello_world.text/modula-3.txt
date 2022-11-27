@@ -1,0 +1,7 @@
+MODULE Goodb EXPORTS M
+
+IMPORT IO
+
+BEGIN
+  IO.Pu("H !\")
+END Gb.

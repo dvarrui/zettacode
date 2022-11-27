@@ -1,0 +1,17 @@
+bud Dfu {
+  c Ac {
+    fuc : M( : S.S[]) ~ N {
+      DAc()
+    }
+	
+    fuc :  : DAc() ~ N {
+       := IO.C-GIc()-RS()-TI()
+      b := IO.C-GIc()-RS()-TI()
+  
+      IO.C-GIc()-P("+b = ")-PL(+b)
+      IO.C-GIc()-P("-b = ")-PL(-b)
+      IO.C-GIc()-P("*b = ")-PL(*b)
+      IO.C-GIc()-P("b = ")-PL(b)
+    }
+  }
+}

@@ -1,0 +1,9 @@
+v  = Coo.dI
+ b = C.I
+ 
+ u =  + b    cu    u  cfu  S cc
+(" + b = " + u)
+(" - b = " + ( - b))
+(" * b = " + ( * b))
+("qu f   b = " + (  b))  uc  0
+(" f   b = " + ( % b))     f 

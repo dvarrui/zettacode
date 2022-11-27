@@ -1,0 +1,14 @@
+Pu  u  TI-83' c f c z.
+
+P A,B
+D "SUM"
+Pu A+B
+D "DIFFERENCE"
+Pu A-B
+D "PRODUCT"
+Pu AB
+D "INTEGER QUOTIENT"
+Pu (AB)
+D "REMAINDER"
+Pu A-B*(AB)
+

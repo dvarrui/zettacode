@@ -1,0 +1,4498 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.11/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.11/ http://www.mediawiki.org/xml/export-0.11.xsd" version="0.11" xml:lang="en">
+  <siteinfo>
+    <sitename>Rosetta Code</sitename>
+    <dbname>rosettacodewiki</dbname>
+    <base>https://rosettacode.org/wiki/Rosetta_Code</base>
+    <generator>MediaWiki 1.38.4</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Media</namespace>
+      <namespace key="-1" case="first-letter">Special</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Talk</namespace>
+      <namespace key="2" case="first-letter">User</namespace>
+      <namespace key="3" case="first-letter">User talk</namespace>
+      <namespace key="4" case="first-letter">Rosetta Code</namespace>
+      <namespace key="5" case="first-letter">Rosetta Code talk</namespace>
+      <namespace key="6" case="first-letter">File</namespace>
+      <namespace key="7" case="first-letter">File talk</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki talk</namespace>
+      <namespace key="10" case="first-letter">Template</namespace>
+      <namespace key="11" case="first-letter">Template talk</namespace>
+      <namespace key="12" case="first-letter">Help</namespace>
+      <namespace key="13" case="first-letter">Help talk</namespace>
+      <namespace key="14" case="first-letter">Category</namespace>
+      <namespace key="15" case="first-letter">Category talk</namespace>
+      <namespace key="102" case="first-letter">Property</namespace>
+      <namespace key="103" case="first-letter">Property talk</namespace>
+      <namespace key="108" case="first-letter">Concept</namespace>
+      <namespace key="109" case="first-letter">Concept talk</namespace>
+      <namespace key="112" case="first-letter">smw/schema</namespace>
+      <namespace key="113" case="first-letter">smw/schema talk</namespace>
+      <namespace key="114" case="first-letter">Rule</namespace>
+      <namespace key="115" case="first-letter">Rule talk</namespace>
+      <namespace key="460" case="case-sensitive">Campaign</namespace>
+      <namespace key="461" case="case-sensitive">Campaign talk</namespace>
+      <namespace key="828" case="first-letter">Module</namespace>
+      <namespace key="829" case="first-letter">Module talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Hello world/Text</title>
+    <ns>0</ns>
+    <id>19</id>
+    <revision>
+      <id>333704</id>
+      <parentid>333232</parentid>
+      <timestamp>2022-11-18T07:27:26Z</timestamp>
+      <contributor>
+        <username>Star651</username>
+        <id>475</id>
+      </contributor>
+      <comment>My new favorite language is Rockstar, just started learning it, so I'm implementing tasks starting with the simplest in Rockstar</comment>
+      <origin>333704</origin>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="122926" sha1="pvejvhhj3r3js3coyflyl113kmxoycz" xml:space="preserve">{{task|Basic language learning}}
+{{selection|Short Circuit|Console Program Basics}}
+[[Category:Simple]]
+
+;Task:
+Display the string '''Hello world!''' on a text console.
+
+;Related tasks:
+* &amp;nbsp; [[Hello world/Graphical]]
+* &amp;nbsp; [[Hello world/Line Printer]]
+* &amp;nbsp; [[Hello world/Newbie]]
+* &amp;nbsp; [[Hello world/Newline omission]]
+* &amp;nbsp; [[Hello world/Standard error]]
+* &amp;nbsp; [[Hello world/Web server]]
+&lt;br&gt;&lt;br&gt;
+
+=={{header|0815}}==
+&lt;syntaxhighlight lang="0815"&gt;
+&lt;:48:x&lt;:65:=&lt;:6C:$=$=$$~&lt;:03:+
+$~&lt;:ffffffffffffffb1:+$&lt;:77:~$
+~&lt;:fffffffffffff8:x+$~&lt;:03:+$~
+&lt;:06:x-$x&lt;:0e:x-$=x&lt;:43:x-$
+
+&lt;/syntaxhighlight&gt;
+
+=={{header|11l}}==
+&lt;syntaxhighlight lang="11l"&gt;print(‘Hello world!’)&lt;/syntaxhighlight&gt;
+
+=={{header|360 Assembly}}==
+Using native SVC (Supervisor Call) to write to system console:
+&lt;syntaxhighlight lang="360 assembly"&gt;
+HELLO    CSECT 
+         USING HELLO,15
+         LA    1,MSGAREA     Point Register 1 to message area
+         SVC   35            Invoke SVC 35 (Write to Operator) 
+         BR    14            Return
+MSGAREA  EQU   *             Message Area
+         DC    AL2(19)       Total area length = 19 (Prefix length:4 + Data Length:15) 
+         DC    XL2'00'       2 bytes binary of zeros
+         DC    C'Hello world!'  Text to be written to system console
+         END&lt;/syntaxhighlight&gt;
+Using WTO Macro to generate SVC 35 and message area:
+&lt;syntaxhighlight lang="360 assembly"&gt;         WTO   'Hello world!'
+         BR    14            Return
+         END
+&lt;/syntaxhighlight&gt;
+
+=={{header|4DOS Batch}}==
+&lt;syntaxhighlight lang="4dos"&gt;echo Hello world!&lt;/syntaxhighlight&gt;
+
+=={{header|6502 Assembly}}==
+&lt;syntaxhighlight lang="asm"&gt;; goodbyeworld.s for C= 8-bit machines, ca65 assembler format.
+; String printing limited to strings of 256 characters or less.
+
+a_cr	= $0d		; Carriage return.
+bsout	= $ffd2		; C64 KERNEL ROM, output a character to current device.
+			; use $fded for Apple 2, $ffe3 (ascii) or $ffee (raw) for BBC.
+	.code
+
+	ldx #0		; Starting index 0 in X register.
+printnext:
+	lda text,x	; Get character from string.
+	beq done	; If we read a 0 we're done.
+	jsr bsout	; Output character. 
+	inx		; Increment index to next character.
+	bne printnext	; Repeat if index doesn't overflow to 0.
+done:
+	rts		; Return from subroutine.
+
+	.rodata
+
+text:
+	.byte	"Hello world!", a_cr, 0&lt;/syntaxhighlight&gt;
+
+=={{header|6800 Assembly}}==
+&lt;syntaxhighlight lang="text"&gt;        .cr  6800
+        .tf  gbye6800.obj,AP1
+        .lf  gbye6800
+;=====================================================;
+;        Hello world! for the Motorola 6800        ;
+;                 by barrym 2013-03-17                ;
+;-----------------------------------------------------;
+; Prints the message "Hello world!" to an ascii    ;
+;   terminal (console) connected to a 1970s vintage   ;
+;   SWTPC 6800 system, which is the target device for ;
+;   this assembly.                                    ;
+; Many thanks to:                                     ;
+;   swtpc.com for hosting Michael Holley's documents! ;
+;   sbprojects.com for a very nice assembler!         ;
+;   swtpcemu.com for a very capable emulator!         ;
+; reg x is the string pointer                         ;
+; reg a holds the ascii char to be output             ;
+;-----------------------------------------------------;
+outeee   =   $e1d1      ;ROM: console putchar routine
+        .or  $0f00
+;-----------------------------------------------------;
+main    ldx  #string    ;Point to the string
+        bra  puts       ;  and print it
+outs    jsr  outeee     ;Emit a as ascii
+        inx             ;Advance the string pointer
+puts    ldaa ,x         ;Load a string character
+        bne  outs       ;Print it if non-null
+        swi             ;  else return to the monitor
+;=====================================================;
+string  .as  "Hello world!",#13,#10,#0
+        .en&lt;/syntaxhighlight&gt;
+
+=={{header|8080 Assembly}}==
+
+&lt;syntaxhighlight lang="8080asm"&gt;	; This is Hello World, written in 8080 assembly to run under CP/M
+	; As you can see, it is similar to the 8086, and CP/M is very
+	; similar to DOS in the way it is called.
+	org	100h	; CP/M .COM entry point is 100h - like DOS
+	mvi	c,9	; C holds the syscall, 9 = print string - like DOS
+	lxi	d,msg	; DE holds a pointer to the string
+	jmp	5	; CP/M calls are accessed through the jump at 05h
+	; Normally you'd CALL it, but since you'd end the program by RETurning,
+	; JMP saves a byte (if you've only got 64k of address space you want to
+	; save bytes). 
+msg:	db	'Hello world!$'&lt;/syntaxhighlight&gt;
+
+=={{header|8086 Assembly}}==
+
+&lt;syntaxhighlight lang="masm"&gt;DOSSEG
+.MODEL TINY
+.DATA
+TXT DB "Hello world!$"
+.CODE
+START:
+	MOV ax, @DATA
+	MOV ds, ax
+	
+	MOV ah, 09h		; prepare output function
+	MOV dx, OFFSET TXT	; set offset
+	INT 21h			; output string TXT
+	
+	MOV AX, 4C00h 		; go back to DOS
+	INT 21h
+END START&lt;/syntaxhighlight&gt;
+
+With A86 or NASM syntax:
+&lt;pre&gt;  org 100h
+
+  mov dx, msg
+  mov ah, 9
+  int 21h
+
+  mov ax, 4c00h
+  int 21h
+
+msg:
+  db "Hello world!$"&lt;/pre&gt;
+
+=={{header|8th}}==
+&lt;syntaxhighlight lang="forth"&gt;"Hello world!\n" . bye&lt;/syntaxhighlight&gt;
+
+=={{header|AArch64 Assembly}}==
+&lt;syntaxhighlight lang="arm_assembly"&gt;.equ STDOUT, 1
+.equ SVC_WRITE, 64
+.equ SVC_EXIT, 93
+
+.text
+.global _start
+
+_start:
+	stp x29, x30, [sp, -16]!
+	mov x0, #STDOUT
+	ldr x1, =msg
+	mov x2, 13
+	mov x8, #SVC_WRITE
+	mov x29, sp
+	svc #0 // write(stdout, msg, 13);
+	ldp x29, x30, [sp], 16
+	mov x0, #0
+	mov x8, #SVC_EXIT
+	svc #0 // exit(0);
+
+msg:	.ascii "Hello World!\n"
+.align 4&lt;/syntaxhighlight&gt;
+
+=={{header|ABAP}}==
+&lt;syntaxhighlight lang="abap"&gt;REPORT zgoodbyeworld.
+  WRITE 'Hello world!'.&lt;/syntaxhighlight&gt;
+
+=={{header|ACL2}}==
+&lt;syntaxhighlight lang="lisp"&gt;(cw "Hello world!~%")&lt;/syntaxhighlight&gt;
+
+
+=={{header|Action!}}==
+&lt;syntaxhighlight lang="action!"&gt;Proc Main()
+ Print("Hello world!")
+Return&lt;/syntaxhighlight&gt;
+
+=={{header|ActionScript}}==
+&lt;syntaxhighlight lang="actionscript"&gt;trace("Hello world!");&lt;/syntaxhighlight&gt;
+
+=={{header|Ada}}==
+{{works with|GCC|4.1.2}}
+&lt;syntaxhighlight lang="ada"&gt;with Ada.Text_IO; use Ada.Text_IO;
+procedure Main is
+begin
+  Put_Line ("Hello world!");
+end Main;&lt;/syntaxhighlight&gt;
+
+=={{header|Agda}}==
+For Agda 2.6.2, based on its [https://agda.readthedocs.io/en/v2.6.2/getting-started/hello-world.html documentation].
+&lt;syntaxhighlight lang="agda"&gt;module helloworld where
+
+open import Agda.Builtin.IO using (IO)
+open import Agda.Builtin.Unit renaming (⊤ to Unit)
+open import Agda.Builtin.String using (String)
+
+postulate putStrLn : String -&gt; IO Unit
+{-# FOREIGN GHC import qualified Data.Text as T #-}
+{-# COMPILE GHC putStrLn = putStrLn . T.unpack #-}
+
+main : IO Unit
+main = putStrLn "Hello world!"
+&lt;/syntaxhighlight&gt;
+
+=={{header|Agena}}==
+&lt;syntaxhighlight lang="agena"&gt;print( "Hello world!" )&lt;/syntaxhighlight&gt;
+
+=={{header|Aime}}==
+&lt;syntaxhighlight lang="aime"&gt;o_text("Hello world!\n");&lt;/syntaxhighlight&gt;
+
+or:
+
+&lt;syntaxhighlight lang="aime"&gt;integer
+main(void)
+{
+    o_text("Hello world!\n");
+
+    return 0;
+}&lt;/syntaxhighlight&gt;
+
+=={{header|Algae}}==
+&lt;syntaxhighlight lang="algae"&gt;printf("Hello world!\n");&lt;/syntaxhighlight&gt;
+
+=={{header|ALGOL 60}}==
+&lt;syntaxhighlight lang="algol60"&gt;'BEGIN'
+    OUTSTRING(1,'('Hello world!')');
+    SYSACT(1,14,1)
+'END'&lt;/syntaxhighlight&gt;
+
+=={{header|ALGOL 68}}==
+&lt;syntaxhighlight lang="algol68"&gt;main: (
+  printf($"Hello world!"l$)
+)&lt;/syntaxhighlight&gt;
+
+=={{header|ALGOL W}}==
+&lt;syntaxhighlight lang="algolw"&gt;begin
+    write( "Hello world!" )
+end.&lt;/syntaxhighlight&gt;
+
+=={{header|ALGOL-M}}==
+&lt;syntaxhighlight lang="algol"&gt;BEGIN
+    WRITE( "Hello world!" );
+END&lt;/syntaxhighlight&gt;
+
+=={{header|Alore}}==
+&lt;syntaxhighlight lang="alore"&gt;Print('Hello world!')&lt;/syntaxhighlight&gt;
+=={{header|Amazing Hopper}}==
+
+1)
+&lt;syntaxhighlight lang="amazing hopper"&gt;
+main:
+   {"Hello world!\n"}print
+exit(0)
+&lt;/syntaxhighlight&gt;
+&lt;pre&gt;execute with:  hopper helloworld.com&lt;/pre&gt;
+2)
+&lt;syntaxhighlight lang="amazing hopper"&gt;
+#include &lt;hopper.h&gt;
+main:
+   exit("Hello world!\n")
+&lt;/syntaxhighlight&gt;
+&lt;pre&gt;execute with:  hopper helloworld.com -d&lt;/pre&gt;
+3)
+&lt;syntaxhighlight lang="amazing hopper"&gt;
+main:
+  {"Hello world!\n"}return
+&lt;/syntaxhighlight&gt;
+&lt;pre&gt;execute with:  hopper helloworld.com -d&lt;/pre&gt;
+
+=={{header|AmbientTalk}}==
+&lt;syntaxhighlight lang="ambienttalk"&gt;system.println("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|AmigaE}}==
+&lt;syntaxhighlight lang="amigae"&gt;PROC main()
+  WriteF('Hello world!\n')
+ENDPROC&lt;/syntaxhighlight&gt;
+
+=={{header|AngelScript}}==
+&lt;syntaxhighlight lang="angelscript"&gt;void main() { print("Hello world\n"); }&lt;/syntaxhighlight&gt;
+
+=={{header|AntLang}}==
+Note, that "Hello, World!" prints twice in interactive mode.
+One time as side-effect and one as the return value of echo.
+&lt;syntaxhighlight lang="antlang"&gt;echo["Hello, World!"]&lt;/syntaxhighlight&gt;
+
+=={{header|Anyways}}==
+
+&lt;syntaxhighlight lang="anyways"&gt;There was a guy called Hello World
+"Ow!" it said.
+That's all folks!&lt;/syntaxhighlight&gt;
+
+=={{header|APL}}==
+&lt;syntaxhighlight lang="apl"&gt;'Hello world!'&lt;/syntaxhighlight&gt;
+
+=={{header|AppleScript}}==
+To show in Script Editor Result pane:
+&lt;syntaxhighlight lang="applescript"&gt;"Hello world!"&lt;/syntaxhighlight&gt;
+
+To show in Script Editor Event Log pane:
+&lt;syntaxhighlight lang="applescript"&gt;log "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Applesoft BASIC}}==
+&lt;!-- {{incorrect|Applesoft BASIC|output isn't consistent with the task's requirements: mixed case.}} --&gt;
+
+Important Note: Although Applesoft BASIC allowed the storage and output of mixed-case strings, the ability to enter mixed-case via the keyboard and to output mixed-case on the default display was not offered as standard equipment on the original Apple II/II+.  Since Applesoft WAS the default programming language for the Apple II+, perhaps some flexibility in the task specification could be offered, for this and for other systems that lacked proper mixed-case I/O capabilities in at least one popular configuration.
+
+&lt;syntaxhighlight lang="applesoft basic"&gt; PRINT "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Apricot}}==
+&lt;syntaxhighlight lang="apricot"&gt;(puts "Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|Arc}}==
+&lt;syntaxhighlight lang="arc"&gt;(prn "Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|Arendelle}}==
+&lt;pre&gt;"Hello world!"&lt;/pre&gt;
+
+=={{header|Argile}}==
+&lt;syntaxhighlight lang="argile"&gt;use std
+print "Hello world!"&lt;/syntaxhighlight&gt;
+compile with: arc hello_world.arg -o hello_world.c &amp;&amp; gcc -o hello_world hello_world.c
+
+=={{header|ARM Assembly}}==
+
+&lt;syntaxhighlight lang="arm_assembly"&gt;.global main
+
+message:
+    .asciz "Hello world!\n"
+    .align 4
+
+main:
+    ldr r0, =message
+    bl printf
+
+    mov r7, #1
+    swi 0&lt;/syntaxhighlight&gt;
+
+=={{header|ArnoldC}}==
+&lt;syntaxhighlight lang="arnoldc"&gt;IT'S SHOWTIME
+TALK TO THE HAND "Hello world!"
+YOU HAVE BEEN TERMINATED&lt;/syntaxhighlight&gt;
+
+=={{header|Arturo}}==
+&lt;syntaxhighlight lang="rebol"&gt;print "Hello world!"&lt;/syntaxhighlight&gt;
+
+{{out}}
+
+&lt;pre&gt;Hello world!&lt;/pre&gt;
+
+=={{header|AsciiDots}}==
+
+&lt;syntaxhighlight lang="asciidots"&gt;
+.-$'Hello, World!'
+&lt;/syntaxhighlight&gt;
+
+=={{header|Astro}}==
+&lt;syntaxhighlight lang="python"&gt;print "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Asymptote}}==
+
+&lt;syntaxhighlight lang="asymptote"&gt;write('Hello world!');&lt;/syntaxhighlight&gt;
+
+=={{header|ATS}}==
+&lt;syntaxhighlight lang="ats"&gt;implement main0 () = print "Hello world!\n"&lt;/syntaxhighlight&gt;
+
+=={{header|AutoHotkey}}==
+script launched from windows explorer
+&lt;syntaxhighlight lang="autohotkey"&gt;DllCall("AllocConsole")
+FileAppend, Goodbye`, World!, CONOUT$
+FileReadLine, _, CONIN$, 1&lt;/syntaxhighlight&gt;
+scripts run from shell 
+[requires Windows XP or higher; older Versions of Windows don´t have the "AttachConsole" function]
+&lt;syntaxhighlight lang="autohotkey"&gt;DllCall("AttachConsole", "int", -1)
+FileAppend, Goodbye`, World!, CONOUT$&lt;/syntaxhighlight&gt;
+&lt;syntaxhighlight lang="autohotkey"&gt;SendInput Hello world!{!}&lt;/syntaxhighlight&gt;
+
+=={{header|AutoIt}}==
+&lt;syntaxhighlight lang="autoit"&gt;ConsoleWrite("Hello world!" &amp; @CRLF)&lt;/syntaxhighlight&gt;
+
+=={{header|AutoLISP}}==
+&lt;syntaxhighlight lang="cadlisp"&gt;(printc "Hello World!")&lt;/syntaxhighlight&gt;
+
+=={{header|Avail}}==
+&lt;syntaxhighlight lang="avail"&gt;Print: "Hello World!";&lt;/syntaxhighlight&gt;
+
+=={{header|AWK}}==
+&lt;syntaxhighlight lang="awk"&gt;BEGIN{print "Hello world!"}&lt;/syntaxhighlight&gt;
+
+
+"BEGIN" is a "special pattern" - code within "{}" is executed before the input file is read, even if there is no input. "END" is a similar pattern, for after completion of main processing.
+&lt;syntaxhighlight lang="awk"&gt;
+END {
+     print "Hello world!"
+    }
+&lt;/syntaxhighlight&gt;
+
+For a file containing data, the work can be done in the "body". The "//" is "match anything" so gets the first data, the "exit" halts processing the file (any "END" would then be executed).  Or instead of //, simply 1 is true.
+&lt;syntaxhighlight lang="awk"&gt;
+//  { 
+    print "Hello world!" 
+    exit
+    }
+&lt;/syntaxhighlight&gt;
+
+
+For a "single record" file.
+&lt;syntaxhighlight lang="awk"&gt;
+//  { 
+    print "Hello world!" 
+    }
+&lt;/syntaxhighlight&gt;
+
+For a "single record" file containing - Hello world! -. The "default" action for a "pattern match" (the "/" and "/" define a "pattern" to match data) is to "print" the record.
+&lt;syntaxhighlight lang="awk"&gt;
+// 
+&lt;/syntaxhighlight&gt;
+
+=={{header|Axe}}==
+Note that the i here is the imaginary ''i'', not the lowercase letter i.
+&lt;syntaxhighlight lang="axe"&gt;Disp "Hello world!",i&lt;/syntaxhighlight&gt;
+
+=={{header|B}}==
+{{works with|The Amsterdam Compiler Kit - B|V6.1pre1}}
+&lt;syntaxhighlight lang="b"&gt;main()
+{
+    putstr("Hello world!*n");
+    return(0);
+}&lt;/syntaxhighlight&gt;
+
+=={{header|B4X}}==
+&lt;syntaxhighlight lang="b4x"&gt;Log("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|Babel}}==
+
+&lt;syntaxhighlight lang="babel"&gt;"Hello world!" &lt;&lt;&lt;/syntaxhighlight&gt;
+
+=={{header|bash}}==
+&lt;syntaxhighlight lang="bash"&gt;echo "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|BASIC}}==
+{{works with|BASICA}}
+{{works with|Commodore BASIC}}
+{{works with|Locomotive Basic}}
+{{works with|M2000 Interpreter}}
+{{works with|MSX BASIC}}
+{{works with|Tiny BASIC}}
+&lt;syntaxhighlight lang="qbasic"&gt;10 print "Hello world!"&lt;/syntaxhighlight&gt;
+
+{{works with|7Basic}}
+{{works with|BaCon}} [[Category:BaCon]]
+{{works with|QBasic}}
+{{works with|M2000 Interpreter}}
+{{works with|Script Basic}}
+&lt;syntaxhighlight lang="qbasic"&gt;PRINT "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|BASIC256}}==
+&lt;syntaxhighlight lang="basic256"&gt;PRINT "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Batch File}}==
+'''Under normal circumstances, when delayed expansion is disabled'''
+&lt;syntaxhighlight lang="dos"&gt;echo Hello world!&lt;/syntaxhighlight&gt;
+
+'''If delayed expansion is enabled, then the ! must be escaped twice'''
+&lt;syntaxhighlight lang="dos"&gt;setlocal enableDelayedExpansion
+echo Hello world!^^!&lt;/syntaxhighlight&gt;
+
+=={{header|Battlestar}}==
+&lt;!--- supports C syntax highlighting ---&gt;
+&lt;syntaxhighlight lang="c"&gt;const hello = "Hello world!\n"
+
+print(hello)&lt;/syntaxhighlight&gt;
+
+=={{header|BBC BASIC}}==
+&lt;syntaxhighlight lang="bbcbasic"&gt;      PRINT "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|bc}}==
+&lt;syntaxhighlight lang="bc"&gt;"Hello world!
+"&lt;/syntaxhighlight&gt;
+
+=={{header|BCPL}}==
+&lt;syntaxhighlight lang="bcpl"&gt;GET "libhdr"
+
+LET start() = VALOF
+{ writef("Hello world!")
+  RESULTIS 0
+}&lt;/syntaxhighlight&gt;
+
+=={{header|Beef}}==
+&lt;syntaxhighlight lang=csharp&gt;Using System;
+namespace HelloWorld {
+  class Program
+  {
+    static void Main()
+    {
+      Console.Writeln("Hello World!");
+    }
+  }
+}
+&lt;/syntaxhighlight&gt;
+
+=={{header|beeswax}}==
+Straightforward:
+
+&lt;syntaxhighlight lang="beeswax"&gt;*`Hello, World!&lt;/syntaxhighlight&gt;
+
+Less obvious way:
+
+&lt;syntaxhighlight lang="beeswax"&gt;&gt;`ld!
+`
+ r
+  o
+   W
+    `
+     b` ,olleH`_&lt;/syntaxhighlight&gt;
+
+Even less obvious, demonstrating the creation and execution order of instruction pointers, and the hexagonal layout of beeswax programs:
+
+&lt;syntaxhighlight lang="beeswax"&gt;r  l
+ l o
+  ``
+ol`*`,d!
+   ``
+   e H
+   W&lt;/syntaxhighlight&gt;
+
+=={{header|Befunge}}==
+&lt;syntaxhighlight lang="befunge"&gt;52*"!dlroW ,olleH"&gt;:#,_@&lt;/syntaxhighlight&gt;
+
+=={{header|Binary Lambda Calculus}}==
+As explained at https://www.ioccc.org/2012/tromp/hint.html
+&lt;syntaxhighlight lang="blc"&gt; Hello world!&lt;/syntaxhighlight&gt;
+
+=={{header|Bird}}==
+It's not possible to print exclamation marks in [[Bird]] which is why it is not used in this example.
+&lt;syntaxhighlight lang="bird"&gt;use Console
+
+define Main
+    Console.Println "Hello world"
+end&lt;/syntaxhighlight&gt;
+
+=={{header|Blade}}==
+&lt;syntaxhighlight lang="blade"&gt;echo 'Hello world!'&lt;/syntaxhighlight&gt;
+or
+&lt;syntaxhighlight lang="blade"&gt;print('Hello world!')&lt;/syntaxhighlight&gt;
+or
+&lt;syntaxhighlight lang="blade"&gt;import io
+io.stdout.write('Hello world!')&lt;/syntaxhighlight&gt;
+
+=={{header|Blast}}==
+&lt;syntaxhighlight lang="blast"&gt;# This will display a goodbye message on the terminal screen
+.begin
+display "Hello world!"
+return
+# This is the end of the script.&lt;/syntaxhighlight&gt;
+
+=={{Header|BlitzMax}}==
+&lt;syntaxhighlight lang="blitzmax"&gt;
+print "Hello world!"
+&lt;/syntaxhighlight&gt;
+
+=={{header|Blue}}==
+
+Linux/x86
+
+&lt;syntaxhighlight lang="blue"&gt;global _start
+
+: syscall ( num:eax -- result:eax ) syscall ;
+
+: exit ( status:edi -- noret ) 60 syscall ;
+: bye ( -- noret ) 0 exit ;
+
+1 const stdout
+
+: write ( buf:esi len:edx fd:edi -- ) 1 syscall drop ;
+: print ( buf len -- ) stdout write ;
+
+: greet ( -- ) s" Hello world!\n" print ;
+
+: _start ( -- noret ) greet bye ;&lt;/syntaxhighlight&gt;
+
+=={{header|blz}}==
+&lt;syntaxhighlight lang="blz"&gt;print("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|BML}}==
+&lt;syntaxhighlight lang="bml"&gt;display "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Boo}}==
+&lt;syntaxhighlight lang="boo"&gt;print "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|bootBASIC}}==
+&lt;syntaxhighlight lang="bootbasic"&gt;10 print "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|BQN}}==
+
+Works in: [[CBQN]]
+
+&lt;syntaxhighlight lang="bqn"&gt;•Out "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Brace}}==
+&lt;syntaxhighlight lang="brace"&gt;#!/usr/bin/env bx
+use b
+Main:
+	say("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|Bracmat}}==
+&lt;syntaxhighlight lang="bracmat"&gt;put$"Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Brainf***}}==
+To print text, we need the ascii-value of each character to output.&lt;br&gt;
+So, we wanna make a series of round numbers going like:
+
+ 10	close to newline and carriage return
+ 30	close to ! and SPACE
+ 40	close to COMMA
+ 70	close to G
+ 80	close to W
+ 90	close to b
+ 100	is d and close to e and l
+ 110	close to o
+ 120	close to y
+
+forming all the letters we need if we just add up a bit
+
+Commented version:
+&lt;syntaxhighlight lang="bf"&gt;+++++ +++++		First cell 10 (its a counter and we will be "multiplying")
+
+[
+&gt;+			10 times 1 is 10
+&gt;+++			10 times 3 is 30
+&gt;++++			etc etc
+&gt;+++++ ++
+&gt;+++++ +++
+&gt;+++++ ++++
+&gt;+++++ +++++
+&gt;+++++ ++++++
+&gt;+++++ +++++++
+&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; -		go back to counter and subtract 1
+]
+
+printing G
+&gt;&gt;&gt;&gt; + .
+
+o twice
+&gt;&gt;&gt;&gt; + ..
+
+d
+&lt; .
+
+b
+&lt; +++++ +++ .
+
+y
+&gt;&gt;&gt; + .
+
+e
+&lt;&lt; + .
+
+COMMA
+&lt;&lt;&lt;&lt; ++++ .
+
+SPACE
+&lt; ++ .
+
+W
+&gt;&gt;&gt; +++++ ++ .
+
+o
+&gt;&gt;&gt; .
+
+r
++++ .
+
+l
+&lt; +++++ ++ .
+
+d
+----- --- .
+
+!
+&lt;&lt;&lt;&lt;&lt; + .
+
+CRLF
+&lt; +++ . --- .&lt;/syntaxhighlight&gt;
+
+Uncommented:
+&lt;syntaxhighlight lang="bf"&gt;++++++++++[&gt;+&gt;+++&gt;++++&gt;+++++++&gt;++++++++&gt;+++++++++&gt;++
+++++++++&gt;+++++++++++&gt;++++++++++++&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;-]&gt;&gt;&gt;&gt;+.&gt;&gt;&gt;
+&gt;+..&lt;.&lt;++++++++.&gt;&gt;&gt;+.&lt;&lt;+.&lt;&lt;&lt;&lt;++++.&lt;++.&gt;&gt;&gt;+++++++.&gt;&gt;&gt;.+++.
+&lt;+++++++.--------.&lt;&lt;&lt;&lt;&lt;+.&lt;+++.---.&lt;/syntaxhighlight&gt;
+It can most likely be optimized, but this is a nice way to show 
+how character printing works in Brainf*** :)
+
+=={{header|Brat}}==
+&lt;syntaxhighlight lang="brat"&gt;p "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Brlcad}}==
+
+The mged utility can output text to the terminal:
+
+&lt;syntaxhighlight lang="brlcad"&gt;
+echo Hello world!
+&lt;/syntaxhighlight&gt;
+
+=={{header|Burlesque}}==
+
+&lt;syntaxhighlight lang="burlesque"&gt;
+"Hello world!"sh
+&lt;/syntaxhighlight&gt;
+
+Although please note that ''sh'' actually does not print anything.
+
+=={{header|C}}==
+{{works with|gcc|4.0.1}}
+&lt;syntaxhighlight lang="c"&gt;#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+  printf("Hello world!\n");
+  return EXIT_SUCCESS;
+}&lt;/syntaxhighlight&gt;
+Or:
+&lt;syntaxhighlight lang="c"&gt;#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+  puts("Hello world!");
+  return EXIT_SUCCESS;
+}&lt;/syntaxhighlight&gt;
+Or, the eternal favourite :)
+&lt;syntaxhighlight lang="c"&gt;
+#include&lt;stdio.h&gt;
+
+int main()
+{
+  printf("\nHello world!");
+  return 0;
+}&lt;/syntaxhighlight&gt;
+
+or better yet...
+&lt;syntaxhighlight lang="c"&gt;
+#include&lt;stdio.h&gt;
+
+int main()
+{
+	return printf("\nHello World!");
+}
+&lt;/syntaxhighlight&gt;
+
+=={{header|C sharp|C#}}==
+{{works with|Mono|1.2}}
+{{works with|Visual C sharp|Visual C#|2003}}
+&lt;syntaxhighlight lang="csharp"&gt;namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            System.Console.WriteLine("Hello world!");
+        }
+    }
+}&lt;/syntaxhighlight&gt;
+
+{{works with|Visual C sharp|Visual C#|9.0+}}
+C# 9.0 allows statements at the top level of a source file (a ''compilation_unit'' in the specification) between any using statements and namespace declarations. These statements become the program entry point and are placed in a method in a compiler-generated type.
+&lt;syntaxhighlight lang="csharp"&gt;System.Console.WriteLine("Hello world!");&lt;/syntaxhighlight&gt;
+or
+&lt;syntaxhighlight lang="csharp"&gt;using System;
+Console.WriteLine("Hello world!");&lt;/syntaxhighlight&gt;
+
+=={{header|C++}}==
+&lt;syntaxhighlight lang="cpp"&gt;#include &lt;iostream&gt;
+
+int main () {
+  std::cout &lt;&lt; "Hello world!" &lt;&lt; std::endl;
+}&lt;/syntaxhighlight&gt;
+
+=={{header|C++/CLI}}==
+&lt;syntaxhighlight lang="cpp"&gt;using namespace System;
+int main()
+{
+  Console::WriteLine("Hello world!");
+}&lt;/syntaxhighlight&gt;
+
+=={{header|C1R}}==
+&lt;syntaxhighlight lang="c0h"&gt;Hello_world/Text&lt;/syntaxhighlight&gt;
+{{out}}
+&lt;pre&gt;
+$ echo Hello_world/Text &gt;hw.c1r
+$ ./c1r hw.c1r
+$ ./a.out
+Hello world!
+&lt;/pre&gt;
+
+=={{header|C2}}==
+&lt;syntaxhighlight lang="c2"&gt;module hello_world;
+import stdio as io;
+
+func i32 main(i32 argc, char** argv) {
+    io.printf("Hello World!\n");
+    return 0;
+}&lt;/syntaxhighlight&gt;
+
+=={{header|C3}}==
+&lt;syntaxhighlight lang="c3"&gt;import std::io;
+
+fn int main() 
+{
+    io::println("Hello, World!");
+    return 0;
+}&lt;/syntaxhighlight&gt;
+
+=={{header|Casio BASIC}}==
+&lt;syntaxhighlight lang="basic casio"&gt;Locate 1,1,"Hello World!"&lt;/syntaxhighlight&gt;
+or just
+&lt;syntaxhighlight lang="basic casio"&gt;"Hello World!"&lt;/syntaxhighlight&gt;
+
+=={{header|Cat}}==
+&lt;syntaxhighlight lang="cat"&gt;"Hello world!" writeln&lt;/syntaxhighlight&gt;
+
+=={{header|Cduce}}==
+&lt;syntaxhighlight lang="cduce"&gt;print "Hello world!";;&lt;/syntaxhighlight&gt;
+
+=={{header|CFEngine}}==
+&lt;syntaxhighlight lang="cfengine3"&gt;#!/usr/bin/env cf-agent
+# without --no-lock option to cf-agent
+# this output will only occur once per minute
+# this is by design.
+bundle agent main
+{
+  reports:
+    "Hello world!";
+}&lt;/syntaxhighlight&gt;
+
+See https://docs.cfengine.com/docs/master/examples.html for a more complete example and introduction.
+
+=={{header|Chapel}}==
+&lt;syntaxhighlight lang="chapel"&gt;writeln("Hello world!");&lt;/syntaxhighlight&gt;
+
+=={{header|Chef}}==
+&lt;syntaxhighlight lang="chef"&gt;Goodbye World Souffle.
+ 
+Ingredients.
+71 g green beans
+111 cups oil
+98 g butter
+121 ml yogurt
+101 eggs
+44 g wheat flour
+32 zucchinis
+119 ml water
+114 g red salmon
+108 g lard
+100 g dijon mustard
+33 potatoes
+ 
+Method.
+Put potatoes into the mixing bowl.
+Put dijon mustard into the mixing bowl.
+Put lard into the mixing bowl.
+Put red salmon into the mixing bowl.
+Put oil into the mixing bowl.
+Put water into the mixing bowl.
+Put zucchinis into the mixing bowl.
+Put wheat flour into the mixing bowl.
+Put eggs into the mixing bowl.
+Put yogurt into the mixing bowl.
+Put butter into the mixing bowl.
+Put dijon mustard into the mixing bowl.
+Put oil into the mixing bowl.
+Put oil into the mixing bowl.
+Put green beans into the mixing bowl.
+Liquefy contents of the mixing bowl.
+Pour contents of the mixing bowl into the baking dish.
+ 
+Serves 1.&lt;/syntaxhighlight&gt;
+
+=={{header|ChucK}}==
+&lt;syntaxhighlight lang="text"&gt;&lt;&lt;&lt; "Hello world!"&gt;&gt;&gt;;&lt;/syntaxhighlight&gt;
+
+=={{header|Cind}}==
+
+&lt;syntaxhighlight lang="cind"&gt;
+execute() {
+    host.println("Hello world!");
+}
+&lt;/syntaxhighlight&gt;
+
+=={{header|Clay}}==
+&lt;syntaxhighlight lang="clay"&gt;main() {
+    println("Hello world!");
+}&lt;/syntaxhighlight&gt;
+
+=={{header|Clean}}==
+&lt;syntaxhighlight lang="clean"&gt;Start = "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Clio}}==
+&lt;syntaxhighlight lang="clio"&gt;'hello world!' -&gt; print&lt;/syntaxhighlight&gt;
+
+=={{header|Clipper}}==
+&lt;syntaxhighlight lang="clipper"&gt;? "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|CLIPS}}==
+&lt;syntaxhighlight lang="clips"&gt;(printout t "Hello world!" crlf)&lt;/syntaxhighlight&gt;
+
+=={{header|CLU}}==
+&lt;syntaxhighlight lang="clu"&gt;start_up = proc ()
+    po: stream := stream$primary_output()
+    stream$putl(po, "Hello world!")
+end start_up&lt;/syntaxhighlight&gt;
+
+=={{header|Clojure}}==
+&lt;syntaxhighlight lang="lisp"&gt;(println "Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|CMake}}==
+&lt;syntaxhighlight lang="cmake"&gt;message(STATUS "Hello world!")&lt;/syntaxhighlight&gt;
+
+This outputs
+
+&lt;pre&gt;-- Hello world!&lt;/pre&gt;
+
+=={{header|COBOL}}==
+Using fixed format.
+{{works with|OpenCOBOL}}
+{{works with|Dell Enterprise COBOL}}
+
+&lt;syntaxhighlight lang="cobol"&gt;	program-id. hello.
+	procedure division.
+		display "Hello world!".
+		stop run.&lt;/syntaxhighlight&gt;
+
+Using relaxed compilation rules, the hello program can become a single DISPLAY statement.
+{{works with|GnuCOBOL}}
+
+&lt;syntaxhighlight lang="cobol"&gt;display"Hello, world".&lt;/syntaxhighlight&gt;
+
+&lt;pre&gt;prompt$ cobc -x -frelax-syntax -free hello.cob
+hello.cob: 1: Warning: PROGRAM-ID header missing - assumed
+hello.cob: 1: Warning: PROCEDURE DIVISION header missing - assumed
+
+prompt$ ./hello
+Hello, world&lt;/pre&gt;
+
+''Note how COBOL can handle the DISPLAY reserved word without a space before the quoted string, the quote being a compile time scan delimiter.  The full stop period after the single statement is still mandatory, at least for GnuCOBOL and a clean compile to executable.''
+
+=={{header|Cobra}}==
+&lt;syntaxhighlight lang="cobra"&gt;class Hello
+    def main
+        print 'Hello world!'&lt;/syntaxhighlight&gt;
+
+=={{header|CoffeeScript}}==
+{{works with|Node.js}}
+&lt;syntaxhighlight lang="coffeescript"&gt;console.log "Hello world!"&lt;/syntaxhighlight&gt;
+{{works with|Rhino engine}}
+&lt;syntaxhighlight lang="coffeescript"&gt;print "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|ColdFusion}}==
+&lt;syntaxhighlight lang="coldfusion"&gt;&lt;cfoutput&gt;Hello world!&lt;/cfoutput&gt;&lt;/syntaxhighlight&gt;
+
+=={{header|Comal}}==
+&lt;syntaxhighlight lang="comal"&gt;PRINT "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Comefrom0x10}}==
+&lt;syntaxhighlight lang="cf0x10"&gt;'Hello world!'&lt;/syntaxhighlight&gt;
+
+&lt;syntaxhighlight lang="cf0x10"&gt;"Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Commodore BASIC}}==
+By default some Commodore computers boot into uppercase/graphics mode (C64, C128, VIC-20, Plus 4, etc.) while others (PET, CBM etc.) boot into lowercase/uppercase mode. Therefore, depending on machine used, the CHR$(14) may or may not be required to switch into mixed-case mode.
+&lt;syntaxhighlight lang="gwbasic"&gt;10 print chr$(147);chr$(14);:REM 147=clear screen, 14=switch to lowercase mode
+20 print "Hello world!"
+30 end
+&lt;/syntaxhighlight&gt;
+
+{{Out}}&lt;pre&gt;Hello world!&lt;/pre&gt;
+
+=={{header|Common Lisp}}==
+&lt;syntaxhighlight lang="lisp"&gt;(format t "Hello world!~%")&lt;/syntaxhighlight&gt;
+
+Or
+
+&lt;syntaxhighlight lang="lisp"&gt;(print "Hello world!")&lt;/syntaxhighlight&gt;
+
+===Alternate solution===
+I use [https://franz.com/downloads/clp/survey Allegro CL 10.1]
+
+&lt;syntaxhighlight lang="lisp"&gt;
+;; Project : Hello world/Text
+
+(format t "~a" "Hello world!")
+&lt;/syntaxhighlight&gt;
+Output:
+&lt;pre&gt;
+Hello world!
+&lt;/pre&gt;
+
+=={{header|Component Pascal}}==
+&lt;syntaxhighlight lang="oberon2"&gt;
+MODULE Hello;
+	IMPORT Out;
+	
+	PROCEDURE Do*;
+	BEGIN
+		Out.String("Hello world!"); Out.Ln
+	END Do;
+END Hello.&lt;/syntaxhighlight&gt;
+Run command ''Hello.Do'' by commander.
+
+=={{header|Coq}}==
+&lt;syntaxhighlight lang="coq"&gt;
+Require Import Coq.Strings.String.
+
+Eval compute in ("Hello world!"%string).
+&lt;/syntaxhighlight&gt;
+
+=={{header|Corescript}}==
+&lt;syntaxhighlight lang="corescript"&gt;print Hello world!&lt;/syntaxhighlight&gt;
+
+=={{header|Cowgol}}==
+&lt;syntaxhighlight lang="cowgol"&gt;include "cowgol.coh";
+print("Hello world!");
+print_nl();&lt;/syntaxhighlight&gt;
+
+
+=={{header|Crack}}==
+&lt;syntaxhighlight lang="crack"&gt;
+import crack.io cout;
+cout `Hello world!\n`;
+&lt;/syntaxhighlight&gt;
+
+=={{header|Creative Basic}}==
+&lt;syntaxhighlight lang="creative basic"&gt;
+OPENCONSOLE
+
+PRINT"Hello world!"
+
+'This line could be left out.
+PRINT:PRINT:PRINT"Press any key to end."
+
+'Keep the console from closing right away so the text can be read.
+DO:UNTIL INKEY$&lt;&gt;""
+
+CLOSECONSOLE
+
+END
+&lt;/syntaxhighlight&gt;
+
+=={{header|Crystal}}==
+&lt;syntaxhighlight lang="ruby"&gt;puts "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|D}}==
+{{works with|D|2.0}}
+&lt;syntaxhighlight lang="d"&gt;import std.stdio;
+
+void main() {
+    writeln("Hello world!");
+}&lt;/syntaxhighlight&gt;
+
+=={{header|Dafny}}==
+&lt;syntaxhighlight lang="dafny"&gt;
+method Main() {
+  print "hello, world!\n";
+  assert 10 &lt; 2;
+}
+&lt;/syntaxhighlight&gt;
+
+=={{header|Dao}}==
+&lt;syntaxhighlight lang="dao"&gt;io.writeln( 'Hello world!' )&lt;/syntaxhighlight&gt;
+
+=={{header|Dart}}==
+&lt;syntaxhighlight lang="dart"&gt;main() {
+    var bye = 'Hello world!';
+    print("$bye");
+}&lt;/syntaxhighlight&gt;
+
+=={{header|DataWeave}}==
+&lt;syntaxhighlight lang="dataweave"&gt;"Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|DBL}}==
+&lt;syntaxhighlight lang="dbl"&gt;;
+;       Hello world for DBL version 4 by Dario B.
+;
+                                PROC
+;------------------------------------------------------------------
+        XCALL FLAGS (0007000000,1)           ;Suppress STOP message
+
+        OPEN (1,O,'TT:')
+        WRITES (1,"Hello world")
+
+        DISPLAY (1,"Hello world",10)
+        DISPLAY (1,$SCR_MOV(-1,12),"again",10)  ;move up, right and print
+
+        CLOSE 1
+END&lt;/syntaxhighlight&gt;
+
+=={{header|Dc}}==
+&lt;syntaxhighlight lang="dc"&gt;[Hello world!]p&lt;/syntaxhighlight&gt;
+...or print a numerically represented string.
+&lt;syntaxhighlight lang="dc"&gt;5735816763073014741799356604682 P&lt;/syntaxhighlight&gt;
+
+=={{header|DCL}}==
+&lt;syntaxhighlight lang="dcl"&gt;$ write sys$output "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|DDNC}}==
+
+DDNC can only output to a single 7-segment LED display digit, so first we must convert each character into its 7-segment equivalent numerical value.
+
+The three horizontal bars are assigned bits 6, 3, and 0 from top to bottom. The top two vertical bars are assigned bits 5 and 4 while the bottom two vertical bars are assigned bits 2 and 1 from left to right.
+
+Because DDNC can only interpret literals in decimal, each binary number was converted and stored in consecutive memory cells starting at cell 10.
+
+The code can be divided into three sections. The first stores the character numbers in order in an array. The second sets up the loop by loading a delay of 500 milliseconds to slot 3, the start address of the character array in memory to slot 2, and the number of times to loop (14) plus one to slot 5. The third section starts the loop of displaying the characters, waiting for the delay time, incrementing the pointer, decrementing the counter, and checking if the counter is negative to know whether to continue the loop.
+
+&lt;syntaxhighlight lang="ddnc"&gt;
+0 111 10
+0 15 11
+0 15 12
+0 31 13
+0 47 14
+0 59 15
+0 125 16
+0 3 17
+0 0 18
+0 63 19
+0 15 20
+0 12 21
+0 36 22
+0 31 23
+0 17 24
+
+0 500 3
+0 10 2
+0 15 5
+
+60 4
+2 2 1
+80 1
+72 3
+30 2
+31 5
+62 5
+61 4
+64
+&lt;/syntaxhighlight&gt;
+
+=={{header|Delphi}}==
+&lt;syntaxhighlight lang="delphi"&gt;
+program ProjectGoodbye;
+{$APPTYPE CONSOLE}
+begin
+  WriteLn('Hello world!');
+end.
+&lt;/syntaxhighlight&gt;
+
+=={{header|DeviousYarn}}==
+&lt;syntaxhighlight lang="deviousyarn"&gt;o:"Hello world!&lt;/syntaxhighlight&gt;
+
+=={{header|DIBOL-11}}==
+&lt;syntaxhighlight lang="dibol-11"&gt;
+          START     ;Hello World
+
+          RECORD  HELLO
+,         A11, 'Hello World'
+
+          PROC
+          XCALL FLAGS (0007000000,1)          ;Suppress STOP message
+
+          OPEN(8,O,'TT:')
+          WRITES(8,HELLO)
+          END
+
+&lt;/syntaxhighlight&gt;
+
+=={{header|Diego}}==
+Once the caller has met the computer and its printer...
+&lt;syntaxhighlight lang="diego"&gt;with_computer(comp1)_printer(lp1)_text(Hello World!);&lt;/syntaxhighlight&gt;
+If the caller is the computer...
+&lt;syntaxhighlight lang="diego"&gt;with_me()_printer(lp1)_text(Hello World!);&lt;/syntaxhighlight&gt;
+...or can be shortened as...
+&lt;syntaxhighlight lang="diego"&gt;me()_ptr(lp1)_txt(Hello World!);&lt;/syntaxhighlight&gt;
+If the computer has more than one printer...
+&lt;syntaxhighlight lang="diego"&gt;me()_printer()_text(Hello World!);&lt;/syntaxhighlight&gt;
+If there are more than one computer which have zero or more printers...
+&lt;syntaxhighlight lang="diego"&gt;with_computer()_printer()_text(Hello World!);&lt;/syntaxhighlight&gt;
+If there are zero or more printers connected to any thing (device)...
+&lt;syntaxhighlight lang="diego"&gt;with_printer()_text(Hello World!);&lt;/syntaxhighlight&gt;
+
+=={{header|DIV Games Studio}}==
+&lt;syntaxhighlight lang="div"&gt;
+PROGRAM HELLOWORLD;
+
+BEGIN
+
+    WRITE_TEXT(0,160,100,4,"HELLO WORLD!");
+    LOOP
+        FRAME;
+    END
+END
+
+&lt;/syntaxhighlight&gt;
+
+=={{header|DM}}==
+&lt;syntaxhighlight lang="dm"&gt;
+/client/New()
+    ..()
+    src &lt;&lt; "Hello world!"
+&lt;/syntaxhighlight&gt;
+
+=={{header|Draco}}==
+&lt;syntaxhighlight lang="draco"&gt;proc nonrec main() void:
+    writeln("Hello world!")
+corp&lt;/syntaxhighlight&gt;
+
+=={{header|Dragon}}==
+&lt;syntaxhighlight lang="dragon"&gt;
+showln "Hello world!"
+&lt;/syntaxhighlight&gt;
+
+=={{header|DWScript}}==
+&lt;syntaxhighlight lang="delphi"&gt;
+PrintLn('Hello world!');
+&lt;/syntaxhighlight&gt;
+
+=={{header|Dyalect}}==
+&lt;syntaxhighlight lang="dyalect"&gt;print("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|Dylan}}==
+&lt;syntaxhighlight lang="dylan"&gt;
+module: hello-world
+
+format-out("%s\n", "Hello world!");
+&lt;/syntaxhighlight&gt;
+
+=={{header|Dylan.NET}}==
+{{works with|Mono|2.6.7}}
+{{works with|Mono|2.10.x}}
+{{works with|Mono|3.x.y}}
+{{works with|.NET|3.5}}
+{{works with|.NET|4.0}}
+{{works with|.NET|4.5}}
+One Line version:
+&lt;syntaxhighlight lang="dylan.net"&gt;Console::WriteLine("Hello world!")&lt;/syntaxhighlight&gt;
+
+Hello World Program:
+&lt;syntaxhighlight lang="dylan.net"&gt;
+//compile using the new dylan.NET v, 11.5.1.2 or later
+//use mono to run the compiler
+#refstdasm mscorlib.dll
+
+import System
+
+assembly helloworld exe
+ver 1.2.0.0
+
+class public Program
+
+   method public static void main()
+      Console::WriteLine("Hello world!")
+   end method
+
+end class
+&lt;/syntaxhighlight&gt;
+
+=={{header|Déjà Vu}}==
+&lt;syntaxhighlight lang="dejavu"&gt;!print "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|E}}==
+&lt;syntaxhighlight lang="e"&gt;println("Hello world!")
+
+stdout.println("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|EasyLang}}==
+
+&lt;syntaxhighlight lang="text"&gt;print "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|eC}}==
+&lt;syntaxhighlight lang="ec"&gt;class GoodByeApp : Application
+{
+   void Main()
+   {
+      PrintLn("Hello world!");
+   }
+}&lt;/syntaxhighlight&gt;
+
+=={{header|EchoLisp}}==
+&lt;syntaxhighlight lang="lisp"&gt;
+(display "Hello world!" "color:blue")
+&lt;/syntaxhighlight&gt;
+
+=={{header|ECL}}==
+&lt;syntaxhighlight lang="ecl"&gt;
+OUTPUT('Hello world!');
+&lt;/syntaxhighlight&gt;
+
+=={{header|Ecstasy}}==
+&lt;syntaxhighlight lang="java"&gt;module HelloWorld
+    {
+    void run()
+        {
+        @Inject Console console;
+        console.println("Hello World!");
+        }
+    }&lt;/syntaxhighlight&gt;
+
+=={{header|EDSAC order code}}==
+The EDSAC did not support lower-case letters. The method used here is to include a separate &lt;code&gt;O&lt;/code&gt; order to print each character: for short messages and labels this is quite adequate. A more general (though slightly more involved) solution for printing strings is given at [[Hello world/Line printer#EDSAC order code]].
+&lt;syntaxhighlight lang="edsac"&gt;[ Print HELLO WORLD ]
+[ A program for the EDSAC ]
+[ Works with Initial Orders 2 ]
+
+T64K  [ Set load point: address 64 ]
+GK    [ Set base address ]
+O13@  [ Each O order outputs one ]
+O14@  [ character. The numerical ]
+O15@  [ parameter gives the offset ]
+O16@  [ (from the base address) where ]
+O17@  [ the character to print is ]
+O18@  [ stored ]
+O19@
+O20@
+O21@  
+O22@
+O23@
+O24@
+ZF    [ Stop ]
+*F    [ Shift to print letters ]
+HF    [ Character literals ]
+EF
+LF
+LF
+OF
+!F    [ Space character ]
+WF
+OF
+RF
+LF
+DF
+EZPF  [ Start program beginning at
+        the load point ]&lt;/syntaxhighlight&gt;
+{{out}}
+&lt;pre&gt;HELLO WORLD&lt;/pre&gt;
+
+=={{header|Efene}}==
+short version (without a function)
+
+&lt;syntaxhighlight lang="efene"&gt;io.format("Hello world!~n")&lt;/syntaxhighlight&gt;
+
+complete version (put this in a file and compile it)
+
+&lt;syntaxhighlight lang="efene"&gt;@public 
+run = fn () {
+    io.format("Hello world!~n")
+}&lt;/syntaxhighlight&gt;
+
+=={{header|Egel}}==
+&lt;syntaxhighlight lang="egel"&gt;
+def main = "Hello World!"
+&lt;/syntaxhighlight&gt;
+
+=={{header|Egison}}==
+
+&lt;syntaxhighlight lang="egison"&gt;
+(define $main
+  (lambda [$argv]
+    (write-string "Hello world!\n")))
+&lt;/syntaxhighlight&gt;
+
+=={{header|EGL}}==
+{{works with|EDT}}
+{{works with|RBD}}
+&lt;syntaxhighlight lang="egl"&gt;
+program HelloWorld
+    function main()
+        SysLib.writeStdout("Hello world!");
+    end
+end
+&lt;/syntaxhighlight&gt;
+
+=={{header|Eiffel}}==
+{{wikipedia|Eiffel (programming language)}}
+&lt;syntaxhighlight lang="eiffel"&gt;class
+    HELLO_WORLD
+create
+    make
+feature
+    make
+        do
+            print ("Hello world!%N")
+        end
+end&lt;/syntaxhighlight&gt;
+
+=={{header|Ela}}==
+&lt;syntaxhighlight lang="ela"&gt;open monad io
+do putStrLn "Hello world!" ::: IO&lt;/syntaxhighlight&gt;
+
+=={{header|Elan}}==
+&lt;syntaxhighlight lang="elan"&gt;putline ("Hello, world!");&lt;/syntaxhighlight&gt;
+
+=={{header|elastiC}}==
+From the [http://www.elasticworld.org/man/elastic.html elastiC Manual].
+
+&lt;syntaxhighlight lang="elastic"&gt;package hello;
+
+    // Import the `basic' package
+    import basic;
+
+    // Define a simple function
+    function hello()
+    {
+        // Print hello world
+        basic.print( "Hello world!\n" );
+    }
+
+    /*
+     *  Here we start to execute package code
+     */
+
+    // Invoke the `hello' function
+    hello();&lt;/syntaxhighlight&gt;
+
+=={{header|Elena}}==
+ELENA 4.x:
+&lt;syntaxhighlight lang="elena"&gt;public program()
+{
+    console.writeLine:"Hello world!"
+}&lt;/syntaxhighlight&gt;
+
+=={{header|Elisa}}==
+&lt;syntaxhighlight lang="elisa"&gt; "Hello world!"? &lt;/syntaxhighlight&gt;
+
+=={{header|Elixir}}==
+&lt;syntaxhighlight lang="elixir"&gt;
+IO.puts "Hello world!"
+&lt;/syntaxhighlight&gt;
+
+=={{header|Elm}}==
+&lt;syntaxhighlight lang="haskell"&gt;main = text "Goodbye World!"&lt;/syntaxhighlight&gt;
+
+=={{header|Emacs Lisp}}==
+
+&lt;syntaxhighlight lang="lisp"&gt;(message "Hello world!")&lt;/syntaxhighlight&gt;
+
+Alternatively, &lt;code&gt;princ&lt;/code&gt; can be used:
+
+&lt;syntaxhighlight lang="lisp"&gt;(princ "Hello world!\n")&lt;/syntaxhighlight&gt;
+
+=={{header|Emojicode}}==
+&lt;syntaxhighlight lang="emojicode"&gt;🏁 🍇
+  😀 🔤Hello world!🔤
+🍉&lt;/syntaxhighlight&gt;
+
+=={{header|Erlang}}==
+&lt;syntaxhighlight lang="erlang"&gt;io:format("Hello world!~n").&lt;/syntaxhighlight&gt;
+
+=={{header|ERRE}}==
+&lt;syntaxhighlight lang="erre"&gt;
+! Hello World in ERRE language
+PROGRAM HELLO
+BEGIN
+  PRINT("Hello world!")
+END PROGRAM
+&lt;/syntaxhighlight&gt;
+
+=={{header|Euler Math Toolbox}}==
+
+&lt;pre&gt;
+"Hello world!"
+&lt;/pre&gt;
+
+=={{header|Extended BrainF***}}==
+
+&lt;syntaxhighlight lang="bf"&gt;[.&gt;]@Hello world!&lt;/syntaxhighlight&gt;
+
+=={{header|Ezhil}}==
+
+&lt;span style="color:#FF0000"&gt;பதிப்பி&lt;/span&gt;&lt;span style="color:#CD5C5C"&gt;"வணக்கம் உலகம்!"&lt;/span&gt;&lt;br /&gt;
+&lt;span style="color:#FF0000"&gt;பதிப்பி&lt;/span&gt;&lt;span style="color:#CD5C5C"&gt; "Hello world!" &lt;/span&gt;&lt;br /&gt;
+&lt;span style="color:#FF0000"&gt;பதிப்பி&lt;/span&gt;&lt;span style="color:#CD5C5C"&gt;"******* வணக்கம்! மீண்டும் சந்திப்போம் *******"&lt;/span&gt;&lt;br /&gt;
+&lt;span style="color:#8B0000"&gt;exit()&lt;/span&gt;
+
+=={{header|F_Sharp|F#}}==
+&lt;syntaxhighlight lang="fsharp"&gt;printfn "%s" "Hello world!"&lt;/syntaxhighlight&gt;
+or using .Net classes directly
+&lt;syntaxhighlight lang="fsharp"&gt;System.Console.WriteLine("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|Factor}}==
+&lt;syntaxhighlight lang="factor"&gt;"Hello world!" print&lt;/syntaxhighlight&gt;
+
+=={{header|Falcon}}==
+With the printl() function:
+&lt;syntaxhighlight lang="falcon"&gt;printl("Hello world!")&lt;/syntaxhighlight&gt;
+Or via "fast print":
+&lt;syntaxhighlight lang="falcon"&gt;&gt; "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|FALSE}}==
+&lt;syntaxhighlight lang="false"&gt;"Hello world!
+"&lt;/syntaxhighlight&gt;
+
+=={{header|Fantom}}==
+
+&lt;syntaxhighlight lang="fantom"&gt;
+class HelloText
+{
+  public static Void main ()
+  {
+    echo ("Hello world!")
+  }
+}
+&lt;/syntaxhighlight&gt;
+
+=={{header|Fennel}}==
+&lt;syntaxhighlight lang="fennel"&gt;(print "Hello World")&lt;/syntaxhighlight&gt;
+
+=={{header|ferite}}==
+word.}}
+&lt;syntaxhighlight lang="ferite"&gt;uses "console";
+Console.println( "Goodby, World!" );&lt;/syntaxhighlight&gt;
+
+=={{header|Fermat}}==
+&lt;syntaxhighlight lang="fermat"&gt;!!'Hello, World!';&lt;/syntaxhighlight&gt;
+
+=={{header|Fexl}}==
+&lt;syntaxhighlight lang="fexl"&gt;say "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Fhidwfe}}==
+&lt;syntaxhighlight lang="fhidwfe"&gt;puts$ "Hello, world!\n"&lt;/syntaxhighlight&gt;
+
+=={{header|Fish}}==
+Standard Hello, world example, modified for this task:
+&lt;syntaxhighlight lang="fish"&gt;!v"Hello world!"r!
+ &gt;l?!;o&lt;/syntaxhighlight&gt;
+Explanation of the code:&lt;br/&gt;
+&lt;tt&gt;!v"&lt;/tt&gt; jumps over the &lt;tt&gt;v&lt;/tt&gt; character with the &lt;tt&gt;!&lt;/tt&gt; sign, then starts the string mode with &lt;tt&gt;"&lt;/tt&gt; .&lt;br/&gt;
+Then the characters &lt;tt&gt;Hello world!&lt;/tt&gt; are added, and string mode is closed with &lt;tt&gt;"&lt;/tt&gt;.&lt;br/&gt;
+The stack is reversed for printing (&lt;tt&gt;r&lt;/tt&gt;), and a jump (&lt;tt&gt;!&lt;/tt&gt;) is executed to jump over the &lt;tt&gt;!&lt;/tt&gt; at the beginning of the line and execute the &lt;tt&gt;v&lt;/tt&gt;. ([[Fish]] is torical)&lt;br/&gt;
+After going down by &lt;tt&gt;v&lt;/tt&gt;, it goes rightwards again by &lt;tt&gt;&gt;&lt;/tt&gt; and this line is being executed.&lt;br/&gt;
+This line pushes the stack size (&lt;tt&gt;l&lt;/tt&gt;), and stops (&lt;tt&gt;;&lt;/tt&gt;) if the top item on the stack is equal to 0 (&lt;tt&gt;?&lt;/tt&gt;). Else it executes the &lt;tt&gt;!&lt;/tt&gt; directly after it and jumps to the &lt;tt&gt;o&lt;/tt&gt;, which outputs the top item in [http://en.wikipedia.org/wiki/Ascii ASCII]. Then the line is executed again. It effectively prints the stack until it's empty, then it terminates.
+
+=={{header|FOCAL}}==
+&lt;syntaxhighlight lang="focal"&gt;TYPE "Hello, world" !&lt;/syntaxhighlight&gt;
+
+=={{header|Forth}}==
+&lt;syntaxhighlight lang="forth"&gt;." Hello world!"&lt;/syntaxhighlight&gt;
+
+Or as a whole program:
+
+&lt;syntaxhighlight lang="forth"&gt;: goodbye ( -- )   ." Hello world!" CR ;&lt;/syntaxhighlight&gt;
+
+=={{header|Fortran}}==
+{{works with|F77}}
+Simplest case - display using default formatting:
+
+&lt;syntaxhighlight lang="fortran"&gt;print *,"Hello world!"&lt;/syntaxhighlight&gt;
+
+Use explicit output format:
+
+&lt;syntaxhighlight lang="fortran"&gt;100   format (5X,A,"!")
+      print 100,"Hello world!"&lt;/syntaxhighlight&gt;
+
+Output to channels other than stdout goes like this:
+
+&lt;syntaxhighlight lang="fortran"&gt;write (89,100) "Hello world!"&lt;/syntaxhighlight&gt;
+
+uses the format given at label 100 to output to unit 89. If output unit with this number exists yet (no "&lt;tt&gt;OPEN&lt;/tt&gt;" statement or processor-specific external unit setting), a new file will be created and the output sent there. On most UNIX/Linux systems that file will be named "&lt;tt&gt;fort.89&lt;/tt&gt;".
+{{7*7}}
+
+=={{header|Fortress}}==
+&lt;syntaxhighlight lang="fortress"&gt;export Executable                                                                                                                       
+                                                                                                                                        
+run() = println("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|FreeBASIC}}==
+&lt;syntaxhighlight lang="freebasic"&gt;? "Hello world!"
+sleep&lt;/syntaxhighlight&gt;
+
+
+=={{header|Free Pascal}}==
+&lt;syntaxhighlight lang="pascal"&gt;
+PROGRAM HelloWorld ;
+
+{$APPTYPE CONSOLE}
+
+(*) 
+
+        https://www.freepascal.org/advantage.var
+
+(*)
+
+USES
+
+    crt;
+
+BEGIN
+
+  WriteLn ( 'Hello world!' ) ;
+
+END.
+&lt;/syntaxhighlight&gt;
+
+=={{header|Frege}}==
+
+{{Works with|Frege|3.20.113}}
+
+&lt;syntaxhighlight lang="frege"&gt;module HelloWorld where
+main _ = println "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|friendly interactive shell}}==
+Unlike other [[UNIX shell]] languages, fish doesn't support history substitution, so &lt;code&gt;!&lt;/code&gt; is safe to use without quoting.
+&lt;syntaxhighlight lang="fishshell"&gt;echo Hello world!&lt;/syntaxhighlight&gt;
+
+=={{header|Frink}}==
+&lt;syntaxhighlight lang="frink"&gt;
+println["Hello world!"]
+&lt;/syntaxhighlight&gt;
+
+=={{header|FunL}}==
+&lt;syntaxhighlight lang="funl"&gt;println( 'Hello world!' )&lt;/syntaxhighlight&gt;
+
+
+=={{header|Furor}}==
+&lt;syntaxhighlight lang="furor"&gt;."Hello, World!\n"&lt;/syntaxhighlight&gt;
+
+=={{header|FutureBasic}}==
+&lt;syntaxhighlight lang="futurebasic"&gt;window 1
+print @"Hello world!"
+
+HandleEvents&lt;/syntaxhighlight&gt;
+
+=={{header|FUZE BASIC}}==
+&lt;syntaxhighlight lang="qbasic"&gt;PRINT "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Gambas}}==
+'''[https://gambas-playground.proko.eu/?gist=d3a51f670e4eb0f793b513b14329be51 Click this link to run this code]'''
+&lt;syntaxhighlight lang="gambas"&gt;Public Sub Main()
+
+PRINT "Hello world!"
+ 
+End&lt;/syntaxhighlight&gt;
+
+=={{header|GAP}}==
+&lt;syntaxhighlight lang="gap"&gt;# Several ways to do it
+"Hello world!";
+
+Print("Hello world!\n"); # No EOL appended
+
+Display("Hello world!");
+
+f := OutputTextUser();
+WriteLine(f, "Hello world!\n");
+CloseStream(f);&lt;/syntaxhighlight&gt;
+
+=={{header|GB BASIC}}==
+&lt;syntaxhighlight lang="gb basic"&gt;10 print "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|gecho}}==
+&lt;syntaxhighlight lang="gecho"&gt;'Hello, &lt;&gt; 'World! print&lt;/syntaxhighlight&gt;
+
+=={{header|Gema}}==
+Gema ia a preprocessor that reads an input file and writes an output file.
+This code will write "Hello world!' no matter what input is given.
+
+&lt;syntaxhighlight lang="gema"&gt;*= ! ignore off content of input
+\B=Hello world!\! ! Start output with this text.&lt;/syntaxhighlight&gt;
+
+=={{header|Genie}}==
+&lt;syntaxhighlight lang="genie"&gt;
+init
+    print "Hello world!"
+&lt;/syntaxhighlight&gt;
+
+=={{header|Gentee}}==
+&lt;syntaxhighlight lang="gentee"&gt;func hello &lt;main&gt;
+{
+   print("Hello world!")
+}&lt;/syntaxhighlight&gt;
+
+=={{header|GFA Basic}}==
+&lt;syntaxhighlight lang="gfabasic"&gt;PRINT "Hello World"&lt;/syntaxhighlight&gt;
+
+=={{header|GLBasic}}==
+&lt;syntaxhighlight lang="glbasic"&gt;STDOUT "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Glee}}==
+&lt;syntaxhighlight lang="glee"&gt;"Hello world!"&lt;/syntaxhighlight&gt;
+
+or
+
+&lt;syntaxhighlight lang="glee"&gt;'Hello world!'&lt;/syntaxhighlight&gt;
+
+or to display with double quotes
+
+&lt;syntaxhighlight lang="glee"&gt; '"Goodbye,World!"'&lt;/syntaxhighlight&gt;
+
+or to display with single quotes
+
+&lt;syntaxhighlight lang="glee"&gt; "'Goodbye,World!'"&lt;/syntaxhighlight&gt;
+
+=={{header|Global Script}}==
+
+This uses the &lt;code&gt;gsio&lt;/code&gt; I/O operations, which are designed to be simple to implement on top of Haskell and simple to use.
+&lt;syntaxhighlight lang="global script"&gt;λ _. print qq{Hello world!\n}&lt;/syntaxhighlight&gt;
+
+=={{header|GlovePIE}}==
+&lt;syntaxhighlight lang="glovepie"&gt;debug="Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|GML}}==
+&lt;syntaxhighlight lang="c"&gt;show_message("Hello world!"); // displays a pop-up message
+show_debug_message("Hello world!"); // sends text to the debug log or IDE&lt;/syntaxhighlight&gt;
+
+=={{header|Go}}==
+
+&lt;syntaxhighlight lang="go"&gt;package main
+
+import "fmt"
+
+func main() { fmt.Println("Hello world!") }&lt;/syntaxhighlight&gt;
+
+=={{header|Golfscript}}==
+&lt;syntaxhighlight lang="golfscript"&gt;"Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Gosu}}==
+&lt;syntaxhighlight lang="gosu"&gt;print("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|Grain}}==
+&lt;syntaxhighlight lang="grain"&gt;print("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|Groovy}}==
+&lt;syntaxhighlight lang="groovy"&gt;println "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|GW-BASIC}}==
+&lt;syntaxhighlight lang="qbasic"&gt;10 PRINT "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Hack}}==
+&lt;syntaxhighlight lang="hack"&gt;&lt;?hh echo 'Hello world!'; ?&gt;&lt;/syntaxhighlight&gt;
+
+=={{header|Halon}}==
+If the code in run in the REPL the output will be to stdout otherwise syslog LOG_DEBUG will be used.
+
+&lt;syntaxhighlight lang="halon"&gt;echo "Hello world!";&lt;/syntaxhighlight&gt;
+
+=={{header|Harbour}}==
+&lt;syntaxhighlight lang="visualfoxpro"&gt;? "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Hare}}==
+&lt;syntaxhighlight lang="hare"&gt;use fmt;
+
+export fn main() void = {
+	fmt::println("Hello, world!")!;
+};&lt;/syntaxhighlight&gt;
+
+=={{header|Haskell}}==
+&lt;syntaxhighlight lang="haskell"&gt;
+main = putStrLn "Hello world!"
+&lt;/syntaxhighlight&gt;
+
+=={{header|Haxe}}==
+&lt;syntaxhighlight lang="actionscript"&gt;trace("Hello world!");&lt;/syntaxhighlight&gt;
+
+=={{header|hexiscript}}==
+&lt;syntaxhighlight lang="hexiscript"&gt;println "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|HicEst}}==
+&lt;syntaxhighlight lang="hicest"&gt;WRITE() 'Hello world!'&lt;/syntaxhighlight&gt;
+
+=={{header|HLA}}==
+&lt;syntaxhighlight lang="hla"&gt;program goodbyeWorld;
+#include("stdlib.hhf")
+begin goodbyeWorld;
+
+  stdout.put( "Hello world!" nl );
+
+end goodbyeWorld;&lt;/syntaxhighlight&gt;
+
+=={{header|HolyC}}==
+&lt;syntaxhighlight lang="holyc"&gt;"Hello world!\n";&lt;/syntaxhighlight&gt;
+
+=={{header|Hoon}}==
+&lt;syntaxhighlight lang="hoon"&gt;~&amp;  "Hello world!"  ~&lt;/syntaxhighlight&gt;
+
+=={{header|HPPPL}}==
+&lt;syntaxhighlight lang="hpppl"&gt;PRINT("Hello world!");&lt;/syntaxhighlight&gt;
+
+=={{header|HQ9+}}==
+{{incorrect|HQ9+|output isn't consistent with the task's requirements (and is probably incapable of solving the task).}}
+&lt;syntaxhighlight lang="hq9plus"&gt;H&lt;/syntaxhighlight&gt;
+*Technically, HQ9+ can't print "Hello world!" text because of its specification.
+- H : Print 'Hello World!'&lt;br&gt;
+- Q : Quine&lt;br&gt;
+- 9 : Print '99 Bottles of Beer'&lt;br&gt;
+- + : Increase Pointer (useless!)
+
+=={{header|Huginn}}==
+&lt;syntaxhighlight lang="huginn"&gt;#! /bin/sh
+exec huginn --no-argv -E "${0}" "${@}"
+#! huginn
+
+main() {
+	print( "Hello World!\n" );
+	return ( 0 );
+}&lt;/syntaxhighlight&gt;
+=={{header|HTML5}}==
+&lt;syntaxhighlight lang="html5"&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;h1&gt;Hello world!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;/syntaxhighlight&gt;
+
+=={{header|Hy}}==
+&lt;syntaxhighlight lang="clojure"&gt;(print "Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|i}}==
+&lt;syntaxhighlight lang="i"&gt;software {
+    print("Hello world!")
+}&lt;/syntaxhighlight&gt;
+
+=={{header|Icon}} and {{header|Unicon}}==
+&lt;syntaxhighlight lang="icon"&gt;procedure main()
+  write( "Hello world!" )
+end&lt;/syntaxhighlight&gt;
+
+=={{header|IDL}}==
+&lt;syntaxhighlight lang="idl"&gt;print,'Hello world!'&lt;/syntaxhighlight&gt;
+
+=={{header|Idris}}==
+&lt;syntaxhighlight lang="idris"&gt;module Main
+
+main : IO ()
+main = putStrLn "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Inform 6}}==
+&lt;syntaxhighlight lang="inform 6"&gt;[Main;
+  print "Hello world!^";
+];&lt;/syntaxhighlight&gt;
+
+=={{header|Inko}}==
+&lt;syntaxhighlight lang="inko"&gt;import std::stdio::stdout
+
+stdout.print('Hello, world!')&lt;/syntaxhighlight&gt;
+
+
+=={{header|Intercal}}==
+&lt;syntaxhighlight lang="intercal"&gt;DO ,1 &lt;- #13
+PLEASE DO ,1 SUB #1 &lt;- #238
+DO ,1 SUB #2 &lt;- #108
+DO ,1 SUB #3 &lt;- #112
+DO ,1 SUB #4 &lt;- #0
+DO ,1 SUB #5 &lt;- #64
+DO ,1 SUB #6 &lt;- #194
+PLEASE DO ,1 SUB #7 &lt;- #48
+DO ,1 SUB #8 &lt;- #26
+DO ,1 SUB #9 &lt;- #244
+PLEASE DO ,1 SUB #10 &lt;- #168
+DO ,1 SUB #11 &lt;- #24
+DO ,1 SUB #12 &lt;- #16
+DO ,1 SUB #13 &lt;- #162
+PLEASE READ OUT ,1
+PLEASE GIVE UP&lt;/syntaxhighlight&gt;
+
+
+=={{header|Integer BASIC}}==
+NOTE:  Integer BASIC was written (and hand-assembled by Woz himself) for the Apple 1 and original Apple 2.  The Apple 1 has NO support for lower-case letters, and it was an expensive (and later) option on the Apple 2.  This example accurately represents the only reasonable solution for those target devices, and therefore cannot be "fixed", only deleted.
+
+&lt;syntaxhighlight lang="integer basic"&gt;   10 PRINT "Hello world!"
+   20 END&lt;/syntaxhighlight&gt;
+
+=={{header|Io}}==
+&lt;syntaxhighlight lang="io"&gt;"Hello world!" println&lt;/syntaxhighlight&gt;
+
+=={{header|Ioke}}==
+&lt;syntaxhighlight lang="ioke"&gt;"Hello world!" println&lt;/syntaxhighlight&gt;
+
+=={{header|IS-BASIC}}==
+&lt;syntaxhighlight lang="is-basic"&gt;PRINT "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Isabelle}}==
+&lt;syntaxhighlight lang="isabelle"&gt;theory Scratch
+  imports Main
+begin
+  value ‹''Hello world!''›
+end&lt;/syntaxhighlight&gt;
+
+=={{header|IWBASIC}}==
+&lt;syntaxhighlight lang="iwbasic"&gt;
+OPENCONSOLE
+
+PRINT"Hello world!"
+
+'This line could be left out.
+PRINT:PRINT:PRINT"Press any key to end."
+
+'Keep the console from closing right away so the text can be read.
+DO:UNTIL INKEY$&lt;&gt;""
+
+CLOSECONSOLE
+
+END
+&lt;/syntaxhighlight&gt;
+
+=={{header|J}}==
+&lt;syntaxhighlight lang="j"&gt;   'Hello world!'
+Hello world!&lt;/syntaxhighlight&gt;
+
+Here are some redundant alternatives:
+&lt;syntaxhighlight lang="j"&gt;   [data=. 'Hello world!'
+Hello world!
+   data
+Hello world!
+   smoutput data
+Hello world!
+
+   NB. unassigned names are verbs of infinite rank awaiting definition.
+   NB. j pretty prints the train.
+   Hello World!
+Hello World !
+
+
+   NB. j is glorious, and you should know this!
+
+   i. 2 3   NB. an array of integers
+0 1 2
+3 4 5
+
+   verb_with_infinite_rank =: 'Hello world!'"_
+
+   verb_with_infinite_rank i. 2 3
+Hello world!
+   
+
+   verb_with_atomic_rank =: 'Hello world!'"0
+
+   verb_with_atomic_rank i. 2 3
+Hello world!
+Hello world!
+Hello world!
+
+Hello world!
+Hello world!
+Hello world!
+&lt;/syntaxhighlight&gt;
+
+=={{header|Jack}}==
+&lt;syntaxhighlight lang="jack"&gt;class Main {
+  function void main () {
+    do Output.printString("Hello world!");
+    do Output.println();
+    return;
+  }
+}&lt;/syntaxhighlight&gt;
+
+=={{header|Jacquard Loom}}==
+This weaves the string "Hello world!"
+&lt;syntaxhighlight lang="jacquard"&gt;+---------------+
+|               |
+|    *    *     |
+|*   *    *  *  |
+|*           * *|
+|*           * *|
+|*  *         * |
+|   *     *   * |
+|         *     |
++---------------+
+
++---------------+
+|               |
+|*   *    *     |
+|*   *    *     |
+|            * *|
+|            * *|
+|*  *         * |
+|*  *     *   * |
+|         *     |
++---------------+
+
++---------------+
+|               |
+|*   **   * *   |
+|*******  *** * |
+| **** *   * ***|
+| **** *  ******|
+| ******   ** * |
+|   * *   *   * |
+|         *     |
++---------------+
+
++---------------+
+|               |
+|*******  *** * |
+|*******  *** * |
+|           ** *|
+|*        *  * *|
+|*******   ** * |
+|*******  *** * |
+|         *     |
++---------------+
+
++---------------+
+|               |
+|*******  *** * |
+|*******  *** * |
+|      *  *  * *|
+|      *  *  * *|
+|*******  **  * |
+|*******  **  * |
+|         *     |
++---------------+
+
++---------------+
+|               |
+|***** *  *** * |
+|*******  *** * |
+|     * * *  *  |
+|     * *    *  |
+|******   **  * |
+|******   **  * |
+|         *     |
++---------------+
+
++---------------+
+|               |
+|    *    * *   |
+|***** *  ***** |
+|***** **  * ***|
+|***** **  * ***|
+|*******   * ** |
+|   * *   *   * |
+|         *     |
++---------------+
+
++---------------+
+|               |
+|               |
+|     * *       |
+|     * *       |
+|     *         |
+|     *         |
+|               |
+|               |
++---------------+&lt;/syntaxhighlight&gt;
+
+=={{header|Java}}==
+&lt;syntaxhighlight lang="java"&gt;public class HelloWorld
+{
+ public static void main(String[] args)
+ {
+  System.out.println("Hello world!");
+ }
+}&lt;/syntaxhighlight&gt;
+
+=={{header|JavaScript}}==
+&lt;syntaxhighlight lang="javascript"&gt;document.write("Hello world!");&lt;/syntaxhighlight&gt;
+
+{{works with|NJS|0.2.5}}
+{{works with|Rhino}}
+{{works with|SpiderMonkey}}
+&lt;syntaxhighlight lang="javascript"&gt;print('Hello world!');&lt;/syntaxhighlight&gt;
+
+{{works with|JScript}}
+&lt;syntaxhighlight lang="javascript"&gt;WScript.Echo("Hello world!");&lt;/syntaxhighlight&gt;
+
+{{works with|Node.js}}
+&lt;syntaxhighlight lang="javascript"&gt;console.log("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|JCL}}==
+&lt;syntaxhighlight lang="jcl"&gt;/*MESSAGE Hello world!&lt;/syntaxhighlight&gt;
+
+=={{header|Jinja}}==
+&lt;syntaxhighlight lang="jinja"&gt;
+from jinja2 import Template
+print(Template("Hello World!").render())
+&lt;/syntaxhighlight&gt;
+A bit more convoluted, really using a template:
+&lt;syntaxhighlight lang="jinja"&gt;
+from jinja2 import Template
+print(Template("Hello {{ something }}!").render(something="World"))
+&lt;/syntaxhighlight&gt;
+
+=={{header|Joy}}==
+&lt;syntaxhighlight lang="joy"&gt;"Hello world!" putchars.&lt;/syntaxhighlight&gt;
+
+=={{header|jq}}==
+&lt;syntaxhighlight lang="jq"&gt;"Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|JSE}}==
+&lt;syntaxhighlight lang="jse"&gt;Print "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Jsish}}==
+&lt;syntaxhighlight lang="javascript"&gt;puts("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|Julia}}==
+&lt;syntaxhighlight lang="julia"&gt;println("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|K}}==
+&lt;syntaxhighlight lang="k"&gt;
+"Hello world!"
+&lt;/syntaxhighlight&gt;
+Some of the other ways this task can be attached are:
+&lt;syntaxhighlight lang="k"&gt;
+`0: "Hello world!\n"
+&lt;/syntaxhighlight&gt;
+&lt;syntaxhighlight lang="k"&gt;
+s: "Hello world!"
+s
+&lt;/syntaxhighlight&gt;
+&lt;syntaxhighlight lang="k"&gt;
+\echo "Hello world!"
+&lt;/syntaxhighlight&gt;
+
+=={{header|Kabap}}==
+&lt;syntaxhighlight lang="kabap"&gt;return = "Hello world!";&lt;/syntaxhighlight&gt;
+
+=={{header|Kaya}}==
+&lt;syntaxhighlight lang="kaya"&gt;program hello;
+ 
+Void main() {
+    // My first program!
+    putStrLn("Hello world!");
+}&lt;/syntaxhighlight&gt;
+
+=={{header|Kdf9 Usercode}}==
+{{incorrect|Kdf9|output isn't consistent with the task's requirements: wording, punctuation.}}
+&lt;syntaxhighlight lang="joy"&gt; 
+
+V2; W0;
+RESTART; J999; J999;
+PROGRAM;                   (main program);
+   V0 = Q0/AV1/AV2;
+   V1 = B0750064554545700; ("Hello" in Flexowriter code);
+   V2 = B0767065762544477; ("World" in Flexowriter code);
+   V0; =Q9; POAQ9;         (write "Hello World" to Flexowriter);
+999;  OUT;
+   FINISH;
+&lt;/syntaxhighlight&gt;
+
+=={{header|Keg}}==
+&lt;syntaxhighlight lang="keg"&gt;Hello world\!&lt;/syntaxhighlight&gt;
+
+=={{header|Kite}}==
+simply a single line
+&lt;syntaxhighlight lang="kite"&gt;"#!/usr/local/bin/kite
+
+"Hello world!"|print;&lt;/syntaxhighlight&gt;
+
+=={{header|Kitten}}==
+
+&lt;syntaxhighlight lang="kitten"&gt;"Hello world!" say&lt;/syntaxhighlight&gt;
+
+=={{header|Koka}}==
+&lt;syntaxhighlight lang="koka"&gt;fun main() {
+  println("Hello world!")
+}&lt;/syntaxhighlight&gt;
+
+=={{header|KonsolScript}}==
+Displays it in a text file or console/terminal.
+&lt;syntaxhighlight lang="konsolscript"&gt;function main() {
+  Konsol:Log("Hello world!")
+}&lt;/syntaxhighlight&gt;
+
+=={{header|Kotlin}}==
+&lt;syntaxhighlight lang="kotlin"&gt;fun main() {
+    println("Hello world!")
+}&lt;/syntaxhighlight&gt;
+
+=={{header|KQL}}==
+
+&lt;syntaxhighlight lang="kql"&gt;print 'Hello world!'&lt;/syntaxhighlight&gt;
+
+=={{header|KSI}}==
+
+&lt;syntaxhighlight lang="ksi"&gt;
+`plain
+'Hello world!' #echo #
+&lt;/syntaxhighlight&gt;
+
+=={{header|Lambdatalk}}==
+&lt;syntaxhighlight lang="scheme"&gt;
+Hello world!
+{h1 Hello world!}
+_h1 Hello world!\n
+&lt;/syntaxhighlight&gt;
+
+=={{header|Lang5}}==
+&lt;syntaxhighlight lang="lang5"&gt;"Hello world!\n" .&lt;/syntaxhighlight&gt;
+
+=={{header|langur}}==
+&lt;syntaxhighlight lang="langur"&gt;writeln "yo, peeps"&lt;/syntaxhighlight&gt;
+
+=={{header|Lasso}}==
+A plain string is output automatically.
+&lt;syntaxhighlight lang="lasso"&gt;'Hello world!'&lt;/syntaxhighlight&gt;
+
+=={{header|LaTeX}}==
+&lt;syntaxhighlight lang="latex"&gt;\documentclass{minimal}
+\begin{document}
+Hello World!
+\end{document}&lt;/syntaxhighlight&gt;
+
+=={{header|Latitude}}==
+&lt;syntaxhighlight lang="latitude"&gt;putln "Hello world!".&lt;/syntaxhighlight&gt;
+
+=={{header|LC3 Assembly}}==
+
+&lt;syntaxhighlight lang="lc3asm"&gt;.orig x3000
+LEA R0, hello    ; R0 = &amp;hello
+TRAP x22         ; PUTS (print char array at addr in R0)
+HALT
+hello .stringz "Hello World!"
+.end&lt;/syntaxhighlight&gt;
+Or (without PUTS)
+&lt;syntaxhighlight lang="lc3asm"&gt;.orig x3000
+LEA R1, hello        ; R1 = &amp;hello
+TOP LDR R0, R1, #0   ; R0 = R1[0]
+BRz END              ; if R0 is string terminator (x0000) go to END
+TRAP x21             ; else OUT (write char in R0)
+ADD R1, R1, #1       ;      increment R1
+BR TOP               ;      go to TOP
+END HALT
+hello .stringz "Hello World!"
+.end&lt;/syntaxhighlight&gt;
+
+=={{header|LDPL}}==
+&lt;syntaxhighlight lang="ldpl"&gt;
+procedure:
+display "Hello World!" crlf
+&lt;/syntaxhighlight&gt;
+
+=={{header|Lean}}==
+&lt;syntaxhighlight lang="lean"&gt;
+#eval "Hello world!"
+&lt;/syntaxhighlight&gt;
+
+=={{header|LFE}}==
+&lt;syntaxhighlight lang="lisp"&gt;
+(: io format '"Hello world!~n")
+&lt;/syntaxhighlight&gt;
+
+=={{header|Liberty BASIC}}==
+&lt;syntaxhighlight lang="lb"&gt;print "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|LIL}}==
+&lt;syntaxhighlight lang="tcl"&gt;#
+# Hello world in lil
+#
+
+print "Hello, world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Lily}}==
+There are two ways to do this. First, with the builtin print:
+
+&lt;syntaxhighlight lang="lily"&gt;print("Hello world!")&lt;/syntaxhighlight&gt;
+
+Second, by using stdout directly:
+
+&lt;syntaxhighlight lang="lily"&gt;stdout.print("Hello world!\n")&lt;/syntaxhighlight&gt;
+
+=={{header|Lilypond}}==
+&lt;syntaxhighlight lang="lilypond"&gt;\version "2.18.2"
+global = {
+  \time 4/4
+  \key c \major
+  \tempo 4=100
+}
+\relative c''{ g e e( g2)
+}
+\addlyrics {
+  Hel -- lo,   World!
+}&lt;/syntaxhighlight&gt;
+
+=={{header|Limbo}}==
+&lt;syntaxhighlight lang="limbo"&gt;implement Command;
+ 
+ include "sys.m";
+     sys: Sys;
+ 
+ include "draw.m";
+ 
+ include "sh.m";
+ 
+ init(nil: ref Draw-&gt;Context, nil: list of string)
+ {
+     sys = load Sys Sys-&gt;PATH;
+     sys-&gt;print("Hello world!\n");
+ }&lt;/syntaxhighlight&gt;
+
+=={{header|Lingo}}==
+&lt;syntaxhighlight lang="lingo"&gt;put "Hello world!"&lt;/syntaxhighlight&gt;
+
+or:
+
+&lt;syntaxhighlight lang="lingo"&gt;trace("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|Lisaac}}==
+{{works with|Lisaac|0.13.1}}
+You can print to standard output in Lisaac by calling STRING.print or INTEGER.print:
+
+&lt;syntaxhighlight lang="lisaac"&gt;Section Header          // The Header section is required.
+  + name := GOODBYE;    // Define the name of this object.
+
+Section Public
+  - main &lt;- ("Hello world!\n".print;);&lt;/syntaxhighlight&gt;
+
+However, it may be more straightforward to use IO.print_string instead:
+
+&lt;syntaxhighlight lang="lisaac"&gt;Section Header          // The Header section is required.
+  + name := GOODBYE2;   // Define the name of this object.
+
+Section Public
+  - main &lt;- (IO.put_string "Hello world!\n";);&lt;/syntaxhighlight&gt;
+
+=={{header|Little}}==
+Output to terminal:
+&lt;syntaxhighlight lang="c"&gt;puts("Hello world!");&lt;/syntaxhighlight&gt;
+
+Without the newline terminator: 
+
+&lt;syntaxhighlight lang="c"&gt;puts(nonewline: "Hello world!");&lt;/syntaxhighlight&gt;
+
+Output to arbitrary open, writable file, for example the standard error channel:
+&lt;syntaxhighlight lang="c"&gt;puts(stderr, "Hello world!");&lt;/syntaxhighlight&gt;
+
+=={{header|LiveCode}}==
+Examples using the full LiveCode IDE.
+
+Text input and output done in the Message palette/window:
+&lt;syntaxhighlight lang="livecode"&gt;put "Hello World!"&lt;/syntaxhighlight&gt;
+
+Present a dialog box to the user
+&lt;syntaxhighlight lang="livecode"&gt;Answer "Hello World!"&lt;/syntaxhighlight&gt;
+
+Example using command-line livecode-server in shell script
+&lt;syntaxhighlight lang="livecode"&gt;#! /usr/local/bin/livecode-server
+set the outputLineEndings to "lf"
+put "Hello world!" &amp; return&lt;/syntaxhighlight&gt;
+
+Livecode also supports stdout as a device to write to 
+&lt;syntaxhighlight lang="livecode"&gt;write "Hello world!" &amp; return to stdout&lt;/syntaxhighlight&gt;
+
+=={{header|LLVM}}==
+
+&lt;syntaxhighlight lang="llvm"&gt;
+; const char str[14] = "Hello World!\00"
+@.str = private unnamed_addr constant  [14 x i8] c"Hello, world!\00"
+
+; declare extern `puts` method
+declare i32 @puts(i8*) nounwind
+
+define i32 @main()
+{
+  call i32 @puts( i8* getelementptr ([14 x i8]* @str, i32 0,i32 0))
+  ret i32 0
+}&lt;/syntaxhighlight&gt;
+
+=={{header|Lobster}}==
+&lt;syntaxhighlight lang="lobster"&gt;print "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Logo}}==
+Print includes a line feed:
+&lt;syntaxhighlight lang="logo"&gt;print [Hello world!]&lt;/syntaxhighlight&gt;
+Type does not:
+&lt;syntaxhighlight lang="logo"&gt;type [Hello world!]&lt;/syntaxhighlight&gt;
+
+=={{header|Logtalk}}==
+&lt;syntaxhighlight lang="logtalk"&gt;:- object(hello_world).
+
+    % the initialization/1 directive argument is automatically executed
+    % when the object is loaded into memory:
+    :- initialization(write('Hello world!\n')).
+
+:- end_object.&lt;/syntaxhighlight&gt;
+
+=={{header|LOLCODE}}==
+&lt;syntaxhighlight lang="lolcode"&gt;
+HAI
+CAN HAS STDIO?
+VISIBLE "Hello world!"
+KTHXBYE
+&lt;/syntaxhighlight&gt;
+
+=={{header|LotusScript}}==
+&lt;syntaxhighlight lang="lotusscript"&gt;:- object(hello_world).
+    'This will send the output to the status bar at the bottom of the Notes client screen
+    print "Hello world!"
+
+:- end_object.&lt;/syntaxhighlight&gt;
+
+=={{header|LSE}}==
+&lt;syntaxhighlight lang="lse"&gt;AFFICHER [U, /] 'Hello world!'&lt;/syntaxhighlight&gt;
+
+=={{header|LSE64}}==
+&lt;syntaxhighlight lang="lse64"&gt;"Hello world!" ,t nl&lt;/syntaxhighlight&gt;
+
+=={{header|Lua}}==
+Function calls with either a string literal or a table constructor passed as their only argument do not require parentheses.
+&lt;syntaxhighlight lang="lua"&gt;print "Hello world!"&lt;/syntaxhighlight&gt;
+
+Harder way with a table:
+&lt;syntaxhighlight lang="lua"&gt; 
+local chars = {"G","o","o","d","b","y","e",","," ","W","o","r","l","d","!"}
+for i = 1, #chars do
+  io.write(chars[i])
+end
+-- or:
+print(table.concat(chars))
+&lt;/syntaxhighlight&gt;
+
+=={{header|Luna}}==
+&lt;syntaxhighlight lang="luna"&gt;def main:
+    hello = "Hello, World!"
+    print hello&lt;/syntaxhighlight&gt;
+
+=={{header|M2000 Interpreter}}==
+&lt;syntaxhighlight lang="m2000 interpreter"&gt;
+Print "Hello World!" \\ printing on columns, in various ways defined by last $() for specific layer
+Print $(4),"Hello World!" \\ proportional printing using columns, expanded to a number of columns as the length of string indicates.
+Report "Hello World!"  \\ proportional printing with word wrap, for text, can apply justification and rendering a range of text lines
+&lt;/syntaxhighlight&gt;
+
+=={{header|M4}}==
+For the particular nature of m4, this is simply:
+&lt;syntaxhighlight lang="m4"&gt;`Hello world!'&lt;/syntaxhighlight&gt;
+
+=={{header|MACRO-10}}==
+&lt;syntaxhighlight lang="macro-10"&gt;
+
+        TITLE HELLO
+
+COMMENT !
+  Hello-World program, PDP-10 assembly language, written by kjx, 2022.
+           Assembler: MACRO-10    Operating system: TOPS-20
+!
+
+        SEARCH MONSYM                      ;Get symbolic names for system-calls.
+
+GO::    RESET%                             ;System call: Initialize process.
+
+        HRROI 1,[ASCIZ /Hello World!/]     ;Put pointer to string into register 1.
+        PSOUT%                             ;System call: Print string.
+        HALTF%                             ;System call: Halt program.
+
+        JRST GO                            ;Unconditional jump to GO (in case the
+                                           ;user uses the CONTINUE-command while this
+                                           ;program is still loaded).
+
+        END GO
+
+&lt;/syntaxhighlight&gt;
+
+=={{header|MACRO-11}}==
+&lt;syntaxhighlight lang="macro-11"&gt;
+;
+;          TEXT BASED HELLO WORLD
+;          WRITTEN  BY:  BILL GUNSHANNON
+;
+ 
+           .MCALL  .PRINT .EXIT 
+           .RADIX  10
+ 
+ 
+ 
+MESG1:     .ASCII  "  "
+           .ASCII  " HELLO WORLD "
+           .EVEN
+ 
+START:
+           .PRINT  #MESG1
+ 
+DONE:
+ 
+;   CLEAN UP AND GO BACK TO KMON
+ 
+           .EXIT
+ 
+ 
+           .END     START
+&lt;/syntaxhighlight&gt;
+
+
+=={{header|Maclisp}}==
+&lt;syntaxhighlight lang="lisp"&gt;(format t "Hello world!~%")&lt;/syntaxhighlight&gt;
+Or
+&lt;syntaxhighlight lang="lisp"&gt;(print "Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|MAD}}==
+
+&lt;syntaxhighlight lang="mad"&gt;           VECTOR VALUES HELLO = $11HHELLO WORLD*$
+           PRINT FORMAT HELLO
+           END OF PROGRAM&lt;/syntaxhighlight&gt;
+
+=={{header|make}}==
+Makefile contents:
+&lt;syntaxhighlight lang="make"&gt;
+all:
+$(info Hello world!)
+&lt;/syntaxhighlight&gt;
+Running make produces:
+
+Hello world!&lt;br&gt;
+make: Nothing to be done for `all'.
+
+=={{header|Malbolge}}==
+
+'''Long version:'''
+&lt;syntaxhighlight lang="malbolge"&gt;('&amp;%:9]!~}|z2Vxwv-,POqponl$Hjig%eB@@&gt;}=&lt;M:9wv6WsU2T|nm-,jcL(I&amp;%$#"
+`CB]V?Tx&lt;uVtT`Rpo3NlF.Jh++FdbCBA@?]!~|4XzyTT43Qsqq(Lnmkj"Fhg${z@&gt;&lt;/syntaxhighlight&gt;
+
+'''Short version:'''
+&lt;syntaxhighlight lang="malbolge"&gt;(=&lt;`#9]~6ZY32Vx/4Rs+0No-&amp;Jk)"Fh}|Bcy?`=*z]Kw%oG4UUS0/@-ejc(:'8dc&lt;/syntaxhighlight&gt;
+
+{{Out}} 
+&lt;pre&gt;HELLO WORLD!
+&lt;/pre&gt;
+
+=={{header|MANOOL}}==
+In &amp;ldquo;applicative&amp;rdquo; notation:
+&lt;syntaxhighlight lang="manool"&gt;{{extern "manool.org.18/std/0.3/all"} in WriteLine[Out; "Hello world!"]}&lt;/syntaxhighlight&gt;
+OOPish notation (equivalent to the above, up to Abstract Syntax Tree):
+&lt;syntaxhighlight lang="manool"&gt;{{extern "manool.org.18/std/0.3/all"} in Out.WriteLine["Hello world!"]}&lt;/syntaxhighlight&gt;
+LISPish notation (ditto):
+&lt;syntaxhighlight lang="manool"&gt;{{extern "manool.org.18/std/0.3/all"} in {WriteLine Out "Hello world!"}}&lt;/syntaxhighlight&gt;
+Using a colon punctuator (ditto):
+&lt;syntaxhighlight lang="manool"&gt;{{extern "manool.org.18/std/0.3/all"} in: WriteLine Out "Hello world!"}&lt;/syntaxhighlight&gt;
+Note that all semicolons, wherever allowed, are optional. The above example with all possible semicolons:
+&lt;syntaxhighlight lang="manool"&gt;{{extern; "manool.org.18/std/0.3/all"} in: WriteLine; Out; "Hello world!"}&lt;/syntaxhighlight&gt;
+
+=={{header|Maple}}==
+&lt;syntaxhighlight lang="maple"&gt;
+&gt; printf( "Hello world!\n" ): # print without quotes
+Hello world!
+&lt;/syntaxhighlight&gt;
+
+=={{header|Mathcad}}==
+Simply type the following directly onto a Mathcad worksheet (''A worksheet is Mathcad's combined source code file &amp; console'').  
+&lt;syntaxhighlight lang="ayrch"&gt;"Hello, World!"&lt;/syntaxhighlight&gt;
+Applies to Mathcad Prime, Mathcad Prime Express and Mathcad 15 (''and earlier'')
+
+=={{header|Mathematica}} / {{header|Wolfram Language}}==
+&lt;syntaxhighlight lang="mathematica"&gt;Print["Hello world!"]&lt;/syntaxhighlight&gt;
+
+=={{header|MATLAB}}==
+&lt;syntaxhighlight lang="matlab"&gt;&gt;&gt; disp('Hello world!')&lt;/syntaxhighlight&gt;
+
+
+=={{header|Maude}}==
+&lt;syntaxhighlight lang="maude"&gt;
+fmod BYE-WORLD is
+
+	protecting STRING .
+	
+	op sayBye : -&gt; String .
+	
+	eq sayBye = "Hello world!" .
+	
+endfm
+
+red sayBye .
+&lt;/syntaxhighlight&gt;
+
+=={{header|Maxima}}==
+&lt;syntaxhighlight lang="maxima"&gt;print("Hello world!");&lt;/syntaxhighlight&gt;
+
+=={{header|MAXScript}}==
+&lt;syntaxhighlight lang="maxscript"&gt;print "Hello world!"&lt;/syntaxhighlight&gt;
+or:
+&lt;syntaxhighlight lang="maxscript"&gt;format "%" "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|MDL}}==
+&lt;syntaxhighlight lang="mdl"&gt;&lt;PRINC "Hello world!"&gt;
+&lt;CRLF&gt;&lt;/syntaxhighlight&gt;
+
+=={{header|MEL}}==
+&lt;syntaxhighlight lang="mel"&gt;proc helloWorld () {
+   print "Hello, world!\n";
+} &lt;/syntaxhighlight&gt;
+
+=={{header|MelonBasic}}==
+&lt;syntaxhighlight lang="melonbasic"&gt;Say:Hello world!
+
+helloWorld; &lt;/syntaxhighlight&gt;
+
+=={{header|Mercury}}==
+&lt;syntaxhighlight lang="mecury"&gt;:- module hello.
+:- interface.
+:- import_module io.
+:- pred main(io::di, io::uo) is det.
+
+:- implementation.
+main(!IO) :-
+    io.write_string("Hello world!\n", !IO).&lt;/syntaxhighlight&gt;
+
+=={{header|Metafont}}==
+&lt;syntaxhighlight lang="metafont"&gt;message "Hello world!"; end&lt;/syntaxhighlight&gt;
+
+=={{header|min}}==
+&lt;syntaxhighlight lang="min"&gt;"Hello world!" puts&lt;/syntaxhighlight&gt;
+
+=={{header|MiniScript}}==
+&lt;syntaxhighlight lang="miniscript"&gt;print "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|MiniZinc}}==
+&lt;syntaxhighlight lang="minizinc"&gt;
+output ["Hello World"];
+&lt;/syntaxhighlight&gt;
+{{out}}
+&lt;pre&gt;
+Hello World
+----------
+&lt;/pre&gt;
+
+=={{header|MIPS Assembly}}==
+{{works with|MARS}} and {{works with|SPIM}}
+&lt;syntaxhighlight lang="mips"&gt;   .data #section for declaring variables
+hello:  .asciiz "Hello world!" #asciiz automatically adds the null terminator. If it's .ascii it doesn't have it.
+
+   .text # beginning of code
+main: # a label, which can be used with jump and branching instructions.
+   la $a0, hello # load the address of hello into $a0
+   li $v0, 4 # set the syscall to print the string at the address $a0
+   syscall # make the system call
+
+   li $v0, 10 # set the syscall to exit
+   syscall # make the system call&lt;/syntaxhighlight&gt;
+
+=={{header|mIRC Scripting Language}}==
+&lt;syntaxhighlight lang="mirc"&gt;echo -ag Hello world!&lt;/syntaxhighlight&gt;
+
+=={{header|ML/I}}==
+&lt;syntaxhighlight lang="ml/i"&gt;Hello world!&lt;/syntaxhighlight&gt;
+
+=={{header|Modula-2}}==
+&lt;syntaxhighlight lang="modula2"&gt;MODULE Hello;
+IMPORT InOut;
+
+BEGIN
+  InOut.WriteString('Hello world!');
+  InOut.WriteLn
+END Hello.&lt;/syntaxhighlight&gt;
+==={{header|TopSpeed Modula-2}}===
+{{works with|TopSpeed (JPI) Modula-2 under DOSBox-X}}
+Modula-2 does not have built-in procedures for I/O. Instead, I/O is done via library modules. The names and contents of these modules vary between implementations of Modula-2. The solution below shows that the console I/O module supplied with TopSpeed Modula-2 has a different name and different procedures from the implementation in the previous solution.
+&lt;syntaxhighlight lang="modula2"&gt;
+MODULE Hello;
+IMPORT IO;
+
+BEGIN
+  IO.WrStr('Hello world!'); IO.WrLn;
+
+(* Another way, showing some features of Modula-2 *)
+  IO.WrStr("Hello");  (* either single or double quotes can be used *)
+  IO.WrChar(40C);     (* character whose ASCII code is 40 octal *)
+  IO.WrStr('world!');
+  IO.WrLn();          (* procedure with no arguments: () is optional *)
+END Hello.
+&lt;/syntaxhighlight&gt;
+
+=={{header|Modula-3}}==
+&lt;syntaxhighlight lang="modula3"&gt;MODULE Goodbye EXPORTS Main;
+
+IMPORT IO;
+
+BEGIN
+  IO.Put("Hello world!\n");
+END Goodbye.&lt;/syntaxhighlight&gt;
+
+=={{header|MontiLang}}==
+&lt;syntaxhighlight lang="montilang"&gt;|Hello, World!| PRINT .&lt;/syntaxhighlight&gt;
+
+=={{header|Morfa}}==
+&lt;syntaxhighlight lang="morfa"&gt;
+import morfa.io.print;
+func main(): void
+{
+    println("Hello world!");
+}
+&lt;/syntaxhighlight&gt;
+
+=={{header|Mosaic}}==
+&lt;syntaxhighlight lang="mosaic"&gt;proc start =
+      println "Hello, world"
+end&lt;/syntaxhighlight&gt;
+
+=={{header|MUF}}==
+&lt;syntaxhighlight lang="muf"&gt;: main[ -- ]
+me @ "Hello world!" notify
+exit
+;&lt;/syntaxhighlight&gt;
+
+=={{header|MUMPS}}==
+&lt;syntaxhighlight lang="mumps"&gt;Write "Hello world!",!&lt;/syntaxhighlight&gt;
+
+=={{header|MyDef}}==
+Run with: &lt;pre&gt;mydef_run hello.def&lt;/pre&gt;
+Perl:
+&lt;syntaxhighlight lang="mydef"&gt;$print Hello world&lt;/syntaxhighlight&gt;
+
+C:
+&lt;syntaxhighlight lang="mydef"&gt;
+module: c
+$print Hello world
+&lt;/syntaxhighlight&gt;
+
+python:
+&lt;syntaxhighlight lang="mydef"&gt;
+module: python
+$print Hello world
+&lt;/syntaxhighlight&gt;
+
+JavaScript
+&lt;syntaxhighlight lang="mydef"&gt;
+module: js
+$print "Hello world"
+&lt;/syntaxhighlight&gt;
+
+go:
+&lt;syntaxhighlight lang="mydef"&gt;
+module: go
+$print Hello world
+&lt;/syntaxhighlight&gt;
+
+=={{header|MyrtleScript}}==
+&lt;syntaxhighlight lang="myrtlescript"&gt;script HelloWorld {
+    func main returns: int {
+        print("Hello World!")
+    }
+}
+&lt;/syntaxhighlight&gt;
+
+=={{header|MySQL}}==
+
+&lt;syntaxhighlight lang="mysql"&gt;SELECT 'Hello world!';&lt;/syntaxhighlight&gt;
+
+=={{header|Mythryl}}==
+
+&lt;syntaxhighlight lang="mythryl"&gt;print "Hello world!";&lt;/syntaxhighlight&gt;
+
+=={{header|N/t/roff}}==
+
+To get text output, compile the source file using NROFF and set output to the text terminal.  If you compile using TROFF, you will get graphical output suitable for typesetting on a graphical typesetter/printer instead.
+
+Because /.ROFF/ is a document formatting language, the majority of input is expected to be text to output onto a medium.  Therefore, there are no routines to explicitly call to print text.
+
+&lt;syntaxhighlight lang="n/t/roff"&gt;Hello world!&lt;/syntaxhighlight&gt;
+
+=={{header|Nanoquery}}==
+&lt;syntaxhighlight lang="nanoquery"&gt;println "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Neat}}==
+
+&lt;syntaxhighlight lang="neat"&gt;void main() writeln "Hello world!";&lt;/syntaxhighlight&gt;
+
+=={{header|Neko}}==
+&lt;syntaxhighlight lang="neko"&gt;$print("Hello world!");&lt;/syntaxhighlight&gt;
+
+=={{header|Nemerle}}==
+&lt;syntaxhighlight lang="nemerle"&gt;
+class Hello
+{
+  static Main () : void
+  {
+    System.Console.WriteLine ("Hello world!");
+  }
+}
+&lt;/syntaxhighlight&gt;
+Easier method:
+&lt;syntaxhighlight lang="nemerle"&gt;
+System.Console.WriteLine("Hello world!");
+&lt;/syntaxhighlight&gt;
+
+=={{header|NetRexx}}==
+&lt;syntaxhighlight lang="netrexx"&gt;say  'Hello world!'&lt;/syntaxhighlight&gt;
+
+=={{header|Never}}==
+&lt;syntaxhighlight lang="fsharp"&gt;func main() -&gt; int {
+    prints("Hello world!\n");
+    0
+}&lt;/syntaxhighlight&gt;
+
+{{out}}
+&lt;pre&gt;prompt$ never -f hello.nev
+Hello world!&lt;/pre&gt;
+
+=={{header|newLISP}}==
+{{works with|newLisp|6.1 and after}}
+&lt;syntaxhighlight lang="lisp"&gt;(println "Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|Nickle}}==
+&lt;syntaxhighlight lang="c"&gt;printf("Hello world!\n")&lt;/syntaxhighlight&gt;
+
+=={{header|Nim}}==
+&lt;syntaxhighlight lang="nim"&gt;echo("Hello world!")&lt;/syntaxhighlight&gt;
+using &lt;code&gt;stdout&lt;/code&gt;
+&lt;syntaxhighlight lang="nim"&gt;stdout.writeLine("Hello World!")&lt;/syntaxhighlight&gt;
+
+=={{header|Nit}}==
+&lt;syntaxhighlight lang="nit"&gt;print "Hello world!"&lt;/syntaxhighlight&gt;
+=={{header|Nix}}==
+&lt;syntaxhighlight lang="nix"&gt;"Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|NLP++}}==
+&lt;syntaxhighlight lang="nlp++"&gt;
+@CODE
+"output.txt" &lt;&lt; "Hello world!";
+@@CODE
+&lt;/syntaxhighlight&gt;
+
+=={{header|NS-HUBASIC}}==
+&lt;p&gt;As lowercase characters are not offered in NS-HUBASIC, perhaps some flexibility in the task specification could be offered.&lt;/p&gt;
+Using &lt;code&gt;?&lt;/code&gt;:
+&lt;syntaxhighlight lang="ns-hubasic"&gt;10 ? "HELLO WORLD!"&lt;/syntaxhighlight&gt;
+
+Using &lt;code&gt;PRINT&lt;/code&gt;:
+&lt;syntaxhighlight lang="ns-hubasic"&gt;10 PRINT "HELLO WORLD!"&lt;/syntaxhighlight&gt;
+
+=={{header|Nyquist}}==
+'''Interpreter:''' [[Nyquist]] (3.15)
+[[Category:Nyquist Version 3.15]]
+===LISP syntax===
+&lt;syntaxhighlight lang="lisp"&gt;(format t "Hello world!")&lt;/syntaxhighlight&gt;
+
+Or
+
+&lt;syntaxhighlight lang="lisp"&gt;(print "Hello world!")&lt;/syntaxhighlight&gt;
+
+===SAL syntax===
+&lt;syntaxhighlight lang="sal"&gt;print "Hello World!"&lt;/syntaxhighlight&gt;
+
+Or
+
+&lt;syntaxhighlight lang="sal"&gt;exec format(t, "Hello World!")&lt;/syntaxhighlight&gt;
+
+=={{header|Oberon-2}}==
+&lt;syntaxhighlight lang="oberon2"&gt;
+MODULE Goodbye;
+IMPORT Out;
+  PROCEDURE World*;
+  BEGIN
+    Out.String("Hello world!");Out.Ln
+  END World;
+BEGIN
+  World;
+END Goodbye.
+&lt;/syntaxhighlight&gt;
+
+=={{header|Objeck}}==
+&lt;syntaxhighlight lang="objeck"&gt;
+class Hello {
+  function : Main(args : String[]) ~ Nil {
+    "Hello world!"-&gt;PrintLine();
+  }
+}&lt;/syntaxhighlight&gt;
+
+=={{header|Objective-C}}==
+{{works with|clang-602.0.53}}
+
+The de facto Objective-C "Hello, World!" program is most commonly illustrated as the following, using the NSLog() function:
+
+&lt;syntaxhighlight lang="objc"&gt;
+#import &lt;Foundation/Foundation.h&gt;
+
+int main() {
+    @autoreleasepool {
+        NSLog(@"Hello, World!");
+    }
+}
+&lt;/syntaxhighlight&gt;
+
+However the purpose of the NSLog() function is to print a message to standard error prefixed with a timestamp, which does not meet the most common criteria of a "Hello, World!" program of displaying only the requested message to standard output.
+
+The following code prints the message to standard output without a timestamp using exclusively Objective-C messages:
+
+&lt;syntaxhighlight lang="objc"&gt;
+#import &lt;Foundation/Foundation.h&gt;
+
+int main() {
+    @autoreleasepool {
+        NSFileHandle *standardOutput = [NSFileHandle fileHandleWithStandardOutput];
+        NSString *message = @"Hello, World!\n";
+        [standardOutput writeData:[message dataUsingEncoding:NSUTF8StringEncoding]];
+    }
+}
+&lt;/syntaxhighlight&gt;
+
+Objective-C also supports functions contained within the C standard library. However, Objective-C's NSString objects must be converted into a UTF-8 string in order to be supported by the C language's I/O functions.
+
+&lt;syntaxhighlight lang="objc"&gt;
+#import &lt;Foundation/Foundation.h&gt;
+
+int main() {
+    @autoreleasepool {
+        NSString *message = @"Hello, World!\n";
+        printf("%s", message.UTF8String);
+    }
+}
+&lt;/syntaxhighlight&gt;
+
+=={{header|OCaml}}==
+&lt;syntaxhighlight lang="ocaml"&gt;print_endline "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Occam}}==
+{{works with|kroc}}
+&lt;syntaxhighlight lang="occam"&gt;#USE "course.lib"
+PROC main (CHAN BYTE screen!)
+  out.string("Hello world!*c*n", 0, screen)
+:&lt;/syntaxhighlight&gt;
+
+=={{header|Octave}}==
+&lt;syntaxhighlight lang="octave"&gt;disp("Hello world!");&lt;/syntaxhighlight&gt;
+
+Or, using C-style function printf:
+
+&lt;syntaxhighlight lang="octave"&gt;printf("Hello world!");&lt;/syntaxhighlight&gt;
+
+=={{header|Odin}}==
+&lt;syntaxhighlight lang="odin"&gt;package main
+import "core:fmt"
+
+main :: proc() {
+  fmt.println("Hellope!");
+}&lt;/syntaxhighlight&gt;
+
+=={{header|Oforth}}==
+&lt;syntaxhighlight lang="oforth"&gt;"Hello world!" .&lt;/syntaxhighlight&gt;
+
+=={{header|Ol}}==
+&lt;syntaxhighlight lang="scheme"&gt;(print "Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|Onyx}}==
+&lt;syntaxhighlight lang="onyx"&gt;`Hello world!\n' print flush&lt;/syntaxhighlight&gt;
+
+=={{header|OOC}}==
+To print a String, either call its println() method:
+&lt;syntaxhighlight lang="ooc"&gt;main: func {
+  "Hello world!" println()
+}&lt;/syntaxhighlight&gt;
+Or call the free println() function with the String as the argument.
+&lt;syntaxhighlight lang="ooc"&gt;main: func {
+  println("Hello world!")
+}&lt;/syntaxhighlight&gt;
+
+=={{header|ooRexx}}==
+Refer also to the [[#REXX|Rexx]] and [[#NetRexx|NetRexx]] solutions.  Simple output is common to most Rexx dialects.
+&lt;syntaxhighlight lang="oorexx"&gt;/* Rexx */
+say 'Hello world!'
+&lt;/syntaxhighlight&gt;
+
+=={{header|OpenLisp}}==
+We can use the same code as the Common Lisp example, but as a shell script.
+&lt;syntaxhighlight lang="openlisp"&gt;
+#!/openlisp/uxlisp -shell
+(format t "Hello world!~%")
+(print "Hello world!")
+&lt;/syntaxhighlight&gt;
+
+Output:
+Hello world!
+"Hello world!"
+
+=={{header|Openscad}}==
+&lt;syntaxhighlight lang="openscad"&gt;
+echo("Hello world!");  // writes to the console
+text("Hello world!");  // creates 2D text in the object space
+linear_extrude(height=10) text("Hello world!"); // creates 3D text in the object space
+&lt;/syntaxhighlight&gt;
+
+=={{header|Oxygene}}==
+From [[wp:Oxygene (programming language)]]
+&lt;syntaxhighlight lang="oxygene"&gt;
+namespace HelloWorld;
+ 
+interface
+ 
+type
+  HelloClass = class
+  public
+    class method Main; 
+  end;
+ 
+implementation
+ 
+class method HelloClass.Main;
+begin
+  writeLn('Hello world!');
+end;
+ 
+end.
+&lt;/syntaxhighlight&gt;
+&lt;pre&gt;
+&gt;HelloWorld.exe
+Hello world!
+&lt;/pre&gt;
+
+=={{header|Oz}}==
+&lt;syntaxhighlight lang="oz"&gt;{Show "Hello world!"}&lt;/syntaxhighlight&gt;
+
+=={{header|PARI/GP}}==
+
+&lt;syntaxhighlight lang="parigp"&gt;print("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|Pascal}}==
+{{works with|Free Pascal}}
+&lt;syntaxhighlight lang="pascal"&gt;program byeworld;
+begin
+ writeln('Hello world!');
+end.&lt;/syntaxhighlight&gt;
+
+=={{header|PASM}}==
+&lt;syntaxhighlight lang="pasm"&gt;print "Hello world!\n"
+end&lt;/syntaxhighlight&gt;
+
+=={{header|PDP-1 Assembly}}==
+This can be assembled with macro1.c distributed with SIMH and then run on the SIMH PDP-1 simulator.
+&lt;syntaxhighlight lang="assembly"&gt;
+hello   
+/ above: title line - was punched in human readable letters on paper tape
+/ below: location specifier - told assembler what address to assemble to
+100/
+lup,	lac i ptr		/ load ac from address stored in pointer
+	cli			/ clear io register
+lu2,	rcl 6s			/ rotate combined ac + io reg 6 bits to the left
+				/ left 6 bits in ac move into right 6 bits of io reg
+	tyo			/ type out character in 6 right-most bits of io reg
+	sza			/ skip next instr if accumulator is zero
+	jmp lu2			/ otherwise do next character in current word
+	idx ptr			/ increment pointer to next word in message
+	sas end			/ skip next instr if pointer passes the end of message
+	jmp lup			/ otherwise do next word in message
+	hlt			/ halt machine
+ptr,	msg			/ pointer to current word in message
+msg,	text "hello, world"	/ 3 6-bit fiodec chars packed into each 18-bit word
+end,	.         		/ sentinel for end of message
+start 100			/ tells assembler where program starts
+&lt;/syntaxhighlight&gt;
+
+=={{header|PDP-11 Assembly}}==
+This is Dennis Ritchie's Unix Assembler ("as"). Other PDP-11 assemblers include PAL-11R, PAL-11S and MACRO-11.
+
+{{works with|UNIX|1}} to {{works with|UNIX|7}}
+
+&lt;syntaxhighlight lang="assembly"&gt;.globl  start
+	.text
+start:
+        mov	$1,r0               / r0=stream, STDOUT=$1
+	sys	4; outtext; outlen  / sys 4 is write
+	sys	1                   / sys 1 is exit
+	rts	pc                  / in case exit returns
+
+	.data
+outtext: &lt;Hello world!\n&gt;
+outlen = . - outtext&lt;/syntaxhighlight&gt;
+
+=={{header|PepsiScript}}==
+The letters are only outputted in uppercase in the running program. However, lowercase characters can be used in the code instead.
+
+For typing:
+&lt;syntaxhighlight lang="pepsiscript"&gt;#include default-libraries
+
+#author Childishbeat
+
+class Hello world/Text:
+function Hello world/Text:
+
+print "Hello world!"
+
+end&lt;/syntaxhighlight&gt;
+For importing:
+
+•dl◘Childishbeat◙♦Hello world/Text♪♣Hello_world!♠
+
+=={{header|Perl}}==
+{{works with|Perl|5.8.8}}
+&lt;syntaxhighlight lang="perl"&gt;print "Hello world!\n";&lt;/syntaxhighlight&gt;
+
+{{works with|Perl|5.10.x}}
+Backported from Raku:
+&lt;syntaxhighlight lang="perl"&gt;use feature 'say';
+say 'Hello world!';&lt;/syntaxhighlight&gt;
+
+or:
+&lt;syntaxhighlight lang="perl"&gt;use 5.010;
+say 'Hello world!';&lt;/syntaxhighlight&gt;
+
+=={{header|Peylang}}==
+&lt;syntaxhighlight lang="peylang"&gt;chaap 'Hello world!';&lt;/syntaxhighlight&gt;
+{{out}}
+&lt;pre&gt;
+$ peyman hello.pey
+Hello world!
+&lt;/pre&gt;
+
+=={{header|Pharo}}==
+&lt;syntaxhighlight lang="pharo"&gt;"Comments are in double quotes"
+"Sending message printString to 'Hello World' string"
+
+'Hello World' printString&lt;/syntaxhighlight&gt;
+
+=={{header|Phix}}==
+{{libheader|Phix/basics}}
+&lt;!--&lt;syntaxhighlight lang="phix"&gt;--&gt;
+ &lt;span style="color: #7060A8;"&gt;puts&lt;/span&gt;&lt;span style="color: #0000FF;"&gt;(&lt;/span&gt;&lt;span style="color: #000000;"&gt;1&lt;/span&gt;&lt;span style="color: #0000FF;"&gt;,&lt;/span&gt;&lt;span style="color: #008000;"&gt;"Hello world!"&lt;/span&gt;&lt;span style="color: #0000FF;"&gt;)&lt;/span&gt;
+&lt;!--&lt;/syntaxhighlight&gt;--&gt;
+
+=={{header|PHL}}==
+&lt;syntaxhighlight lang="phl"&gt;module helloworld;
+extern printf;
+
+@Integer main [
+    printf("Hello world!");
+    return 0;
+]&lt;/syntaxhighlight&gt;
+
+=={{header|PHP}}==
+&lt;syntaxhighlight lang="php"&gt;&lt;?php
+echo "Hello world!\n";
+?&gt;&lt;/syntaxhighlight&gt;
+Alternatively, any text outside of the &lt;code&gt;&lt;?php ?&gt;&lt;/code&gt; tags will be automatically echoed:
+&lt;syntaxhighlight lang="php"&gt;Hello world!&lt;/syntaxhighlight&gt;
+
+=={{header|Picat}}==
+&lt;syntaxhighlight lang="picat"&gt;println("Hello, world!")&lt;/syntaxhighlight&gt;
+
+=={{header|PicoLisp}}==
+&lt;syntaxhighlight lang="picolisp"&gt;(prinl "Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|Pict}}==
+Using the syntax sugared version:
+&lt;syntaxhighlight lang="pict"&gt;(prNL "Hello World!");&lt;/syntaxhighlight&gt;
+Using the channel syntax:
+&lt;syntaxhighlight lang="pict"&gt;new done: ^[]
+run ( prNL!["Hello World!" (rchan done)]
+    | done?_ = () )&lt;/syntaxhighlight&gt;
+
+=={{header|Pikachu}}==
+&lt;syntaxhighlight lang="pict"&gt;pikachu pika pikachu pika pika pi pi pika pikachu pika pikachu pi pikachu pi pikachu pi pika pi pikachu pikachu pi pi pika pika pikachu pika pikachu pikachu pi pika pi pika pika pi pikachu pikachu pi pikachu pi pika pikachu pi pikachu pika pikachu pi pikachu pikachu pi pikachu pika pika pikachu pi pikachu pi pi pikachu pikachu pika pikachu pi pika pi pi pika pika pikachu pikachu pi pi pikachu pi pikachu
+pikachu pikachu pi pikachu
+pikachu pika pika pikachu pika pikachu pikachu pika pika pikachu pikachu pi pi pikachu pika pikachu pika pika pi pika pikachu pikachu pi pika pika pikachu pi pika pi pika pi pikachu pi pikachu pika pika pi pi pika pi pika pika pikachu pikachu pika pikachu pikachu pika pi pikachu pika pi pikachu pi pika pika pi pikachu pika pi pika pikachu pi pi pikachu pika pika pi pika pi pikachu
+pikachu pikachu pi pikachu
+pikachu pika pi pika pika pikachu pika pikachu pi pikachu pi pi pika pi pikachu pika pi pi pika pikachu pi pikachu pi pi pikachu pikachu pika pikachu pikachu pika pi pikachu pi pika pikachu pi pikachu pika pika pikachu pika pi pi pikachu pikachu pika pika pikachu pi pika pikachu pikachu pi pika pikachu pikachu pika pi pi pikachu pikachu pi pikachu pi pikachu pi pikachu pi pika pikachu pi pikachu pika pikachu pi pika pi pikachu
+pi pika
+pikachu pikachu pi pikachu
+pika pi
+pikachu pikachu pi pikachu
+pikachu pi pikachu pi pi pikachu pi pikachu pika pikachu pikachu pi pikachu pikachu pika pi pi pika pikachu pika pikachu pi pi pikachu pika pi pi pikachu pika pika pi pika pika pikachu pika pikachu pi pi pika pikachu pika pi pikachu pikachu pi pikachu pika pikachu pikachu pika pi pi pikachu pikachu pi pika pikachu pi pikachu pika pikachu pikachu pika pi pikachu pikachu pika pikachu pi pikachu pika pika pi pikachu pi pika pi pikachu pikachu pi pikachu
+pi pika
+pikachu pikachu pi pikachu
+pikachu pikachu pi pika pikachu pi pika pika pi pi pika pi pikachu pi pika pi pika pi pika pikachu pika pi pi pikachu pi pikachu pi pika pi pika pika pikachu pi pikachu
+pikachu pikachu pi pikachu
+pikachu pi pikachu pika pikachu pi pika pi pikachu pikachu pika pika pi pi pikachu pi pika pi pikachu pi pika pikachu pi pika pi pi pikachu pikachu pika pika pikachu pikachu pi pi pikachu pi pikachu pi pikachu pi pi pikachu pikachu pi pikachu pi pikachu pi pika pika pikachu pikachu pika pi pika pikachu pi pikachu pi pi pika pikachu pika pi pikachu pi pika pi pi pikachu pikachu pika pika pikachu pika pika pikachu pi pika pi pika pikachu pi pika pikachu pika pi pika pikachu
+pikachu pikachu pika pikachu
+pikachu pikachu pika pikachu
+pi pi pikachu pi pikachu pika pika pi pikachu pika pika pi pi pika pika pikachu pi pi pikachu pi pika pi pika pikachu pi pikachu pi pikachu pikachu pi pi pika pika pi pika pika pi pika pikachu pikachu pi pikachu pika pi pi pika pi pi pikachu pikachu pika pi pi pika pika pi pika pikachu pi pikachu pi pi pika pi pika pika pikachu pika pi pika pikachu pi pikachu pikachu pi pi pika pi pika pika pikachu pikachu pi pikachu
+pikachu pikachu pi pikachu
+pikachu pi pikachu pikachu pika pikachu pikachu pika pika pikachu pikachu pika pikachu pi pika pikachu pika pika pi pikachu pi pi pika pi pi pikachu pika pika pikachu pikachu pika pikachu pikachu pi pika pi pi pikachu pikachu pika pi pi pikachu pikachu pika pikachu pika pi pikachu pi pika pi pika pikachu pika pi pikachu pi pikachu pikachu pi pika pikachu pi pikachu pikachu pi pika pi pikachu pikachu pi pikachu pika pika pi pi pikachu
+pikachu pi pi pika pi pi pikachu pika pikachu pikachu pika pika pi pi pika pikachu pi pikachu pi pi pika pi pika pi pi pika pikachu pi pika pi pikachu pika pikachu pika pi pi pika pi pi pikachu pi pikachu pikachu pika pi pikachu pi pi pika pi pikachu pi pi pika pi pi pikachu pika pikachu pika pikachu pika pi pikachu pikachu pi pi pika pika pikachu
+pikachu pikachu pi pikachu
+pikachu pikachu pika pikachu&lt;/syntaxhighlight&gt;
+
+=={{header|Pike}}==
+&lt;syntaxhighlight lang="pike"&gt;int main(){
+   write("Hello world!\n");
+}&lt;/syntaxhighlight&gt;
+
+=={{header|PILOT}}==
+&lt;syntaxhighlight lang="pilot"&gt;T:Hello world!&lt;/syntaxhighlight&gt;
+
+=={{header|PIR}}==
+&lt;syntaxhighlight lang="pir"&gt;.sub hello_world_text :main
+	print "Hello world!\n"
+.end&lt;/syntaxhighlight&gt;
+
+=={{header|Pixilang}}==
+&lt;syntaxhighlight lang="pixilang"&gt;fputs("Hello world!\n")&lt;/syntaxhighlight&gt;
+
+=={{header|PL/I}}==
+&lt;syntaxhighlight lang="pli"&gt;goodbye:proc options(main);
+     put list('Hello world!');
+end goodbye;&lt;/syntaxhighlight&gt;
+
+=={{header|PL/M}}==
+The original PL/M compiler does not recognise lower-case letters, hence the Hello, World! string must specify the ASCII codes for the lower-case letters.
+&lt;syntaxhighlight lang="pli"&gt;100H:
+   /* CP/M BDOS SYSTEM CALL */
+   BDOS: PROCEDURE( FN, ARG ); DECLARE FN BYTE, ARG ADDRESS; GOTO 5; END;
+   /* PRINT A $ TERMINATED STRING */
+   PRINT$STRING: PROCEDURE( S ); DECLARE S ADDRESS; CALL BDOS( 9, S ); END;
+   /* HELLO, WORLD! IN MIXED CASE */
+   DECLARE HELLO$WORLD ( 14 ) BYTE
+           INITIAL( 'H', 65H, 6CH, 6CH, 6FH, ',', ' '
+                  , 'W', 6FH, 72H, 6CH, 64H, 21H, '$'
+                  );
+   CALL PRINT$STRING( .HELLO$WORLD );
+EOF&lt;/syntaxhighlight&gt;
+
+=={{header|PL/SQL}}==
+{{works with|Oracle}}
+&lt;syntaxhighlight lang="plsql"&gt;
+set serveroutput on
+
+BEGIN
+  DBMS_OUTPUT.PUT_LINE('Hello world!');
+END;
+/
+&lt;/syntaxhighlight&gt;
+
+&lt;pre&gt;
+SQL&gt; set serveroutput on
+SQL&gt; 
+SQL&gt; BEGIN
+  2    DBMS_OUTPUT.PUT_LINE('Hello world!');
+  3  END;
+  4  /
+Hello world!                                                                    
+
+PL/SQL procedure successfully completed.
+&lt;/pre&gt;
+
+=={{header|Plain English}}==
+&lt;syntaxhighlight lang="plainenglish"&gt;\This prints Hello World within the CAL-4700 IDE.
+\...and backslashes are comments!
+To run:
+Start up.
+Write "Hello World!" to the console.
+Wait for the escape key.
+Shut down.&lt;/syntaxhighlight&gt;
+
+=={{header|Plan}}==
+This prints HELLO WORLD on operator's console.
+
+&lt;syntaxhighlight lang="plan"&gt;#STEER         LIST,BINARY
+#PROGRAM       HLWD
+#LOWER
+MSG1A          11HHELLO WORLD
+MSG1B          11/MSG1A
+#PROGRAM
+#ENTRY         0
+      DISTY    MSG1B
+      SUSWT    2HHH
+#END
+#FINISH
+#STOP&lt;/syntaxhighlight&gt;
+
+=={{header|Pony}}==
+&lt;syntaxhighlight lang="pony"&gt;actor Main
+  new create(env: Env) =&gt;
+    env.out.print("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|Pop11}}==
+&lt;syntaxhighlight lang="pop11"&gt;printf('Hello world!\n');&lt;/syntaxhighlight&gt;
+
+=={{header|Portugol}}==
+Portugol keywords are Portuguese words.
+&lt;syntaxhighlight lang="portugol"&gt;
+programa {
+// funcao defines a new function
+// inicio is the entry point of the program, like main in C
+    funcao inicio() {
+        // escreva is used to print stuff to the screen
+        escreva("Hello, world!\n") // no ';' needed
+    }
+}
+&lt;/syntaxhighlight&gt;
+
+=={{header|PostScript}}==
+
+To generate a document that shows the text "Hello world!":
+
+&lt;syntaxhighlight lang="postscript"&gt;%!PS
+/Helvetica 20 selectfont
+70 700 moveto
+(Hello world!) show
+showpage&lt;/syntaxhighlight&gt;
+
+If the viewer has a console, then there are the following ways to display the topmost element of the stack:
+
+&lt;syntaxhighlight lang="postscript"&gt;(Hello world!) ==&lt;/syntaxhighlight&gt;
+
+will display the &lt;i&gt;string&lt;/i&gt; "(Hello world!)";
+
+&lt;syntaxhighlight lang="postscript"&gt;(Hello world!) =&lt;/syntaxhighlight&gt;
+
+will display the &lt;i&gt;content&lt;/i&gt; of the string "(Hello world!)"; that is, "Hello world!";
+
+&lt;syntaxhighlight lang="postscript"&gt;(Hello world!) print&lt;/syntaxhighlight&gt;
+
+will do the same, without printing a newline. It may be necessary to provoke an error message to make the console pop up. The following program combines all four above variants:
+
+&lt;syntaxhighlight lang="postscript"&gt;%!PS
+/Helvetica 20 selectfont
+70 700 moveto
+(Hello world!) dup dup dup
+= print == % prints three times to the console
+show % prints to document
+1 0 div % provokes error message
+showpage&lt;/syntaxhighlight&gt;
+
+=={{header|Potion}}==
+&lt;syntaxhighlight lang="potion"&gt;"Hello world!\n" print&lt;/syntaxhighlight&gt;
+
+=={{header|PowerBASIC}}==
+&lt;syntaxhighlight lang="powerbasic"&gt;#COMPILE EXE
+#COMPILER PBCC 6
+
+FUNCTION PBMAIN () AS LONG
+  CON.PRINT "Hello world!"
+  CON.WAITKEY$
+END FUNCTION&lt;/syntaxhighlight&gt;
+
+=={{header|PowerShell}}==
+This example used to say that using ''Write-Host'' was good practice. This is not true - it should in fact be avoided in most cases. 
+
+See http://www.jsnover.com/blog/2013/12/07/write-host-considered-harmful/ (Jeffrey Snover is one of the creators of PowerShell).
+&lt;syntaxhighlight lang="powershell"&gt;'Hello world!'&lt;/syntaxhighlight&gt;
+
+=={{header|Processing}}==
+&lt;syntaxhighlight lang="processing"&gt;println("Hello world!");&lt;/syntaxhighlight&gt;
+
+=={{header|ProDOS}}==
+&lt;syntaxhighlight lang="prodos"&gt;printline Hello world!&lt;/syntaxhighlight&gt;
+
+=={{header|Programming Language}}==
+For typing:
+&lt;syntaxhighlight lang="programming language"&gt;print(Hello world!)&lt;/syntaxhighlight&gt;
+For importing:
+
+[print(Hello world!)]
+
+=={{header|Prolog}}==
+&lt;syntaxhighlight lang="prolog"&gt;:- write('Hello world!'), nl.&lt;/syntaxhighlight&gt;
+
+=={{header|PROMAL}}==
+&lt;syntaxhighlight lang="promal"&gt;
+program hello
+include library
+begin
+output "Hello world!"
+end
+&lt;/syntaxhighlight&gt;
+
+=={{header|PSQL}}==
+  EXECUTE BLOCK
+    RETURNS(S VARCHAR(40))
+  AS
+  BEGIN
+    S = 'Hello world!';
+    SUSPEND;
+  END
+
+=={{header|Pure}}==
+&lt;syntaxhighlight lang="pure"&gt;
+using system;
+
+puts "Hello world!\n" ;
+&lt;/syntaxhighlight&gt;
+
+=={{header|PureBasic}}==
+&lt;syntaxhighlight lang="purebasic"&gt;OpenConsole()
+PrintN("Hello world!")
+Input() ; Wait for enter&lt;/syntaxhighlight&gt;
+using &lt;code&gt;Debug&lt;/code&gt;
+&lt;syntaxhighlight lang="purebasic"&gt;Debug("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|Python}}==
+{{works with|Python|2.4}}
+&lt;syntaxhighlight lang="python"&gt;print "Hello world!"&lt;/syntaxhighlight&gt;
+
+The same using sys.stdout
+&lt;syntaxhighlight lang="python"&gt;import sys
+sys.stdout.write("Hello world!\n")&lt;/syntaxhighlight&gt;
+
+In Python 3.0, print is changed from a statement to a function.
+
+{{works with|Python|3.0}} (And version 2.X too).
+&lt;syntaxhighlight lang="python"&gt;print("Hello world!")&lt;/syntaxhighlight&gt;
+
+'''An easter egg'''
+The first two examples print &lt;code&gt;Hello, world!&lt;/code&gt; once, and the last one prints it twice.
+&lt;syntaxhighlight lang="python"&gt;import __hello__&lt;/syntaxhighlight&gt;
+
+&lt;syntaxhighlight lang="python"&gt;import __phello__&lt;/syntaxhighlight&gt;
+
+&lt;syntaxhighlight lang="python"&gt;import __phello__.spam&lt;/syntaxhighlight&gt;
+
+=={{header|QB64}}==
+&lt;syntaxhighlight lang="qbasic"&gt;PRINT "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Quackery}}==
+&lt;syntaxhighlight lang="quackery"&gt;say "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Quill}}==
+&lt;syntaxhighlight lang="quill"&gt;"Hello world!" print&lt;/syntaxhighlight&gt;
+
+=={{header|Quite BASIC}}==
+&lt;syntaxhighlight lang="quite basic"&gt;10 print "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|R}}==
+&lt;syntaxhighlight lang="r"&gt; cat("Hello world!\n")&lt;/syntaxhighlight&gt;
+or
+&lt;syntaxhighlight lang="r"&gt; message("Hello world!")&lt;/syntaxhighlight&gt;
+or
+&lt;syntaxhighlight lang="r"&gt; print("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|Ra}}==
+&lt;syntaxhighlight lang="ra"&gt;
+class HelloWorld
+	**Prints "Hello world!"**
+
+	on start
+
+		print "Hello world!"
+&lt;/syntaxhighlight&gt;
+
+=={{header|Racket}}==
+&lt;syntaxhighlight lang="racket"&gt;
+(printf "Hello world!\n")
+&lt;/syntaxhighlight&gt;
+
+=={{header|Raku}}==
+(formerly Perl 6)
+&lt;syntaxhighlight lang="raku" line&gt;say 'Hello world!';&lt;/syntaxhighlight&gt;
+In an object-oriented approach, the string is treated as an object calling its '''say()''' method:
+&lt;syntaxhighlight lang="raku" line&gt;"Hello, World!".say();&lt;/syntaxhighlight&gt;
+
+=={{header|Raven}}==
+&lt;syntaxhighlight lang="raven"&gt;'Hello world!' print&lt;/syntaxhighlight&gt;
+
+=={{header|RATFOR}}==
+&lt;syntaxhighlight lang="ratfor"&gt;
+
+program hello
+
+write(*,101)"Hello World"
+101 format(A)
+
+end
+
+&lt;/syntaxhighlight&gt;
+
+
+=={{header|RASEL}}==
+&lt;syntaxhighlight lang="text"&gt;A"!dlroW ,olleH"&gt;:?@,Hj&lt;/syntaxhighlight&gt;
+
+=={{header|REALbasic}}==
+{{works with|REALbasic|5.5}}
+This requires a console application.
+
+&lt;syntaxhighlight lang="realbasic"&gt;Function Run(args() as String) As Integer
+  Print "Hello world!"
+  Quit
+End Function&lt;/syntaxhighlight&gt;
+
+=={{header|REBOL}}==
+&lt;syntaxhighlight lang="rebol"&gt;print "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|RED}}==
+&lt;syntaxhighlight lang="red"&gt;print "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Relation}}==
+
+&lt;syntaxhighlight lang="relation"&gt;
+' Hello world!
+&lt;/syntaxhighlight&gt;
+
+=={{header|ReScript}}==
+
+&lt;syntaxhighlight lang="rescript"&gt;Js.log("Hello world!")&lt;/syntaxhighlight&gt;
+{{out}}
+&lt;pre&gt;
+$ bsc hello.res &gt; hello.bs.js
+$ node hello.bs.js
+Hello world!
+&lt;/pre&gt;
+
+=={{header|Retro}}==
+
+&lt;syntaxhighlight lang="retro"&gt;
+'Hello_world! s:put
+&lt;/syntaxhighlight&gt;
+
+=={{header|REXX}}==
+===using SAY===
+&lt;syntaxhighlight lang="rexx"&gt;/*REXX program to show a line of text.  */
+say 'Hello world!'&lt;/syntaxhighlight&gt;
+
+===using SAY variable===
+&lt;syntaxhighlight lang="rexx"&gt;/*REXX program to show a line of text.  */
+yyy = 'Hello world!'
+say yyy&lt;/syntaxhighlight&gt;
+
+===using LINEOUT===
+&lt;syntaxhighlight lang="rexx"&gt;/*REXX program to show a line of text.  */
+
+call lineout ,"Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Ring}}==
+&lt;syntaxhighlight lang="ring"&gt;See "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Risc-V}}==
+&lt;syntaxhighlight lang="risc-v"&gt;.data
+hello:
+.string "Hello World!\n\0"
+.text
+main:
+la a0, hello
+li a7, 4
+ecall
+li a7, 10
+ecall
+&lt;/syntaxhighlight&gt;
+
+=={{header|Rockstar}}==
+&lt;syntaxhighlight lang="rockstar"&gt;Shout "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|RTL/2}}==
+&lt;syntaxhighlight lang="rtl/2"&gt;TITLE Goodbye World;
+
+LET NL=10;
+
+EXT PROC(REF ARRAY BYTE) TWRT;
+
+ENT PROC INT RRJOB();
+
+    TWRT("Hello world!#NL#");
+    RETURN(1);
+
+ENDPROC;&lt;/syntaxhighlight&gt;
+
+=={{header|Ruby}}==
+{{works with|Ruby|1.8.4}}
+&lt;syntaxhighlight lang="ruby"&gt;puts "Hello world!"&lt;/syntaxhighlight&gt;
+or
+&lt;syntaxhighlight lang="ruby"&gt;$stdout.puts "Hello world!"&lt;/syntaxhighlight&gt;
+or even
+&lt;syntaxhighlight lang="ruby"&gt; STDOUT.write "Hello world!\n"&lt;/syntaxhighlight&gt;
+
+
+'''Using the &gt; global'''
+&lt;syntaxhighlight lang="ruby"&gt;$&gt;.puts "Hello world!"&lt;/syntaxhighlight&gt;
+&lt;syntaxhighlight lang="ruby"&gt;$&gt;.write "Hello world!\n"&lt;/syntaxhighlight&gt;
+
+=={{header|Run BASIC}}==
+&lt;syntaxhighlight lang="runbasic"&gt;print "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Rust}}==
+&lt;syntaxhighlight lang="rust"&gt;
+fn main() {
+   print!("Hello world!");
+}
+&lt;/syntaxhighlight&gt;
+
+or
+
+&lt;syntaxhighlight lang="rust"&gt;
+fn main() {
+   println!("Hello world!");
+}
+&lt;/syntaxhighlight&gt;
+
+=={{header|Salmon}}==
+&lt;syntaxhighlight lang="salmon"&gt;"Hello world!"!&lt;/syntaxhighlight&gt;
+
+or
+
+&lt;syntaxhighlight lang="salmon"&gt;print("Hello world!\n");&lt;/syntaxhighlight&gt;
+
+or
+
+&lt;syntaxhighlight lang="salmon"&gt;standard_output.print("Hello world!\n");&lt;/syntaxhighlight&gt;
+
+=={{header|SAS}}==
+&lt;syntaxhighlight lang="sas"&gt;/* Using a data step. Will print the string in the log window */
+data _null_;
+put "Hello world!";
+run;&lt;/syntaxhighlight&gt;
+
+=={{header|SASL}}==
+Note that a string starts with a single and ends with a double quote
+&lt;syntaxhighlight lang="sasl"&gt;
+'Hello World!",nl
+&lt;/syntaxhighlight&gt;
+
+=={{header|Sather}}==
+&lt;syntaxhighlight lang="sather"&gt;class GOODBYE_WORLD is
+ main is 
+  #OUT+"Hello world!\n"; 
+ end; 
+end;&lt;/syntaxhighlight&gt;
+
+=={{header|Scala}}==
+{{libheader|Console}}
+===Ad hoc REPL solution===
+Ad hoc solution as [http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop REPL] script. Type this in a REPL session:
+&lt;syntaxhighlight lang="scala"&gt;println("Hello world!")&lt;/syntaxhighlight&gt;
+===Via Java runtime===
+This is a call to the Java run-time library. '''Not recommended'''.
+&lt;syntaxhighlight lang="scala"&gt;System.out.println("Hello world!")&lt;/syntaxhighlight&gt;
+
+===Via Scala Console API===
+This is a call to the Scala run-time library. '''Recommended'''.
+&lt;syntaxhighlight lang="scala"&gt;println("Hello world!")&lt;/syntaxhighlight&gt;
+
+===Short term deviation to out===
+&lt;syntaxhighlight lang="scala"&gt;Console.withErr(Console.out) { Console.err.println("This goes to default _out_") }&lt;/syntaxhighlight&gt;
+===Long term deviation to out===
+&lt;syntaxhighlight lang="scala"&gt;  Console.err.println ("Err not deviated")
+  Console.setErr(Console.out)
+  Console.err.println ("Err deviated")
+  Console.setErr(Console.err) // Reset to normal&lt;/syntaxhighlight&gt;
+
+=={{header|Scheme}}==
+All Scheme implementations display the value of the last evaluated expression before the program terminates.
+&lt;syntaxhighlight lang="scheme"&gt;"Hello world!"&lt;/syntaxhighlight&gt;
+
+The &lt;tt&gt;display&lt;/tt&gt; and &lt;tt&gt;newline&lt;/tt&gt; procedures are found in specific modules of the standard library in R6RS and R7RS.
+The previous standards have no concept of modules and the entirety of the standard library is loaded by default.
+
+===R5RS===
+&lt;syntaxhighlight lang="scheme"&gt;(display "Hello world!")
+(newline)&lt;/syntaxhighlight&gt;
+
+===R6RS===
+&lt;syntaxhighlight lang="scheme"&gt;(import (rnrs base (6))
+        (rnrs io simple (6)))
+(display "Hello world!")
+(newline)&lt;/syntaxhighlight&gt;
+
+===R7RS===
+&lt;syntaxhighlight lang="scheme"&gt;(import (scheme base)
+        (scheme write))
+(display "Hello world!")
+(newline)&lt;/syntaxhighlight&gt;
+
+=={{header|Scilab}}==
+&lt;syntaxhighlight lang="scilab"&gt;disp("Hello world!");&lt;/syntaxhighlight&gt;
+
+=={{header|ScratchScript}}==
+&lt;syntaxhighlight lang="scratchscript"&gt;print "Hello world!"&lt;/syntaxhighlight&gt;
+This example waits until the mouse is clicked for the program to end. This can be useful if the program executes too fast for "Hello world!" to be visible on the screen long enough for it to be comfortable.
+&lt;syntaxhighlight lang="scratchscript"&gt;print "Hello world!"
+delayOnClick&lt;/syntaxhighlight&gt;
+
+=={{header|sed}}==
+&lt;syntaxhighlight lang="sed"&gt;i\
+Hello world!
+q&lt;/syntaxhighlight&gt;
+
+=={{header|Seed7}}==
+&lt;syntaxhighlight lang="seed7"&gt;$ include "seed7_05.s7i";
+
+const proc: main is func
+  begin
+    writeln("Hello world!");
+  end func;&lt;/syntaxhighlight&gt;
+
+=={{header|Self}}==
+&lt;syntaxhighlight lang="self"&gt;'Hello world!' printLine.&lt;/syntaxhighlight&gt;
+
+=={{header|SenseTalk}}==
+&lt;syntaxhighlight lang="sensetalk"&gt;put "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Set lang}}==
+&lt;syntaxhighlight lang="set_lang"&gt;set ! H
+set ! E
+set ! L
+set ! L
+set ! O
+set ! 32
+set ! W
+set ! O
+set ! R
+set ! L
+set ! D
+set ! 33&lt;/syntaxhighlight&gt;
+
+=={{header|SETL}}==
+&lt;syntaxhighlight lang="setl"&gt;print("Hello world!");&lt;/syntaxhighlight&gt;
+
+=={{header|SETL4}}==
+&lt;syntaxhighlight lang="setl4"&gt;out("Hello world!");end&lt;/syntaxhighlight&gt;
+
+=={{header|Shen}}==
+&lt;syntaxhighlight lang="shen"&gt;(output "Hello world!~%")&lt;/syntaxhighlight&gt;
+
+=={{header|Shiny}}==
+&lt;syntaxhighlight lang="shiny"&gt;say 'Hello world!'&lt;/syntaxhighlight&gt;
+
+=={{header|Sidef}}==
+&lt;syntaxhighlight lang="sidef"&gt;„Hello world!”.say;&lt;/syntaxhighlight&gt;
+
+=={{header|SimpleCode}}==
+The letters are only outputted in uppercase in the running program. However, lowercase characters can be used in the code instead.
+&lt;syntaxhighlight lang="simplecode"&gt;dtxt
+Hello world!&lt;/syntaxhighlight&gt;
+
+=={{header|SIMPOL}}==
+&lt;syntaxhighlight lang="simpol"&gt;function main()
+end function "Hello world!{d}{a}"&lt;/syntaxhighlight&gt;
+
+=={{header|Simula}}==
+{{works with|SIMULA-67}}
+&lt;syntaxhighlight lang="simula"&gt;BEGIN
+   OUTTEXT("Hello world!");
+   OUTIMAGE
+END&lt;/syntaxhighlight&gt;
+
+=={{header|Sing}}==
+&lt;syntaxhighlight lang="sing"&gt;requires "sio";
+
+public fn singmain(argv [*]string) i32
+{
+    sio.print("hello world !\r\n");
+    return(0);
+}&lt;/syntaxhighlight&gt;
+
+=={{header|Sisal}}==
+&lt;syntaxhighlight lang="sisal"&gt;define main
+
+% Sisal doesn't yet have a string built-in.
+% Let's define one as an array of characters.
+
+type string = array[character];
+
+function main(returns string)
+  "Hello world!"
+end function&lt;/syntaxhighlight&gt;
+
+=={{header|SkookumScript}}==
+&lt;syntaxhighlight lang="javascript"&gt;print("Hello world!")&lt;/syntaxhighlight&gt;
+Alternatively if just typing in the SkookumIDE [http://skookumscript.com/docs/v3.0/ide/console/workspace/ REPL]: 
+&lt;syntaxhighlight lang="javascript"&gt;"Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Slate}}==
+&lt;syntaxhighlight lang="slate"&gt;inform: 'Hello world!'.&lt;/syntaxhighlight&gt;
+
+=={{header|Slope}}==
+&lt;syntaxhighlight lang="slope"&gt;(write "Hello, world!")&lt;/syntaxhighlight&gt;
+
+=={{header|Smalltalk}}==
+&lt;syntaxhighlight lang="smalltalk"&gt;Transcript show: 'Hello world!'; cr.&lt;/syntaxhighlight&gt;
+
+{{works with|GNU Smalltalk}} (as does the above code)
+&lt;syntaxhighlight lang="smalltalk"&gt;'Hello world!' printNl.&lt;/syntaxhighlight&gt;
+
+=={{header|smart BASIC}}==
+&lt;syntaxhighlight lang="qbasic"&gt;PRINT "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|SmileBASIC}}==
+&lt;syntaxhighlight lang="smilebasic"&gt;PRINT "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|SNOBOL4}}==
+Using CSnobol4 dialect
+&lt;syntaxhighlight lang="snobol4"&gt;    OUTPUT = "Hello world!"
+END&lt;/syntaxhighlight&gt;
+
+=={{header|SNUSP}}==
+===Core SNUSP===
+&lt;syntaxhighlight lang="snusp"&gt;/++++!/===========?\&gt;++.&gt;+.+++++++..+++\
+\+++\ | /+&gt;+++++++&gt;/ /++++++++++&lt;&lt;.++&gt;./
+$+++/ | \+++++++++&gt;\ \+++++.&gt;.+++.-----\
+      \==-&lt;&lt;&lt;&lt;+&gt;+++/ /=.&gt;.+&gt;.--------.-/&lt;/syntaxhighlight&gt;
+
+===Modular SNUSP===
+&lt;syntaxhighlight lang="snusp"&gt;@\G.@\o.o.@\d.--b.@\y.@\e.&gt;@\comma.@\.&lt;-@\W.+@\o.+++r.------l.@\d.&gt;+.! #
+ |   |     \@------|#  |    \@@+@@++|+++#-    \\               -
+ |   \@@@@=+++++#  |   \===--------!\===!\-----|-------#-------/
+ \@@+@@@+++++#     \!#+++++++++++++++++++++++#!/&lt;/syntaxhighlight&gt;
+
+=={{header|SoneKing Assembly}}==
+&lt;syntaxhighlight lang="soneking assembly"&gt;
+extern print
+
+dv Msg Goodbye,World!
+
+mov eax Msg
+push
+call print
+pop
+&lt;/syntaxhighlight&gt;
+
+=={{header|SPARC Assembly}}==
+&lt;syntaxhighlight lang="sparc"&gt;
+	.section	".text"
+	.global		_start
+_start:
+	mov	4,%g1			! 4 is SYS_write
+	mov	1,%o0			! 1 is stdout
+	set	.msg,%o1		! pointer to buffer
+	mov	(.msgend-.msg),%o2	! length
+	ta	8
+
+	mov	1,%g1			! 1 is SYS_exit
+	clr	%o0			! return status is 0
+	ta	8
+
+.msg:
+	.ascii	"Hello world!\n"
+.msgend:
+&lt;/syntaxhighlight&gt;
+
+=={{header|Sparkling}}==
+&lt;syntaxhighlight lang="sparkling"&gt;print("Hello world!");&lt;/syntaxhighlight&gt;
+
+=={{header|SPL}}==
+&lt;syntaxhighlight lang="spl"&gt;#.output("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|SQL}}==
+{{works with|Oracle}}
+{{works with|Db2 LUW}}
+&lt;syntaxhighlight lang="sql"&gt;
+select 'Hello world!' text from dual;
+&lt;/syntaxhighlight&gt;
+
+&lt;pre&gt;
+SQL&gt;select 'Hello world!' text from dual;
+TEXT
+------------
+Hello world!
+&lt;/pre&gt;
+
+=={{header|SQL PL}}==
+{{works with|Db2 LUW}}
+With SQL only:
+&lt;syntaxhighlight lang="sql pl"&gt;
+SELECT 'Hello world!' AS text FROM sysibm.sysdummy1;
+&lt;/syntaxhighlight&gt;
+Output:
+&lt;pre&gt;
+db2 -t
+db2 =&gt; SELECT 'Hello world!' AS text FROM sysibm.sysdummy1;
+
+TEXT        
+------------
+Hello world!
+
+  1 record(s) selected.
+&lt;/pre&gt;
+
+{{works with|Db2 LUW}} version 9.7 or higher.
+With SQL PL:
+&lt;syntaxhighlight lang="sql pl"&gt;
+SET SERVEROUTPUT ON;
+
+CALL DBMS_OUTPUT.PUT_LINE('Hello world!');
+&lt;/syntaxhighlight&gt;
+Output:
+&lt;pre&gt;
+db2 -t
+db2 =&gt; SET SERVEROUTPUT ON
+DB20000I  The SET SERVEROUTPUT command completed successfully.
+db2 =&gt; CALL DBMS_OUTPUT.PUT_LINE('Hello world!')
+
+  Return Status = 0
+
+Hello world!
+&lt;/pre&gt;
+
+=={{header|Standard ML}}==
+&lt;syntaxhighlight lang="sml"&gt;print "Hello world!\n"&lt;/syntaxhighlight&gt;
+
+=={{header|Stata}}==
+&lt;syntaxhighlight lang="stata"&gt;display "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Suneido}}==
+&lt;syntaxhighlight lang="suneido"&gt;Print("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|Swahili}}==
+&lt;syntaxhighlight lang="swahili"&gt;andika("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|Swift}}==
+{{works with|Swift|2.x+}}
+&lt;syntaxhighlight lang="swift"&gt;print("Hello world!")&lt;/syntaxhighlight&gt;
+{{works with|Swift|1.x}}
+&lt;syntaxhighlight lang="swift"&gt;println("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|Symsyn}}==
+&lt;syntaxhighlight lang="symsyn"&gt;
+ 'hello world' []
+&lt;/syntaxhighlight&gt;
+
+=={{header|Tailspin}}==
+&lt;syntaxhighlight lang="tailspin"&gt;'Hello World' -&gt; !OUT::write&lt;/syntaxhighlight&gt;
+
+=={{header|Tcl}}==
+Output to terminal:
+&lt;syntaxhighlight lang="tcl"&gt;puts stdout {Hello world!}&lt;/syntaxhighlight&gt;
+
+Output to arbitrary open, writable file:
+&lt;syntaxhighlight lang="tcl"&gt;puts $fileID {Hello world!}&lt;/syntaxhighlight&gt;
+
+=={{header|Teco}}==
+Outputting to terminal. Please note that ^A means control-A, not a caret followed by 'A', and that $ represent the ESC key.
+&lt;syntaxhighlight lang="teco"&gt;^AHello world!^A$$&lt;/syntaxhighlight&gt;
+
+=={{header|Tern}}==
+&lt;syntaxhighlight lang="tern"&gt;println("Hello world!");&lt;/syntaxhighlight&gt;
+
+=={{header|Terra}}==
+&lt;syntaxhighlight lang="terra"&gt;C = terralib.includec("stdio.h")
+
+terra hello(argc : int, argv : &amp;rawstring)
+  C.printf("Hello world!\n")
+  return 0
+end&lt;/syntaxhighlight&gt;
+
+=={{header|Terraform}}==
+&lt;syntaxhighlight lang="hcl"&gt;output "result" {
+  value = "Hello world!"
+}&lt;/syntaxhighlight&gt;
+{{Out}}
+&lt;pre&gt;$ terraform init
+$ terraform apply
+
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+result = Hello world!
+$ terraform output result
+Hello world!&lt;/pre&gt;
+
+=={{header|TestML}}==
+&lt;syntaxhighlight lang="testml"&gt;%TestML 0.1.0
+Print("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|TI-83 BASIC}}==
+&lt;syntaxhighlight lang="ti83b"&gt;Disp "Hello world!&lt;/syntaxhighlight&gt;
+(Lowercase letters DO exist in TI-BASIC, though you need an assembly program to enable them.)
+
+=={{header|TI-89 BASIC}}==
+&lt;syntaxhighlight lang="ti89b"&gt;Disp "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Tiny BASIC}}==
+{{works with|TinyBasic}}
+&lt;syntaxhighlight lang="basic"&gt;
+10 PRINT "Hello, World!"
+20 END
+&lt;/syntaxhighlight&gt;
+
+=={{header|TMG}}==
+Unix TMG:
+&lt;syntaxhighlight lang="tqs"&gt;begin: parse(( = { &lt;Hello, World!&gt; * } ));&lt;/syntaxhighlight&gt;
+
+=={{header|TorqueScript}}==
+&lt;syntaxhighlight lang="tqs"&gt;echo("Hello world!");&lt;/syntaxhighlight&gt;
+
+=={{header|TPP}}==
+&lt;syntaxhighlight lang="tpp"&gt;Hello world!&lt;/syntaxhighlight&gt;
+
+=={{header|Transact-SQL}}==
+
+&lt;syntaxhighlight lang="sql"&gt;PRINT "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Transd}}==
+
+&lt;syntaxhighlight lang="scheme"&gt;(textout "Hello, World!")&lt;/syntaxhighlight&gt;
+
+=={{header|TransFORTH}}==
+&lt;syntaxhighlight lang="forth"&gt;PRINT " Hello world! "&lt;/syntaxhighlight&gt;
+
+=={{header|Trith}}==
+&lt;syntaxhighlight lang="trith"&gt;"Hello world!" print&lt;/syntaxhighlight&gt;
+
+=={{header|True BASIC}}==
+&lt;syntaxhighlight lang="truebasic"&gt;
+! In True BASIC all programs run in their own window. So this is almost a graphical version.
+PRINT "Hello world!"
+END
+&lt;/syntaxhighlight&gt;
+
+=={{header|TUSCRIPT}}==
+&lt;syntaxhighlight lang="tuscript"&gt;
+$$ MODE TUSCRIPT
+PRINT "Hello world!"
+&lt;/syntaxhighlight&gt;
+Output:
+&lt;pre&gt;
+Hello world!
+&lt;/pre&gt;
+
+=={{header|uBasic/4tH}}==
+&lt;syntaxhighlight lang="text"&gt;Print "Hello world!"&lt;/syntaxhighlight&gt;
+=={{header|Uniface}}==
+&lt;syntaxhighlight lang="uniface"&gt;
+message "Hello world!"
+&lt;/syntaxhighlight&gt;
+
+=={{header|Unison}}==
+&lt;syntaxhighlight lang="unison"&gt;
+main = '(printLine "Hello world!")
+&lt;/syntaxhighlight&gt;
+
+=={{header|UNIX Shell}}==
+{{works with|Bourne Shell}}
+&lt;syntaxhighlight lang="bash"&gt;#!/bin/sh
+echo "Hello world!"&lt;/syntaxhighlight&gt;
+
+==={{header|C Shell}}===
+&lt;syntaxhighlight lang="csh"&gt;#!/bin/csh -f
+echo "Hello world!\!"&lt;/syntaxhighlight&gt;
+
+We use \! to prevent history substitution. Plain ! at end of string seems to be safe, but we use \! to be sure.
+
+=={{header|Unlambda}}==
+&lt;syntaxhighlight lang="unlambda"&gt;`r```````````````.G.o.o.d.b.y.e.,. .W.o.r.l.d.!i&lt;/syntaxhighlight&gt;
+
+=={{header|Ursa}}==
+&lt;syntaxhighlight lang="ursa"&gt;out "hello world!" endl console&lt;/syntaxhighlight&gt;
+
+=={{header|Ursala}}==
+output as a side effect of compilation
+&lt;syntaxhighlight lang="ursala"&gt;#show+
+
+main = -[Hello world!]-&lt;/syntaxhighlight&gt;
+output by a compiled executable
+&lt;syntaxhighlight lang="ursala"&gt;#import std
+
+#executable ('parameterized','')
+
+main = &lt;file[contents: -[Hello world!]-]&gt;!&lt;/syntaxhighlight&gt;
+
+=={{header|உயிர்/Uyir}}==
+&lt;syntaxhighlight lang="உயிர்/uyir"&gt;முதன்மை என்பதின் வகை எண் பணி {{
+         ("உலகத்தோருக்கு வணக்கம்") என்பதை திரை.இடு;
+
+         முதன்மை = 0;
+}};&lt;/syntaxhighlight&gt;
+
+=={{header|V}}==
+&lt;syntaxhighlight lang="v"&gt;"Hello world!" puts&lt;/syntaxhighlight&gt;
+
+=={{header|Vala}}==
+&lt;syntaxhighlight lang="vala"&gt;void main(){
+	stdout.printf("Hello world!\n");
+}&lt;/syntaxhighlight&gt;
+
+=={{header|VAX Assembly}}==
+
+&lt;syntaxhighlight lang="vax assembly"&gt;
+desc:  .ascid "Hello World!"      ;descriptor (len+addr) and text
+.entry hello, ^m&lt;&gt;                ;register save mask
+       pushaq desc                ;address of descriptor
+       calls #1, g^lib$put_output ;call with one argument on stack
+       ret                        ;restore registers, clean stack &amp; return
+.end hello                        ;transfer address for linker
+&lt;/syntaxhighlight&gt;
+
+
+=={{header|VBA}}==
+&lt;syntaxhighlight lang="vb"&gt;
+Public Sub hello_world_text
+    Debug.Print "Hello World!"
+End Sub
+&lt;/syntaxhighlight&gt;
+
+
+=={{header|VBScript}}==
+{{works with|Windows Script Host|5.7}}
+&lt;syntaxhighlight lang="vbscript"&gt;WScript.Echo "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Vedit macro language}}==
+&lt;syntaxhighlight lang="vedit"&gt;Message("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|Verbexx}}==
+&lt;syntaxhighlight lang="verbexx"&gt;@SAY "Hello world!";&lt;/syntaxhighlight&gt;
+
+
+=={{header|Verilog}}==
+&lt;syntaxhighlight lang="verilog"&gt;
+module main;
+  initial begin
+      $display("Hello world!");
+      $finish ;
+    end
+endmodule
+&lt;/syntaxhighlight&gt;
+
+=={{header|VHDL}}==
+&lt;syntaxhighlight lang="vhdl"&gt;LIBRARY std;
+USE std.TEXTIO.all;
+
+entity test is
+end entity test;
+
+architecture beh of test is
+begin
+  process
+    variable line_out : line;
+  begin
+    write(line_out, string'("Hello world!"));
+    writeline(OUTPUT, line_out);
+    wait; -- needed to stop the execution
+  end process;
+end architecture beh;&lt;/syntaxhighlight&gt;
+
+=={{header|Vim Script}}==
+&lt;syntaxhighlight lang="vim"&gt;echo "Hello world!\n"&lt;/syntaxhighlight&gt;
+
+=={{header|Visual Basic}}==
+{{Libheader|Microsoft.Scripting}}
+{{works with|Visual Basic|VB6 Standard}}
+Visual Basic 6 is actually designed to create GUI applications, however with a little help from the Microsoft.Scripting Library it is fairly easy to write a simple console application.
+&lt;syntaxhighlight lang="vb"&gt;Option Explicit
+
+Private Declare Function AllocConsole Lib "kernel32.dll" () As Long
+Private Declare Function FreeConsole Lib "kernel32.dll" () As Long
+'needs a reference set to "Microsoft Scripting Runtime" (scrrun.dll)
+
+Sub Main()
+  Call AllocConsole
+  Dim mFSO As Scripting.FileSystemObject
+  Dim mStdIn As Scripting.TextStream
+  Dim mStdOut As Scripting.TextStream
+  Set mFSO = New Scripting.FileSystemObject
+  Set mStdIn = mFSO.GetStandardStream(StdIn)
+  Set mStdOut = mFSO.GetStandardStream(StdOut)
+  mStdOut.Write "Hello world!" &amp; vbNewLine
+  mStdOut.Write "press enter to quit program."
+  mStdIn.Read 1
+  Call FreeConsole
+End Sub&lt;/syntaxhighlight&gt;
+
+=={{header|Visual Basic .NET}}==
+&lt;syntaxhighlight lang="vb"&gt;Imports System
+
+Module HelloWorld
+    Sub Main()
+        Console.WriteLine("Hello world!")
+    End Sub
+End Module&lt;/syntaxhighlight&gt;
+
+=={{header|Viua VM assembly}}==
+&lt;syntaxhighlight lang="text"&gt;.function: main/0
+    text %1 local "Hello World!"
+    print %1 local
+    izero %0 local
+    return
+.end&lt;/syntaxhighlight&gt;
+
+=={{header|V (Vlang)}}==
+&lt;syntaxhighlight lang="go"&gt;fn main() {
+        println('Hello World!')
+}&lt;/syntaxhighlight&gt;
+
+=={{header|VTL-2}}==
+&lt;syntaxhighlight lang="vtl-2"&gt;10 ?="Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Wart}}==
+
+&lt;syntaxhighlight lang="wart"&gt;prn "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|WDTE}}==
+&lt;syntaxhighlight lang="wdte"&gt;io.writeln io.stdout 'Hello world!';&lt;/syntaxhighlight&gt;
+
+=={{header|WebAssembly}}==
+
+{{libheader|WASI}}
+&lt;syntaxhighlight lang="webassembly"&gt;(module $helloworld
+
+    ;;Import fd_write from WASI, declaring that it takes 4 i32 inputs and returns 1 i32 value
+    (import "wasi_unstable" "fd_write"
+        (func $fd_write (param i32 i32 i32 i32) (result i32))
+    )
+
+    ;;Declare initial memory size of 32 bytes
+    (memory 32)
+
+    ;;Export memory so external functions can see it
+    (export "memory" (memory 0))
+ 
+    ;;Declare test data starting at address 8
+    (data (i32.const 8) "Hello world!\n")
+ 
+    ;;The entry point for WASI is called _start
+    (func $main (export "_start")
+        
+        ;;Write the start address of the string to address 0
+        (i32.store (i32.const 0) (i32.const 8)) 
+ 
+        ;;Write the length of the string to address 4
+        (i32.store (i32.const 4) (i32.const 13))
+
+        ;;Call fd_write to print to console
+        (call $fd_write
+            (i32.const 1) ;;Value of 1 corresponds to stdout
+            (i32.const 0) ;;The location in memory of the string pointer
+            (i32.const 1) ;;Number of strings to output
+            (i32.const 24) ;;Address to write number of bytes written
+        )
+        drop ;;Ignore return code
+    )
+)
+&lt;/syntaxhighlight&gt;
+
+=={{header|Wee Basic}}==
+&lt;syntaxhighlight lang="wee basic"&gt;print 1 "Hello world!"
+end&lt;/syntaxhighlight&gt;
+
+=={{header|Whenever}}==
+
+&lt;syntaxhighlight lang="whenever"&gt;1 print("Hello world!");&lt;/syntaxhighlight&gt;
+
+=={{header|Whiley}}==
+
+&lt;syntaxhighlight lang="whiley"&gt;import whiley.lang.System
+
+method main(System.Console console):
+    console.out.println("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|Whitespace}}==
+There is a "Hello World" - example-program on the [http://compsoc.dur.ac.uk/whitespace/hworld.ws Whitespace-website]
+
+=={{header|Wisp}}==
+Output in Wisp follows the same concepts as [[Scheme]], but replacing outer parentheses with indentation.
+
+With [[Guile]] and wisp installed, this example can be tested in a REPL started with guile --language=wisp, or directly with the command wisp.
+
+&lt;syntaxhighlight lang="wisp"&gt;import : scheme base
+         scheme write
+display "Hello world!"
+newline&lt;/syntaxhighlight&gt;
+
+=={{header|Wolfram Language}}==
+&lt;syntaxhighlight lang="wolfram"&gt;Print["Hello world!"]&lt;/syntaxhighlight&gt;
+
+=={{header|Wren}}==
+&lt;syntaxhighlight lang="ecmascript"&gt;System.print("Hello world!")&lt;/syntaxhighlight&gt;
+
+=={{header|X10}}==
+&lt;syntaxhighlight lang="x10"&gt;class HelloWorld {
+  public static def main(args:Rail[String]):void {
+    if (args.size &lt; 1) {
+        Console.OUT.println("Hello world!");
+        return;
+    }
+  }
+}&lt;/syntaxhighlight&gt;
+
+=={{header|X86 Assembly}}==
+{{works with|nasm|2.05.01}}
+
+This is known to work on Linux, it may or may not work on other Unix-like systems
+
+Prints "Hello world!" to stdout (and there is probably an even simpler version):
+&lt;syntaxhighlight lang="asm"&gt;section .data
+msg     db      'Hello world!', 0AH
+len     equ     $-msg
+
+section .text
+global  _start
+_start: mov     edx, len
+        mov     ecx, msg
+        mov     ebx, 1
+        mov     eax, 4
+        int     80h
+
+        mov     ebx, 0
+        mov     eax, 1
+        int     80h&lt;/syntaxhighlight&gt;
+
+'''AT&amp;T syntax:''' works with gcc (version 4.9.2) and gas (version 2.5):
+
+&lt;syntaxhighlight lang="asm"&gt;.section .text
+
+.globl main
+
+main:
+	movl $4,%eax	#syscall number 4
+	movl $1,%ebx	#number 1 for stdout
+	movl $str,%ecx	#string pointer
+	movl $16,%edx	#number of bytes
+	int $0x80	#syscall interrupt
+	ret
+
+.section .data
+str: .ascii "Hello world!\12"&lt;/syntaxhighlight&gt;
+
+=={{header|X86-64 Assembly}}==
+===UASM===
+&lt;syntaxhighlight lang="asm"&gt;
+option casemap:none
+if @Platform eq 1
+   option dllimport:&lt;kernel32&gt;
+      ExitProcess   proto :dword
+   option dllimport:none
+      exit          equ ExitProcess
+endif
+printf              proto :qword, :vararg
+exit                proto :dword
+
+.code
+main proc
+invoke printf, CSTR("Goodbye, World!",10)
+invoke exit, 0
+ret
+main endp
+end
+&lt;/syntaxhighlight&gt;
+===AT&amp;T syntax (Gas)===
+&lt;syntaxhighlight lang="asm"&gt;// No "main" used
+// compile with `gcc -nostdlib`
+#define SYS_WRITE   $1
+#define STDOUT      $1
+#define SYS_EXIT    $60
+#define MSGLEN      $14
+
+.global _start
+.text
+
+_start:
+    movq    $message, %rsi          // char *
+    movq    SYS_WRITE, %rax
+    movq    STDOUT, %rdi
+    movq    MSGLEN, %rdx
+    syscall                         // sys_write(message, stdout, 0x14);
+    
+    movq    SYS_EXIT, %rax
+    xorq    %rdi, %rdi              // The exit code.
+    syscall                         // exit(0)
+    
+.data
+message:    .ascii "Hello, world!\n"&lt;/syntaxhighlight&gt;
+
+=={{header|XBasic}}==
+{{works with|Windows XBasic}}
+&lt;syntaxhighlight lang="xbasic"&gt;
+PROGRAM "hello"
+VERSION "0.0003"
+
+DECLARE FUNCTION Entry()
+
+FUNCTION Entry()
+  PRINT "Hello World"
+END FUNCTION
+END PROGRAM
+&lt;/syntaxhighlight&gt;
+
+=={{header|xEec}}==
+&lt;syntaxhighlight lang="xeec"&gt;
+h#10 h$! h$d h$l h$r h$o h$w h#32  
+h$o h$l h$l h$e h$H &gt;o o$ p jno
+&lt;/syntaxhighlight&gt;
+
+=={{header|XL}}==
+&lt;syntaxhighlight lang="xl"&gt;use XL.UI.CONSOLE
+WriteLn "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|XLISP}}==
+&lt;syntaxhighlight lang="xlisp"&gt;(DISPLAY "Hello world!")
+(NEWLINE)&lt;/syntaxhighlight&gt;
+
+=={{header|XPL0}}==
+&lt;syntaxhighlight lang="xpl0"&gt;code Text=12;
+Text(0, "Hello world!
+")&lt;/syntaxhighlight&gt;
+
+=={{header|XPath}}==
+&lt;syntaxhighlight lang="xpath"&gt;'Hello world&amp;#xA;'&lt;/syntaxhighlight&gt;
+
+=={{header|XSLT}}==
+With a literal newline:
+&lt;syntaxhighlight lang="xml"&gt;&lt;xsl:text&gt;Hello world!
+&lt;/xsl:text&gt;&lt;/syntaxhighlight&gt;
+Or, with an explicit newline:
+&lt;syntaxhighlight lang="xml"&gt;&lt;xsl:text&gt;Hello world!&amp;#xA;&lt;/xsl:text&gt;&lt;/syntaxhighlight&gt;
+
+=={{header|Yabasic}}==
+&lt;syntaxhighlight lang="yabasic"&gt;
+print "Hello world!"
+&lt;/syntaxhighlight&gt;
+
+=={{header|Yorick}}==
+&lt;syntaxhighlight lang="yorick"&gt;write, "Hello world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Z80 Assembly}}==
+
+Using the Amstrad CPC firmware:
+
+&lt;syntaxhighlight lang="z80"&gt;org		$4000
+
+txt_output:	equ	$bb5a
+
+		push	hl
+		ld	hl,world
+
+print:		ld	a,(hl)
+		cp	0
+		jr	z,end
+		call	txt_output
+		inc	hl
+		jr	print
+
+end:		pop	hl
+		ret
+
+world:		defm	"Hello world!\r\n\0"&lt;/syntaxhighlight&gt;
+
+=={{header|zkl}}==
+&lt;syntaxhighlight lang="zkl"&gt;println("Hello world!");&lt;/syntaxhighlight&gt;
+{{omit from|VBA|VBA can't write or output to console}}
+
+=={{header|Zig}}==
+&lt;syntaxhighlight lang="zig"&gt;const std = @import("std");
+pub fn main() !void {
+    try std.io.getStdOut().writer().writeAll("Hello world!\n");
+}&lt;/syntaxhighlight&gt;
+
+=={{header|Zoea}}==
+&lt;syntaxhighlight lang="zoea"&gt;program: hello_world 
+  output: "Hello  world!"&lt;/syntaxhighlight&gt;
+
+=={{header|Zoea Visual}}==
+[http://zoea.co.uk/examples/zv-rc/Hello_world.png Hello World]
+
+=={{header|Zoomscript}}==
+For typing:
+&lt;syntaxhighlight lang="zoomscript"&gt;print "Hello world!"&lt;/syntaxhighlight&gt;
+For importing:
+
+¶0¶print "Hello world!"
+
+=={{header|ZX Spectrum Basic}}==
+&lt;syntaxhighlight lang="zxbasic"&gt;10 print "Hello world!"&lt;/syntaxhighlight&gt;</text>
+      <sha1>pvejvhhj3r3js3coyflyl113kmxoycz</sha1>
+    </revision>
+  </page>
+</mediawiki>

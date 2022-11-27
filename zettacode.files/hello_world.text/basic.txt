@@ -1,0 +1,14 @@
+{{ |BASICA}}
+{{ |C BASIC}}
+{{ |Lc Bc}}
+{{ |M2000 I}}
+{{ |MSX BASIC}}
+{{ |T BASIC}}
+10  "Ho wod!"
+
+{{ |7Bc}}
+{{ |BC}} [[C:BC]]
+{{ |QBc}}
+{{ |M2000 I}}
+{{ |Sc Bc}}
+PRINT "Ho wod!"

@@ -1,0 +1,27 @@
+
+E Two Numb   oom.
+
+Nuc    c    ub. U "[ub]"  uc .
+
+T f ub   ub  .
+
+Af uc  f  f :
+	  f ub   ub u.
+
+Af uc  f  c :
+	 A b  f ub
+	 B b  ub u
+	 "[A] + [B] = [A + B]." [ ]
+	 "[A] - [B] = [A u B]." [E ]
+	 P b  b P = A * B  P   ub [ qu]
+	 "[A] * [B] = [P]."
+	 Q b  b  D Fu [ qu]
+	 "[A]  [B] = [Q]."
+	 "[A]  [B] = [ f  A b B]."
+	  .
+
+Equ - D Fu
+	Q = A  B
+ Q   ub, A   ub,  B   ub.
+
+T u  fu : c , E ,  qu,   qu. D u  z,          qu.

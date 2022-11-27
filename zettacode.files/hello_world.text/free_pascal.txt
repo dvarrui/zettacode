@@ -1,0 +1,21 @@
+
+PROGRAM HW 
+
+{$APPTYPE CONSOLE}
+
+(*) 
+
+        :.fc..
+
+(*)
+
+USES
+
+    c
+
+BEGIN
+
+  WL ( 'H !' ) 
+
+END.
+

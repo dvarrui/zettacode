@@ -1,0 +1,11 @@
+Pu   Puu .
+
+ {
+ fuc f   fuc
+ c     f  ,    C
+    fuc c() {
+         c  u   uff   c
+        c("H, !\")   '' 
+    }
+}
+

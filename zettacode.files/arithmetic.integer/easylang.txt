@@ -1,0 +1,9 @@
+
+ = umb u
+b = ub u
+  + b
+  - b
+  * b
+   b
+   b
+   b

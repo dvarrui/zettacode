@@ -1,0 +1,19 @@
+T    ,      ub f  c.  '''''' u  u  c ffc  (  b -- %b b ).
+: mc (  b -- )
+  c ." ="  . ." b=" u .
+  c ." +b=" 2u + .
+  c ." -b=" 2u - .
+  c ." *b=" 2u * .
+  c ." b="  .
+  c ."   b = " . c 
+
+Dff    ff    b. ANS F f   ub-c   , f c    c   u    bc   (  ,  ,  , * ). T   u  ff cfc    u , F-79  F-83.
+
+FMMOD ( d  -- mod dv )   \ food
+SMREM (   --   )   \ c
+M* (   --  )
+
+I ,   u .
+
+UMMOD ( ud u -- umod udv )
+UM* ( u u -- u )

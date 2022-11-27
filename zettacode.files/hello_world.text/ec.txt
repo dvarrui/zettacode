@@ -1,0 +1,7 @@
+c GoodBA : Aco
+{
+    M()
+   {
+      PL("H !")
+   }
+}

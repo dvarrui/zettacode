@@ -1,0 +1,7 @@
+
+ PjcGb
+{$APPTYPE CONSOLE}
+b
+  WL('H !')
+.
+

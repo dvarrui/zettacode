@@ -1,0 +1,38 @@
+[[F:PAcI.]]b
+ c
+ c   c
+ ()   A
+ uc AA
+ uc AAA
+ uc AAAA
+ uc AAAAA
+ ()   BAAAAA
+ uc BBAAAAA
+ uc BBBAAAAA
+ uc BBBBAAAAA
+ uc BBBBBAAAAA
+ u 9    9BBBBBAAAAA
+ u 1    19BBBBBAAAAA
+       BBBBAAAABA
+ u 7    7BBBBAAAABA
+ u 1    17BBBBAAAABA
+       BBBAAABABA
+ u 5    5BBBAAABABA
+ u 1    15BBBAAABABA
+       BBAABABABA
+ u 3    3BBAABABABA
+ u 1    13BBAABABABA
+       BABABABABA
+        (A+B)BABABABA
+ u()  BABABABA
+ ub       (A-B)BABABA
+ u()  BABABA
+ u      (A*B)BABA
+ u()  BABA
+     (AB)BA
+ u()  BA
+        (A%B)
+ u()  NULL
+ u 1    1
+ c
+H u    u   , bu I b    u  0.

@@ -1,0 +1,19 @@
+om IAmc
+
+{$APPTYPE CONSOLE}
+
+u SU, M
+
+
+  , b: I
+b
+   := STI(PS(1))
+  b := STI(PS(2))
+
+  WL(F('% + % = %', [, b,  + b]))
+  WL(F('% - % = %', [, b,  - b]))
+  WL(F('% * % = %', [, b,  * b]))
+  WL(F('%  % = %', [, b,   b]))  u  0
+  WL(F('% %% % = %', [, b,   b]))  c  f  f 
+  WL(F('% ^ % = %', [, b, Tuc(P(, b))]))
+.

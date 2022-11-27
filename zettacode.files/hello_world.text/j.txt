@@ -1,0 +1,40 @@
+   'Ho wod!'
+H !
+
+H   u :
+   [d=. 'Ho wod!'
+H !
+   
+H !
+   uu 
+H !
+
+   NB. u   b f f   f.
+   NB. j    .
+   H W!
+H W !
+
+
+   NB. j  u,  u u  !
+
+   . 2 3   NB.   f 
+0 1 2
+3 4 5
+
+   b__f_ =: 'H !'"_
+
+   b__f_ . 2 3
+H !
+   
+
+   b__c_ =: 'H !'"0
+
+   b__c_ . 2 3
+H !
+H !
+H !
+
+H !
+H !
+H !
+

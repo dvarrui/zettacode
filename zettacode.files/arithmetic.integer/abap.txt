@@ -1,0 +1,25 @@
+o zz_mc o dd  d.
+
+" R    ub f  u.
+c-c b f bc u.
+  : _f  ,
+              _c  .
+c-c  f bc u.
+
+" S   u     u qu.
+ c-c uu.
+  %__f_%__%-  = 'F Nub: '.
+  %__c_%__%- = 'Sc Nub: '.
+
+-f-c.
+  : _u  .
+  _u = _f + _c.
+  :  'A:', _u.
+  _u = _f - _c.
+  :  'Subc:', _u.
+  _u = _f * _c.
+  :  'Muc:', _u.
+  _u = _f  _c.
+  :  'I qu:', _u. " Tuc  z.
+  _u = _f  _c.
+  :  'R:',  _u.

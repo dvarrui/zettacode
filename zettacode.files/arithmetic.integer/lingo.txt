@@ -1,0 +1,10 @@
+-- X, Y: 2 db fd mmb, ow     cu GUI
+ = (b("X").)
+ = (b("Y").)
+
+u "Su: "       ,  + 
+u "Dffc: ",  - 
+u "Puc: "   ,  * 
+u "Qu: "  ,      -- Tuc  z
+u "R: " ,    -- Ru   f f 
+u "E: "  , (, )

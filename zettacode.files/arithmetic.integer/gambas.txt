@@ -1,0 +1,30 @@
+Pubc Sub M()
+  D , b A S
+  D c,  A I
+
+  P "E   ub,  b c:"
+  Iu , b
+
+  c = CI()
+   = CI(b)
+
+  P "Su: "  (c + )
+  P "Dffc:"  (c - )
+  P "Puc: "  (c * )
+  P "I: "  (c D )
+  P "R: "  (c M )
+  P "E: "  (c ^ )
+
+E
+
+Ouu:
+
+E   ub,  b c:
+8 1
+Su: 9
+Dffc:7
+Puc: 8
+I: 8
+R: 0
+E: 8
+

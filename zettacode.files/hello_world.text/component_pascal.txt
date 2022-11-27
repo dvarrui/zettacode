@@ -1,0 +1,10 @@
+
+MODULE H
+	IMPORT Ou
+	
+	PROCEDURE D*
+	BEGIN
+		Ou.S("H !") Ou.L
+	END D
+END H.
+Ru c ''H.D'' b c.

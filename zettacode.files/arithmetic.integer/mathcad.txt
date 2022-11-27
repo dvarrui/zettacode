@@ -1,0 +1,51 @@
+T  b (f "T N" )     u     Mc  c   (, Mc 15, Mc P 6.0,  Mc P 6.0 E).   Mc' "b" fc   u   f    f  .  T  f  f b, u cc c   f, f z  bcu    c  .  M  u b   f b, fuc ( bu- fuc), ,    u (Mc   u-, SI-b qu ).  I      ''   b.
+
+----
+
+'''T N'''
+
+''F qu, c   u (..  z,   f, c.).''
+
+T   qu fuc  Mc,  c .  W u qu b   f b u u b f, c u   f,  uc, c u  z.
+
+''F , c    c   f  f   f  c , f   ff.
+''
+W u  Mc fuc (,), c u  u ,       . 
+
+'''Iuc'''
+
+E   f u cc f I1  I2.
+
+(      f  'I1:= '  'I2:=' ,   f  ub  )
+
+'''I'''
+
+'''Mc Iu  Ouu'''
+
+Mc "" u  uu  c c    (" uc c"). 
+
+'''Iu''':
+
+== '' u   u f := (f) ''
+
+I O:  ''I1'':='''-8'''
+
+I T:  ''I2'':='''3'''
+
+'''Ru''':
+
+== ''Mc uc ccu   u f = (u) .''
+
+u              :  ''I1'' + ''I2'' = -5  
+
+ffc       :  ''I1'' - ''I2'' = -11
+
+uc          :  ''I1'' · ''I2'' = -24
+
+ qu :  f(''I1''÷''I2'')=-3     uc(I1÷I2)=-2  
+
+        :  (''I1'',''I2'')=-2
+
+   :  ''I1''u''I2''u=-512
+
+----

@@ -1,0 +1,5 @@
+!-- {{cc|Af BASIC|uu ' c   ' qu:  c.}} --
+
+I N: Au Af BASIC     uu f -c ,  b   -c   b   uu -c   fu    ff   qu    A IIII+.  Sc Af WAS  fu  u f  A II+,   fb    cfc cu b ff, f   f    c  -c IO cb     u cfu.
+
+ ="f bc" PRINT "H !"

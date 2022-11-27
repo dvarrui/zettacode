@@ -1,0 +1,10 @@
+cud c:\c\cod
+ A, B
+[A:= II(0)
+ B:= II(0)
+IOu(0, A+B) CLf(0)
+IOu(0, A-B) CLf(0)
+IOu(0, A*B) CLf(0)
+IOu(0, AB) CLf(0)        \uc  z
+IOu(0, (0)) CLf(0)     \'  c f  (A)
+]

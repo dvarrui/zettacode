@@ -1,0 +1,20 @@
+T qu u  0 f b u      f f  u  f . T  f          f  f  ().
+Gu, Add, Ed, v, 5
+Gu, A, E, b, -3
+Gu, A, Bu, Dfu, Cu
+Gu, S
+Ru
+
+BuCu:
+  Gu, Sub
+  MB,%
+  (J`"`"
+    "+" b " = " +b
+    "-" b " = " -b
+    "*" b " = " *b
+    "" b " = " b "  " M(,b)
+    "**" b " = " **b
+  )
+ fu
+GuC:
+  EA

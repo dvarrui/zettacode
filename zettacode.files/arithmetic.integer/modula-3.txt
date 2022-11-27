@@ -1,0 +1,15 @@
+MODULE A EXPORTS M
+
+IMPORT IO, F
+
+VAR , b: INTEGER
+
+BEGIN
+   := IO.GI()
+  b := IO.GI()
+  IO.Pu("+b = "  F.I( + b)  "\")
+  IO.Pu("-b = "  F.I( - b)  "\")
+  IO.Pu("*b = "  F.I( * b)  "\")
+  IO.Pu(" DIV b = "  F.I( DIV b)  "\")
+  IO.Pu(" MOD b = "  F.I( MOD b)  "\")
+END A.

@@ -1,0 +1,7 @@
+:- objc(o_wod).
+
+    %  z1 c u  uc cu
+    %   bjc    :
+    :- z(('H !\')).
+
+:- _bjc.

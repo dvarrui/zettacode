@@ -1,0 +1,16 @@
+LIBRARY d
+USE .TEXTIO.
+
+  
+  
+
+ccu b f  
+b
+  c
+    b _u : 
+  b
+    (_u, '("H !"))
+    (OUTPUT, _u)
+     --     cu
+   c
+ ccu b

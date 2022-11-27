@@ -1,0 +1,22 @@
+mo jv.u.Sc
+
+ubc c IAc {
+    ubc c  (S[] ) {
+         G  2 ub f c  u
+        Sc c =  Sc(S.)
+          = c.I()
+         b = c.I()
+
+         u =  + b         T u f  ''  'b' (N:    cu    u  cfu   cc)
+         ffc =  - b  T u f ubc 'b' f ''
+         uc =  * b     T u f u ''  'b'
+          =   b    T u f  '' b 'b' (N: ''   c  fc u)
+          =  % b   T  f  '' b 'b'
+
+        S.u.(" + b = " + u)
+        S.u.(" - b = " + ffc)
+        S.u.(" * b = " + uc)
+        S.u.("qu f   b = " + )    uc  0
+        S.u.(" f   b = " + )       f 
+    }
+}

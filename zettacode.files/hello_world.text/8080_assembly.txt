@@ -1,0 +1,12 @@
+
+	 T  Ho Wod, w  8080 mb o u ud CPM
+	 A u c ,      8086,  CPM  
+	   DOS      c.
+		100	 CPM .COM    100 -  DOS
+		c,9	 C   c, 9 =   -  DOS
+		,	 DE      
+	j	5	 CPM c  cc u  ju  05
+	 N u' CALL , bu c u'    b RETu,
+	 JMP   b (f u'   64 f  c u  
+	  b). 
+:	b	'H !$'

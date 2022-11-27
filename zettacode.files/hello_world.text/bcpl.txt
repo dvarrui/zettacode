@@ -1,0 +1,6 @@
+GET "bd"
+
+LET () = VALOF
+{ f("H !")
+  RESULTIS 0
+}

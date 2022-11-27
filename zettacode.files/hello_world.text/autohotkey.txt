@@ -1,0 +1,9 @@
+c uc f  
+DC("AocCoo")
+FA, Gb`, W!, CONOUT$
+FRL, _, CONIN$, 1
+c u f  
+[qu W XP    V f W ´   "AcC" fuc]
+DC("AcCoo", "", -1)
+FA, Gb`, W!, CONOUT$
+SdIu Ho wod!{!}

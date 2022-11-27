@@ -1,0 +1,22 @@
+ oodbwod. fo C= 8-b mc, c65 mb fom.
+ S     f 256 cc  .
+
+_c	= $0		 C u.
+bu	= $ff2		 C64 KERNEL ROM, uu  cc  cu c.
+			 u $f f A 2, $ff3 (c)  $ff () f BBC.
+	.c
+
+	 #0		 S  0  X .
+:
+	 ,	 G cc f .
+	bq 	 If    0 ' .
+	j bu	 Ouu cc. 
+			 Ic    cc.
+	b 	 R f  ' f  0.
+:
+			 Ru f ubu.
+
+	.
+
+:
+	.b	"H !", _c, 0

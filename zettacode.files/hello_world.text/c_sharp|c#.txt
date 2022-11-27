@@ -1,0 +1,19 @@
+{{ |M|1.2}}
+{{ |Vu C |Vu C#|2003}}
+mc HoWod
+{
+    c P
+    {
+        c  M([] )
+        {
+            S.C.WL("H !")
+        }
+    }
+}
+
+{{ |Vu C |Vu C#|9.0+}}
+C# 9.0       f  uc f ( ''c_u''   cfc) b  u   c c. T  bc       c      c- .
+Sm.Coo.WL("Ho wod!")
+
+u Sm
+C.WL("H !")

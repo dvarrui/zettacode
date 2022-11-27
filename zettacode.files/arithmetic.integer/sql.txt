@@ -1,0 +1,68 @@
+{{ |Oc}}
+
+-- .q
+-- T  SQL*u
+
+ b 
+
+c b  ( , b )
+
+   u ('A','B')
+
+c
+
+c -b ffc f 
+
+c *b uc f 
+
+c uc(b) _qu f   
+
+c (,b)  f 
+
+c (,b)  f 
+
+
+
+SQL @.q
+
+Tb .
+
+
+Tb c.
+
+E u f : 3
+E u f b: 4
+   1:    u ('A','B')
+   1:    u ('3','4')
+
+1  c.
+
+
+C c.
+
+
+DIFFERENCE
+----------
+        -1
+
+
+   PRODUCT
+----------
+        12
+
+
+INTEGER_QUOTIENT
+----------------
+               0
+
+
+ REMAINDER
+----------
+         3
+
+
+EXPONENTIATION
+--------------
+            81
+   
+

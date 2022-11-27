@@ -1,0 +1,28 @@
+{{ |GNU S}}
+|  b |
+'Iu ub : ' .
+ := ( L) I.
+'Iu ub b: ' .
+b := ( L) I.
+('+b=%1' % {  + b }) N.
+('-b=%1' % {  - b }) N.
+('*b=%1' % {  * b }) N.
+('b=%1' % {   b }) N.
+('%%b=%1' % {  \\ b }) N.
+
+{{ |SX}} (   S)
+| b|
+ := (D qu:'E f ub:') Nub.
+b := (D qu:'E c ub:') Nub.
+#( + -  *  \\ qu: : T: **) :[: |
+    |u|
+    u :=  f: :b.
+    '%P % %P = %P\' f:{ .  . b . u} :Tc
+].
+  c 
+b  uc  (  f) 
+b\\   f \\
+bqu:  uc  ( z) 
+b\\   f qu:
+b**  ju   f T:
+E 10  3, :

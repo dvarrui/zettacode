@@ -1,0 +1,18 @@
+INPUT "E f umb.":f
+INPUT "E c ub.":c
+PRINT "T u f"f""c" "f+c"."
+PRINT "T ffc b"f""c" "ABS(f-c)"."
+PRINT "T uc f"f""c" "f*c"."
+IF c THEN
+    PRINT "T  qu f"f""c" "INTEG(fc)"."
+ELSE
+    PRINT "D b z  c."
+ENDIF
+PRINT "T  b..."f%c"."
+PRINT STR$(f)"    f"c" "f^c"."
+
+'''NOTES:''' S cuu c f  BASIC     c :
+
+I  BASIC, T c INTEG   u  fuc    u f  ccc. T  BASIC INT c ccu   u fuc. T ff f    f BASIC.
+ BASIC uc  c  f  b ub. T c cu uc f u  cb uu f uc b  . I   u   c, u u u   ()  cc  uc u   f  (  c,      f c c). I  c f  c, u u c  uc u   u  STR$ c (     f  c).
+

@@ -1,0 +1,20 @@
+
+PROGRAM INTEGER_ARITHMETIC
+
+!
+! f c.
+!
+
+!$INTEGER
+
+BEGIN
+  INPUT("E  ub ",A)
+  INPUT("E  ub ",B)
+
+  PRINT("A "A"+"B"="(A+B))
+  PRINT("Subc "A"-"B"="(A-B))
+  PRINT("Muc "A"*"B"="(A*B))
+  PRINT("I  "A""B"="(A DIV B))
+  PRINT("R  u "A""B"="(A MOD B))
+  PRINT("P "A"^"B"="(A^B))
+END PROGRAM

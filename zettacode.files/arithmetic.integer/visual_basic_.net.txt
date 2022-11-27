@@ -1,0 +1,14 @@
+Imo Sm.Coo
+Mu Mu1
+  Sub M
+    D  = CI(RL)
+    D b = CI(RL)
+    WL("Su "   + b)
+    WL("Dffc "   - b)
+    WL("Puc "   - b)
+    WL("Qu "    b)
+    WL("I Qu "   \ b)
+    WL("R "   M b)
+    WL("E "   ^ b)
+  E Sub
+E Mu

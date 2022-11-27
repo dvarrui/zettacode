@@ -1,0 +1,8 @@
+$ qu  "E f umb"
+$  = f$(  )
+$ qu b "E c ub"
+$ b = f$( b )
+$  $uu " + b = ",  + b
+$  $uu " - b = ",  - b
+$  $uu " * b = ",  * b
+$  $uu "  b = ",   b  ! uc 

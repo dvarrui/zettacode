@@ -1,0 +1,18 @@
+
+.o 3000
+LEA R0,      R0 = 
+TRAP 22          PUTS ( c     R0)
+HALT
+ .z "H W!"
+.
+O (u PUTS)
+.o 3000
+LEA R1,          R1 = 
+TOP LDR R0, R1, #0    R0 = R1[0]
+BRz END               f R0    (0000)   END
+TRAP 21               OUT ( c  R0)
+ADD R1, R1, #1             c R1
+BR TOP                       TOP
+END HALT
+ .z "H W!"
+.

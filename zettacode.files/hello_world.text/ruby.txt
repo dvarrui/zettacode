@@ -1,0 +1,11 @@
+{{ |Rub|1.8.4}}
+u "Ho wod!"
+
+$dou.u "Ho wod!"
+ 
+ STDOUT.w "Ho wod!\"
+
+
+'''U   b'''
+$.u "Ho wod!"
+$.w "Ho wod!\"

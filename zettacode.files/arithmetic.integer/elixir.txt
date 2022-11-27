@@ -1,0 +1,26 @@
+{{ |E|1.4}}
+dfmodu Amc_I do
+  # Fuc    b  c   
+  f _() 
+    IO.() | S. | S._
+  
+  
+  f  
+    # G u u
+     = _("E u f : ") 
+    b = _("E u c : ")
+    
+    IO.u "E I Ac:\"
+    IO.u "Su:            #{ + b}"
+    IO.u "Dffc:     #{ - b}"
+    IO.u "Puc:        #{ * b}"
+    IO.u "Tu D:  #{  b}"                  # F
+    IO.u "D:       #{(,b)}"               # Tuc T 0
+    IO.u "F D: #{I.f_(,b)}" # f  
+    IO.u "R:      #{(,b)}"               # S f f 
+    IO.u "Mu:         #{I.(,b)}"       # u  (u f )
+    IO.u "E:       #{:.(,b)}"         # F, u E' :
+  
+
+
+Ac_I.

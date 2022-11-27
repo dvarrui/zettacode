@@ -1,0 +1,33 @@
+HCL '          c     c, bu      uu b bc u  ff.......
+
+#Au, 15 Auu 2022
+
+b "" {
+   = ub
+}
+
+b "b" {
+   = ub
+}
+
+uu "Su" {
+  u = . + .b
+}
+
+uu "Dffc" {
+  u = . - .b
+}
+
+uu "Puc" {
+  u = . * .b
+}
+
+uu "Qu" {
+  u = f(.  .b)
+}
+
+uu "R" {
+  u = . % .b
+}
+
+T f fuc u   c  . Ic  uu   b :

@@ -1,0 +1,8 @@
+
+Loc , b
+P , b
+D "Su: "  ( + b)
+D "Dffc: "  ( - b)
+D "Puc: "  ( * b)
+D "I qu: "  (D(, b))
+D "R: "  ((, b))

@@ -1,0 +1,50 @@
+C  c   ubu (.. JSR Ac).  Scfc OS u f u u    f u.
+Amc:	PHA			u ccumuo d X  oo ck
+		TXA
+		PHA
+		JSR GUIu	u  
+		     c A  B
+		
+		LDA A
+		CLC
+		ADC B
+		JSR DA	u  
+
+		ubc
+		LDA A
+		SEC
+		SBC B
+		JSR DSubc	u  
+
+		uc - f  
+		LDA A
+		LDX B
+Mu:	CLC
+		ADC A
+		DEX
+		BNE Mu
+		JSR DMu	u  
+
+			- u u
+		LDA A
+		LDX #0
+		SEC
+D:		INX
+		SBC B
+		BCS D
+		TXA			 u  ccuu
+		JSR DD	u  
+
+		uu
+		LDA A
+		SEC
+Muu:	SBC B
+		BCS Muu
+		ADC B
+		JSR DMuu	u  
+
+		PLA			 ccuu  X  f c
+		TAX
+		PLA
+		RTS			u f ubu
+T 6502   c f uc, ,  uu  u f uc, ,  uu  b c b  z    f  c.

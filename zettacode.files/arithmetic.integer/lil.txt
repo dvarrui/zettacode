@@ -1,0 +1,14 @@
+# AmcI,  LIL
+ "E  ub  b c: "
+f {[c]} {  []}
+
+
+  [ $ 0]
+ b [ $ 1]
+ "A  $"", B  $b"
+ "Su               A + B  [ $ + $b]"
+ "Dffc        A - B  [ $ - $b]"
+ "Puc           A * B  [ $ * $b]"
+ "I Qu  A \\ B  [ $ \ $b], uc  z"
+ "R         A % B  [ $ % $b],  f f "
+ "LIL     "

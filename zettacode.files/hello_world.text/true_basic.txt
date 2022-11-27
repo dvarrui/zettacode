@@ -1,0 +1,5 @@
+
+! I Tu BASIC   u    . S     c .
+PRINT "H !"
+END
+

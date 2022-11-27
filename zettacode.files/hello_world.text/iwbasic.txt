@@ -1,0 +1,15 @@
+
+OPENCONSOLE
+
+PRINT"H !"
+
+'T  cu b f u.
+PRINT:PRINT:PRINT"P    ."
+
+'K  c f c      c b .
+DO:UNTIL INKEY$""
+
+CLOSECONSOLE
+
+END
+

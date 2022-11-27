@@ -1,0 +1,16 @@
+{{ |Lc|0.13.1}}
+Yu c    uu  Lc b c STRING.  INTEGER.:
+
+Sco Hd           T Hd co  qud.
+  +  := GOODBYE     Df   f  bjc.
+
+Sc Pubc
+  -  - ("H !\".)
+
+H,   b  f  u IO._ :
+
+Sco Hd           T Hd co  qud.
+  +  := GOODBYE2    Df   f  bjc.
+
+Sc Pubc
+  -  - (IO.u_ "H !\")

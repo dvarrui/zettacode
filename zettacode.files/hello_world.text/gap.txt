@@ -1,0 +1,10 @@
+# Sv w o do 
+"H !"
+
+P("H !\") # N EOL 
+
+D("H !")
+
+f := OuuTU()
+WL(f, "H !\")
+CS(f)

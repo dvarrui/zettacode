@@ -1,0 +1,15 @@
+'''I:''' [[Nqu]] (3.15)
+[[C:Nqu V 3.15]]
+===LISP ===
+(fom  "Ho wod!")
+
+O
+
+( "Ho wod!")
+
+===SAL ===
+ "Ho Wod!"
+
+O
+
+c fom(, "Ho Wod!")

@@ -1,0 +1,7 @@
+modu owod
+ f
+
+@I  [
+    f("H !")
+    u 0
+]

@@ -1,0 +1,5 @@
+d("Ho wod!")
+
+O, u C- fuc f:
+
+f("Ho wod!")

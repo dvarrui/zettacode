@@ -1,0 +1,15 @@
+I ANSI FORTRAN 77  :
+ INTEGER A, B
+ PRINT *, 'T    ub  b  c',
++         '   ENTER'
+ READ *, A, B
+ PRINT *, '   A + B = ', (A + B)
+ PRINT *, '   A - B = ', (A - B)
+ PRINT *, '   A * B = ', (A * B)
+ PRINT *, '   A  B = ', (A  B)
+ PRINT *, 'MOD(A,B) = ', MOD(A,B)
+ PRINT *
+ PRINT *, 'E u u   , ',
++         '   c   F, ...'
+ PRINT *, '  A ** B = ', (A ** B)
+ END

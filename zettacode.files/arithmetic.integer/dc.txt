@@ -1,0 +1,10 @@
+[E 2  o 1 .
+  U c  . E: 2 3
+  U uc f  . E: _10
+]P ? b 
+[: ]P  b +  z
+[ub: ]P  b -  z
+[u: ]P  b *  z
+[: ]P  b   z  [uc  z]z
+[: ]P  b %  z  [ c f ]z
+[: ]P  b ^  z

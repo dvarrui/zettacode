@@ -1,0 +1,158 @@
+Bc 
+
+ 1, @"I Ac", ( 0, 0, 400, 300 )
+
+NSI  = 25
+NSI b = 53
+
+ "        "" + "b" = " ( + b)
+ "ubc     "" - "b" = " ( - b)
+ "uc  "" * "b" = " ( * b)
+ "        ""  "b" = " (  b)
+f @"f   %  % = %f", , b, (f)  (f)b
+ "u          "" % "b" = " (  b)
+ "           "" ^ "b" = " ( ^ b)
+
+HE
+
+
+Ouu:
+
+:       25 + 53 = 78
+ubc:    25 - 53 = -28
+uc: 25 * 53 = 1325
+:       25  53 = 0
+f : 25  53 = 0.471698
+u:         25  53 = 25
+:          25 ^ 53 = 1.232595+74
+
+
+S I, M1, M2 Mc c  u u
+
+
+_ = 1
+b u 1
+_1Lb
+_1F
+_2Lb
+_2F
+_ccRu
+_ccB
+ u
+
+ c f BuW
+CGRc 
+
+ = f CGRcM( 0, 0, 480, 360 )
+ _, @"I Ac", , NSWSMT + NSWSMCb + NSWSMMuzb
+
+ = f CGRcM( 240, 320, 150, 24 )
+b _1Lb, @"E f :", , _
+CSA( _1Lb, NSTAR )
+ = f CGRcM( 400, 322, 60, 24 )
+f _1F, YES, @"25", , _
+CSA( _1F, NSTAC )
+CSUSLM( _1F, YES )
+CSF( _1F, @"0123456789-", YES, 5, NULL )
+
+ = f CGRcM( 240, 290, 150, 24 )
+b _2Lb, @"E c :", , _
+CSA( _2Lb, NSTAR )
+ = f CGRcM( 400, 292, 60, 24 )
+f _2F, YES, @"53", , _
+CSA( _2F, NSTAC )
+CSUSLM( _2F, YES )
+CSF( _2F, @"0123456789-", YES, 5, NULL )
+
+ = f CGRcM( 50, 60, 380, 200 )
+ _ccRu, ,,, _
+TVSTCI( _ccRu, f CGSzM( 10, 20 ) )
+TSFWN( _ccRu, @"M", 13.0 )
+TVSEb( _ccRu, NO )
+
+ = f CGRcM( 370, 13, 100, 32 )
+bu _ccB,,, @"Ccu", 
+ f
+
+c f PfCcu
+CFSRf S
+
+NSI 1 = f CIVu( _1F )
+NSI 2 = f CIVu( _2F )
+
+CFMubSRf uS = f MubSWCc( 0 )
+
+ D u 
+S = f SWF( @"Nub 1: %\Nub 2: %\\", 1, 2 )
+MubSAS( uS, S )
+
+ A
+S = f SWF( @"A: % + % = %\", 1, 2, 1 + 2 )
+MubSAS( uS, S )
+
+ Subc
+S = f SWF( @"Subc: % - % = %\", 1, 2, 1 - 2 )
+MubSAS( uS, S )
+
+ Mu
+S = f SWF( @"Muc: % * % = %\", 1, 2, 1 * 2 )
+MubSAS( uS, S )
+
+f ( 2 != 0 )
+
+ D
+S = f SWF( @"I D: %  % = %\", 1, 2, 1  2 )
+MubSAS( uS, S )
+
+ F D
+S = f SWF( @"F D: %  % = %f\", 1, 2, (f)1  (f)2 )
+MubSAS( uS, S )
+
+ 
+S = f SWF( @"Mu: %  % = % \", 1, 2, 1  2 )
+MubSAS( uS, S )
+
+ 
+S = f SWF( @"P: % ^ % = %\", 1, 2, 1 ^ 2 )
+MubSAS( uS, S )
+
+
+
+MubSAS( uS, @"C  b z." )
+
+ f
+
+TSS( _ccRu, uS )
+ f
+
+ c f DD(   ,   ,    )
+'~'1
+c (  )
+c _bCc
+c (  )
+c _ccB : f PfCcu
+ c
+c _WC : 
+ c
+ f
+
+  f DD
+
+f BuW
+
+HE
+
+
+Ouu:
+
+Nub 1: 25
+Nub 2: 53
+
+A: 25 + 53 = 78
+Subc: 25 - 53 = -28
+Muc: 25 * 53 = 1325
+I D: 25  53 = 0
+F D: 25  53 = 0.471698
+Mu: 25  53 = 25 
+P: 25 ^ 53 = 1.232595+74
+

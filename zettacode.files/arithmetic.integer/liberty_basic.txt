@@ -1,0 +1,12 @@
+N      c     u    -f- .
+
+u "E  f :  " f
+u "E  c : " c
+
+ "T u  "  f + c
+ "T ffc  "  f -c
+ "T uc  "  f *c
+f c 0   "T  qu  "  ( f c) " (u  0)"   "D b z  ."
+ "T   "  f MOD c " ( c f )"
+ "T f     f  c  "  f ^c
+

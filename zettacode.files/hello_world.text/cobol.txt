@@ -1,0 +1,22 @@
+U f f.
+{{ |OCOBOL}}
+{{ |D E COBOL}}
+
+	om-d. o.
+	cu .
+		 "H !".
+		 u.
+
+U  c u,    c bc   DISPLAY .
+{{ |GuCOBOL}}
+
+d"Ho, wod".
+
+$ cbc - -f- -f .cb
+.cb: 1: W: PROGRAM-ID   - u
+.cb: 1: W: PROCEDURE DIVISION   - u
+
+$ .
+H, 
+
+''N  COBOL c   DISPLAY   u  c bf  qu ,  qu b  c  c .  T fu   f      ,   f GuCOBOL   c c  cub.''

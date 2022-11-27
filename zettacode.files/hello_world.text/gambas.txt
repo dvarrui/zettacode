@@ -1,0 +1,6 @@
+'''[:b-u..u?=351f6704b0f793b513b14329b51 Cc    u  c]'''
+Pubc Sub M()
+
+PRINT "H !"
+ 
+E

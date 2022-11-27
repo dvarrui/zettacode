@@ -1,0 +1,15 @@
+$ = [] (Rd-Ho F Numb)
+$b = [] (R-H Sc Nub)
+
+W-H "Su:                              $($ + $b)"
+W-H "Dffc:                       $($ - $b)"
+W-H "Puc:                          $($ * $b)"
+W-H "Qu:                         $($  $b)"
+W-H "Qu, u  :          $([M]::Ru($  $b))"
+W-H "R,  f f:    $($ % $b)"
+Nub  uc c  cc f  u. T     I32  b   I64 bu    - qu  cu  u  b f  f- .
+
+T     f  f .
+
+N   , bu c b  u   .NET BCL:
+[M]::Pow($, $b)

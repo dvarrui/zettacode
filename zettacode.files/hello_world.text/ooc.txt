@@ -1,0 +1,8 @@
+T   S,  c  () :
+m: fuc {
+  "H !" ()
+}
+O c  f () fuc   S   u.
+m: fuc {
+  ("H !")
+}

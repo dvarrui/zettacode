@@ -1,0 +1,10 @@
+  (u  fuc)
+
+o.fom("Ho wod!~")
+
+c  (u    f  c )
+
+@ubc 
+u = f () {
+    .f("H !~")
+}

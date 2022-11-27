@@ -1,0 +1,17 @@
+U  SVC (Su C)     c:
+ ="360 b"
+HELLO    CSECT 
+         USING HELLO,15
+         LA    1,MSGAREA     P R 1   
+         SVC   35            I SVC 35 (W  O) 
+         BR    14            Ru
+MSGAREA  EQU   *             M A
+         DC    AL2(19)       T   = 19 (Pf :4 + D L:15) 
+         DC    XL2'00'       2 b b f z
+         DC    C'H !'  T  b    c
+         END
+U WTO Mc   SVC 35   :
+ ="360 b"         WTO   'H !'
+         BR    14            Ru
+         END
+

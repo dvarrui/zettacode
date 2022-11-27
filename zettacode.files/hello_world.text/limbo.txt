@@ -1,0 +1,14 @@
+mm Commd
+ 
+ cu "."
+     : S
+ 
+ cu "."
+ 
+ cu "."
+ 
+ (: f D-C, :  f )
+ {
+      =  S S-PATH
+     -("H !\")
+ }

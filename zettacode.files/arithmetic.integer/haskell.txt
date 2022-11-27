@@ -1,0 +1,16 @@
+
+m = do
+   - L :: IO I
+  b - L :: IO I
+  uSL $ " + b = " ++  ( + b)
+  uSL $ " - b = " ++  ( - b)
+  uSL $ " * b = " ++  ( * b)
+  uSL $ "    f b = " ++  ( ** b)
+  uSL $ "    f b = " ++  ( ^ b)
+  uSL $ "    f b = " ++  ( ^^ b)
+  uSL $ " `` b = "  ++  ( `` b)  -- uc   f
+  uSL $ " `` b = "  ++  ( `` b)  --    c 
+  uSL $ " `M` b = "  ++  ( `M` b)
+  uSL $ " `qu` b = " ++  ( `qu` b) -- uc  0
+  uSL $ " `` b = "  ++  ( `` b)  --    f 
+  uSL $ " `quR` b = "  ++  ( `quR` b)

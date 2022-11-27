@@ -1,0 +1,9 @@
+I   c\c u  -\f. T    c\c u-- (  +\f) .  O  cc   u bu u  f     - qu.
+(,b)={
+  (+b)
+  (-b)
+  (*b)
+  (\b)
+  (%b)
+  (^b)
+}

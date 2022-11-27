@@ -1,0 +1,16 @@
+{{ |F77}}
+S c -  u fu f:
+
+ *,"Ho wod!"
+
+U c uu f:
+
+100   fom (5X,A,"!")
+       100,"H !"
+
+Ouu  c   u   :
+
+w (89,100) "Ho wod!"
+
+u  f   b 100  uu  u 89. If uu u   ub   ( "OPEN"   c-cfc  u ),   f  b c   uu  . O  UNIXLu   f  b  "f.89".
+{{7*7}}

@@ -1,0 +1,37 @@
+{{ |cc|4.0.1}}
+#cud db.
+#cu .
+
+ ()
+{
+  f("H !\")
+  u EXIT_SUCCESS
+}
+O:
+#cud db.
+#cu .
+
+ ()
+{
+  u("H !")
+  u EXIT_SUCCESS
+}
+O,   fu :)
+
+#cu.
+
+ ()
+{
+  f("\H !")
+  u 0
+}
+
+ b ...
+
+#cu.
+
+ ()
+{
+	u f("\H W!")
+}
+

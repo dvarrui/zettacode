@@ -1,0 +1,44 @@
+
+# Mo of  o c  m o.
+# A u      u     c
+#   cu , ub, u, ,  .
+
+$CSc { # U ANSI  c
+  `\[2J\[11H'  fu
+} b f
+
+$S { #  S -
+  `\' c  fu
+} b f
+
+$SPb {
+`T    c    O,' S
+`\' u  ub f u cc, c' S
+`\' c A  B.\' S
+} b f
+
+$P { # c:  --
+  u c   fu
+} f
+
+$GI { # c:  -- 
+  u c `E  ' c c `: ' c
+  P    c  f
+} b f
+
+$T { # c__ b_ T u_
+  A c ` ' B c ` ' 5 c  c `  ' 3 c c
+  A B  c  c `.' 3 c S
+} b f
+
+$SRu {
+  $ `A: ' T
+  $ub `Subc: ' T
+  $u `Muc: ' T
+  $ `D: ' T
+  `N   u f    u  z.' S
+  $ `E: ' T
+  `N   u f          ub.' S
+} b f
+
+CSc SPb $A GI $B GI SRu

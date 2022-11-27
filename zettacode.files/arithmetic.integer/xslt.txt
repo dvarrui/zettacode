@@ -1,0 +1,10 @@
+:m m="mc"
+  : =""5:
+  : ="b"2:
+  f:bc + b = :u-f c="$ + $b"f:bc
+  f:bc - b = :u-f c="$ - $b"f:bc
+  f:bc * b = :u-f c="$ * $b"f:bc
+  f:bc  b = :u-f c="u($  $b)"f:bc
+  f:bc  b = :u-f c="$  $b"f:bc
+ :
+

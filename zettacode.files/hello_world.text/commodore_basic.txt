@@ -1,0 +1,5 @@
+B fu  C cu b  ucc  (C64, C128, VIC-20, Pu 4, c.)   (PET, CBM c.) b  cuc . Tf,   c u,  CHR$(14)     b qu  c  -c .
+10  c$(147)c$(14):REM 147=c c, 14=wc o owc mod
+20  "H !"
+30 
+

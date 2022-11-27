@@ -1,0 +1,137 @@
+{{ ||Rb P 3B  Bu 64 b}}
+ ="c64 b"
+* ARM b AARCH64 Rb PI 3B *
+*   64.   *
+
+*******************************************
+* C f                         *
+*******************************************
+* f  f   cu  f  u AAc64 b*
+.cu "..cuCARM64.c" 
+
+***********************
+* Iz  *
+***********************
+.
+zME:          .cz " T ub  c   ! \"        
+zRuL:        .cz "\"
+zMRu:         .cz "u : @ \"        u
+MVu:          .f 12, 1, ' '
+                      .cz "\"
+zMA:       .cz "A "
+zMSuc:   .cz "uc :"
+zMMuc: .cz "uc :"
+zMD:       .cz " :"
+zMR:          .cz " :"
+ 
+***********************
+* N Iz  *
+***********************
+.b
+qVu:            .  8          8 b  
+ZC:          . 30  
+.
+.b  
+:
+     f,                    f - c 
+     0,[f]                  cu ub f   c 
+    c 0,3
+    b 
+     0,[f,16]                f 1 ub
+    b cAD
+     3,0
+     0,[f,24]                f 2 ub
+    b cAD
+     4,0
+                                 
+     0,3,4
+     1,qAZC         u  0
+    b c10S             c fuc  2  (0,1)
+     0,qAzMA
+    b ffcM              
+     0,qAzMRu
+     1,qAZC
+    b IACIc         u  @ cc
+    b ffcM              
+     0,qAZC
+                                 uc
+    ub 0,3,4
+     1,qAZC         u  0
+    b c10S             c fuc  2  (0,1)
+     0,qAzMSuc
+    b ffcM              
+     0,qAzMRu
+     1,qAZC
+    b IACIc         u  @ cc
+    b ffcM              
+     0,qAZC
+                                 uc
+    u 0,3,4
+     1,qAZC         u  0
+    b c10S             c fuc  2  (0,1)
+     0,qAzMMuc
+    b ffcM              
+     0,qAzMRu
+     1,qAZC
+    b IACIc         u  @ cc
+    b ffcM              
+     0,qAZC
+                                  
+     0,3
+     1,4
+    u 0,3,4                qu
+    ub 3,0,4,3              3 = 3 - (0*4)
+     1,qAZC         u  0
+    b c10S             c fuc  2  (0,1)
+     0,qAzMD
+    b ffcM              
+     0,qAzMRu
+     1,qAZC
+    b IACIc         u  @ cc
+    b ffcM              
+     0,qAZC
+
+     0,3                    
+     1,qAZC         u  0
+    b c10S             c fuc  2  (0,1)
+     0,qAzMR
+    b ffcM              
+     0,qAzMRu
+     1,qAZC
+    b IACIc         u  @ cc
+    b ffcM              
+     0,qAZC
+ 
+     0,0                     u c
+    b 100f
+:
+     0,qAzME
+    b ffcM             c fuc  1  (0)
+     0,1                     u c
+100:                              f  
+     8,EXIT                  qu   
+    c 0                        f   c
+qAMVu:          .qu MVu    
+qAzMRu:         .qu zMRu
+qAzME:          .qu zME
+qAzMA:       .qu zMA
+qAzMSuc:   .qu zMSuc
+qAzMMuc: .qu zMMuc
+qAzMD:       .qu zMD
+qAzMR:          .qu zMR
+qAZC:            .qu ZC
+********************************************************
+*        F Icu fc                        *
+********************************************************
+* f  f   cu  f  u AAc64 b *
+.cu "..cuARM64.c"
+
+{{Ouu : }}
+PRE
+@b-bu-64:~643 $ 64 101 25
+A u : +126
+uc :u : +76
+uc :u : +2525
+ :u : +4
+ :u : +1
+PRE

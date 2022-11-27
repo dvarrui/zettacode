@@ -1,0 +1,23 @@
+Iu  uu u b OS-cfc    . T u    16-b 8086,      32-b  64-b ucc:  cu b  f  f 32-b  64-b c  c    u. T qu  uc  z      f  f .
+m: mov      c,          
+              b,          b
+              ,          
+        
+              ,          c
+              ,          b
+              u,         
+        
+              ,          c
+        u     b
+              uc,     
+        
+              ,          c
+        ub      ,          b
+              ffc,  
+        
+              ,          c
+             b
+              qu,    
+              ,   
+
+        

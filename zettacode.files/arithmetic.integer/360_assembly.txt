@@ -1,0 +1,55 @@
+F  c f : O    32 b . 
+N qu    '-c f. 
+b'''Muc:'''b
+T uc f  u ( c )   uc 
+( f ) c  uc. B u  
+uc  32-b  . T uc    64-b 
+   ccu    .
+b'''D:'''b
+T  (f )   b   (c ) 
+ c b  qu  . T    64-b 
+   ccu    f . 
+A 32-b     32-b  qu c   
+  -ub  -ub , c.
+T  f  qu   b  u f b. 
+T        .
+*        AmcI        04092015
+ARITHINT CSECT
+         USING  ARITHINT,R12
+         LR     R12,R15
+ADD      L      R1,A
+         A      R1,B               1=+b
+         XDECO  R1,BUF
+         MVI    BUF,C'+'
+         XPRNT  BUF,12
+SUB      L      R1,A
+         S      R1,B               1=-b
+         XDECO  R1,BUF
+         MVI    BUF,C'-'
+         XPRNT  BUF,12
+MUL      L      R1,A 
+         M      R0,B               01=*b
+         XDECO  R1,BUF              1    
+         MVI    BUF,C'*'
+         XPRNT  BUF,12
+DIV      L      R0,A
+         SRDA   R0,32               f  
+         D      R0,B               1=b  0   
+         XDECO  R1,BUF              1  qu
+         MVI    BUF,C''
+         XPRNT  BUF,12
+MOD      L      R0,A
+         SRDA   R0,32               f  
+         D      R0,B               1=b  0   
+         XDECO  R0,BUF              0   
+         MVI    BUF,C'R'
+         XPRNT  BUF,12
+RETURN   XR     R15,R15
+         BR     R14
+         CNOP   0,4
+A        DC     F'53'
+B        DC     F'11'
+BUF      DC     CL12' '
+         YREGS
+         END    ARITHINT
+Iu    c: =53, b=11

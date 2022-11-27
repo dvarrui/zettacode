@@ -1,0 +1,32 @@
+W  G P C Pc
+
+MODULE Ac
+IMPORT CP,C,RTS
+
+VAR
+   ,	  : INTEGER
+   	  : ARRAY 128 OF CHAR
+   u : BOOLEAN
+   
+
+PROCEDURE E(IN  : ARRAY OF CHAR)
+BEGIN
+   C.WS()C.WL
+   HALT(1)
+END E
+
+
+BEGIN
+   IF CP.ANub()  2 THEN E("G   !") END
+   CP.GA(0,) RTS.STI(,,u)
+   IF ~u THEN E("C' c 	'"++"'  I") END
+   CP.GA(1,) RTS.STI(,,u)
+   IF ~u THEN E("C' c '"++"'  I") END
+   C.WS(" +  ")C.WI( + ,6)C.WL
+   C.WS(" -  ")C.WI( - ,6)C.WL
+   C.WS(" *  ")C.WI( * ,6)C.WL
+   C.WS("   ")C.WI( DIV ,6)C.WL
+   C.WS(" MOD  ")C.WI( MOD ,6)C.WL
+END Ac.
+
+c: cu Ac 12 23b

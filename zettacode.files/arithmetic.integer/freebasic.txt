@@ -1,0 +1,18 @@
+' FB 1.05.0 W64
+
+D A I , j
+Iu "E    b  c" , j
+P " + " j " = "  + j
+P " - " j " = "  - j
+P " * " j " = "  * j
+P "  " j " = "  \ j
+P " % " j " = "  M j 
+P " ^ " j " = "  ^ j
+S
+
+' I  (f c FB u  '\' ) u  z
+
+' R (f c FB u  M ) , f -z, c  
+' f  f 
+
+S u  uu:-

@@ -1,0 +1,13 @@
+===u SAY===
+*REXX om o ow   of .  *
+ 'H !'
+
+===u SAY b===
+*REXX om o ow   of .  *
+ = 'H !'
+ 
+
+===u LINEOUT===
+*REXX om o ow   of .  *
+
+c u ,"H !"

@@ -1,0 +1,36 @@
+ ="c!"DEFINE NO_KEY="255"
+DEFINE KEY_Y="43"
+DEFINE KEY_N="35"
+
+PROC M()
+  BYTE CH=$02FC I  u f   
+  BYTE 
+  INT ,b
+
+  DO
+    P("Iu  u =")
+    =IuI()
+    P("Iu  u b=")
+    b=IuI()
+
+    PF("+b=%I%E",+b)
+    PF("-b=%I%E",-b)
+    PF("*b=%I%E",*b)
+    PF("b=%I%E",b)
+    PF(" MOD b=%I%E", MOD b)
+    
+    PuE()
+    PE("A? (YN)")
+
+    CH=NO_KEY Fu  b
+    DO
+      =CH
+    UNTIL =KEY_Y OR =KEY_N
+    OD
+    CH=NO_KEY Fu  b
+
+    IF =KEY_N THEN
+      EXIT
+    FI
+  OD
+RETURN

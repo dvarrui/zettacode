@@ -1,0 +1,15 @@
+T  D Rc' U Ab (""). O PDP-11 b cu PAL-11R, PAL-11S  MACRO-11.
+
+{{ |UNIX|1}}  {{ |UNIX|7}}
+
+.ob  
+	.
+:
+        	$1,0                0=, STDOUT=$1
+		4 u u    4  
+		1                     1  
+		c                    c  u
+
+	.
+u: H !\
+u = . - u

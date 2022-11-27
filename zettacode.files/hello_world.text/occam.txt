@@ -1,0 +1,5 @@
+{{ |c}}
+#USE "cou.b"
+PROC  (CHAN BYTE c!)
+  u.("H !*c*", 0, c)
+:

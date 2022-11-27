@@ -1,0 +1,40 @@
+
+DDNC c  uu    7- LED  ,  f  u c c cc   7- qu uc u.
+
+T  z b   b 6, 3,  0 f   b. T   c b   b 5  4   b  c b   b 2  1 f f  .
+
+Bcu DDNC c     c, c b ub  c    ccu  c   c 10.
+
+T c c b    c. T f   cc ub     . T c  u   b    f 500 c   3,    f  cc      2,   ub f    (14) u    5. T  c    f   cc,  f   , c  , c  cu,  cc f  cu       cu  .
+
+
+0 111 10
+0 15 11
+0 15 12
+0 31 13
+0 47 14
+0 59 15
+0 125 16
+0 3 17
+0 0 18
+0 63 19
+0 15 20
+0 12 21
+0 36 22
+0 31 23
+0 17 24
+
+0 500 3
+0 10 2
+0 15 5
+
+60 4
+2 2 1
+80 1
+72 3
+30 2
+31 5
+62 5
+61 4
+64
+

@@ -1,0 +1,30 @@
+BEGIN{ "Ho wod!"}
+
+
+"BEGIN"   "c " - c  "{}"  cu bf  u f  ,  f    u. "END"    , f f c f  c.
+
+END {
+      "H !"
+    }
+
+
+F  f c ,   c b    "b". T ""  "c "    f ,  ""  c  f ( "END" u  b cu).  O  f ,  1  u.
+
+  { 
+     "H !" 
+    
+    }
+
+
+
+F  " c" f.
+
+  { 
+     "H !" 
+    }
+
+
+F  " c" f c - H ! -. T "fu" c f  " c" ( ""  "" f  ""  c )   ""  c.
+
+ 
+

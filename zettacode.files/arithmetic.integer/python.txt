@@ -1,0 +1,47 @@
+
+ = (w_u("Numb 1: "))
+ = (_u("Nub 2: "))
+
+ "Su: %" % ( + )
+ "Dffc: %" % ( - )
+ "Puc: %" % ( * )
+ "Qu: %" % (  )     #       f   .
+                                   # uc   f
+ "R: %" % ( % )    #    c 
+ "Qu: %  R: %" % (, )
+ "P: %" % **
+
+## O u     u    
+_u( )
+
+N: I P3 ''_u()''  b   ''u()'' (  ''u()'' bu-   , u  cu u ''(u())''  u   ...  - ... b).  A  b  u    ''()'' c   '': ... c VuE:...'' cuc uc :
+
+df um(om):
+     Tu: #  ...
+        :
+             = (_u())
+        c VuE:
+             "Iu cu  b    . P  ."\
+            cu
+        b
+    u 
+
+ = u("Nub1: ")
+ = u("Nub2: ")
+...
+
+(I  '  cc  f  f  u  c  bc.  T  c u f c u u, bu      f cfu   f,   f  c   IPC c).
+
+P    cu ''''  u b qu  . 
+ qu,  = (355,113)
+G  qu f 3,    f 16. 
+
+=== P 3.0 cb c ===
+df mc(, ):
+    f   "+ - *  % **".():
+         = "%() %() %()" % ()
+        ("%\= %" % (, ()))
+
+
+c(12, 8)
+c(u("Nub 1: "), u("Nub 2: "))

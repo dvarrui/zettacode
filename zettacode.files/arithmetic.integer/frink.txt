@@ -1,0 +1,10 @@
+T    (c uc  ub  b), CODECODE,  CODECODE.  CODECODE u   f (f  CODEf[]CODE).  CODECODE u   f  c ub (f  CODE -  * f[]CODE).  A  uc uc b   c  ub  c.
+
+[,b] = u["E ub",["","b"]]
+=["+", "-", "*", "", "" ,"" ,"^"]
+f  = 
+{
+    = "$ $ $b"
+   ["$ = " + []]
+}
+

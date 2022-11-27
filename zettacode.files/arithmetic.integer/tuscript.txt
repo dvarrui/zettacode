@@ -1,0 +1,9 @@
+
+$$ MODE TUSCRIPT
+=5
+b=3
+c=+b
+c=-b
+c=*b
+c=b
+c=%b

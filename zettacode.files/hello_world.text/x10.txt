@@ -1,0 +1,8 @@
+c HoWod {
+  ubc c f (:R[S]): {
+    f (.z  1) {
+        C.OUT.("H !")
+        u
+    }
+  }
+}

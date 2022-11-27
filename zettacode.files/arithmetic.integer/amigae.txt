@@ -1,0 +1,14 @@
+PROC m()
+  DEF , b, 
+  WF('A = ')
+  RS(, )
+   := V()
+  WF('B = ')
+  RS(, )
+  b := V()
+  WF('A+B=\\A-B=\\', +b, -b)
+  WF('A*B=\\AB=\\', *b, b)
+  * *    16 b  Mu  D  32b  *
+  WF('A*B=\\AB=\\', Mu(,b), D(,b))
+  WF('A  B =\\', M(,b))
+ENDPROC

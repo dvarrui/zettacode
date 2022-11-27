@@ -1,0 +1,6 @@
+
+T   uu, c  uc f u NROFF   uu    .  If u c u TROFF, u   c uu ub f    c  .
+
+Bcu .ROFF   cu f u,  j f u  c  b   uu   u.  Tf,    u  c c   .
+
+ ="ff"H !

@@ -1,0 +1,20 @@
+w Ad.T_Io
+ A.I_T_IO
+
+cu I_Ac 
+   u A.T_IO
+   u A.I_T_I
+
+   A, B : I
+b
+   G(A)
+   G(B)
+   Pu_L("+b = "  I'I(A + B))
+   Pu_L("-b = "  I'I(A - B))
+   Pu_L("*b = "  I'I(A * B))
+   Pu_L("b = "  I'I(A  B))
+   Pu_L("  b = "  I'I(A  B)) -- S c B
+   Pu_L(" f b = "  I'I(A  B)) -- S c A
+   Pu_L("**b = "  I'I(A ** B))  
+
+ I_Ac

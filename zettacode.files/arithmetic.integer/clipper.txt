@@ -1,0 +1,11 @@
+ocdu T( , b )
+   ? "+b",  + b
+   ? "-b",  - b
+   ? "*b",  * b
+    T qu ' ,   u  I() fuc, c uc  .
+   ? "b", I(   b )
+    R:
+   ? "%b",  % b
+    E    b c 
+   ? "**b",  ** b
+   u

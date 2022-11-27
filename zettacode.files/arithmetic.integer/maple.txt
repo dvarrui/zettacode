@@ -1,0 +1,25 @@
+T    bu-.  A    c,    u u .
+
+DI := c()
+        c  := ( "Iu  : " ):
+        c b := ( "Iu  : " ):
+        f( "Su = %\",   + b ):
+        f( "Dffc = %\",   - b ):
+        f( "Puc = %\",   * b ):
+        f( "Qu = %\",  qu( , b, 'c' ) ):
+        f( "R = %\", c ) #  ( , b )
+        NULL # qu u
+ c:
+
+H    f c DI.
+
+ DI()
+Iu  : 15
+Iu  : 12
+Su = 27
+Dffc = 3
+Puc = 180
+Qu = 1
+R = 3
+
+

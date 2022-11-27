@@ -1,0 +1,3 @@
+ "Ho wod!"
+:
+fom "%" "Ho wod!"

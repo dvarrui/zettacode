@@ -1,0 +1,21 @@
+{{ |Oc}}
+
+ uu 
+
+BEGIN
+  DBMS_OUTPUT.PUT_LINE('H !')
+END
+
+
+
+
+SQL  uu 
+SQL 
+SQL BEGIN
+  2    DBMS_OUTPUT.PUT_LINE('H !')
+  3  END
+  4  
+H !                                                                    
+
+PLSQL cu uccfu c.
+

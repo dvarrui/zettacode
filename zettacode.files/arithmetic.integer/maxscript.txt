@@ -1,0 +1,8 @@
+ = KBVu om:"F umb"
+ = KBVu :"Sc ub:"
+
+f "Su: %\" ( + ) 
+f "Dffc: %\" ( - ) 
+f "Puc: %\" ( * ) 
+f "Qu: %\" (  ) 
+f "R: %\" (  )

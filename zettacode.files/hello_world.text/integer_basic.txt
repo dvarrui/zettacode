@@ -1,0 +1,4 @@
+NOTE:  I BASIC   ( -b b Wz f) f  A 1   A 2.  T A 1  NO u f -c ,      ( )    A 2.  T  ccu    b u f   c,  f c b "f",  .
+
+ =" bc"   10 PRINT "H !"
+   20 END

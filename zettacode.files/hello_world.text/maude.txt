@@ -1,0 +1,13 @@
+
+f BYE-WORLD 
+
+	c STRING .
+	
+	 B : - S .
+	
+	q B = "H !" .
+	
+f
+
+ B .
+

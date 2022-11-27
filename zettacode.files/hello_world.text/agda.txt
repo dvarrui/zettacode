@@ -1,0 +1,14 @@
+F A 2.6.2, b   [:.c.2.6.2--. cu].
+modu owod w
+
+  A.Bu.IO u (IO)
+  A.Bu.U  (⊤  U)
+  A.Bu.S u (S)
+
+u uSL : S - IO U
+{-# FOREIGN GHC  quf D.T  T #-}
+{-# COMPILE GHC uSL = uSL . T.uc #-}
+
+ : IO U
+ = uSL "H !"
+

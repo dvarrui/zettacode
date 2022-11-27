@@ -1,0 +1,31 @@
+
+T   cu     "H !":
+
+%!PS
+Hc 20 cf
+70 700 
+(H !) 
+
+
+If     c,     f       f  c:
+
+(Ho wod!) ==
+
+    "(H !)"
+
+(Ho wod!) =
+
+   c f   "(H !)"  , "H !"
+
+(Ho wod!) 
+
+   , u   . I  b c         c  u. T f  cb  fu b :
+
+%!PS
+Hc 20 cf
+70 700 
+(H !) u u u
+=  == %      c
+ %   cu
+1 0  %   
+

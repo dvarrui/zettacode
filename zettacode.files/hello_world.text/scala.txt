@@ -1,0 +1,19 @@
+{{b|C}}
+===A c REPL u===
+A c u  [:..R%E2%80%93%E2%80%93_ REPL] c. T    REPL :
+("Ho wod!")
+===V J u===
+T   c   J u- b. '''N c'''.
+Sm.ou.("Ho wod!")
+
+===V Sc C API===
+T   c   Sc u- b. '''Rc'''.
+("Ho wod!")
+
+===S    u===
+Coo.wE(Coo.ou) { Coo..("T o o dfu _ou_") }
+===L    u===
+  Coo.. ("E o dvd")
+  C.E(C.u)
+  C.. ("E ")
+  C.E(C.)  R  

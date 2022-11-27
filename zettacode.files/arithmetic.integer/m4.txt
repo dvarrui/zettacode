@@ -1,0 +1,17 @@
+
+Bcu f  cu u f M4,   u-u   c f. A  f c c b u:
+v(A+B)
+(A-B)
+(A*B)
+(AB)
+(A%B)
+
+c    f, .. .4:
+
+4 -DA=4 -DB=6 .4
+
+ u   f '''':
+
+df(`A', 4)d
+f(`B', 6)
+cu(`.4')

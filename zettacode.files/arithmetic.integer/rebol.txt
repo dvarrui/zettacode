@@ -1,0 +1,51 @@
+REBOL [
+	T: "I"
+	URL: :c.AcI
+]
+
+: -  "P    ,   []: "
+: -  "P   : "
+ ""
+
+ ["Su:"   + ]
+ ["Dffc:"   - ]
+ ["Puc:"  * ]
+
+ ["I qu (cc)                          :"  -   ]
+ ["I qu ( f z)                    :"  u   ]
+ ["I qu ( u   )  :"  u   ]
+ ["I qu ( u  z)         :"  uf-   ]
+ ["I qu (u   c)       :"  uf   ]
+ ["I qu (u   c)       :"  uc   ]
+ ["I qu ( u   c):"  uf-c   ]
+
+ ["R:"  :   ]
+
+ REBOL u f  f f  . T  
+ cc u --   f  u. Tf 
+ f  c, I u  u  f 
+ ("? ") f      u f  '
+ c    f b. T  u f , c  I '
+   u  cfc u . T f u  
+ fuc  u uc.
+
+c?: fuc [ b][(? ) = ? b]
+
+u: c []
+f c?   [ u "f"]
+f c?   [ u "c"]
+
+ Yu c u b     f  , 
+ I u  "c"     b u b  
+  f  u .
+
+ [
+	"R  c:" 
+	c ? u [
+		0 [""]
+		1 [u1]
+		2 ["b"]
+	] 
+]
+
+ ["E:"  ** ]

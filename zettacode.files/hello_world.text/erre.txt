@@ -1,0 +1,7 @@
+
+! H W  ERRE u
+PROGRAM HELLO
+BEGIN
+  PRINT("H !")
+END PROGRAM
+

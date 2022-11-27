@@ -1,0 +1,17 @@
+OCoo()
+ 
+Df , b
+
+P("Nub 1: "):  = V(Iu())
+P("Nub 2: "): b = V(Iu())
+
+PN("Su:        " + S( + b))
+PN("Dffc: " + S( - b))
+PN("Puc:    " + S( * b))
+PN("Qu:   " + S(  b))  I  (u =uc)
+PN("R: " + S( % b))
+PN("P:      " + S(P(, b)))
+ 
+Iu()
+ 
+CC()

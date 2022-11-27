@@ -1,0 +1,6 @@
+A c cc   ff  NS-HUBASIC,   fb    cfc cu b ff.
+U c?c:
+ ="-ubc"10 ? "HELLO WORLD!"
+
+U cPRINTc:
+ ="-ubc"10 PRINT "HELLO WORLD!"

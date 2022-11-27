@@ -1,0 +1,35 @@
+{{ |Db2 LUW}}
+W SQL :
+ ="q "
+SELECT 'H !' AS  FROM b.u1
+
+Ouu:
+
+b2 -
+b2 = SELECT 'H !' AS  FROM b.u1
+
+TEXT        
+------------
+H !
+
+  1 c() c.
+
+
+{{ |Db2 LUW}}  9.7  .
+W SQL PL:
+ ="q "
+SET SERVEROUTPUT ON
+
+CALL DBMS_OUTPUT.PUT_LINE('H !')
+
+Ouu:
+
+b2 -
+b2 = SET SERVEROUTPUT ON
+DB20000I  T SET SERVEROUTPUT c c uccfu.
+b2 = CALL DBMS_OUTPUT.PUT_LINE('H !')
+
+  Ru Su = 0
+
+H !
+

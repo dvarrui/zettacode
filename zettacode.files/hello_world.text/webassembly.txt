@@ -1,0 +1,38 @@
+
+{{b|WASI}}
+(modu $owod
+
+    I f_ f WASI, c    4 32 u  u 1 32 u
+    ( "_ub" "f_"
+        (fuc $f_ ( 32 32 32 32) (u 32))
+    )
+
+    Dc   z f 32 b
+    ( 32)
+
+    E    fuc c  
+    ( "" ( 0))
+ 
+    Dc      8
+    ( (32.c 8) "H !\")
+ 
+    T   f WASI  c _
+    (fuc $ ( "_")
+        
+        W    f     0
+        (32. (32.c 0) (32.c 8)) 
+ 
+        W   f     4
+        (32. (32.c 4) (32.c 13))
+
+        C f_    c
+        (c $f_
+            (32.c 1) Vu f 1 c  u
+            (32.c 0) T c   f   
+            (32.c 1) Nub f   uu
+            (32.c 24) A   ub f b 
+        )
+         I u c
+    )
+)
+

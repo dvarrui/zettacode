@@ -1,0 +1,54 @@
+W c  u b  %, c  ub    c . T c  17 . A A%=1.5   2,  1. T   c u: A%=12  1  A%. W c u FLOOR()  INT()   ,  CEIL(),     BANK() c   B Ru: BANK(2.5)=2  BANK(3.5)=4.
+
+
+
+
+ ="2000 "
+MODULE LCBc {
+      \\ ADDITION: EUCLIDEAN DIV#  MOD# AND ** FOR POWER INCLUDING ^
+      10 INPUT "ENTER A NUMBER:" A%
+      20 INPUT "ENTER ANOTHER NUMBER:" B%
+      30 PRINT "ADDITION:"A%"+"B%"="A%+B%
+      40 PRINT "SUBTRACTION:"A%"-"B%"="A%-B%
+      50 PRINT "MULTIPLICATION:"A%"*"B%"="A%*B%
+      60 PRINT "INTEGER DIVISION:"A%"DIV"B%"="A% DIV B%
+      65 PRINT "INTEGER EUCLIDEAN DIVISION:"A%"DIV"B%"="A% DIV# B%
+      70 PRINT "REMAINDER OR MODULO:"A%"MOD"B%"="A% MOD B%
+      75 PRINT "EUCLIDEAN REMAINDER OR MODULO:"A%"MOD#"B%"="A% MOD# B%
+      80 PRINT "POWER:"A%"^"B%"="A%^B%
+      90 PRINT "POWER:"A%"**"B%"="A%**B%
+}
+LCBc
+
+
+Mu IT {
+      =12% ' I 16 b
+      b=12 ' L 32 b
+      c=12@' Dc (29 )
+      Df ET$()=T$()
+      P ET$(+1)="Dub"
+      P ET$(+1%)="I"
+      P ET$(  5)="Dub"
+      P ET$(  5%)="Dub"
+      P ET$(  5)="Dub"
+      P ET$(  5%)="Dub"
+      P ET$(**2)="Dub"
+      
+      P ET$(b+1)="Dub"
+      P ET$(b+1)="L"
+      P ET$(b  5)="Dub"
+      P ET$(b  5)="Dub"
+      P ET$(b  5)="Dub"
+      P ET$(b  5)="Dub"
+      P ET$(b**2)="Dub"
+
+      P ET$(c+1)="Dc"
+      P ET$(c+1@)="Dc"
+      P ET$(c  5)="Dc"
+      P ET$(c  5@)="Dc"
+      P ET$(c  5)="Dc"
+      P ET$(c  5@)="Dc"     
+      P ET$(c**2)="Dub"
+}
+IT
+

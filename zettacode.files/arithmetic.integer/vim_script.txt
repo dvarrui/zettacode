@@ -1,0 +1,10 @@
+  = fo2(u("Numb 1: ") + 0)
+ b = f2(u("Nub 2: ") + 0)
+c "\Su: " . ( + b)
+c "Dffc: " . ( - b)
+c "Puc: " . ( * b)
+" T u f     uc
+c "Qu: " . (  b)
+" T  f  u f    c   f 
+"  f  
+c "R: " . ( % b)

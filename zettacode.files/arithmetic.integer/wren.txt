@@ -1,0 +1,16 @@
+I W  qu  ''   u bu,   ''f''      u,  u    .
+
+T  f    '%' c   f  f .
+mo "o" fo Sd, Sdou
+S.("f ub:     ")
+Su.fu()
+  = Nu.fS(S.L())
+S.("c ub:    ")
+Su.fu()
+ b = Nu.fS(S.L())
+S.("u:              %( + b)")
+S.("ffc:       %( - b)")
+S.("uc:          %( * b)")
+S.(" qu: %((  b).f)")
+S.(":        %( % b)")
+S.(":   %(.(b))")

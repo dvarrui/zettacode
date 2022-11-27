@@ -1,0 +1,22 @@
+T c b b  c1.c bu  SIMH   u   SIMH PDP-1 u.
+
+   
+ b:   -  uc  u b    
+ b: c cf -  b    b 
+100
+u,	c  		  c f    
+	c			 c  
+u2,	c 6			  cb c +   6 b   f
+				 f 6 b  c    6 b f  
+				  u cc  6 - b f  
+	z			    f ccuu  z
+	j u2			    cc  cu 
+	 			 c      
+	 			    f     f 
+	j u			      
+				  c
+,				   cu   
+,	 ", "	 3 6-b fc c c  c 18-b 
+,	.         		  f  f 
+ 100			  b   
+

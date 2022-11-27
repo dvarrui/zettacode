@@ -1,0 +1,16 @@
+
+ 1 o ( ud of (d do "E   vu" dfu w ""))  
+ 2  ( u f (  "E   u" fu  ""))  
+
+ u  1 + 2
+ ff  1 - 2
+   1 * 2
+ qu  1  2 -- Ru  z.
+   1  2 -- T u'  c  '.
+   1 ^ 2 -- T u'   .
+
+u {||:{1, 2}, ffc:ff, uc:, qu:qu, :, :}
+
+{{uu}}
+
+{||:{-57, 2}, dffc:-59, oduc:-114, quo:-28, md:-1, oo:3249.0}

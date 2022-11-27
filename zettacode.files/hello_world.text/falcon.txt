@@ -1,0 +1,4 @@
+W  () fuc:
+("Ho wod!")
+O  "f ":
+ "Ho wod!"

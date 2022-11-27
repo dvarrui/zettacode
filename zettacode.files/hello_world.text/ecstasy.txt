@@ -1,0 +1,8 @@
+modu HoWod
+    {
+     u()
+        {
+        @Ijc C c
+        c.("H W!")
+        }
+    }

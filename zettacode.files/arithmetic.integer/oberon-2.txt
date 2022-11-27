@@ -1,0 +1,14 @@
+Of Ob-2
+
+MODULE Ac
+IMPORT I, Ou
+VAR
+        ,:INTEGER
+BEGIN
+        Ou.S("G  ub: ")I.I()I.I()
+        Ou.S(" +  ")Ou.I( + ,6)Ou.L
+        Ou.S(" -  ")Ou.I( - ,6)Ou.L
+        Ou.S(" *  ")Ou.I( * ,6)Ou.L
+        Ou.S("   ")Ou.I( DIV ,6)Ou.L
+        Ou.S(" MOD  ")Ou.I( MOD ,6)Ou.L
+END Ac.

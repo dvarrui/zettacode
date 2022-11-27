@@ -1,0 +1,14 @@
+ ="b-11"
+          START     H W
+
+          RECORD  HELLO
+,         A11, 'H W'
+
+          PROC
+          XCALL FLAGS (0007000000,1)          Su STOP 
+
+          OPEN(8,O,'TT:')
+          WRITES(8,HELLO)
+          END
+
+

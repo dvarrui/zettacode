@@ -1,0 +1,25 @@
+A Ac  NSIS   b  [:.ucf.DcC4.#4.9.10.2 IO] uc.  I  b  c f     u u ( f  ),  I  b  -c u u  u u,    f    u-u c.
+Fuco Amc
+	Pu $0
+	Pu $1
+	Pu $2
+	SC $0 21
+	SC $1 -2
+	
+	IO $2 $0 + $1
+	DP "$0 + $1 = $2"
+	IO $2 $0 - $1
+	DP "$0 - $1 = $2"
+	IO $2 $0 * $1
+	DP "$0 * $1 = $2"
+	IO $2 $0  $1
+	DP "$0  $1 = $2"
+	DP "Ru    f"
+	IO $2 $0 % $1
+	DP "$0 % $1 = $2"
+	DP "S f  c  f ub"
+	
+	P $2
+	P $1
+	P $0
+FucE

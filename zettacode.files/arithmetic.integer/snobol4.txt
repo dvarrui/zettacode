@@ -1,0 +1,12 @@
+
+        uu = "E f :"
+  	f = u
+	uu = "E c :"
+	c = u
+	uu = "u  = " f + c
+	uu = "ff = " f - c
+	uu = " = " f * c
+	uu = "qu = " (qu = f  c)
+	uu = "  = " f - (qu * c)
+	uu = "  = " f ** c
+

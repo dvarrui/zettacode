@@ -1,0 +1,11 @@
+
+MODULE Gb
+IMPORT Ou
+  PROCEDURE W*
+  BEGIN
+    Ou.S("H !")Ou.L
+  END W
+BEGIN
+  W
+END Gb.
+

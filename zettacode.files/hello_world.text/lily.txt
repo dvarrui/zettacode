@@ -1,0 +1,7 @@
+T      . F,   bu :
+
+("Ho wod!")
+
+Sc, b u u c:
+
+dou.("Ho wod!\")

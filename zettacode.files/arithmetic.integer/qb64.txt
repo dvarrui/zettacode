@@ -1,0 +1,21 @@
+''CBTJD'': 20200312
+START:
+INPUT "E   (,b):" !, b!
+IF  = 0 THEN END
+IF b = 0 THEN
+    PRINT "Sc   z. Z   f Qu  R."
+    GOTO START
+END IF
+PRINT
+PRINT "             Su = "  + b
+PRINT "      Dffc = "  - b
+PRINT "         Puc = "  * b
+' Nc  u f  INTEGER D "\"     u  "".
+PRINT "I Qu = "  \ b, , "* Ru  0."
+PRINT "       R = "  MOD b, , "* S c f ."
+PRINT "  E = "  ^ b
+PRINT
+INPUT "A? (N)" $
+IF UCASE$($) = "Y" THEN CLS: GOTO START
+CLS
+END

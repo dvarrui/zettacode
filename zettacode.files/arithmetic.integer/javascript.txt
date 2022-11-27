@@ -1,0 +1,30 @@
+===WSc===
+{{ |JSc}}
+{{ |SM}}
+N          f JSc  qu f cfc       u u.
+v  = I(_u("E  "), 10)
+ b = I(_u("E  "), 10)
+
+WSc.Ec(" = " + )
+WSc.Ec("b = " + b)
+WSc.Ec("u:  + b = "        + ( + b))
+WSc.Ec("ffc:  - b = " + ( - b))
+WSc.Ec("uc:  * b = "    + ( * b))
+WSc.Ec("qu:   b = "   + (  b | 0))  "| 0" c    
+WSc.Ec(":  % b = "  + ( % b))
+
+fuc _u() {
+    uu()
+     {
+        u WSc.SI.L()
+    } cc() {
+        u ()
+    }
+}
+fuc uu() {
+     {
+        WSc.Ec()
+    } cc() {
+        ()
+    }
+}

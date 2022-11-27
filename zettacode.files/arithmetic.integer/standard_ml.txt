@@ -1,0 +1,13 @@
+v () = 
+    = Of (I.fS (Of (TIO.uL TIO.I)))
+   b = Of (I.fS (Of (TIO.uL TIO.I)))
+
+   (" + b = "   ^ I.S ( + b)   ^ "\")
+   (" - b = "   ^ I.S ( - b)   ^ "\")
+   (" * b = "   ^ I.S ( * b)   ^ "\")
+   ("  b = " ^ I.S (  b) ^ "\")         (* uc   f *)
+   ("  b = " ^ I.S (  b) ^ "\")         (*    c  *)
+   (" qu b = " ^ I.S (I.qu (, b)) ^ "\")(* uc  0 *)
+   ("  b = " ^ I.S (I. (, b)) ^ "\")  (*    f  *)
+   ("~ = "      ^ I.S (~)      ^ "\")          (* u , uuu  c   u *)
+

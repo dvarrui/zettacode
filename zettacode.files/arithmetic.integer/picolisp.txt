@@ -1,0 +1,8 @@
+(d m (A B)
+   ( "A      " (+ A B))
+   ( "Subc " (- A B))
+   ( "Mu " (* A B))
+   ( "D   " ( A B))        # Tuc  z
+   ( "D  " (* A B))       # Ru   
+   ( "Muu  " (% A B))        # S f  f 
+   ( "P    " (** A B)) )

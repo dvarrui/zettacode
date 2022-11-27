@@ -1,0 +1,12 @@
+docum.w("Ho wod!")
+
+{{ |NJS|0.2.5}}
+{{ |R}}
+{{ |SM}}
+('Ho wod!')
+
+{{ |JSc}}
+WSc.Eco("Ho wod!")
+
+{{ |N.j}}
+coo.o("Ho wod!")

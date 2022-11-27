@@ -1,0 +1,44 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. I-Ac.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+
+       01 A      PIC S9(10).
+       01 B      PIC S9(10).
+       01 Ru PIC S9(10).
+
+       PROCEDURE DIVISION.
+           DISPLAY "F ub: " WITH NO ADVANCING
+           ACCEPT A
+           DISPLAY "Sc ub: " WITH NO ADVANCING
+           ACCEPT B
+           
+*          * N: T u ADDSUBTRACTc.  c b
+*          * c  COMPUTE , c  
+*          *   b f    u,
+*          * .. COMPUTE Ru = A + B
+
+           ADD A TO B GIVING Ru
+           DISPLAY "A + B = " Ru
+
+           SUBTRACT B FROM A GIVING Ru
+           DISPLAY "A - B = " Ru
+
+           MULTIPLY A BY B GIVING Ru
+           DISPLAY "A * B = " Ru
+
+*          * D  uc  z. DIVIDE c  
+*          * ROUNDED cu, c  u  u   
+*          * .
+           DIVIDE A BY B GIVING Ru
+           DISPLAY "A  B = " Ru
+
+           COMPUTE Ru = A ^ B
+           DISPLAY "A ^ B = " Ru
+       
+*          * Mc  f f u.
+           DISPLAY "A % B = " FUNCTION REM(A, B)
+
+           GOBACK
+           .

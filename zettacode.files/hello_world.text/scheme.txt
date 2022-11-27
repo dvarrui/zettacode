@@ -1,0 +1,21 @@
+A Sc    u f   u  bf   .
+"Ho wod!"
+
+T    cu  fu  cfc u f   b  R6RS  R7RS.
+T u    cc f u    f   b   b fu.
+
+===R5RS===
+(d "Ho wod!")
+()
+
+===R6RS===
+(mo ( b (6))
+        (   (6)))
+( "H !")
+()
+
+===R7RS===
+(mo (cm b)
+        (c ))
+( "H !")
+()

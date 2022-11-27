@@ -1,0 +1,11 @@
+ = .o_!.o_64
+b = ._!._64
+
+u "Su: #{ + b}"
+u "Dffc: #{ - b}"
+u "Puc: #{ * b}"
+u "Qu (f ): #{  b}"  #   u  f.
+u "Qu (f ): #{  b}"
+u "R: #{ % b}" # S f  c  f  c  (b).
+u "P: #{ ** b}"    # I c  b     .
+

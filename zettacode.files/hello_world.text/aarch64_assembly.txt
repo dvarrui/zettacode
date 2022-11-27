@@ -1,0 +1,22 @@
+.qu STDOUT, 1
+.qu SVC_WRITE, 64
+.qu SVC_EXIT, 93
+
+.
+.b _
+
+_:
+	 29, 30, [, -16]!
+	 0, #STDOUT
+	 1, =
+	 2, 13
+	 8, #SVC_WRITE
+	 29, 
+	c #0  (u, , 13)
+	 29, 30, [], 16
+	 0, #0
+	 8, #SVC_EXIT
+	c #0  (0)
+
+:	.c "H W!\"
+. 4

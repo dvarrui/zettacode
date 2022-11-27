@@ -1,0 +1,17 @@
+(DEFUN INTEGER-ARITHMETIC ()
+    (DISPLAY "E    b  c.")
+    (NEWLINE)
+    (DISPLAY " ")
+    (DEFINE A (READ))
+    (DEFINE B (READ))
+    (DISPLAY `(SUM ,(+ A B)))
+    (NEWLINE)
+    (DISPLAY `(DIFFERENCE ,(- A B)))
+    (NEWLINE)
+    (DISPLAY `(PRODUCT ,(* A B)))
+    (NEWLINE)
+    (DISPLAY `(QUOTIENT ,(QUOTIENT A B)))  uc  z
+    (NEWLINE)
+    (DISPLAY `(REMAINDER ,(REM A B)))    f f 
+    (NEWLINE)
+    (DISPLAY `(EXPONENTIATION ,(EXPT A B))))

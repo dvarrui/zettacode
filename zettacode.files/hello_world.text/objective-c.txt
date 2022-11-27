@@ -1,0 +1,42 @@
+{{ |c-602.0.53}}
+
+T  fc Objc-C "H, W!"    c u   f, u  NSL() fuc:
+
+
+# FuFu.
+
+ () {
+    @u {
+        NSL(@"H, W!")
+    }
+}
+
+
+H  u f  NSL() fuc         f   , c      c c f  "H, W!"  f    qu    uu.
+
+T f c      uu u   u cu Objc-C :
+
+
+# FuFu.
+
+ () {
+    @u {
+        NSFH *Ouu = [NSFH fHWSOuu]
+        NSS * = @"H, W!\"
+        [Ouu D:[ UEc:NSUTF8SEc]]
+    }
+}
+
+
+Objc-C  u fuc c   C  b. H, Objc-C' NSS bjc u b c   UTF-8     b u b  C u' IO fuc.
+
+
+# FuFu.
+
+ () {
+    @u {
+        NSS * = @"H, W!\"
+        f("%", .UTF8S)
+    }
+}
+

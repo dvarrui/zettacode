@@ -1,0 +1,29 @@
+
+(dfu mc (moo ( (d *qu-o*)) (b (d *qu-o*)))
+  (c
+    (b ()
+      (f  "~ = ~~%" (   b) (fuc (b-fuc )  b)))
+    '(+ - *   f c uc u ))
+  (u))
+
+C L'   fuc  cfc, ccc, cucc,  cuc. T ff    u  qu.
+
+{| c="b"
+! T fuc !! u  qu 
+|-
+! cfc
+|  f
+|-
+! ccc
+|  f
+|-
+! cucc
+| z
+|-
+! cuc
+|    (f    f  c qu  qu f  )
+|}
+
+Ec fuc  u     c u, uc 
+  qu *  +  =  .
+c(  b)c  c(  b)c u ub qu   c u f c(f  b)c  c(uc  b)c, c.

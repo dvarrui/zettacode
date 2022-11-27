@@ -1,0 +1,13 @@
+Mod "mc dmo_,_"  
+[
+     : ,
+    b : 
+|
+    P: “ + b”
+    P: “ - b”
+    P: “ × b”    * b
+    P: “ ÷ b”     b, u   f
+    P: “  b”   c c u
+    P: “ ^ b”
+]
+

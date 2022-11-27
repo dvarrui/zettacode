@@ -1,0 +1,24 @@
+ ="c-10"
+
+        TITLE HELLO
+
+COMMENT !
+  H-W , PDP-10 b u,  b j, 2022.
+           Ab: MACRO-10    O : TOPS-20
+!
+
+        SEARCH MONSYM                      G bc  f -c.
+
+GO::    RESET%                             S c: Iz c.
+
+        HRROI 1,[ASCIZ H W!]     Pu      1.
+        PSOUT%                             S c: P .
+        HALTF%                             S c: H .
+
+        JRST GO                            Uc ju  GO ( c 
+                                           u u  CONTINUE-c  
+                                              ).
+
+        END GO
+
+

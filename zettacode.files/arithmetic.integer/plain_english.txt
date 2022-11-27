@@ -1,0 +1,26 @@
+To u:
+S u.
+D  c.
+W f  c .
+Su .
+
+T   c:
+W "E  ub: "   c u c.
+R  ub f  c.
+W "E  ub: "   c u c.
+R  ub f  c.
+S  c  b  ub    ub.
+
+T   c  b  ub   ub:
+W  ub u   ub  "   u."   c.
+W  ub u   ub  "   ffc."   c.
+W  ub    ub  "   uc."   c.
+S   f  ub b   ub.
+R  ub    ub.
+W  ub  "   ."   c.
+
+T    f  ub b  ub:
+Pz  ub.
+D  ub b   ub   qu [u  z]    [      ].
+W  qu  "   qu."   c.
+W    "   ."   c.

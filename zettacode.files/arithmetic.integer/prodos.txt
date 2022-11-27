@@ -1,0 +1,35 @@
+IGNORELINE No: T m cud  m modu.
+cu cu
+:
+  u= =E f : 
+  u=b =E c :
+  u=c 
+  --,-b-=-c-
+ -c-
+ ubc ,b
+ -c-
+ u ,b
+ -c-
+  ,b
+ -c-
+ uu ,b
+ -c-
+  u= =D u   ccu  ub?
+f -- u   :   :
+:
+
+IGNORELINE No: T m do o u  m modu.
+:
+  u= =E f : 
+  u=b =E c :
+  u=--+-b-=-c-
+ -c-
+  u=*b=c
+ -c-
+  u=b=c
+ -c-
+  u= %% b=c
+ -c-
+  u= =D u   ccu  ub?
+f -- u   :   :
+:

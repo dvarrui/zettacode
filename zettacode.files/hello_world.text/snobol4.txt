@@ -1,0 +1,3 @@
+U CSb4 c
+    OUTPUT = "Ho wod!"
+END

@@ -1,0 +1,3 @@
+f "%" "Ho wod!"
+ u .N c c
+Sm.Coo.WL("Ho wod!")

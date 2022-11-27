@@ -1,0 +1,44 @@
+===UASM===
+
+ c:
+f @Pf q 1
+    :32
+      EPc    :
+    :
+                qu EPc
+f
+f               :q, :
+                 :
+
+.c
+ c
+ f, CSTR("Gb, W!",10)
+ , 0
+
+ 
+
+
+===ATT  (G)===
+ No "m" ud
+ c  `cc -b`
+#f SYS_WRITE   $1
+#f STDOUT      $1
+#f SYS_EXIT    $60
+#f MSGLEN      $14
+
+.b _
+.
+
+_:
+    q    $, %           c *
+    q    SYS_WRITE, %
+    q    STDOUT, %
+    q    MSGLEN, %
+    c                          _(, u, 014)
+    
+    q    SYS_EXIT, %
+    q    %, %               T  c.
+    c                          (0)
+    
+.
+:    .c "H, !\"

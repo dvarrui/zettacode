@@ -1,0 +1,11 @@
+o o : :b
+  ( [ =] :)
+  ( [b =] :b)
+  ( [ + b =] : + :b)
+  ( [ - b =] : - :b)
+  ( [ * b =] : * :b)
+  ( [  b =]  :  :b)
+  ( [  b =] u : :b)
+
+
+Ec f     f  (u, ffc, uc, qu). Su  uc c        u   (u 1 2 3). If      cc u    c  u    b  cc .

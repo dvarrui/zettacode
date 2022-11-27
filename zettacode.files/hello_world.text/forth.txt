@@ -1,0 +1,5 @@
+." Ho wod!"
+
+O    :
+
+: oodb ( -- )   ." Ho wod!" CR 

@@ -1,0 +1,18 @@
+cc =:    + , - , * , .@% , |~ , ^
+T fuc cccc cuc   f uc u f  . T  f    u  (c.@%.c) u  (  f),    cb      u .
+   17 cc 3
+20 14 51 5 2 4913
+
+T fuc cbc b  u, u:
+
+b  =: ].2 'Sum: Dffc: Poduc: Quo: Rmd: Eoo: '
+cb =: ,. ":@,.
+b     =: b cb cc
+
+   17 b 3
+Su:              20
+Dffc:       14
+Puc:          51
+Qu:          5
+R:         2
+E: 4913

@@ -1,0 +1,9 @@
+      INPUT "E  f : " f%
+      INPUT "E  c : " c%
+      
+      PRINT "T u  "  f% + c%
+      PRINT "T ffc  "  f% - c%
+      PRINT "T uc  "  f% * c%
+      PRINT "T  qu  "  f% DIV c% " (u  0)"
+      PRINT "T   "  f% MOD c% " ( c f )"
+      PRINT "T f     f  c  "  f% ^ c%

@@ -1,0 +1,5 @@
+:- objc(o_wod).
+    'T    uu   u b   b f  N c c
+     "H !"
+
+:- _bjc.

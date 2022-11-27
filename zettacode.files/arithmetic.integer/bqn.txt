@@ -1,0 +1,22 @@
+•Ou "E ub 1: "
+ ← •BQN •GL @
+•Ou "E ub 2: "
+b ← •BQN •GL @
+
+•S  + b
+•S  - b
+•S  × b
+•S  ÷ b
+•S b | 
+•S  ⋆ b
+E ub 1:
+12
+E ub 2:
+2
+14
+10
+24
+6
+0
+144
+

@@ -1,0 +1,13 @@
+T  PLM c   c -c , c  H, W!  u cf  ASCII c f  -c .
+100H:
+   * CPM BDOS SYSTEM CALL *
+   BDOS: PROCEDURE( FN, ARG ) DECLARE FN BYTE, ARG ADDRESS GOTO 5 END
+   * PRINT A $ TERMINATED STRING *
+   PRINT$STRING: PROCEDURE( S ) DECLARE S ADDRESS CALL BDOS( 9, S ) END
+   * HELLO, WORLD! IN MIXED CASE *
+   DECLARE HELLO$WORLD ( 14 ) BYTE
+           INITIAL( 'H', 65H, 6CH, 6CH, 6FH, ',', ' '
+                  , 'W', 6FH, 72H, 6CH, 64H, 21H, '$'
+                  )
+   CALL PRINT$STRING( .HELLO$WORLD )
+EOF

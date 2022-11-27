@@ -1,0 +1,12 @@
+k "E  f umb:"
+u   ub1
+
+ "E  c ub:"
+u   ub2
+
+u "Su: "  ub1 u ub2
+u "Dffc: "  ub1 u ub2
+u "Puc: "  ub1 u b ub2
+u "I qu: "  ub1  ub2 -- Ru  0
+u "R: "  ub1  ub2
+u "E: "  ub1    f ub2

@@ -1,0 +1,15 @@
+
+       H  f DBL  4 b D B.
+
+                                PROC
+------------------------------------------------------------------
+        XCALL FLAGS (0007000000,1)           Su STOP 
+
+        OPEN (1,O,'TT:')
+        WRITES (1,"H ")
+
+        DISPLAY (1,"H ",10)
+        DISPLAY (1,$SCR_MOV(-1,12),"",10)   u,   
+
+        CLOSE 1
+END

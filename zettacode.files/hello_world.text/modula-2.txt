@@ -1,0 +1,24 @@
+MODULE Ho
+IMPORT IOu
+
+BEGIN
+  IOu.WS('H !')
+  IOu.WL
+END H.
+==={{|TS Mu-2}}===
+{{ |TS (JPI) Mu-2 u DOSB-X}}
+Mu-2    bu- cu f IO. I, IO    b u. T   c f  u  b  f Mu-2. T u b    c IO u u  TS Mu-2   ff   ff cu f     u u.
+
+MODULE H
+IMPORT IO
+
+BEGIN
+  IO.WS('H !') IO.WL
+
+(* A ,   fu f Mu-2 *)
+  IO.WS("H")  (*    ub qu c b u *)
+  IO.WC(40C)     (* cc  ASCII c  40 c *)
+  IO.WS('!')
+  IO.WL()          (* cu   u: ()   *)
+END H.
+

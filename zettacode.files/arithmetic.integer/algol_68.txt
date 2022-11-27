@@ -1,0 +1,14 @@
+{{|C}}
+{{ |ALGOL 68|R 1 -    u u}}
+{{ |ALGOL 68G|A -    [:ucf.jc68f6868-1.18.068-1.18.0-9..5.c.fc11.386. 1.18.0-9.]}}
+{{  |ELLA ALGOL 68|A (  jb c) -    [:ucf.jc68f68c68c-1.8.868c-1.8-8.fc9.386. 1.8-8] - u   u f FORMAT u}}
+m:(
+  LONG INT =355, b=113
+  f(($" PLUS b = +b = "$,  + b))
+  f(($" MINUS b = -b = "$,  - b))
+  f(($" TIMES b = *b = ×b = "$,  * b))
+  f(($" DIV b = b = "$,   b))
+  f(($" OVER b = %b = ÷b = "$,  % b))
+  f(($" MOD b = %*b = %×b = ÷×b = ÷*b = "$,  %* b))
+  f(($" UP b = **b = ↑b = "$,  ** b))
+)

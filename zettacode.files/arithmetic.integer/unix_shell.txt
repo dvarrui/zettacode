@@ -1,0 +1,29 @@
+
+T U    c u c ,   , uc  ''''  u  f c ccu  qu:
+
+{{ |Bu S}}
+{{ |Aqu SH}}
+#!b
+   b
+c "+b     = "  ` $  +  $b`
+c "-b     = "  ` $  -  $b`
+c "*b     = "  ` $ \*  $b`
+c "b     = "  ` $    $b` # uc  0
+c "  b = "  ` $  %  $b` #    f 
+
+N: U  ` (bcc ,  b   Bu    ''$(...)'' )  u    u   b    ffc  b . T c u     '''' c  u  qu    qu u  qu  c  ''*'' cc  ,    b "bb" --- f  f  ''*''   c cc.
+
+W SUS3  :
+
+{{ |Bu A SH|3.2}}
+{{ ||5.2.14}}
+{{ |Z SH}}
+#!b
+   b
+c "+b     = $((+b))"
+c "-b     = $((-b))"
+c "*b     = $((*b))"
+c "b     = $((b))" # uc  0
+c "  b = $((%b))" #    f 
+
+N: c   ''$((...))''     qu  ''$((...))'' c b   u  ub qu, bu  `...`  f  u  c  b   u  ub qu.

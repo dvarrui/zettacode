@@ -1,0 +1,18 @@
+Mc    fuc bu-    . E:
+ = Iu["Gv m   !"]
+b = Iu["G    !"]
+P["Yu   ", , "  ", b]
+P["u: ",  + b]
+P["ffc: ",  - b]
+P["uc: ",  b]
+P[" qu: ", Qu[, b]]
+P[": ", M[, b]]
+P[": ", ^b]
+ bc f u 17  3:
+Yu   17  3
+u: 20
+ffc: 14
+uc: 51
+ qu: 5
+: 2
+: 4913

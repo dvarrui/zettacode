@@ -1,0 +1,18 @@
+MLI     f ' u'  , 
+  uu  u  ' uu'  .
+
+ =""MCSKIP "WITH" NL
+"" AcI
+"" u c  u  1,    2
+MCSKIP MT,
+MCINS %.
+MCDEF SL SPACES NL AS MCSET T1=%A1.
+MCSET T2=%A2.
+ + b   = %%T1.+%T2..
+ - b   = %%T1.-%T2..
+ * b   = %%T1.*%T2..
+  b   = %%T1.%T2..
+  b = %%T1.-%%%T1.%T2..*%T2...
+D  uc    
+   c  c u. R c
+  f  c , f   ff.

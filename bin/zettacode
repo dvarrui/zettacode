@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 require "optparse"
-require_relative "../lib/zettacode/parse/parse"
-require_relative "../lib/zettacode/scrap/scrap"
+require_relative "../lib/zettacode"
 
 options = {}
 OptionParser.new do |opts|
@@ -13,6 +12,9 @@ OptionParser.new do |opts|
   opts.on("-s", "--scrap", "Scrap RosettaCode URLs") do |s|
     options[:scrap] = s
   end
+  opts.on("-v", "--version", "Show version") do |v|
+    options[:version] = v
+  end
 end.parse!
 
 if options[:parse]
@@ -21,4 +23,6 @@ elsif options[:scrap]
   scrap = Zettacode::Scrap.new("config/scrap.yaml")
   scrap.load_settings
   scrap.find_langs
+elsif options[:version]
+  puts "zettacode #{Zettacode::VERSION}"
 end

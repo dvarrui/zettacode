@@ -1,50 +1,50 @@
-C  c   ubu (.. JSR Ac).  Scfc OS u f u u    f u.
-Amc:	PHA			u ccumuo d X  oo ck
+Code is called as a subroutine (i.e. JSR Arithmetic).  Specific OS/hardware routines for user input and printing are left unimplemented.
+Arithmetic:	PHA			;push accumulator and X register onto stack
 		TXA
 		PHA
-		JSR GUIu	u  
-		     c A  B
-		
+		JSR GetUserInput	;routine not implemented
+		;two integers now in memory locations A and B
+		;addition
 		LDA A
 		CLC
 		ADC B
-		JSR DA	u  
+		JSR DisplayAddition	;routine not implemented
 
-		ubc
+		;subtraction
 		LDA A
 		SEC
 		SBC B
-		JSR DSubc	u  
+		JSR DisplaySubtraction	;routine not implemented
 
-		uc - f  
+		;multiplication - overflow not handled
 		LDA A
 		LDX B
-Mu:	CLC
+Multiply:	CLC
 		ADC A
 		DEX
-		BNE Mu
-		JSR DMu	u  
+		BNE Multiply
+		JSR DisplayMultiply	;routine not implemented
 
-			- u u
+		;division	- rounds up
 		LDA A
 		LDX #0
 		SEC
-D:		INX
+Divide:		INX
 		SBC B
-		BCS D
-		TXA			 u  ccuu
-		JSR DD	u  
+		BCS Divide
+		TXA			;get result into accumulator
+		JSR DisplayDivide	;routine not implemented
 
-		uu
+		;modulus
 		LDA A
 		SEC
-Muu:	SBC B
-		BCS Muu
+Modulus:	SBC B
+		BCS Modulus
 		ADC B
-		JSR DMuu	u  
+		JSR DisplayModulus	;routine not implemented
 
-		PLA			 ccuu  X  f c
+		PLA			;restore accumulator and X register from stack
 		TAX
 		PLA
-		RTS			u f ubu
-T 6502   c f uc, ,  uu  u f uc, ,  uu  b c b  z    f  c.
+		RTS			;return from subroutine
+The 6502 has no opcodes for multiplication, division, or modulus; the routines for multiplication, division, and modulus given above can be heavily optimized at the expense of some clarity.

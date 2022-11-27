@@ -1,21 +1,21 @@
 
 1)
- ="z "
-:
-   {"H !\"}
-(0)
+<syntaxhighlight lang="amazing hopper">
+main:
+   {"Hello world!\n"}print
+exit(0)
 
-cu :   .c
+execute with:  hopper helloworld.com
 2)
- ="z "
-#cu .
-:
-   ("H !\")
+<syntaxhighlight lang="amazing hopper">
+#include <hopper.h>
+main:
+   exit("Hello world!\n")
 
-cu :   .c -
+execute with:  hopper helloworld.com -d
 3)
- ="z "
-:
-  {"H !\"}u
+<syntaxhighlight lang="amazing hopper">
+main:
+  {"Hello world!\n"}return
 
-cu :   .c -
+execute with:  hopper helloworld.com -d

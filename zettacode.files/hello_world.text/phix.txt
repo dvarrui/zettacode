@@ -1,4 +1,4 @@
-{{b|Pbc}}
-!----
-  ="c: #7060A8"u ="c: #0000FF"( ="c: #000000"1 ="c: #0000FF", ="c: #008000""H !" ="c: #0000FF")
-!----
+{{libheader|Phix/basics}}
+<!---->
+ <span style="color: #7060A8;">puts</span><span style="color: #0000FF;">(</span><span style="color: #000000;">1</span><span style="color: #0000FF;">,</span><span style="color: #008000;">"Hello world!"</span><span style="color: #0000FF;">)</span>
+<!---->

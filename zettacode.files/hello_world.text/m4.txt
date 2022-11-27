@@ -1,2 +1,2 @@
-F  cu u f 4,   :
-`Ho wod!'
+For the particular nature of m4, this is simply:
+`Hello world!'

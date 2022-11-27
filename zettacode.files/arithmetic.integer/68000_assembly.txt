@@ -1,24 +1,24 @@
-ADD.L D0,D1  dd wo umb
-
-SUB.L D1,D0  ubc D1 f D0
-
-MULU D0,D1   u  u ub. U MULS f  ub
-
-DIVU D1,D0   D D0 b D1. U DIVS f  ub. U  b f D0   ,      qu.
-
+ADD.L D0,D1 ; add two numbers
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+SUB.L D1,D0 ; subtract D1 from D0
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+MULU D0,D1  ; multiply two unsigned numbers. Use MULS for signed numbers
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+DIVU D1,D0  ; Divide D0 by D1. Use DIVS for signed numbers. Upper two bytes of D0 are the remainder, lower two are the integer quotient.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 MODULUS:
 DIVU D1,D0
-SWAP D0        f  16-b  f D0.
+SWAP D0     ;swap the order of the 16-bit halves of D0.
 RTS
 
-E '  bu c b     f  uc   6502:
+Exponentiation doesn't exist but can be implemented in a similar fashion to multiplication on the 6502:
 
-Eo:
- D0   D1 . N f c.
+Exponent:
+;raises D0 to the D1 power. No overflow protection.
 MOVE.L D0,D2
 SUBQ.L #1,D1
-_:
+loop_exponent:
 MULU D0,D2
-DBRA D1,_
-uu   D2
+DBRA D1,loop_exponent
+;output is in D2
 RTS

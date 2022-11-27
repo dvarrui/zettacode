@@ -1,13 +1,13 @@
 
-f BYE-WORLD 
+fmod BYE-WORLD is
 
-	c STRING .
+	protecting STRING .
 	
-	 B : - S .
+	op sayBye : -> String .
 	
-	q B = "H !" .
+	eq sayBye = "Hello world!" .
 	
-f
+endfm
 
- B .
+red sayBye .
 

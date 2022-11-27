@@ -1,12 +1,12 @@
 
-	 T  Ho Wod, w  8080 mb o u ud CPM
-	 A u c ,      8086,  CPM  
-	   DOS      c.
-		100	 CPM .COM    100 -  DOS
-		c,9	 C   c, 9 =   -  DOS
-		,	 DE      
-	j	5	 CPM c  cc u  ju  05
-	 N u' CALL , bu c u'    b RETu,
-	 JMP   b (f u'   64 f  c u  
-	  b). 
-:	b	'H !$'
+	; This is Hello World, written in 8080 assembly to run under CP/M
+	; As you can see, it is similar to the 8086, and CP/M is very
+	; similar to DOS in the way it is called.
+	org	100h	; CP/M .COM entry point is 100h - like DOS
+	mvi	c,9	; C holds the syscall, 9 = print string - like DOS
+	lxi	d,msg	; DE holds a pointer to the string
+	jmp	5	; CP/M calls are accessed through the jump at 05h
+	; Normally you'd CALL it, but since you'd end the program by RETurning,
+	; JMP saves a byte (if you've only got 64k of address space you want to
+	; save bytes). 
+msg:	db	'Hello world!$'

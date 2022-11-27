@@ -1,5 +1,5 @@
-u mc Sm
- ()
+using namespace System;
+int main()
 {
-  C::WL("H !")
+  Console::WriteLine("Hello world!");
 }

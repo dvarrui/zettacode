@@ -1,1 +1,1 @@
-u ("Ho, wod!")
+putline ("Hello, world!");

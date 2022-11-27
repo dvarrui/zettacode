@@ -1,6 +1,6 @@
 
 
-"H !"
+"Hello world!"sh
 
 
-Au    '''' cu    .
+Although please note that ''sh'' actually does not print anything.

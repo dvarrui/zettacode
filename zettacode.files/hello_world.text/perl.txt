@@ -1,11 +1,11 @@
-{{ |P|5.8.8}}
- "Ho wod!\"
+{{works with|Perl|5.8.8}}
+print "Hello world!\n";
 
-{{ |P|5.10.}}
-Bc f Ru:
-u fu ''
- 'H !'
+{{works with|Perl|5.10.x}}
+Backported from Raku:
+use feature 'say';
+say 'Hello world!';
 
-:
-u 5.010
- 'H !'
+or:
+use 5.010;
+say 'Hello world!';

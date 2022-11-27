@@ -1,7 +1,7 @@
 
- f..
-fuc (): 
+import morfa.io.print;
+func main(): void
 {
-    ("H !")
+    println("Hello world!");
 }
 

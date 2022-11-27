@@ -1,6 +1,6 @@
 
-ck m
+package main
 
- "f"
+import "fmt"
 
-fuc () { f.P("H !") }
+func main() { fmt.Println("Hello world!") }

@@ -1,15 +1,15 @@
-'''I:''' [[Nqu]] (3.15)
-[[C:Nqu V 3.15]]
-===LISP ===
-(fom  "Ho wod!")
+'''Interpreter:''' [[Nyquist]] (3.15)
+[[Category:Nyquist Version 3.15]]
+===LISP syntax===
+(format t "Hello world!")
 
-O
+Or
 
-( "Ho wod!")
+(print "Hello world!")
 
-===SAL ===
- "Ho Wod!"
+===SAL syntax===
+print "Hello World!"
 
-O
+Or
 
-c fom(, "Ho Wod!")
+exec format(t, "Hello World!")

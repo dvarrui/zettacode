@@ -1,1 +1,1 @@
-u = "Ho wod!"
+return = "Hello world!";

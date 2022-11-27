@@ -1,11 +1,11 @@
-5 LET =5: LET b=3
-10 PRINT " + "b" = "+b
-20 PRINT " - "b" = "-b
-30 PRINT " * "b" = "*b
-40 PRINT "  "b" = "INT (b)
-50 PRINT "  "b" = "-INT (b)*b
-60 PRINT "    f "b" = "^b
+5 LET a=5: LET b=3
+10 PRINT a;" + ";b;" = ";a+b
+20 PRINT a;" - ";b;" = ";a-b
+30 PRINT a;" * ";b;" = ";a*b
+40 PRINT a;" / ";b;" = ";INT (a/b)
+50 PRINT a;" mod ";b;" = ";a-INT (a/b)*b
+60 PRINT a;" to the power of ";b;" = ";a^b
 
-      1ju20012b49596cj51
+      <sha1>jmu2t0w01l2tasbm4sraa95rv96cj5t</sha1>
     
   

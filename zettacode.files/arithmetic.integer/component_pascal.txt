@@ -1,32 +1,32 @@
-W  G P C Pc
+Works with Gardens Point Component Pascal
 
-MODULE Ac
-IMPORT CP,C,RTS
+MODULE Arithmetic;
+IMPORT CPmain,Console,RTS;
 
 VAR
-   ,	  : INTEGER
-   	  : ARRAY 128 OF CHAR
-   u : BOOLEAN
+   x,y	  : INTEGER;
+   arg	  : ARRAY 128 OF CHAR;
+   status : BOOLEAN;
    
 
-PROCEDURE E(IN  : ARRAY OF CHAR)
+PROCEDURE Error(IN str : ARRAY OF CHAR);
 BEGIN
-   C.WS()C.WL
+   Console.WriteString(str);Console.WriteLn;
    HALT(1)
-END E
+END Error;
 
 
 BEGIN
-   IF CP.ANub()  2 THEN E("G   !") END
-   CP.GA(0,) RTS.STI(,,u)
-   IF ~u THEN E("C' c 	'"++"'  I") END
-   CP.GA(1,) RTS.STI(,,u)
-   IF ~u THEN E("C' c '"++"'  I") END
-   C.WS(" +  ")C.WI( + ,6)C.WL
-   C.WS(" -  ")C.WI( - ,6)C.WL
-   C.WS(" *  ")C.WI( * ,6)C.WL
-   C.WS("   ")C.WI( DIV ,6)C.WL
-   C.WS(" MOD  ")C.WI( MOD ,6)C.WL
-END Ac.
+   IF CPmain.ArgNumber() < 2 THEN Error("Give me two integers!") END;
+   CPmain.GetArg(0,arg); RTS.StrToInt(arg,x,status);
+   IF ~status THEN Error("Can't convert 	'"+arg+"' to Integer") END;
+   CPmain.GetArg(1,arg); RTS.StrToInt(arg,y,status);
+   IF ~status THEN Error("Can't convert '"+arg+"' to Integer") END;
+   Console.WriteString("x + y >");Console.WriteInt(x + y,6);Console.WriteLn;
+   Console.WriteString("x - y >");Console.WriteInt(x - y,6);Console.WriteLn;
+   Console.WriteString("x * y >");Console.WriteInt(x * y,6);Console.WriteLn;
+   Console.WriteString("x / y >");Console.WriteInt(x DIV y,6);Console.WriteLn;
+   Console.WriteString("x MOD y >");Console.WriteInt(x MOD y,6);Console.WriteLn;
+END Arithmetic.
 
-c: cu Ac 12 23b
+command: <i>cprun Arithmetic 12 23</i><br/>

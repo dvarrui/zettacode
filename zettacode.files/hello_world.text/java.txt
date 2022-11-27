@@ -1,7 +1,7 @@
-ubc c HoWod
+public class HelloWorld
 {
- ubc c  (S[] )
+ public static void main(String[] args)
  {
-  S.u.("H !")
+  System.out.println("Hello world!");
  }
 }

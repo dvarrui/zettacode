@@ -1,18 +1,18 @@
-INPUT "E f umb.":f
-INPUT "E c ub.":c
-PRINT "T u f"f""c" "f+c"."
-PRINT "T ffc b"f""c" "ABS(f-c)"."
-PRINT "T uc f"f""c" "f*c"."
-IF c THEN
-    PRINT "T  qu f"f""c" "INTEG(fc)"."
+INPUT "Enter first number.":first
+INPUT "Enter second number.":second
+PRINT "The sum of";first;"and";second;"is ";first+second&amp;"."
+PRINT "The difference between";first;"and";second;"is ";ABS(first-second)&amp;"."
+PRINT "The product of";first;"and";second;"is ";first*second&amp;"."
+IF second THEN
+    PRINT "The integer quotient of";first;"and";second;"is ";INTEG(first/second)&amp;"."
 ELSE
-    PRINT "D b z  c."
+    PRINT "Division by zero not cool."
 ENDIF
-PRINT "T  b..."f%c"."
-PRINT STR$(f)"    f"c" "f^c"."
+PRINT "The remainder being...";first%second&amp;"."
+PRINT STR$(first);"raised to the power of";second;"is ";first^second&amp;"."
 
-'''NOTES:''' S cuu c f  BASIC     c :
-
-I  BASIC, T c INTEG   u  fuc    u f  ccc. T  BASIC INT c ccu   u fuc. T ff f    f BASIC.
- BASIC uc  c  f  b ub. T c cu uc f u  cb uu f uc b  . I   u   c, u u u   ()  cc  uc u   f  (  c,      f c c). I  c f  c, u u c  uc u   u  STR$ c (     f  c).
-
+'''NOTES:''' Some curious aspects of smart BASIC to note in this code example:
+<ol>
+<li>In smart BASIC, The command INTEG is a true integer function providing only the value of the characteristic. The smart BASIC INT command calculates as a rounding function. This differs from some other versions of BASIC.</li>
+<li>smart BASIC automatically inserts spaces ahead of and behind numbers. This can cause unexpected formatting issues when combining output from numeric variables with text. In order to suppress the trailing space, you must use the ampersand (&amp;) to concatenate the numeric value with the following text (in this case, a period at the end of each sentence). In the case of leading spaces, you must convert the numeric value to text using the STR$ command (as with the last line of the code).
+</ol>

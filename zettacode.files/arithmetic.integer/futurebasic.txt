@@ -1,158 +1,158 @@
-Bc 
+Basic program
 
- 1, @"I Ac", ( 0, 0, 400, 300 )
+window 1, @"Integer Arithmetic", ( 0, 0, 400, 300 )
 
-NSI  = 25
-NSI b = 53
+NSInteger a = 25
+NSInteger b = 53
 
- "        "" + "b" = " ( + b)
- "ubc     "" - "b" = " ( - b)
- "uc  "" * "b" = " ( * b)
- "        ""  "b" = " (  b)
-f @"f   %  % = %f", , b, (f)  (f)b
- "u          "" % "b" = " (  b)
- "           "" ^ "b" = " ( ^ b)
+print "addition        "a" + "b" = " (a + b)
+print "subtraction     "a" - "b" = " (a - b)
+print "multiplication  "a" * "b" = " (a * b)
+print "division        "a" / "b" = " (a / b)
+printf @"float division  %ld / %ld = %f", a, b, (float)a / (float)b
+print "modulo          "a" % "b" = " (a mod b)
+print "power           "a" ^ "b" = " (a ^ b)
 
-HE
-
-
-Ouu:
-
-:       25 + 53 = 78
-ubc:    25 - 53 = -28
-uc: 25 * 53 = 1325
-:       25  53 = 0
-f : 25  53 = 0.471698
-u:         25  53 = 25
-:          25 ^ 53 = 1.232595+74
+HandleEvents
 
 
-S I, M1, M2 Mc c  u u
+Output:
+
+addition:       25 + 53 = 78
+subtraction:    25 - 53 = -28
+multiplication: 25 * 53 = 1325
+division:       25 / 53 = 0
+float division: 25 / 53 = 0.471698
+modulo:         25 mod 53 = 25
+power:          25 ^ 53 = 1.232595e+74
 
 
-_ = 1
-b u 1
-_1Lb
-_1F
-_2Lb
-_2F
-_ccRu
-_ccB
- u
-
- c f BuW
-CGRc 
-
- = f CGRcM( 0, 0, 480, 360 )
- _, @"I Ac", , NSWSMT + NSWSMCb + NSWSMMuzb
-
- = f CGRcM( 240, 320, 150, 24 )
-b _1Lb, @"E f :", , _
-CSA( _1Lb, NSTAR )
- = f CGRcM( 400, 322, 60, 24 )
-f _1F, YES, @"25", , _
-CSA( _1F, NSTAC )
-CSUSLM( _1F, YES )
-CSF( _1F, @"0123456789-", YES, 5, NULL )
-
- = f CGRcM( 240, 290, 150, 24 )
-b _2Lb, @"E c :", , _
-CSA( _2Lb, NSTAR )
- = f CGRcM( 400, 292, 60, 24 )
-f _2F, YES, @"53", , _
-CSA( _2F, NSTAC )
-CSUSLM( _2F, YES )
-CSF( _2F, @"0123456789-", YES, 5, NULL )
-
- = f CGRcM( 50, 60, 380, 200 )
- _ccRu, ,,, _
-TVSTCI( _ccRu, f CGSzM( 10, 20 ) )
-TSFWN( _ccRu, @"M", 13.0 )
-TVSEb( _ccRu, NO )
-
- = f CGRcM( 370, 13, 100, 32 )
-bu _ccB,,, @"Ccu", 
- f
-
-c f PfCcu
-CFSRf S
-
-NSI 1 = f CIVu( _1F )
-NSI 2 = f CIVu( _2F )
-
-CFMubSRf uS = f MubSWCc( 0 )
-
- D u 
-S = f SWF( @"Nub 1: %\Nub 2: %\\", 1, 2 )
-MubSAS( uS, S )
-
- A
-S = f SWF( @"A: % + % = %\", 1, 2, 1 + 2 )
-MubSAS( uS, S )
-
- Subc
-S = f SWF( @"Subc: % - % = %\", 1, 2, 1 - 2 )
-MubSAS( uS, S )
-
- Mu
-S = f SWF( @"Muc: % * % = %\", 1, 2, 1 * 2 )
-MubSAS( uS, S )
-
-f ( 2 != 0 )
-
- D
-S = f SWF( @"I D: %  % = %\", 1, 2, 1  2 )
-MubSAS( uS, S )
-
- F D
-S = f SWF( @"F D: %  % = %f\", 1, 2, (f)1  (f)2 )
-MubSAS( uS, S )
-
- 
-S = f SWF( @"Mu: %  % = % \", 1, 2, 1  2 )
-MubSAS( uS, S )
-
- 
-S = f SWF( @"P: % ^ % = %\", 1, 2, 1 ^ 2 )
-MubSAS( uS, S )
+Standalone Intel, M1, M2 Macintosh application with user input
 
 
+_window = 1
+begin enum 1
+_int1Label
+_int1Field
+_int2Label
+_int2Field
+_calcResults
+_calcBtn
+end enum
 
-MubSAS( uS, @"C  b z." )
+void local fn BuildWindow
+CGRect r
 
- f
+r = fn CGRectMake( 0, 0, 480, 360 )
+window _window, @"Integer Arithmetic", r, NSWindowStyleMaskTitled + NSWindowStyleMaskClosable + NSWindowStyleMaskMiniaturizable
 
-TSS( _ccRu, uS )
- f
+r = fn CGRectMake( 240, 320, 150, 24 )
+textlabel _int1Label, @"Enter first integer:", r, _window
+ControlSetAlignment( _int1Label, NSTextAlignmentRight )
+r = fn CGRectMake( 400, 322, 60, 24 )
+textfield _int1Field, YES, @"25", r, _window
+ControlSetAlignment( _int1Field, NSTextAlignmentCenter )
+ControlSetUsesSingleLineMode( _int1Field, YES )
+ControlSetFormat( _int1Field, @"0123456789-", YES, 5, NULL )
 
- c f DD(   ,   ,    )
+r = fn CGRectMake( 240, 290, 150, 24 )
+textlabel _int2Label, @"Enter second integer:", r, _window
+ControlSetAlignment( _int2Label, NSTextAlignmentRight )
+r = fn CGRectMake( 400, 292, 60, 24 )
+textfield _int2Field, YES, @"53", r, _window
+ControlSetAlignment( _int2Field, NSTextAlignmentCenter )
+ControlSetUsesSingleLineMode( _int2Field, YES )
+ControlSetFormat( _int2Field, @"0123456789-", YES, 5, NULL )
+
+r = fn CGRectMake( 50, 60, 380, 200 )
+textview _calcResults, r,,, _window
+TextViewSetTextContainerInset( _calcResults, fn CGSizeMake( 10, 20 ) )
+TextSetFontWithName( _calcResults, @"Menlo", 13.0 )
+TextViewSetEditable( _calcResults, NO )
+
+r = fn CGRectMake( 370, 13, 100, 32 )
+button _calcBtn,,, @"Calculate", r
+end fn
+
+local fn PerformCalculations
+CFStringRef tempStr
+
+NSInteger i1 = fn ControlIntegerValue( _int1Field )
+NSInteger i2 = fn ControlIntegerValue( _int2Field )
+
+CFMutableStringRef mutStr = fn MutableStringWithCapacity( 0 )
+
+// Display inout integers
+tempStr = fn StringWithFormat( @"Number 1: %ld\nNumber 2: %ld\n\n", i1, i2 )
+MutableStringAppendString( mutStr, tempStr )
+
+// Add
+tempStr = fn StringWithFormat( @"Addition: %ld + %ld = %ld\n", i1, i2, i1 + i2 )
+MutableStringAppendString( mutStr, tempStr )
+
+// Subtract
+tempStr = fn StringWithFormat( @"Subtraction: %ld - %ld = %ld\n", i1, i2, i1 - i2 )
+MutableStringAppendString( mutStr, tempStr )
+
+// Multiply
+tempStr = fn StringWithFormat( @"Multiplication: %ld * %ld = %ld\n", i1, i2, i1 * i2 )
+MutableStringAppendString( mutStr, tempStr )
+
+if ( i2 != 0 )
+
+// Divide
+tempStr = fn StringWithFormat( @"Integer Division: %ld / %ld = %ld\n", i1, i2, i1 / i2 )
+MutableStringAppendString( mutStr, tempStr )
+
+// Float Divide
+tempStr = fn StringWithFormat( @"Float Division: %ld / %ld = %f\n", i1, i2, (float)i1 / (float)i2 )
+MutableStringAppendString( mutStr, tempStr )
+
+// mod
+tempStr = fn StringWithFormat( @"Modulo: %ld mod %ld = %ld remainder\n", i1, i2, i1 mod i2 )
+MutableStringAppendString( mutStr, tempStr )
+
+// power
+tempStr = fn StringWithFormat( @"Power: %ld ^ %ld = %e\n", i1, i2, i1 ^ i2 )
+MutableStringAppendString( mutStr, tempStr )
+
+else
+
+MutableStringAppendString( mutStr, @"Cannot divide by zero." )
+
+end if
+
+TextSetString( _calcResults, mutStr )
+end fn
+
+void local fn DoDialog( ev as long, tag as long, wnd as long )
 '~'1
-c (  )
-c _bCc
-c (  )
-c _ccB : f PfCcu
- c
-c _WC : 
- c
- f
+select ( ev )
+case _btnClick
+select ( tag )
+case _calcBtn : fn PerformCalculations
+end select
+case _windowWillClose : end
+end select
+end fn
 
-  f DD
+on dialog fn DoDialog
 
-f BuW
+fn BuildWindow
 
-HE
+HandleEvents
 
 
-Ouu:
+Output:
 
-Nub 1: 25
-Nub 2: 53
+Number 1: 25
+Number 2: 53
 
-A: 25 + 53 = 78
-Subc: 25 - 53 = -28
-Muc: 25 * 53 = 1325
-I D: 25  53 = 0
-F D: 25  53 = 0.471698
-Mu: 25  53 = 25 
-P: 25 ^ 53 = 1.232595+74
+Addition: 25 + 53 = 78
+Subtraction: 25 - 53 = -28
+Multiplication: 25 * 53 = 1325
+Integer Division: 25 / 53 = 0
+Float Division: 25 / 53 = 0.471698
+Modulo: 25 mod 53 = 25 remainder
+Power: 25 ^ 53 = 1.232595e+74
 

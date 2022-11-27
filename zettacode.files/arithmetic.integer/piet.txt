@@ -1,38 +1,38 @@
-[[F:PAcI.]]b
- c
- c   c
- ()   A
- uc AA
- uc AAA
- uc AAAA
- uc AAAAA
- ()   BAAAAA
- uc BBAAAAA
- uc BBBAAAAA
- uc BBBBAAAAA
- uc BBBBBAAAAA
- u 9    9BBBBBAAAAA
- u 1    19BBBBBAAAAA
-       BBBBAAAABA
- u 7    7BBBBAAAABA
- u 1    17BBBBAAAABA
-       BBBAAABABA
- u 5    5BBBAAABABA
- u 1    15BBBAAABABA
-       BBAABABABA
- u 3    3BBAABABABA
- u 1    13BBAABABABA
-       BABABABABA
-        (A+B)BABABABA
- u()  BABABABA
- ub       (A-B)BABABA
- u()  BABABA
- u      (A*B)BABA
- u()  BABA
-     (AB)BA
- u()  BA
-        (A%B)
- u()  NULL
- u 1    1
- c
-H u    u   , bu I b    u  0.
+[[File:PietArithmaticInteger.png]]<br>
+ <code>
+ command   stack
+ in(int)   A
+ duplicate AA
+ duplicate AAA
+ duplicate AAAA
+ duplicate AAAAA
+ in(int)   BAAAAA
+ duplicate BBAAAAA
+ duplicate BBBAAAAA
+ duplicate BBBBAAAAA
+ duplicate BBBBBAAAAA
+ push 9    9BBBBBAAAAA
+ push 1    19BBBBBAAAAA
+ roll      BBBBAAAABA
+ push 7    7BBBBAAAABA
+ push 1    17BBBBAAAABA
+ roll      BBBAAABABA
+ push 5    5BBBAAABABA
+ push 1    15BBBAAABABA
+ roll      BBAABABABA
+ push 3    3BBAABABABA
+ push 1    13BBAABABABA
+ roll      BABABABABA
+ add       (A+B)BABABABA
+ out(int)  BABABABA
+ sub       (A-B)BABABA
+ out(int)  BABABA
+ mult      (A*B)BABA
+ out(int)  BABA
+ divide    (A/B)BA
+ out(int)  BA
+ mod       (A%B)
+ out(int)  NULL
+ push 1    1
+ exit</code>
+How rounding is handled is up to the interpreter, but I believe the intent was round towards 0.

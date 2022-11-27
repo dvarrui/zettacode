@@ -1,8 +1,8 @@
-T   S,  c  () :
-m: fuc {
-  "H !" ()
+To print a String, either call its println() method:
+main: func {
+  "Hello world!" println()
 }
-O c  f () fuc   S   u.
-m: fuc {
-  ("H !")
+Or call the free println() function with the String as the argument.
+main: func {
+  println("Hello world!")
 }

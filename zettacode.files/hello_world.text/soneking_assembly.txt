@@ -1,10 +1,10 @@
- =" b"
- 
+<syntaxhighlight lang="soneking assembly">
+extern print
 
- M Gb,W!
+dv Msg Goodbye,World!
 
-  M
-u
-c 
-
+mov eax Msg
+push
+call print
+pop
 

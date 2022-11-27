@@ -1,1 +1,1 @@
-WRITE() 'Ho wod!'
+WRITE() 'Hello world!'

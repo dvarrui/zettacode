@@ -1,6 +1,6 @@
-U   u :
-(NL "Ho Wod!")
-U  c :
-w do: ^[]
-u ( NL!["H W!" (c )]
-    | ?_ = () )
+Using the syntax sugared version:
+(prNL "Hello World!");
+Using the channel syntax:
+new done: ^[]
+run ( prNL!["Hello World!" (rchan done)]
+    | done?_ = () )

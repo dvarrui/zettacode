@@ -1,2 +1,2 @@
 
-uu ["H W"]
+output ["Hello World"];

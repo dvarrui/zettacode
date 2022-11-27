@@ -1,5 +1,5 @@
-{{ |F Pc}}
-om bwod
-b
- ('H !')
-.
+{{works with|Free Pascal}}
+program byeworld;
+begin
+ writeln('Hello world!');
+end.

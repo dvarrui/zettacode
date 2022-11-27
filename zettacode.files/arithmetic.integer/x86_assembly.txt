@@ -1,23 +1,23 @@
-Iu  uu u b OS-cfc    . T u    16-b 8086,      32-b  64-b ucc:  cu b  f  f 32-b  64-b c  c    u. T qu  uc  z      f  f .
-m: mov      c,          
-              b,          b
-              ,          
+Input and output would be OS-specific and are not implemented. This routine works on the 16-bit 8086, as well as on its 32-bit and 64-bit successors: it could be trivially modified to perform 32-bit or 64-bit arithmetic on machines where those are supported. The quotient is truncated towards zero; the remainder takes its sign from the first operand.
+arithm: mov      cx,          a
+        mov      bx,          b
+        xor      dx,          dx
         
-              ,          c
-              ,          b
-              u,         
+        mov      ax,          cx
+        add      ax,          bx
+        mov      sum,         ax
         
-              ,          c
-        u     b
-              uc,     
+        mov      ax,          cx
+        imul     bx
+        mov      product,     ax
         
-              ,          c
-        ub      ,          b
-              ffc,  
+        mov      ax,          cx
+        sub      ax,          bx
+        mov      difference,  ax
         
-              ,          c
-             b
-              qu,    
-              ,   
+        mov      ax,          cx
+        idiv     bx
+        mov      quotient,    ax
+        mov      remainder,   dx
 
-        
+        ret

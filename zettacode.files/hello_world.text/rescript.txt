@@ -1,2 +1,2 @@
 
-J.o("Ho wod!")
+Js.log("Hello world!")

@@ -1,10 +1,10 @@
-uu    ffc f c
-#ow+
+output as a side effect of compilation
+#show+
 
- = -[H !]-
-uu b  c cub
-#mo d
+main = -[Hello world!]-
+output by a compiled executable
+#import std
 
-#cub ('z','')
+#executable ('parameterized','')
 
- = f[c: -[H !]-]!
+main = <file[contents: -[Hello world!]-]>!

@@ -1,13 +1,13 @@
-Mod "mc dmo_,_"  
+Method "arithmetic demo_,_" is 
 [
-     : ,
-    b : 
+    a : integer,
+    b : integer
 |
-    P: “ + b”
-    P: “ - b”
-    P: “ × b”    * b
-    P: “ ÷ b”     b, u   f
-    P: “  b”   c c u
-    P: “ ^ b”
-]
+    Print: “a + b”;
+    Print: “a - b”;
+    Print: “a × b”; // or a * b
+    Print: “a ÷ b”; // or a / b, rounds toward negative infinity
+    Print: “a mod b”; // sign matches second argument
+    Print: “a ^ b”;
+];
 

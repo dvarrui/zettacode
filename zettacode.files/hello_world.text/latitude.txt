@@ -1,1 +1,1 @@
-u "Ho wod!".
+putln "Hello world!".

@@ -1,7 +1,7 @@
 
- PjcGb
+program ProjectGoodbye;
 {$APPTYPE CONSOLE}
-b
-  WL('H !')
-.
+begin
+  WriteLn('Hello world!');
+end.
 

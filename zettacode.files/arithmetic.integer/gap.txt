@@ -1,15 +1,15 @@
-u := fuco()
-  c , b, f
-  f := IuTU()
-  P(" =\")
-   := I(C(RL(f)))
-  P("b =\")
-  b := I(C(RL(f)))
-  D(Cc(S(), " + ", S(b), " = ", S( + b)))
-  D(Cc(S(), " - ", S(b), " = ", S( - b)))
-  D(Cc(S(), " * ", S(b), " = ", S( * b)))
-  D(Cc(S(), "  ", S(b), " = ", S(QuI(, b)))) #  0
-  D(Cc(S(), "  ", S(b), " = ", S(RI(, b)))) # 
-  D(Cc(S(), " ^ ", S(b), " = ", S( ^ b)))
-  CS(f)
-
+run := function()
+  local a, b, f;
+  f := InputTextUser();
+  Print("a =\n");
+  a := Int(Chomp(ReadLine(f)));
+  Print("b =\n");
+  b := Int(Chomp(ReadLine(f)));
+  Display(Concatenation(String(a), " + ", String(b), " = ", String(a + b)));
+  Display(Concatenation(String(a), " - ", String(b), " = ", String(a - b)));
+  Display(Concatenation(String(a), " * ", String(b), " = ", String(a * b)));
+  Display(Concatenation(String(a), " / ", String(b), " = ", String(QuoInt(a, b)))); # toward 0
+  Display(Concatenation(String(a), " mod ", String(b), " = ", String(RemInt(a, b)))); # nonnegative
+  Display(Concatenation(String(a), " ^ ", String(b), " = ", String(a ^ b)));
+  CloseStream(f);
+end;

@@ -1,1 +1,1 @@
-( "Ho wod!")
+(prn "Hello world!")

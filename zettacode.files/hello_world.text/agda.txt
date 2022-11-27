@@ -1,14 +1,14 @@
-F A 2.6.2, b   [:.c.2.6.2--. cu].
-modu owod w
+For Agda 2.6.2, based on its [https://agda.readthedocs.io/en/v2.6.2/getting-started/hello-world.html documentation].
+module helloworld where
 
-  A.Bu.IO u (IO)
-  A.Bu.U  (⊤  U)
-  A.Bu.S u (S)
+open import Agda.Builtin.IO using (IO)
+open import Agda.Builtin.Unit renaming (⊤ to Unit)
+open import Agda.Builtin.String using (String)
 
-u uSL : S - IO U
-{-# FOREIGN GHC  quf D.T  T #-}
-{-# COMPILE GHC uSL = uSL . T.uc #-}
+postulate putStrLn : String -> IO Unit
+{-# FOREIGN GHC import qualified Data.Text as T #-}
+{-# COMPILE GHC putStrLn = putStrLn . T.unpack #-}
 
- : IO U
- = uSL "H !"
+main : IO Unit
+main = putStrLn "Hello world!"
 

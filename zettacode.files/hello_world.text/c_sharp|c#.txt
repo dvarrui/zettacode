@@ -1,19 +1,19 @@
-{{ |M|1.2}}
-{{ |Vu C |Vu C#|2003}}
-mc HoWod
+{{works with|Mono|1.2}}
+{{works with|Visual C sharp|Visual C#|2003}}
+namespace HelloWorld
 {
-    c P
+    class Program
     {
-        c  M([] )
+        static void Main(string[] args)
         {
-            S.C.WL("H !")
+            System.Console.WriteLine("Hello world!");
         }
     }
 }
 
-{{ |Vu C |Vu C#|9.0+}}
-C# 9.0       f  uc f ( ''c_u''   cfc) b  u   c c. T  bc       c      c- .
-Sm.Coo.WL("Ho wod!")
-
-u Sm
-C.WL("H !")
+{{works with|Visual C sharp|Visual C#|9.0+}}
+C# 9.0 allows statements at the top level of a source file (a ''compilation_unit'' in the specification) between any using statements and namespace declarations. These statements become the program entry point and are placed in a method in a compiler-generated type.
+System.Console.WriteLine("Hello world!");
+or
+using System;
+Console.WriteLine("Hello world!");

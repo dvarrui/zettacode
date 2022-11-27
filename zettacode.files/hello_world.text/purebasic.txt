@@ -1,5 +1,5 @@
-OCoo()
-PN("H !")
-Iu()  W f 
-u cDbuc
-Dbu("Ho wod!")
+OpenConsole()
+PrintN("Hello world!")
+Input() ; Wait for enter
+using <code>Debug</code>
+Debug("Hello world!")

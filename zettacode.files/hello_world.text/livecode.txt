@@ -1,15 +1,15 @@
-E u  fu LC IDE.
+Examples using the full LiveCode IDE.
 
-T u  uu    M :
-u "Ho Wod!"
+Text input and output done in the Message palette/window:
+put "Hello World!"
 
-P   b   u
-Aw "Ho Wod!"
+Present a dialog box to the user
+Answer "Hello World!"
 
-E u c- c-   c
-#! uocbvcod-v
-  uuLE  "f"
-u "H !"  u
+Example using command-line livecode-server in shell script
+#! /usr/local/bin/livecode-server
+set the outputLineEndings to "lf"
+put "Hello world!" &amp; return
 
-Lc  u u   c    
-w "Ho wod!" m u o dou
+Livecode also supports stdout as a device to write to 
+write "Hello world!" &amp; return to stdout

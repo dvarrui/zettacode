@@ -1,32 +1,32 @@
 
-If  ub    c A1  B1
+If the numbers are typed into cells A1 and B1
 
-F u,   C1
+For sum, type in C1
 
 =$A1+$B1
 
 
-F ffc,   D1
+For difference, type in D1
 
 =$A1-$B1
 
 
-F uc,   E1
+For product, type in E1
 
 =$A1*$B1
 
 
-F qu,   F1
+For quotient, type in F1
 
 =QUOTIENT($A1,$B1)
 
 
-F ,   G1
+For remainder, type in G1
 
 =MOD($A1,$B1)
 
 
-F ,   H1
+For exponentiation, type in H1
 
 =$A1^$B1
 

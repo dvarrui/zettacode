@@ -1,2 +1,2 @@
-om: o_wod 
-  uu: "H  !"
+program: hello_world 
+  output: "Hello  world!"

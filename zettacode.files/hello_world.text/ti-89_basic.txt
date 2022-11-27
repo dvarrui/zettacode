@@ -1,1 +1,1 @@
-D "Ho wod!"
+Disp "Hello world!"

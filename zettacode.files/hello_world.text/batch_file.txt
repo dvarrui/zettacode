@@ -1,6 +1,6 @@
-'''U  ccuc,     b'''
-co Ho wod!
+'''Under normal circumstances, when delayed expansion is disabled'''
+echo Hello world!
 
-'''If    b,   ! u b c c'''
-oc bDdEo
-c H !^^!
+'''If delayed expansion is enabled, then the ! must be escaped twice'''
+setlocal enableDelayedExpansion
+echo Hello world!^^!

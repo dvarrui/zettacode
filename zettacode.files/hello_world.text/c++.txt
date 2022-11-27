@@ -1,5 +1,5 @@
-#cud om
+#include <iostream>
 
-  () {
-  ::cu  "H !"  ::
+int main () {
+  std::cout << "Hello world!" << std::endl;
 }

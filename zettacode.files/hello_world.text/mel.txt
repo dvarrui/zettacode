@@ -1,3 +1,3 @@
-oc oWod () {
-    "H, !\"
+proc helloWorld () {
+   print "Hello, world!\n";
 } 

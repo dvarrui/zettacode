@@ -1,10 +1,10 @@
-  (u  fuc)
+short version (without a function)
 
-o.fom("Ho wod!~")
+io.format("Hello world!~n")
 
-c  (u    f  c )
+complete version (put this in a file and compile it)
 
-@ubc 
-u = f () {
-    .f("H !~")
+@public 
+run = fn () {
+    io.format("Hello world!~n")
 }

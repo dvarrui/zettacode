@@ -1,1 +1,1 @@
-vod m() { ("Ho wod\") }
+void main() { print("Hello world\n"); }

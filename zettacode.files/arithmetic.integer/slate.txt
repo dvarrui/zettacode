@@ -1,9 +1,9 @@
-[| : :b |
-f: ( + b) S.
-f: ( - b) S.
-f: ( * b) S.
-f: (  b) S.
-f: (  b) S.
-f: ( \\ b) S.
+[| :a :b |
+inform: (a + b) printString.
+inform: (a - b) printString.
+inform: (a * b) printString.
+inform: (a / b) printString.
+inform: (a // b) printString.
+inform: (a \\ b) printString.
 
-] T: {I F: (qu: 'E : '). I F: (qu: 'E b: ')}.
+] applyTo: {Integer readFrom: (query: 'Enter a: '). Integer readFrom: (query: 'Enter b: ')}.

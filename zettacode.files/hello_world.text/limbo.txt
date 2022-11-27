@@ -1,14 +1,14 @@
-mm Commd
+implement Command;
  
- cu "."
-     : S
+ include "sys.m";
+     sys: Sys;
  
- cu "."
+ include "draw.m";
  
- cu "."
+ include "sh.m";
  
- (: f D-C, :  f )
+ init(nil: ref Draw->Context, nil: list of string)
  {
-      =  S S-PATH
-     -("H !\")
+     sys = load Sys Sys->PATH;
+     sys->print("Hello world!\n");
  }

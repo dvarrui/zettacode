@@ -1,13 +1,13 @@
-===u SAY===
-*REXX om o ow   of .  *
- 'H !'
+===using SAY===
+/*REXX program to show a line of text.  */
+say 'Hello world!'
 
-===u SAY b===
-*REXX om o ow   of .  *
- = 'H !'
- 
+===using SAY variable===
+/*REXX program to show a line of text.  */
+yyy = 'Hello world!'
+say yyy
 
-===u LINEOUT===
-*REXX om o ow   of .  *
+===using LINEOUT===
+/*REXX program to show a line of text.  */
 
-c u ,"H !"
+call lineout ,"Hello world!"

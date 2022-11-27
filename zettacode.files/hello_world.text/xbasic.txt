@@ -1,12 +1,12 @@
-{{ |W XBc}}
+{{works with|Windows XBasic}}
 
-PROGRAM ""
+PROGRAM "hello"
 VERSION "0.0003"
 
-DECLARE FUNCTION E()
+DECLARE FUNCTION Entry()
 
-FUNCTION E()
-  PRINT "H W"
+FUNCTION Entry()
+  PRINT "Hello World"
 END FUNCTION
 END PROGRAM
 

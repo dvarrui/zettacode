@@ -1,9 +1,9 @@
 
-df mc( :, b :) {
-  u `$\
-   Su:        ${ + b}
-   Dffc: ${ - b}
-   Puc:    ${ * b}
-   Qu:   ${  b}
-   R:  ${ % b}$\`
+def arithmetic(a :int, b :int) {
+  return `$\
+   Sum:        ${a + b}
+   Difference: ${a - b}
+   Product:    ${a * b}
+   Quotient:   ${a // b}
+   Remainder:  ${a % b}$\n`
 }

@@ -1,6 +1,6 @@
-'''[:b-u..u?=351f6704b0f793b513b14329b51 Cc    u  c]'''
-Pubc Sub M()
+'''[https://gambas-playground.proko.eu/?gist=d3a51f670e4eb0f793b513b14329be51 Click this link to run this code]'''
+Public Sub Main()
 
-PRINT "H !"
+PRINT "Hello world!"
  
-E
+End

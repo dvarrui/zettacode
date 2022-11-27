@@ -1,25 +1,25 @@
-A Ac  NSIS   b  [:.ucf.DcC4.#4.9.10.2 IO] uc.  I  b  c f     u u ( f  ),  I  b  -c u u  u u,    f    u-u c.
-Fuco Amc
-	Pu $0
-	Pu $1
-	Pu $2
-	SC $0 21
-	SC $1 -2
+All Arithmetic in NSIS is handled by the [http://nsis.sourceforge.net/Docs/Chapter4.html#4.9.10.2 IntOp] instruction.  It is beyond the scope of this task to implement user input (a fairly involved task), so I will be providing hard-coded values simulating the user input, with the intention of later adding the user-input piece.
+Function Arithmetic
+	Push $0
+	Push $1
+	Push $2
+	StrCpy $0 21
+	StrCpy $1 -2
 	
-	IO $2 $0 + $1
-	DP "$0 + $1 = $2"
-	IO $2 $0 - $1
-	DP "$0 - $1 = $2"
-	IO $2 $0 * $1
-	DP "$0 * $1 = $2"
-	IO $2 $0  $1
-	DP "$0  $1 = $2"
-	DP "Ru    f"
-	IO $2 $0 % $1
-	DP "$0 % $1 = $2"
-	DP "S f  c  f ub"
+	IntOp $2 $0 + $1
+	DetailPrint "$0 + $1 = $2"
+	IntOp $2 $0 - $1
+	DetailPrint "$0 - $1 = $2"
+	IntOp $2 $0 * $1
+	DetailPrint "$0 * $1 = $2"
+	IntOp $2 $0 / $1
+	DetailPrint "$0 / $1 = $2"
+	DetailPrint "Rounding is toward negative infinity"
+	IntOp $2 $0 % $1
+	DetailPrint "$0 % $1 = $2"
+	DetailPrint "Sign of remainder matches the first number"
 	
-	P $2
-	P $1
-	P $0
-FucE
+	Pop $2
+	Pop $1
+	Pop $0
+FunctionEnd

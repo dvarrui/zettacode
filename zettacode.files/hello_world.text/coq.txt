@@ -1,5 +1,5 @@
 
-Rqu I Cq.S.S.
+Require Import Coq.Strings.String.
 
-E cu  ("H !"%).
+Eval compute in ("Hello world!"%string).
 

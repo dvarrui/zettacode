@@ -1,1 +1,1 @@
-M("Ho wod!")
+Message("Hello world!")

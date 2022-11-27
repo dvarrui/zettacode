@@ -1,1 +1,1 @@
-AFFICHER [U, ] 'Ho wod!'
+AFFICHER [U, /] 'Hello world!'

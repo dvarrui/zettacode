@@ -1,18 +1,18 @@
 
-Lu86
+Linux/x86
 
-ob _
+global _start
 
-: c ( u: -- u: ) c 
+: syscall ( num:eax -- result:eax ) syscall ;
 
-:  ( u: --  ) 60 c 
-: b ( --  ) 0  
+: exit ( status:edi -- noret ) 60 syscall ;
+: bye ( -- noret ) 0 exit ;
 
-1 c u
+1 const stdout
 
-:  ( buf: : f: -- ) 1 c  
-:  ( buf  -- ) u  
+: write ( buf:esi len:edx fd:edi -- ) 1 syscall drop ;
+: print ( buf len -- ) stdout write ;
 
-:  ( -- ) " H !\"  
+: greet ( -- ) s" Hello world!\n" print ;
 
-: _ ( --  )  b 
+: _start ( -- noret ) greet bye ;

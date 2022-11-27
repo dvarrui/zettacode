@@ -1,15 +1,15 @@
-MODULE A EXPORTS M
+MODULE Arith EXPORTS Main;
 
-IMPORT IO, F
+IMPORT IO, Fmt;
 
-VAR , b: INTEGER
+VAR a, b: INTEGER;
 
 BEGIN
-   := IO.GI()
-  b := IO.GI()
-  IO.Pu("+b = "  F.I( + b)  "\")
-  IO.Pu("-b = "  F.I( - b)  "\")
-  IO.Pu("*b = "  F.I( * b)  "\")
-  IO.Pu(" DIV b = "  F.I( DIV b)  "\")
-  IO.Pu(" MOD b = "  F.I( MOD b)  "\")
-END A.
+  a := IO.GetInt();
+  b := IO.GetInt();
+  IO.Put("a+b = " &amp; Fmt.Int(a + b) &amp; "\n");
+  IO.Put("a-b = " &amp; Fmt.Int(a - b) &amp; "\n");
+  IO.Put("a*b = " &amp; Fmt.Int(a * b) &amp; "\n");
+  IO.Put("a DIV b = " &amp; Fmt.Int(a DIV b) &amp; "\n");
+  IO.Put("a MOD b = " &amp; Fmt.Int(a MOD b) &amp; "\n");
+END Arith.

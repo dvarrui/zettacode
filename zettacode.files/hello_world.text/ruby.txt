@@ -1,11 +1,11 @@
-{{ |Rub|1.8.4}}
-u "Ho wod!"
+{{works with|Ruby|1.8.4}}
+puts "Hello world!"
+or
+$stdout.puts "Hello world!"
+or even
+ STDOUT.write "Hello world!\n"
 
-$dou.u "Ho wod!"
- 
- STDOUT.w "Ho wod!\"
 
-
-'''U   b'''
-$.u "Ho wod!"
-$.w "Ho wod!\"
+'''Using the > global'''
+$>.puts "Hello world!"
+$>.write "Hello world!\n"

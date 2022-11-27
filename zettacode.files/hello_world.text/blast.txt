@@ -1,10 +1,10 @@
-# T w d  oodb m o  m c
-.b
- "H !"
-u
-# T    f  c.
+# This will display a goodbye message on the terminal screen
+.begin
+display "Hello world!"
+return
+# This is the end of the script.
 
-=={{H|BzM}}==
+=={{Header|BlitzMax}}==
 
- "H !"
+print "Hello world!"
 

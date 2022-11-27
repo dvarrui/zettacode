@@ -1,6 +1,6 @@
 
 
-(f $
-  (b [$]
-    (- "H !\")))
+(define $main
+  (lambda [$argv]
+    (write-string "Hello world!\n")))
 

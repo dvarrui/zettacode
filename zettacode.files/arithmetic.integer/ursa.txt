@@ -1,27 +1,27 @@
 #
-#  c
+# integer arithmetic
 #
 
-c   
-u "ub 1: " c
-  (  c)
-u "ub 2: " c
-  (  c)
+decl int x y
+out "number 1: " console
+set x (in int console)
+out "number 2: " console
+set y (in int console)
 
-u "\u:\" ( (+  ))  c
-u "ff:\" ( (-  ))  c
-u ":\" ( (*  ))  c
-# qu ' u  , bu   fuc u u
-u "qu:\" ( (  ))  c
-#     f 
-u ":\" ( (  ))  c
+out "\nsum:\t" (int (+ x y)) endl console
+out "diff:\t" (int (- x y)) endl console
+out "prod:\t" (int (* x y)) endl console
+# quotient doesn't round at all, but the int function rounds up
+out "quot:\t" (int (/ x y)) endl console
+# mod takes the sign of x
+out "mod:\t" (int (mod x y)) endl console
 
-S :
-ub 1: 15
-ub 2: 7
+Sample session:
+number 1: 15
+number 2: 7
 
-u:	22
-ff:	8
-:	105
-qu:	2
-:	1
+sum:	22
+diff:	8
+prod:	105
+quot:	2
+mod:	1

@@ -1,5 +1,5 @@
-u "Ho wod!"
+put "Hello world!"
 
-:
+or:
 
-c("Ho wod!")
+trace("Hello world!")

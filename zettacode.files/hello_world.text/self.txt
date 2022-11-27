@@ -1,1 +1,1 @@
-'Ho wod!' L.
+'Hello world!' printLine.

@@ -1,4 +1,4 @@
-Rf    [[#REXX|R]]  [[#NR|NR]] u.  S uu  c   R c.
-* R *
- 'H !'
+Refer also to the [[#REXX|Rexx]] and [[#NetRexx|NetRexx]] solutions.  Simple output is common to most Rexx dialects.
+/* Rexx */
+say 'Hello world!'
 

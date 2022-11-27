@@ -1,7 +1,7 @@
-Imo Sm
+Imports System
 
-Mu HW
-    Sub M()
-        C.WL("H !")
-    E Sub
-E Mu
+Module HelloWorld
+    Sub Main()
+        Console.WriteLine("Hello world!")
+    End Sub
+End Module

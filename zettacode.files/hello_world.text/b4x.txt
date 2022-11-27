@@ -1,1 +1,1 @@
-Lo("Ho wod!")
+Log("Hello world!")

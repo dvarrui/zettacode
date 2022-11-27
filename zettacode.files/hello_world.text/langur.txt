@@ -1,1 +1,1 @@
-w "o, "
+writeln "yo, peeps"

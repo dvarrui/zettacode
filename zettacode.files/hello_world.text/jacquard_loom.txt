@@ -1,4 +1,4 @@
-T    "H !"
+This weaves the string "Hello world!"
 +---------------+
 |               |
 |    *    *     |

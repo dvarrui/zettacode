@@ -1,5 +1,5 @@
-{{ |SIMULA-67}}
+{{works with|SIMULA-67}}
 BEGIN
-   OUTTEXT("H !")
+   OUTTEXT("Hello world!");
    OUTIMAGE
 END

@@ -1,7 +1,7 @@
-{{ |W 7|  , ' cc  }}
+{{works with|Windows 7| or later, haven't checked earlier versions}}
 
-  qu=
-  u=%qu%
-c %u%
-u
+set /p equation=
+set /a result=%equation%
+echo %result%
+pause
 

@@ -1,4 +1,4 @@
-: m[ -- ]
- @ "H !" f
-
-
+: main[ -- ]
+me @ "Hello world!" notify
+exit
+;

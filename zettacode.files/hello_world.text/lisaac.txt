@@ -1,16 +1,16 @@
-{{ |Lc|0.13.1}}
-Yu c    uu  Lc b c STRING.  INTEGER.:
+{{works with|Lisaac|0.13.1}}
+You can print to standard output in Lisaac by calling STRING.print or INTEGER.print:
 
-Sco Hd           T Hd co  qud.
-  +  := GOODBYE     Df   f  bjc.
+Section Header          // The Header section is required.
+  + name := GOODBYE;    // Define the name of this object.
 
-Sc Pubc
-  -  - ("H !\".)
+Section Public
+  - main <- ("Hello world!\n".print;);
 
-H,   b  f  u IO._ :
+However, it may be more straightforward to use IO.print_string instead:
 
-Sco Hd           T Hd co  qud.
-  +  := GOODBYE2    Df   f  bjc.
+Section Header          // The Header section is required.
+  + name := GOODBYE2;   // Define the name of this object.
 
-Sc Pubc
-  -  - (IO.u_ "H !\")
+Section Public
+  - main <- (IO.put_string "Hello world!\n";);

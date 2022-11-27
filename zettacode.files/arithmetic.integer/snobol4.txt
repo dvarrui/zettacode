@@ -1,12 +1,12 @@
 
-        uu = "E f :"
-  	f = u
-	uu = "E c :"
-	c = u
-	uu = "u  = " f + c
-	uu = "ff = " f - c
-	uu = " = " f * c
-	uu = "qu = " (qu = f  c)
-	uu = "  = " f - (qu * c)
-	uu = "  = " f ** c
-
+        output = "Enter first integer:"
+  	first = input
+	output = "Enter second integer:"
+	second = input
+	output = "sum  = " first + second
+	output = "diff = " first - second
+	output = "prod = " first * second
+	output = "quot = " (qout = first / second)
+	output = "rem  = " first - (qout * second)
+	output = "expo  = " first ** second
+end

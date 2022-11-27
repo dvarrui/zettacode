@@ -1,6 +1,6 @@
 
-(m "Ho wod!")
+(message "Hello world!")
 
-A, ccc c b u:
+Alternatively, <code>princ</code> can be used:
 
-(c "Ho wod!\")
+(princ "Hello world!\n")

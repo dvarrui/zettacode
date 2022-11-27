@@ -1,1 +1,1 @@
-m "Ho wod!" d
+message "Hello world!"; end

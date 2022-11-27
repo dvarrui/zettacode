@@ -1,1 +1,1 @@
-{Sow "Ho wod!"}
+{Show "Hello world!"}

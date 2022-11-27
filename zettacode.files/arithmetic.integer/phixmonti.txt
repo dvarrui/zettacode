@@ -1,14 +1,14 @@
-df O
-       
-f
+def printOp
+    swap print print nl
+enddef
 
-8   3  b
-" = "  O
-"b = " b O
+8 var a 3 var b
+"a = " a printOp
+"b = " b printOp
 
-" + b = "  b + O
-" - b = "  b - O
-" * b = "  b * O
-"(  b) = "  b   O
-"  b = "  b  O
-" ^ b = "  b  O
+"a + b = " a b + printOp
+"a - b = " a b - printOp
+"a * b = " a b * printOp
+"int(a / b) = " a b / int printOp
+"a mod b = " a b mod printOp
+"a ^ b = " a b power printOp

@@ -1,1 +1,1 @@
-(ouu "Ho wod!~%")
+(output "Hello world!~%")

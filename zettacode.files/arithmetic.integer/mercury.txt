@@ -1,44 +1,44 @@
 
-:- u _.
-:- fc.
+:- module arith_int.
+:- interface.
 
-:- _u .
-:-  (::, ::u)  .
+:- import_module io.
+:- pred main(io::di, io::uo) is det.
 
-:- .
-:- _u , , .
+:- implementation.
+:- import_module int, list, string.
 
-(!IO) :-
-    .c__u(A, !IO),
-    ( f
-        A = [AS, BS],
-        ._(AS, A),
-        ._(BS, B)
-      
-        .f("A + B = %\", [(A + B)], !IO),
-        .f("A - B = %\", [(A - B)], !IO),
-        .f("A * B = %\", [(A * B)], !IO),
+main(!IO) :-
+    io.command_line_arguments(Args, !IO),
+    ( if
+        Args = [AStr, BStr],
+        string.to_int(AStr, A),
+        string.to_int(BStr, B)
+      then
+        io.format("A + B = %d\n", [i(A + B)], !IO),
+        io.format("A - B = %d\n", [i(A - B)], !IO),
+        io.format("A * B = %d\n", [i(A * B)], !IO),
 
-        % D: u  z.
+        % Division: round towards zero.
         %
-        .f("A  B = %\", [(A  B)], !IO),
+        io.format("A / B = %d\n", [i(A / B)], !IO),
 
-        % D: u  u f.
+        % Division: round towards minus infinity.
         %
-        .f("A  B = %\", [(A  B)], !IO), 
+        io.format("A div B = %d\n", [i(A div B)], !IO), 
     
-        % Muu: X  Y = X - (X  Y) * Y.
+        % Modulus: X mod Y = X - (X div Y) * Y.
         %
-        .f("A  B = %\", [(A  B)], !IO),
+        io.format("A mod B = %d\n", [i(A mod B)], !IO),
 
-        % R: X  Y = X - (X  Y) * Y.
+        % Remainder: X rem Y = X - (X / Y) * Y.
         %
-        .f("A  B = %\", [(A  B)], !IO),
+        io.format("A rem B = %d\n", [i(A rem B)], !IO),
 
-        % E   u  fuc .2.
+        % Exponentiation is done using the function int.pow/2.
         %
-        .f("A `` B = %\", [(A `` B)], !IO)
-      
-        .__u(1, !IO)
+        io.format("A `pow` B = %d\n", [i(A `pow` B)], !IO)
+      else
+        io.set_exit_status(1, !IO)
     ).
 

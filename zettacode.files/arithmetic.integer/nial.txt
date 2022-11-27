@@ -1,23 +1,23 @@
 
-E   Q'N7.
+Example tested with Q'Nial7.
 
-Df   u   f :
-     mc  OP A B{[f,,+,-,*,quo,mod,ow] A B}
+Define new operator using an atlas of operators:
+     arithmetic is OP A B{[first,last,+,-,*,quotient,mod,power] A B}
 
-T  :
-     -23 mc 7
+Test new operator:
+     -23 arithmetic 7
 -23 7 -16 -30 -161 -4 5 -3404825447
 
-N    cc f  qu cquc   cc,   b c  u       c? c.
+Negative divisors are not accepted for integer quotient <code>quotient</code> or remainder <code>mod</code>, and in both cases the result is an error with the message <code>?negative divisor</code>.
 
-F cquc, f   cBc  z,  u  z.
+For <code>quotient</code>, if the divisor <code>B</code> is zero, the result is zero.
 
-F cc, f   cBc  z,  u  cAc.
+For <code>mod</code>, if the divisor <code>B</code> is zero, the result is <code>A</code>.
 
-T qu   b    cBc         f    cAc.
+The quotient on division by a positive integer <code>B</code> is always an integer on the same side of the origin as <code>A</code>.
 
-N f f cquc:
+Nial definition of <code>quotient</code>:
 
-A quo B =f=  foo (A  B)
+A quotient B =f=  floor (A / B)
 
-cfc u   f (  ).
+<code>floor</code> rounds towards negative infinity (next lower integer).

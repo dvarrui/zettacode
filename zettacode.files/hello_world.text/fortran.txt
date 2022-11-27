@@ -1,16 +1,16 @@
-{{ |F77}}
-S c -  u fu f:
+{{works with|F77}}
+Simplest case - display using default formatting:
 
- *,"Ho wod!"
+print *,"Hello world!"
 
-U c uu f:
+Use explicit output format:
 
-100   fom (5X,A,"!")
-       100,"H !"
+100   format (5X,A,"!")
+      print 100,"Hello world!"
 
-Ouu  c   u   :
+Output to channels other than stdout goes like this:
 
-w (89,100) "Ho wod!"
+write (89,100) "Hello world!"
 
-u  f   b 100  uu  u 89. If uu u   ub   ( "OPEN"   c-cfc  u ),   f  b c   uu  . O  UNIXLu   f  b  "f.89".
+uses the format given at label 100 to output to unit 89. If output unit with this number exists yet (no "<tt>OPEN</tt>" statement or processor-specific external unit setting), a new file will be created and the output sent there. On most UNIX/Linux systems that file will be named "<tt>fort.89</tt>".
 {{7*7}}

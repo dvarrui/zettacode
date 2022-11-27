@@ -1,13 +1,13 @@
-?
-$ = f(STDIN)
-$b = f(STDIN)
+<?php
+$a = fgets(STDIN);
+$b = fgets(STDIN);
 
-c
-    "u:                 ", $ + $b, "\",
-    "ffc:          ", $ - $b, "\",
-    "uc:             ", $ * $b, "\",
-    "uc qu: ", ()($  $b), "\",
-    "f qu:   ", f($  $b), "\",
-    ":           ", $ % $b, "\",
-    ":               ", $ ** $b, "\"  PHP 5.6+ 
-?
+echo
+    "sum:                 ", $a + $b, "\n",
+    "difference:          ", $a - $b, "\n",
+    "product:             ", $a * $b, "\n",
+    "truncating quotient: ", (int)($a / $b), "\n",
+    "flooring quotient:   ", floor($a / $b), "\n",
+    "remainder:           ", $a % $b, "\n",
+    "power:               ", $a ** $b, "\n"; // PHP 5.6+ only
+?>

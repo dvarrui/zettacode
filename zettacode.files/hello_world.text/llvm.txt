@@ -1,13 +1,13 @@
 
 
- c c [14] = "H W!\00"
-@. =  u_ c  [14  8] c"H, !\00"
+; const char str[14] = "Hello World!\00"
+@.str = private unnamed_addr constant  [14 x i8] c"Hello, world!\00"
 
- c  `u` 
-c 32 @u(8*) u
+; declare extern `puts` method
+declare i32 @puts(i8*) nounwind
 
-f 32 @()
+define i32 @main()
 {
-  c 32 @u( 8*  ([14  8]* @, 32 0,32 0))
-   32 0
+  call i32 @puts( i8* getelementptr ([14 x i8]* @str, i32 0,i32 0))
+  ret i32 0
 }

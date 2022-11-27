@@ -1,18 +1,18 @@
 
-.o 3000
-LEA R0,      R0 = 
-TRAP 22          PUTS ( c     R0)
+.orig x3000
+LEA R0, hello    ; R0 = &amp;hello
+TRAP x22         ; PUTS (print char array at addr in R0)
 HALT
- .z "H W!"
-.
-O (u PUTS)
-.o 3000
-LEA R1,          R1 = 
-TOP LDR R0, R1, #0    R0 = R1[0]
-BRz END               f R0    (0000)   END
-TRAP 21               OUT ( c  R0)
-ADD R1, R1, #1             c R1
-BR TOP                       TOP
+hello .stringz "Hello World!"
+.end
+Or (without PUTS)
+.orig x3000
+LEA R1, hello        ; R1 = &amp;hello
+TOP LDR R0, R1, #0   ; R0 = R1[0]
+BRz END              ; if R0 is string terminator (x0000) go to END
+TRAP x21             ; else OUT (write char in R0)
+ADD R1, R1, #1       ;      increment R1
+BR TOP               ;      go to TOP
 END HALT
- .z "H W!"
-.
+hello .stringz "Hello World!"
+.end

@@ -1,20 +1,20 @@
-F  [:.c.c. C Mu].
+From the [http://www.elasticworld.org/man/elastic.html elastiC Manual].
 
-ck o
+package hello;
 
-     I  `bc' c
-     bc
+    // Import the `basic' package
+    import basic;
 
-     Df   fuc
-    fuc ()
+    // Define a simple function
+    function hello()
     {
-         P  
-        bc.( "H !\" )
+        // Print hello world
+        basic.print( "Hello world!\n" );
     }
 
-    *
-     *  H    cu c c
-     *
+    /*
+     *  Here we start to execute package code
+     */
 
-     I  `' fuc
-    ()
+    // Invoke the `hello' function
+    hello();

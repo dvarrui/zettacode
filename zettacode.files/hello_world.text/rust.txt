@@ -1,13 +1,13 @@
 
-f () {
-   !("H !")
+fn main() {
+   print!("Hello world!");
 }
 
 
+or
 
 
-
-f () {
-   !("H !")
+fn main() {
+   println!("Hello world!");
 }
 

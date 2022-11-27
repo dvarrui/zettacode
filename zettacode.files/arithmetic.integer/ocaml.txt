@@ -1,9 +1,9 @@
- _ =
-    = _ ()
-   b = _ () 
+let _ =
+  let a = read_int ()
+  and b = read_int () in
 
-  Pf.f " + b = %\" ( + b)
-  Pf.f " - b = %\" ( - b)
-  Pf.f " * b = %\" ( * b)
-  Pf.f "  b = %\" (  b)    (* uc  0 *)
-  Pf.f "  b = %\" (  b) (*    f  *)
+  Printf.printf "a + b = %d\n" (a + b);
+  Printf.printf "a - b = %d\n" (a - b);
+  Printf.printf "a * b = %d\n" (a * b);
+  Printf.printf "a / b = %d\n" (a / b);    (* truncates towards 0 *)
+  Printf.printf "a mod b = %d\n" (a mod b) (* same sign as first operand *)

@@ -1,6 +1,6 @@
-I'  b   c   [[B]] c      u   .
-u Coo
+It's not possible to print exclamation marks in [[Bird]] which is why it is not used in this example.
+use Console
 
-f M
-    C.P "H "
-
+define Main
+    Console.Println "Hello world"
+end

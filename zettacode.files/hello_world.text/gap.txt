@@ -1,10 +1,10 @@
-# Sv w o do 
-"H !"
+# Several ways to do it
+"Hello world!";
 
-P("H !\") # N EOL 
+Print("Hello world!\n"); # No EOL appended
 
-D("H !")
+Display("Hello world!");
 
-f := OuuTU()
-WL(f, "H !\")
-CS(f)
+f := OutputTextUser();
+WriteLine(f, "Hello world!\n");
+CloseStream(f);

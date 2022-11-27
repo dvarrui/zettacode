@@ -1,41 +1,41 @@
- vo 1.1
+// version 1.1
 
-fu (: AS) {
-      = R("""-?\+[ ]+-?\+""")
-    (u) {
-        ("E    b c()  q  qu: ")
-         u: S = L()!!.()
-        f (u == "q" || u == "Q") b
-        f (!u.c()) {
-            ("I u,  ")
-            cu
+fun main(args: Array<String>) {
+    val r = Regex("""-?\d+[ ]+-?\d+""")
+    while(true) {
+        print("Enter two integers separated by space(s) or q to quit: ")
+        val input: String = readLine()!!.trim()
+        if (input == "q" || input == "Q") break
+        if (!input.matches(r)) {
+            println("Invalid input, try again")
+            continue
         }
-          = u.IOf(' ')
-          = u.ub(0, ).E().L()
-         b = u.ub( + 1).L()
-        ("$ + $b = ${ + b}")
-        ("$ - $b = ${ - b}")
-        ("$ * $b = ${ * b}")
-        f (b != 0L) {
-            ("$  $b = ${  b}")   u  z
-            ("$ % $b = ${ % b}")   f -z, c  f f 
+        val index = input.lastIndexOf(' ')
+        val a = input.substring(0, index).trimEnd().toLong()
+        val b = input.substring(index + 1).toLong()
+        println("$a + $b = ${a + b}")
+        println("$a - $b = ${a - b}")
+        println("$a * $b = ${a * b}")
+        if (b != 0L) {
+            println("$a / $b = ${a / b}")  // rounds towards zero
+            println("$a % $b = ${a % b}")  // if non-zero, matches sign of first operand
         }
-         {
-            ("$  $b = uf")
-            ("$ % $b = uf")
+        else {
+            println("$a / $b = undefined")
+            println("$a % $b = undefined")
         }
-          = M.(.Dub(), b.Dub())
-        ("$ ^ $b = ")
-        f ( % 1.0 == 0.0) {
-            f ( = L.MIN_VALUE.Dub()   = L.MAX_VALUE.Dub())
-                ("${.L()}")
-            
-                ("u f ")
+        val d = Math.pow(a.toDouble(), b.toDouble())
+        print("$a ^ $b = ")
+        if (d % 1.0 == 0.0) {
+            if (d >= Long.MIN_VALUE.toDouble() &amp;&amp; d <= Long.MAX_VALUE.toDouble())
+                println("${d.toLong()}")
+            else
+                println("out of range")
         }
-         f (!.F())
-            (" f")
-        
-            (" ")
-        ()
+        else if (!d.isFinite())
+            println("not finite")
+        else
+            println("not integral")
+        println()
     }
 }

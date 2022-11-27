@@ -1,31 +1,31 @@
 
-T   cu     "H !":
+To generate a document that shows the text "Hello world!":
 
 %!PS
-Hc 20 cf
-70 700 
-(H !) 
+/Helvetica 20 selectfont
+70 700 moveto
+(Hello world!) show
+showpage
 
+If the viewer has a console, then there are the following ways to display the topmost element of the stack:
 
-If     c,     f       f  c:
+(Hello world!) ==
 
-(Ho wod!) ==
+will display the <i>string</i> "(Hello world!)";
 
-    "(H !)"
+(Hello world!) =
 
-(Ho wod!) =
+will display the <i>content</i> of the string "(Hello world!)"; that is, "Hello world!";
 
-   c f   "(H !)"  , "H !"
+(Hello world!) print
 
-(Ho wod!) 
-
-   , u   . I  b c         c  u. T f  cb  fu b :
+will do the same, without printing a newline. It may be necessary to provoke an error message to make the console pop up. The following program combines all four above variants:
 
 %!PS
-Hc 20 cf
-70 700 
-(H !) u u u
-=  == %      c
- %   cu
-1 0  %   
-
+/Helvetica 20 selectfont
+70 700 moveto
+(Hello world!) dup dup dup
+= print == % prints three times to the console
+show % prints to document
+1 0 div % provokes error message
+showpage

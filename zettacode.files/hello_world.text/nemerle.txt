@@ -1,13 +1,13 @@
 
-c H
+class Hello
 {
-  c M () : 
+  static Main () : void
   {
-    S.C.WL ("H !")
+    System.Console.WriteLine ("Hello world!");
   }
 }
 
-E :
+Easier method:
 
-S.C.WL("H !")
+System.Console.WriteLine("Hello world!");
 

@@ -1,7 +1,7 @@
-c GoodBA : Aco
+class GoodByeApp : Application
 {
-    M()
+   void Main()
    {
-      PL("H !")
+      PrintLn("Hello world!");
    }
 }

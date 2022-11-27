@@ -1,1 +1,1 @@
- ="-bc"PRINT "H !"
+<syntaxhighlight lang="is-basic">PRINT "Hello world!"

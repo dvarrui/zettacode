@@ -1,1 +1,1 @@
-(c "Ho Wod!")
+(printc "Hello World!")

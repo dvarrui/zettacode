@@ -1,83 +1,83 @@
-T  ,    c-u f c cc  uu.b
-S,      f u ub  :
+To print text, we need the ascii-value of each character to output.<br>
+So, we wanna make a series of round numbers going like:
 
- 10	c    c u
- 30	c  !  SPACE
- 40	c  COMMA
- 70	c  G
- 80	c  W
- 90	c  b
- 100	   c    
- 110	c  
- 120	c  
+ 10	close to newline and carriage return
+ 30	close to ! and SPACE
+ 40	close to COMMA
+ 70	close to G
+ 80	close to W
+ 90	close to b
+ 100	is d and close to e and l
+ 110	close to o
+ 120	close to y
 
-f      f  ju  u  b
+forming all the letters we need if we just add up a bit
 
-C :
-+++++ +++++		F c 10 (  cou d w w b "mu")
+Commented version:
++++++ +++++		First cell 10 (its a counter and we will be "multiplying")
 
 [
-+			10  1  10
-+++			10  3  30
-++++			c c
-+++++ ++
-+++++ +++
-+++++ ++++
-+++++ +++++
-+++++ ++++++
-+++++ +++++++
- -		 bc  cu  ubc 1
+>+			10 times 1 is 10
+>+++			10 times 3 is 30
+>++++			etc etc
+>+++++ ++
+>+++++ +++
+>+++++ ++++
+>+++++ +++++
+>+++++ ++++++
+>+++++ +++++++
+<<<<<<<<< -		go back to counter and subtract 1
 ]
 
- G
- + .
+printing G
+>>>> + .
 
- c
- + ..
+o twice
+>>>> + ..
 
-
- .
+d
+< .
 
 b
- +++++ +++ .
+< +++++ +++ .
 
+y
+>>> + .
 
- + .
-
-
- + .
+e
+<< + .
 
 COMMA
- ++++ .
+<<<< ++++ .
 
 SPACE
- ++ .
+< ++ .
 
 W
- +++++ ++ .
+>>> +++++ ++ .
 
+o
+>>> .
 
- .
-
-
+r
 +++ .
 
+l
+< +++++ ++ .
 
- +++++ ++ .
-
-
+d
 ----- --- .
 
 !
- + .
+<<<<< + .
 
 CRLF
- +++ . --- .
+< +++ . --- .
 
-Uc:
-++++++++++[++++++++++++++++++++++++++++++++++
-+++++++++++++++++++++++++++++++-]+.
-+...++++++++.+.+.++++.++.+++++++..+++.
-+++++++.--------.+.+++.---.
-I c   b z, bu    c    
- cc    Bf*** :)
+Uncommented:
+++++++++++[>+>+++>++++>+++++++>++++++++>+++++++++>++
+++++++++>+++++++++++>++++++++++++<<<<<<<<<-]>>>>+.>>>
+>+..<.<++++++++.>>>+.<<+.<<<<++++.<++.>>>+++++++.>>>.+++.
+<+++++++.--------.<<<<<+.<+++.---.
+It can most likely be optimized, but this is a nice way to show 
+how character printing works in Brainf*** :)

@@ -1,9 +1,9 @@
-{{ |Bu S}}
-#!b
-c "H !"
+{{works with|Bourne Shell}}
+#!/bin/sh
+echo "Hello world!"
 
-==={{|C S}}===
-#!bc -f
-c "H !\!"
+==={{header|C Shell}}===
+#!/bin/csh -f
+echo "Hello world!\!"
 
-W u \!    ubu. P !   f    b f, bu  u \!  b u.
+We use \! to prevent history substitution. Plain ! at end of string seems to be safe, but we use \! to be sure.

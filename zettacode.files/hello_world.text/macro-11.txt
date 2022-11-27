@@ -1,8 +1,8 @@
- ="c-11"
-
-          TEXT BASED HELLO WORLD
-          WRITTEN  BY:  BILL GUNSHANNON
-
+<syntaxhighlight lang="macro-11">
+;
+;          TEXT BASED HELLO WORLD
+;          WRITTEN  BY:  BILL GUNSHANNON
+;
  
            .MCALL  .PRINT .EXIT 
            .RADIX  10
@@ -18,7 +18,7 @@ START:
  
 DONE:
  
-   CLEAN UP AND GO BACK TO KMON
+;   CLEAN UP AND GO BACK TO KMON
  
            .EXIT
  

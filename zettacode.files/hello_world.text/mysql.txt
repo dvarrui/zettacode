@@ -1,2 +1,2 @@
 
-SELECT 'Ho wod!'
+SELECT 'Hello world!';

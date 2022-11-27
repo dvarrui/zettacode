@@ -1,2 +1,2 @@
-{{ |W Sc H|5.7}}
-WSc.Eco "Ho wod!"
+{{works with|Windows Script Host|5.7}}
+WScript.Echo "Hello world!"

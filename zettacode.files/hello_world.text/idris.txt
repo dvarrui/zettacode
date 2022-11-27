@@ -1,4 +1,4 @@
-modu M
+module Main
 
- : IO ()
- = uSL "H !"
+main : IO ()
+main = putStrLn "Hello world!"

@@ -1,10 +1,10 @@
-df m
+define main
 
-% S '     bu-.
-% L' f     f cc.
+% Sisal doesn't yet have a string built-in.
+% Let's define one as an array of characters.
 
-  = [cc]
+type string = array[character];
 
-fuc (u )
-  "H !"
- fuc
+function main(returns string)
+  "Hello world!"
+end function

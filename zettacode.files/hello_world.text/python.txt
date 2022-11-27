@@ -1,19 +1,19 @@
-{{ |P|2.4}}
- "Ho wod!"
+{{works with|Python|2.4}}
+print "Hello world!"
 
-T  u .u
-mo 
-.u.("H !\")
+The same using sys.stdout
+import sys
+sys.stdout.write("Hello world!\n")
 
-I P 3.0,   c f     fuc.
+In Python 3.0, print is changed from a statement to a function.
 
-{{ |P|3.0}} (A  2.X ).
-("Ho wod!")
+{{works with|Python|3.0}} (And version 2.X too).
+print("Hello world!")
 
-'''A  '''
-T f    cH, !c c,       c.
-mo __o__
+'''An easter egg'''
+The first two examples print <code>Hello, world!</code> once, and the last one prints it twice.
+import __hello__
 
-mo __o__
+import __phello__
 
-mo __o__.m
+import __phello__.spam

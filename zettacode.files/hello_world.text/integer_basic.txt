@@ -1,4 +1,4 @@
-NOTE:  I BASIC   ( -b b Wz f) f  A 1   A 2.  T A 1  NO u f -c ,      ( )    A 2.  T  ccu    b u f   c,  f c b "f",  .
+NOTE:  Integer BASIC was written (and hand-assembled by Woz himself) for the Apple 1 and original Apple 2.  The Apple 1 has NO support for lower-case letters, and it was an expensive (and later) option on the Apple 2.  This example accurately represents the only reasonable solution for those target devices, and therefore cannot be "fixed", only deleted.
 
- =" bc"   10 PRINT "H !"
+<syntaxhighlight lang="integer basic">   10 PRINT "Hello world!"
    20 END

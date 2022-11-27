@@ -1,1 +1,1 @@
-dbu="Ho wod!"
+debug="Hello world!"

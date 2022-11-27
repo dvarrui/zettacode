@@ -1,1 +1,1 @@
-"Ho wod!\" . b
+"Hello world!\n" . bye

@@ -1,6 +1,6 @@
-{{ |GCC|4.1.2}}
-w Ad.T_IO u Ad.T_IO
-cu M 
-b
-  Pu_L ("H !")
- M
+{{works with|GCC|4.1.2}}
+with Ada.Text_IO; use Ada.Text_IO;
+procedure Main is
+begin
+  Put_Line ("Hello world!");
+end Main;

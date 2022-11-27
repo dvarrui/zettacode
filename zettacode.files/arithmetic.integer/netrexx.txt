@@ -1,14 +1,14 @@
-{{|REXX}}
-* NR *
+{{trans|REXX}}
+/* NetRexx */
 
- c f c j cf b b
+options replace format comments java crossref symbols binary
 
- " 2  u  b b"
-   b
-  "+" b "="  + b
-  "-" b "="  - b
-  "*" b "="  * b
-  "" b "="  % b ""   b "( f f )"
-  "^" b "="  ** b
+say "enter 2 integer values separated by blanks"
+parse ask a b
+say a "+" b "=" a + b
+say a "-" b "=" a - b
+say a "*" b "=" a * b
+say a "/" b "=" a % b "remaining" a // b "(sign from first operand)"
+say a "^" b "=" a ** b
 
-u
+return

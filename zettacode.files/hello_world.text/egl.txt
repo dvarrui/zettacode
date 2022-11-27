@@ -1,9 +1,9 @@
-{{ |EDT}}
-{{ |RBD}}
+{{works with|EDT}}
+{{works with|RBD}}
 
- HW
-    fuc ()
-        SLb.Su("H !")
-    
-
+program HelloWorld
+    function main()
+        SysLib.writeStdout("Hello world!");
+    end
+end
 

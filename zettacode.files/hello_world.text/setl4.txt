@@ -1,1 +1,1 @@
-ou("Ho wod!")d
+out("Hello world!");end

@@ -1,8 +1,8 @@
 
 $$ MODE TUSCRIPT
-PRINT "H !"
+PRINT "Hello world!"
 
-Ouu:
+Output:
 
-H !
+Hello world!
 

@@ -1,4 +1,4 @@
 
- cc. cu
-cu `H !\`
+import crack.io cout;
+cout `Hello world!\n`;
 

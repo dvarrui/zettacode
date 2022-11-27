@@ -1,25 +1,25 @@
-T    bu-.  A    c,    u u .
+These operations are all built-in.  As all operations are exact, there are no rounding issues involved.
 
-DI := c()
-        c  := ( "Iu  : " ):
-        c b := ( "Iu  : " ):
-        f( "Su = %\",   + b ):
-        f( "Dffc = %\",   - b ):
-        f( "Puc = %\",   * b ):
-        f( "Qu = %\",  qu( , b, 'c' ) ):
-        f( "R = %\", c ) #  ( , b )
-        NULL # qu u
- c:
+DoIt := proc()
+        local a := readstat( "Input an integer: " ):
+        local b := readstat( "Input another integer: " ):
+        printf( "Sum = %d\n",  a + b ):
+        printf( "Difference = %d\n",  a - b ):
+        printf( "Product = %d\n",  a * b ):
+        printf( "Quotient = %d\n",  iquo( a, b, 'c' ) ):
+        printf( "Remainder = %d\n", c ); # or irem( a, b )
+        NULL # quiet return
+end proc:
 
-H    f c DI.
+Here is an example of calling DoIt.
 
- DI()
-Iu  : 15
-Iu  : 12
-Su = 27
-Dffc = 3
-Puc = 180
-Qu = 1
-R = 3
-
+> DoIt();
+Input an integer: 15;
+Input another integer: 12;
+Sum = 27
+Difference = 3
+Product = 180
+Quotient = 1
+Remainder = 3
+>
 

@@ -10,8 +10,8 @@ module Zettacode
     end
 
     def self.call(filepath)
-      content, to_folder = read_content_from filepath
-      dirty_examples = scrap_examples_from content
+      raw_content, to_folder = read_content_from filepath
+      dirty_examples = scrap_examples_from raw_content
       clean_examples = clean dirty_examples
       save_files clean_examples, to_folder
     end
@@ -69,27 +69,30 @@ module Zettacode
 
         # Clean syntaxhighlight tag
         lines.each do |line|
+          next if line == ""
           # &lt;syntaxhighlight lang="LANG"&gt;
           filter = /&lt;syntaxhighlight\s+lang="([\w\d]+)"&gt;/
           value = filter.match(line)&.captures&.first
-          if value.nil?
-            line.tr!("</text>", "")
-            line.tr!("</revision>", "")
-            line.tr!("</page>", "")
-            line.tr!("</mediawiki>", "")
-            line = nil if line.strip.start_with? "<sha1>"
-          else
+          unless value.nil?
             syntax = value
             line.gsub!("&lt;syntaxhighlight lang=\"#{value}\"&gt;", "")
+          else
+            line.gsub!("</text>", "")
+            line.gsub!("</revision>", "")
+            line.gsub!("</page>", "")
+            line.gsub!("</mediawiki>", "")
+            line = nil if line.strip.start_with? "<sha1>"
           end
         end
 
         code = lines.join("\n")
-        code.tr!("&lt;/syntaxhighlight&gt;", "")
-        code.tr!("&lt;pre&gt;", "")
-        code.tr!("&lt;/pre&gt;", "")
-        code.tr!("&lt;", "<")
-        code.tr!("&gt;", ">")
+        code.gsub!("&lt;/syntaxhighlight&gt;", "")
+        code.gsub!("&lt;pre&gt;", "")
+        code.gsub!("&lt;/pre&gt;", "")
+        code.gsub!("&lt;", "<")
+        code.gsub!("&gt;", ">")
+        code.gsub!("&lt;code&gt;", "'")
+        code.gsub!("&lt;/code&gt;", "'")
         examples << {
           lang: lang,
           filename: filename,

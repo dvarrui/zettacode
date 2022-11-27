@@ -1,7 +1,7 @@
-MODULE Goodb EXPORTS M
+MODULE Goodbye EXPORTS Main;
 
-IMPORT IO
+IMPORT IO;
 
 BEGIN
-  IO.Pu("H !\")
-END Gb.
+  IO.Put("Hello world!\n");
+END Goodbye.

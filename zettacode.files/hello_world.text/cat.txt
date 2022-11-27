@@ -1,1 +1,1 @@
-"Ho wod!" w
+"Hello world!" writeln

@@ -1,35 +1,35 @@
- ="c!"DEFINE NO_KEY="255"
+<syntaxhighlight lang="action!">DEFINE NO_KEY="255"
 DEFINE KEY_Y="43"
 DEFINE KEY_N="35"
 
-PROC M()
-  BYTE CH=$02FC I  u f   
-  BYTE 
-  INT ,b
+PROC Main()
+  BYTE CH=$02FC ;Internal hardware value for last key pressed
+  BYTE k
+  INT a,b
 
   DO
-    P("Iu  u =")
-    =IuI()
-    P("Iu  u b=")
-    b=IuI()
+    Print("Input integer value a=")
+    a=InputI()
+    Print("Input integer value b=")
+    b=InputI()
 
-    PF("+b=%I%E",+b)
-    PF("-b=%I%E",-b)
-    PF("*b=%I%E",*b)
-    PF("b=%I%E",b)
-    PF(" MOD b=%I%E", MOD b)
+    PrintF("a+b=%I%E",a+b)
+    PrintF("a-b=%I%E",a-b)
+    PrintF("a*b=%I%E",a*b)
+    PrintF("a/b=%I%E",a/b)
+    PrintF("a MOD b=%I%E",a MOD b)
     
-    PuE()
-    PE("A? (YN)")
+    PutE()
+    PrintE("Again? (Y/N)")
 
-    CH=NO_KEY Fu  b
+    CH=NO_KEY ;Flush the keyboard
     DO
-      =CH
-    UNTIL =KEY_Y OR =KEY_N
+      k=CH
+    UNTIL k=KEY_Y OR k=KEY_N
     OD
-    CH=NO_KEY Fu  b
+    CH=NO_KEY ;Flush the keyboard
 
-    IF =KEY_N THEN
+    IF k=KEY_N THEN
       EXIT
     FI
   OD

@@ -1,9 +1,9 @@
 
-f jj2  T
-(T("H W!").())
+from jinja2 import Template
+print(Template("Hello World!").render())
 
-A b  cu,  u  :
+A bit more convoluted, really using a template:
 
-f jj2  T
-(T("H {{  }}!").(="W"))
+from jinja2 import Template
+print(Template("Hello {{ something }}!").render(something="World"))
 

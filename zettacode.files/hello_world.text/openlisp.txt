@@ -1,10 +1,10 @@
-W c u   c   C L , bu    c.
+We can use the same code as the Common Lisp example, but as a shell script.
 
-#!u -
-(f  "H !~%")
-( "H !")
+#!/openlisp/uxlisp -shell
+(format t "Hello world!~%")
+(print "Hello world!")
 
 
-Ouu:
-H !
-"H !"
+Output:
+Hello world!
+"Hello world!"

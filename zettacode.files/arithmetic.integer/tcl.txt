@@ -1,19 +1,19 @@
-u "P  wo umb:"
+puts "Please enter two numbers:"
 
-  [ {([ ])}] # Fc  
-  [ {([ ])}] # Fc  
+set x [expr {int([gets stdin])}]; # Force integer interpretation
+set y [expr {int([gets stdin])}]; # Force integer interpretation
 
-u "$ + $ = [ {$ + $}]"
-u "$ - $ = [ {$ - $}]"
-u "$ * $ = [ {$ * $}]"
-u "$  $ = [ {$  $}]"
-u "$  $ = [ {$ % $}]"
-u "$ ' ' $ = [ {$ ** $}]"
+puts "$x + $y = [expr {$x + $y}]"
+puts "$x - $y = [expr {$x - $y}]"
+puts "$x * $y = [expr {$x * $y}]"
+puts "$x / $y = [expr {$x / $y}]"
+puts "$x mod $y = [expr {$x % $y}]"
+puts "$x 'to the' $y = [expr {$x ** $y}]"
 
-Sc Tc '   bu  "" f  b,  "" c  u  c  f   "". T     uc   " c"  c  u  ([b]).
+Since Tcl doesn't really know about the "type" of a variable, the "<tt>expr</tt>" command is used to declare whatever follows as an "expression". This means there is no such thing as "integer arithmetic" and hence the kludge with <tt>int([gets&amp;nbsp;stdin])</tt>.
 
-Of,   u b f   ff  f    . F ,  c  b "" b  u f  b "",  u 
+Often, these operations would be performed in a different way from what is shown here. For example, to increase the variable "x" by the value of the variable "y", one would write
 
-c  $
+incr x $y
 
-A, '   uu  u   cc  bc, c   f   f      c.  Dcu f    [:.c.10225 T Tc' W].
+Also, it's important to surround the arguments to the <code>expr</code> in braces, especially when any of the parts of the expression are not literal constants.  Discussion of this is on [http://wiki.tcl.tk/10225 The Tcler's Wiki].

@@ -1,19 +1,19 @@
-om IAmc
+program IntegerArithmetic;
 
 {$APPTYPE CONSOLE}
 
-u SU, M
+uses SysUtils, Math;
 
+var
+  a, b: Integer;
+begin
+  a := StrToInt(ParamStr(1));
+  b := StrToInt(ParamStr(2));
 
-  , b: I
-b
-   := STI(PS(1))
-  b := STI(PS(2))
-
-  WL(F('% + % = %', [, b,  + b]))
-  WL(F('% - % = %', [, b,  - b]))
-  WL(F('% * % = %', [, b,  * b]))
-  WL(F('%  % = %', [, b,   b]))  u  0
-  WL(F('% %% % = %', [, b,   b]))  c  f  f 
-  WL(F('% ^ % = %', [, b, Tuc(P(, b))]))
-.
+  WriteLn(Format('%d + %d = %d', [a, b, a + b]));
+  WriteLn(Format('%d - %d = %d', [a, b, a - b]));
+  WriteLn(Format('%d * %d = %d', [a, b, a * b]));
+  WriteLn(Format('%d / %d = %d', [a, b, a div b])); // rounds towards 0
+  WriteLn(Format('%d %% %d = %d', [a, b, a mod b])); // matches sign of the first operand
+  WriteLn(Format('%d ^ %d = %d', [a, b, Trunc(Power(a, b))]));
+end.

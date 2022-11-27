@@ -1,43 +1,43 @@
        IDENTIFICATION DIVISION.
-       PROGRAM-ID. I-Ac.
+       PROGRAM-ID. Int-Arithmetic.
 
        DATA DIVISION.
        WORKING-STORAGE SECTION.
 
        01 A      PIC S9(10).
        01 B      PIC S9(10).
-       01 Ru PIC S9(10).
+       01 Result PIC S9(10).
 
        PROCEDURE DIVISION.
-           DISPLAY "F ub: " WITH NO ADVANCING
+           DISPLAY "First number: " WITH NO ADVANCING
            ACCEPT A
-           DISPLAY "Sc ub: " WITH NO ADVANCING
+           DISPLAY "Second number: " WITH NO ADVANCING
            ACCEPT B
            
-*          * N: T u ADDSUBTRACTc.  c b
-*          * c  COMPUTE , c  
-*          *   b f    u,
-*          * .. COMPUTE Ru = A + B
+*          *> Note: The various ADD/SUBTRACT/etc. statements can be
+*          *> replaced with COMPUTE statements, which allow those
+*          *> operations to be defined similarly to other languages,
+*          *> e.g. COMPUTE Result = A + B
 
-           ADD A TO B GIVING Ru
-           DISPLAY "A + B = " Ru
+           ADD A TO B GIVING Result
+           DISPLAY "A + B = " Result
 
-           SUBTRACT B FROM A GIVING Ru
-           DISPLAY "A - B = " Ru
+           SUBTRACT B FROM A GIVING Result
+           DISPLAY "A - B = " Result
 
-           MULTIPLY A BY B GIVING Ru
-           DISPLAY "A * B = " Ru
+           MULTIPLY A BY B GIVING Result
+           DISPLAY "A * B = " Result
 
-*          * D  uc  z. DIVIDE c  
-*          * ROUNDED cu, c  u  u   
-*          * .
-           DIVIDE A BY B GIVING Ru
-           DISPLAY "A  B = " Ru
+*          *> Division here truncates towards zero. DIVIDE can take a
+*          *> ROUNDED clause, which will round the result to the nearest
+*          *> integer.
+           DIVIDE A BY B GIVING Result
+           DISPLAY "A / B = " Result
 
-           COMPUTE Ru = A ^ B
-           DISPLAY "A ^ B = " Ru
+           COMPUTE Result = A ^ B
+           DISPLAY "A ^ B = " Result
        
-*          * Mc  f f u.
+*          *> Matches sign of first argument.
            DISPLAY "A % B = " FUNCTION REM(A, B)
 
            GOBACK

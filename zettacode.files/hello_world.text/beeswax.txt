@@ -1,23 +1,23 @@
-Sf:
+Straightforward:
 
-*`Ho, Wod!
+*`Hello, World!
 
-L bu :
+Less obvious way:
 
-`d!
+>`ld!
 `
- 
-  
+ r
+  o
    W
     `
-     b` ,H`_
+     b` ,olleH`_
 
-E  bu,   c  cu  f uc ,    u f b :
+Even less obvious, demonstrating the creation and execution order of instruction pointers, and the hexagonal layout of beeswax programs:
 
-  
-  
+r  l
+ l o
   ``
-`*`,!
+ol`*`,d!
    ``
-    H
+   e H
    W

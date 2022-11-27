@@ -1,28 +1,28 @@
-{{ |M|2.6.7}}
-{{ |M|2.10.}}
-{{ |M|3..}}
-{{ |.NET|3.5}}
-{{ |.NET|4.0}}
-{{ |.NET|4.5}}
-O L :
- ="."C::WL("H !")
+{{works with|Mono|2.6.7}}
+{{works with|Mono|2.10.x}}
+{{works with|Mono|3.x.y}}
+{{works with|.NET|3.5}}
+{{works with|.NET|4.0}}
+{{works with|.NET|4.5}}
+One Line version:
+<syntaxhighlight lang="dylan.net">Console::WriteLine("Hello world!")
 
-H W P:
- ="."
-c u   .NET , 11.5.1.2  
-u   u  c
-#f cb.
+Hello World Program:
+<syntaxhighlight lang="dylan.net">
+//compile using the new dylan.NET v, 11.5.1.2 or later
+//use mono to run the compiler
+#refstdasm mscorlib.dll
 
- S
+import System
 
-b  
- 1.2.0.0
+assembly helloworld exe
+ver 1.2.0.0
 
-c ubc P
+class public Program
 
-    ubc c  ()
-      C::WL("H !")
-    
+   method public static void main()
+      Console::WriteLine("Hello world!")
+   end method
 
- c
+end class
 

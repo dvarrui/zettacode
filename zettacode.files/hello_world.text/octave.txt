@@ -1,5 +1,5 @@
-d("Ho wod!")
+disp("Hello world!");
 
-O, u C- fuc f:
+Or, using C-style function printf:
 
-f("Ho wod!")
+printf("Hello world!");

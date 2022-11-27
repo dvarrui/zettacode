@@ -1,5 +1,5 @@
-ELENA 4.:
-ubc om()
+ELENA 4.x:
+public program()
 {
-    c.L:"H !"
+    console.writeLine:"Hello world!"
 }

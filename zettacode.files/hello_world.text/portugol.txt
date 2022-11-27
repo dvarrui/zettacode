@@ -1,11 +1,11 @@
-Pu   Puu .
+Portugol keywords are Portuguese words.
 
- {
- fuc f   fuc
- c     f  ,    C
-    fuc c() {
-         c  u   uff   c
-        c("H, !\")   '' 
+programa {
+// funcao defines a new function
+// inicio is the entry point of the program, like main in C
+    funcao inicio() {
+        // escreva is used to print stuff to the screen
+        escreva("Hello, world!\n") // no ';' needed
     }
 }
 

@@ -1,9 +1,9 @@
 
 $$ MODE TUSCRIPT
-=5
+a=5
 b=3
-c=+b
-c=-b
-c=*b
-c=b
-c=%b
+c=a+b
+c=a-b
+c=a*b
+c=a/b
+c=a%b

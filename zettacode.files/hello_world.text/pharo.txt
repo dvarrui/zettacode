@@ -1,4 +1,4 @@
-"Comm   doub quo"
-"S  S  'H W' "
+"Comments are in double quotes"
+"Sending message printString to 'Hello World' string"
 
-'H W' S
+'Hello World' printString

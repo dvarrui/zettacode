@@ -1,2 +1,2 @@
 
-PRINT "Ho wod!"
+PRINT "Hello world!"

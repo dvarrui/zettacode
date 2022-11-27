@@ -1,14 +1,14 @@
-{{ |BASICA}}
-{{ |C BASIC}}
-{{ |Lc Bc}}
-{{ |M2000 I}}
-{{ |MSX BASIC}}
-{{ |T BASIC}}
-10  "Ho wod!"
+{{works with|BASICA}}
+{{works with|Commodore BASIC}}
+{{works with|Locomotive Basic}}
+{{works with|M2000 Interpreter}}
+{{works with|MSX BASIC}}
+{{works with|Tiny BASIC}}
+10 print "Hello world!"
 
-{{ |7Bc}}
-{{ |BC}} [[C:BC]]
-{{ |QBc}}
-{{ |M2000 I}}
-{{ |Sc Bc}}
-PRINT "Ho wod!"
+{{works with|7Basic}}
+{{works with|BaCon}} [[Category:BaCon]]
+{{works with|QBasic}}
+{{works with|M2000 Interpreter}}
+{{works with|Script Basic}}
+PRINT "Hello world!"

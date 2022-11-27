@@ -1,9 +1,9 @@
-Mf c:
+Makefile contents:
 
-:
-$(f H !)
+all:
+$(info Hello world!)
 
-Ru  uc:
+Running make produces:
 
-H !b
-: N  b  f `'.
+Hello world!<br>
+make: Nothing to be done for `all'.

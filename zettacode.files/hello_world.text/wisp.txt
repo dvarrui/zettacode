@@ -1,8 +1,8 @@
-Ouu  W f   cc  [[Sc]], bu c u   .
+Output in Wisp follows the same concepts as [[Scheme]], but replacing outer parentheses with indentation.
 
-W [[Gu]]   ,   c b    REPL   u --u=,  c   c .
+With [[Guile]] and wisp installed, this example can be tested in a REPL started with guile --language=wisp, or directly with the command wisp.
 
-mo : cm b
-         c 
- "H !"
-
+import : scheme base
+         scheme write
+display "Hello world!"
+newline

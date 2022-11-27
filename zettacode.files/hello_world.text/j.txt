@@ -1,40 +1,40 @@
-   'Ho wod!'
-H !
+   'Hello world!'
+Hello world!
 
-H   u :
-   [d=. 'Ho wod!'
-H !
-   
-H !
-   uu 
-H !
+Here are some redundant alternatives:
+   [data=. 'Hello world!'
+Hello world!
+   data
+Hello world!
+   smoutput data
+Hello world!
 
-   NB. u   b f f   f.
-   NB. j    .
-   H W!
-H W !
+   NB. unassigned names are verbs of infinite rank awaiting definition.
+   NB. j pretty prints the train.
+   Hello World!
+Hello World !
 
 
-   NB. j  u,  u u  !
+   NB. j is glorious, and you should know this!
 
-   . 2 3   NB.   f 
+   i. 2 3   NB. an array of integers
 0 1 2
 3 4 5
 
-   b__f_ =: 'H !'"_
+   verb_with_infinite_rank =: 'Hello world!'"_
 
-   b__f_ . 2 3
-H !
+   verb_with_infinite_rank i. 2 3
+Hello world!
    
 
-   b__c_ =: 'H !'"0
+   verb_with_atomic_rank =: 'Hello world!'"0
 
-   b__c_ . 2 3
-H !
-H !
-H !
+   verb_with_atomic_rank i. 2 3
+Hello world!
+Hello world!
+Hello world!
 
-H !
-H !
-H !
+Hello world!
+Hello world!
+Hello world!
 

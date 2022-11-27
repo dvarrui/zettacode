@@ -1,4 +1,4 @@
- "Ho wod!"
-T   u  u  cc f    . T c b ufu f   cu  f f "H !"  b b   c  u f   b cfb.
- "Ho wod!"
-OCc
+print "Hello world!"
+This example waits until the mouse is clicked for the program to end. This can be useful if the program executes too fast for "Hello world!" to be visible on the screen long enough for it to be comfortable.
+print "Hello world!"
+delayOnClick

@@ -1,29 +1,29 @@
 
-(dfu mc (moo ( (d *qu-o*)) (b (d *qu-o*)))
-  (c
-    (b ()
-      (f  "~ = ~~%" (   b) (fuc (b-fuc )  b)))
-    '(+ - *   f c uc u ))
-  (u))
+(defun arithmetic (&amp;optional (a (read *query-io*)) (b (read *query-io*)))
+  (mapc
+    (lambda (op)
+      (format t "~a => ~a~%" (list op a b) (funcall (symbol-function op) a b)))
+    '(+ - * mod rem floor ceiling truncate round expt))
+  (values))
 
-C L'   fuc  cfc, ccc, cucc,  cuc. T ff    u  qu.
+Common Lisp's integer division functions are <code>floor</code>, <code>ceiling</code>, <code>truncate</code>, and <code>round</code>. They differ in how they round their quotient.
 
-{| c="b"
-! T fuc !! u  qu 
+{| class="wikitable"
+! The function !! rounds its quotient towards
 |-
-! cfc
-|  f
+! <code>floor</code>
+| negative infinity
 |-
-! ccc
-|  f
+! <code>ceiling</code>
+| positive infinity
 |-
-! cucc
-| z
+! <code>truncate</code>
+| zero
 |-
-! cuc
-|    (f    f  c qu  qu f  )
+! <code>round</code>
+| the nearest integer (preferring the even integer if the mathematical quotient is equidistant from two integers)
 |}
 
-Ec fuc  u     c u, uc 
-  qu *  +  =  .
-c(  b)c  c(  b)c u ub qu   c u f c(f  b)c  c(uc  b)c, c.
+Each function also returns a remainder as its secondary value, such that
+  quotient * divisor + remainder = dividend .
+<code>(mod a b)</code> and <code>(rem a b)</code> return numbers equal to the secondary values of <code>(floor a b)</code> and <code>(truncate a b)</code>, respectively.

@@ -1,35 +1,35 @@
-IGNORELINE No: T m cud  m modu.
-cu cu
-:
-  u= =E f : 
-  u=b =E c :
-  u=c 
-  --,-b-=-c-
- -c-
- ubc ,b
- -c-
- u ,b
- -c-
-  ,b
- -c-
- uu ,b
- -c-
-  u= =D u   ccu  ub?
-f -- u   :   :
-:
+IGNORELINE Note: This example includes the math module.
+include arithmeticmodule
+:a
+editvar /newvar /value=a /title=Enter first integer: 
+editvar /newvar /value=b /title=Enter second integer:
+editvar /newvar /value=c 
+do add -a-,-b-=-c-
+printline -c-
+do subtract a,b
+printline -c-
+do multiply a,b
+printline -c-
+do divide a,b
+printline -c-
+do modulus a,b
+printline -c-
+editvar /newvar /value=d /title=Do you want to calculate more numbers?
+if -d- /hasvalue yes goto :a else goto :end
+:end
 
-IGNORELINE No: T m do o u  m modu.
-:
-  u= =E f : 
-  u=b =E c :
-  u=--+-b-=-c-
- -c-
-  u=*b=c
- -c-
-  u=b=c
- -c-
-  u= %% b=c
- -c-
-  u= =D u   ccu  ub?
-f -- u   :   :
-:
+IGNORELINE Note: This example does not use the math module.
+:a
+editvar /newvar /value=a /title=Enter first integer: 
+editvar /newvar /value=b /title=Enter second integer:
+editvar /newvar /value=-a-+-b-=-c-
+printline -c-
+editvar /newvar /value=a*b=c
+printline -c-
+editvar /newvar /value=a/b=c
+printline -c-
+editvar /newvar /value=a %% b=c
+printline -c-
+editvar /newvar /value=d /title=Do you want to calculate more numbers?
+if -d- /hasvalue yes goto :a else goto :end
+:end

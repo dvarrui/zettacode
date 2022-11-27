@@ -1,15 +1,15 @@
 
-  = _of_(S.v[2])
- b = _f_(S.[3])
+let a = int_of_string(Sys.argv[2])
+let b = int_of_string(Sys.argv[3])
 
- u =  + b
- ffc =  - b
- uc =  * b
-  =   b
-  = (, b)
+let sum = a + b
+let difference = a - b
+let product = a * b
+let division = a / b
+let remainder = mod(a, b)
 
-J.(" + b = " ++ _f_(u))
-J.(" - b = " ++ _f_(ffc))
-J.(" * b = " ++ _f_(uc))
-J.("  b = " ++ _f_())
-J.(" % b = " ++ _f_())
+Js.log("a + b = " ++ string_of_int(sum))
+Js.log("a - b = " ++ string_of_int(difference))
+Js.log("a * b = " ++ string_of_int(product))
+Js.log("a / b = " ++ string_of_int(division))
+Js.log("a % b = " ++ string_of_int(remainder))

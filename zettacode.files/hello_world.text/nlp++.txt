@@ -1,5 +1,5 @@
- ="++"
+<syntaxhighlight lang="nlp++">
 @CODE
-"uu."  "H !"
+"output.txt" << "Hello world!";
 @@CODE
 

@@ -1,6 +1,6 @@
-$ cud "d7_05.7"
+$ include "seed7_05.s7i";
 
-c c:   fuc
-  b
-    ("H !")
-   fuc
+const proc: main is func
+  begin
+    writeln("Hello world!");
+  end func;

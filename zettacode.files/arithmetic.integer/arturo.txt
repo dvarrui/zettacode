@@ -1,10 +1,10 @@
 
-: o : u "v m  f umb  : "
-b:  : u "   c ub : "
+a: to :integer input "give me the first number  : "
+b: to :integer input "give me the second number : "
 
- [ "+" b "=" +b]
- [ "-" b "=" -b]
- [ "*" b "=" *b]
- [ "" b "=" b]
- [ "%" b "=" %b]
- [ "^" b "=" ^b]
+print [a "+" b "=" a+b]
+print [a "-" b "=" a-b]
+print [a "*" b "=" a*b]
+print [a "/" b "=" a/b]
+print [a "%" b "=" a%b]
+print [a "^" b "=" a^b]

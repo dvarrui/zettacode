@@ -1,15 +1,15 @@
-$ = [] (Rd-Ho F Numb)
-$b = [] (R-H Sc Nub)
+$a = [int] (Read-Host First Number)
+$b = [int] (Read-Host Second Number)
 
-W-H "Su:                              $($ + $b)"
-W-H "Dffc:                       $($ - $b)"
-W-H "Puc:                          $($ * $b)"
-W-H "Qu:                         $($  $b)"
-W-H "Qu, u  :          $([M]::Ru($  $b))"
-W-H "R,  f f:    $($ % $b)"
-Nub  uc c  cc f  u. T     I32  b   I64 bu    - qu  cu  u  b f  f- .
+Write-Host "Sum:                              $($a + $b)"
+Write-Host "Difference:                       $($a - $b)"
+Write-Host "Product:                          $($a * $b)"
+Write-Host "Quotient:                         $($a / $b)"
+Write-Host "Quotient, round to even:          $([Math]::Round($a / $b))"
+Write-Host "Remainder, sign follows first:    $($a % $b)"
+Numbers are automatically converted to accomodate for the result. This means not only that Int32 will be expanded to Int64 but also that a non-integer quotient will cause the result to be of a floating-point type.
 
-T     f  f .
+The remainder has the sign of the first operand.
 
-N   , bu c b  u   .NET BCL:
-[M]::Pow($, $b)
+No exponentiation operator exists, but can be worked around with the .NET BCL:
+[Math]::Pow($a, $b)

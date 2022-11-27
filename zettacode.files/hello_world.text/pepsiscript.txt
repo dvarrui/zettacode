@@ -1,16 +1,16 @@
-T    uu  uc   u . H, c cc c b u   c .
+The letters are only outputted in uppercase in the running program. However, lowercase characters can be used in the code instead.
 
-F :
-#cud dfu-b
+For typing:
+#include default-libraries
 
-#u Cb
+#author Childishbeat
 
-c H T:
-fuc H T:
+class Hello world/Text:
+function Hello world/Text:
 
- "H !"
+print "Hello world!"
 
+end
+For importing:
 
-F :
-
-•◘Cb◙♦H T♪♣H_!♠
+•dl◘Childishbeat◙♦Hello world/Text♪♣Hello_world!♠

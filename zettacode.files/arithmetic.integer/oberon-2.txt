@@ -1,14 +1,14 @@
-Of Ob-2
+Oxford Oberon-2
 
-MODULE Ac
-IMPORT I, Ou
+MODULE Arithmetic;
+IMPORT In, Out;
 VAR
-        ,:INTEGER
+        x,y:INTEGER;
 BEGIN
-        Ou.S("G  ub: ")I.I()I.I()
-        Ou.S(" +  ")Ou.I( + ,6)Ou.L
-        Ou.S(" -  ")Ou.I( - ,6)Ou.L
-        Ou.S(" *  ")Ou.I( * ,6)Ou.L
-        Ou.S("   ")Ou.I( DIV ,6)Ou.L
-        Ou.S(" MOD  ")Ou.I( MOD ,6)Ou.L
-END Ac.
+        Out.String("Give two numbers: ");In.Int(x);In.Int(y);
+        Out.String("x + y >");Out.Int(x + y,6);Out.Ln;
+        Out.String("x - y >");Out.Int(x - y,6);Out.Ln;
+        Out.String("x * y >");Out.Int(x * y,6);Out.Ln;
+        Out.String("x / y >");Out.Int(x DIV y,6);Out.Ln;
+        Out.String("x MOD y >");Out.Int(x MOD y,6);Out.Ln;
+END Arithmetic.

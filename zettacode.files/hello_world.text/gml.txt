@@ -1,2 +1,2 @@
-ow_m("Ho wod!")  d  o-u m
-_bu_("H !")      bu   IDE
+show_message("Hello world!"); // displays a pop-up message
+show_debug_message("Hello world!"); // sends text to the debug log or IDE

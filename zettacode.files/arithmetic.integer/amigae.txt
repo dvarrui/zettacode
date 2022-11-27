@@ -1,14 +1,14 @@
-PROC m()
-  DEF , b, 
-  WF('A = ')
-  RS(, )
-   := V()
-  WF('B = ')
-  RS(, )
-  b := V()
-  WF('A+B=\\A-B=\\', +b, -b)
-  WF('A*B=\\AB=\\', *b, b)
-  * *    16 b  Mu  D  32b  *
-  WF('A*B=\\AB=\\', Mu(,b), D(,b))
-  WF('A  B =\\', M(,b))
+PROC main()
+  DEF a, b, t
+  WriteF('A = ')
+  ReadStr(stdin, t)
+  a := Val(t)
+  WriteF('B = ')
+  ReadStr(stdin, t)
+  b := Val(t)
+  WriteF('A+B=\d\nA-B=\d\n', a+b, a-b)
+  WriteF('A*B=\d\nA/B=\d\n', a*b, a/b)
+  /* * and / are 16 bit ops; Mul and Div are 32bit ops */
+  WriteF('A*B=\d\nA/B=\d\n', Mul(a,b), Div(a,b))
+  WriteF('A mod B =\d\n', Mod(a,b))
 ENDPROC

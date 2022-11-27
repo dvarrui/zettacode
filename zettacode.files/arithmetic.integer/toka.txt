@@ -1,7 +1,7 @@
 
-[ (  b -- )
-  2u ." +b = " + . c  
-  2u ." -b = " - . c  
-  2u ." *b = " * . c  
-  2u ." b = "  . ."  "  . c  
-]  
+[ ( a b -- )
+  2dup ." a+b = " + . cr  
+  2dup ." a-b = " - . cr  
+  2dup ." a*b = " * . cr  
+  2dup ." a/b = " / . ." remainder " mod . cr  
+] is mathops

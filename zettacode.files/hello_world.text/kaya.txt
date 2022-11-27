@@ -1,6 +1,6 @@
-om o
+program hello;
  
-V () {
-     M f !
-    uSL("H !")
+Void main() {
+    // My first program!
+    putStrLn("Hello world!");
 }

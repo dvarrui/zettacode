@@ -1,4 +1,4 @@
 
-cu:
- "H W!" cf
+procedure:
+display "Hello World!" crlf
 

@@ -1,2 +1,2 @@
-("Ho wod!")
-{{ f|VBA|VBA c'   uu  c}}
+println("Hello world!");
+{{omit from|VBA|VBA can't write or output to console}}

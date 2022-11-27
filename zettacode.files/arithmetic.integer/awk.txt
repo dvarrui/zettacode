@@ -1,12 +1,12 @@
-^[ \]*-?[0-9]+[ \]+-?[0-9]+[ \]*$ {
-	 ":", $1 + $2
-	 "ub:", $1 - $2
-	 "u:", $1 * $2
-	 ":", ($1  $2) # uc  z
-	 ":", $1 % $2      #    f 
-	 ":", $1 ^ $2
-	 }
+/^[ \t]*-?[0-9]+[ \t]+-?[0-9]+[ \t]*$/ {
+	print "add:", $1 + $2
+	print "sub:", $1 - $2
+	print "mul:", $1 * $2
+	print "div:", int($1 / $2) # truncates toward zero
+	print "mod:", $1 % $2      # same sign as first operand
+	print "exp:", $1 ^ $2
+	exit }
 
-F   uu, A u c  C.
+For division and modulus, Awk should act like C.
 
-'''E' :''' W [[]]  [[]], c$1 ** $2c c  c$1 ^ $2c. W [[]], c$1 ** $2c    . N  c**c, bu  u    c^c. G' u , ''"T POSIX   cf  u f `^' f . F u b,   u  `**' ."''
+'''Exponentiation's note:''' With [[nawk]] or [[gawk]], <code>$1 ** $2</code> acts like <code>$1 ^ $2</code>. With [[mawk]], <code>$1 ** $2</code> is a syntax error. Nawk allows <code>**</code>, but its manual page only has <code>^</code>. Gawk's manual warns, ''"The POSIX standard only specifies the use of `^' for exponentiation. For maximum portability, do not use the `**' operator."''

@@ -1,5 +1,5 @@
-." Ho wod!"
+." Hello world!"
 
-O    :
+Or as a whole program:
 
-: oodb ( -- )   ." Ho wod!" CR 
+: goodbye ( -- )   ." Hello world!" CR ;

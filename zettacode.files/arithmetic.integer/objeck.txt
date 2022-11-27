@@ -1,17 +1,17 @@
-bud Dfu {
-  c Ac {
-    fuc : M( : S.S[]) ~ N {
-      DAc()
+bundle Default {
+  class Arithmetic {
+    function : Main(args : System.String[]) ~ Nil {
+      DoArithmetic();
     }
 	
-    fuc :  : DAc() ~ N {
-       := IO.C-GIc()-RS()-TI()
-      b := IO.C-GIc()-RS()-TI()
+    function : native : DoArithmetic() ~ Nil {
+      a := IO.Console->GetInstance()->ReadString()->ToInt();
+      b := IO.Console->GetInstance()->ReadString()->ToInt();
   
-      IO.C-GIc()-P("+b = ")-PL(+b)
-      IO.C-GIc()-P("-b = ")-PL(-b)
-      IO.C-GIc()-P("*b = ")-PL(*b)
-      IO.C-GIc()-P("b = ")-PL(b)
+      IO.Console->GetInstance()->Print("a+b = ")->PrintLine(a+b);
+      IO.Console->GetInstance()->Print("a-b = ")->PrintLine(a-b);
+      IO.Console->GetInstance()->Print("a*b = ")->PrintLine(a*b);
+      IO.Console->GetInstance()->Print("a/b = ")->PrintLine(a/b);
     }
   }
 }

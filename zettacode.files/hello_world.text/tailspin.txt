@@ -1,1 +1,1 @@
-'Ho Wod' - !OUT::w
+'Hello World' -> !OUT::write

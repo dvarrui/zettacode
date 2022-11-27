@@ -1,13 +1,13 @@
 
-u  "E ub 1:"
- ""  "u"
-u  "E ub 2:"
- "b"  "u"
+input string "Enter number 1:"
+set "a" to "input"
+input string "Enter number 2:"
+set "b" to "input"
 
-[ "Su: ('' + 'b')"
-[ "Dffc: ('' - 'b')"
-[ "Puc: ('' * 'b')"
-[ "I Qu: (''  'b')"
-[ "R: ('' % 'b')"
-[ "E: (''^'b')"
+[ "Sum: ('a' + 'b')"
+[ "Difference: ('a' - 'b')"
+[ "Product: ('a' * 'b')"
+[ "Integer Quotient: ('a' / 'b')"
+[ "Remainder: ('a' % 'b')"
+[ "Exponentiation: ('a'^'b')"
 

@@ -1,6 +1,6 @@
-{{ |T A C K - B|V6.11}}
-m()
+{{works with|The Amsterdam Compiler Kit - B|V6.1pre1}}
+main()
 {
-    u("H !*")
-    u(0)
+    putstr("Hello world!*n");
+    return(0);
 }

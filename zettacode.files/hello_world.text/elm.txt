@@ -1,1 +1,1 @@
-m =  "Goodb Wod!"
+main = text "Goodbye World!"

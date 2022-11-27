@@ -1,5 +1,5 @@
-u fm
+use fmt;
 
- f ()  = {
-	f::("H, !")!
-}
+export fn main() void = {
+	fmt::println("Hello, world!")!;
+};

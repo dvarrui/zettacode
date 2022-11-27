@@ -1,5 +1,5 @@
-!-- {{cc|Af BASIC|uu ' c   ' qu:  c.}} --
+<!-- {{incorrect|Applesoft BASIC|output isn't consistent with the task's requirements: mixed case.}} -->
 
-I N: Au Af BASIC     uu f -c ,  b   -c   b   uu -c   fu    ff   qu    A IIII+.  Sc Af WAS  fu  u f  A II+,   fb    cfc cu b ff, f   f    c  -c IO cb     u cfu.
+Important Note: Although Applesoft BASIC allowed the storage and output of mixed-case strings, the ability to enter mixed-case via the keyboard and to output mixed-case on the default display was not offered as standard equipment on the original Apple II/II+.  Since Applesoft WAS the default programming language for the Apple II+, perhaps some flexibility in the task specification could be offered, for this and for other systems that lacked proper mixed-case I/O capabilities in at least one popular configuration.
 
- ="f bc" PRINT "H !"
+<syntaxhighlight lang="applesoft basic"> PRINT "Hello world!"

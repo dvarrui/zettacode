@@ -1,27 +1,27 @@
 
-E Two Numb   oom.
+Enter Two Numbers is a room.
 
-Nuc    c    ub. U "[ub]"  uc .
+Numerically entering is an action applying to one number. Understand "[number]" as numerically entering.
 
-T f ub   ub  .
+The first number is a number that varies.
 
-Af uc  f  f :
-	  f ub   ub u.
+After numerically entering for the first time:
+	now the first number is the number understood.
 
-Af uc  f  c :
-	 A b  f ub
-	 B b  ub u
-	 "[A] + [B] = [A + B]." [ ]
-	 "[A] - [B] = [A u B]." [E ]
-	 P b  b P = A * B  P   ub [ qu]
-	 "[A] * [B] = [P]."
-	 Q b  b  D Fu [ qu]
-	 "[A]  [B] = [Q]."
-	 "[A]  [B] = [ f  A b B]."
-	  .
+After numerically entering for the second time:
+	let A be the first number;
+	let B be the number understood;
+	say "[A] + [B] = [A + B]."; [operator syntax]
+	say "[A] - [B] = [A minus B]."; [English syntax]
+	let P be given by P = A * B where P is a number; [inline equation]
+	say "[A] * [B] = [P].";
+	let Q be given by the Division Formula; [named equation]
+	say "[A] / [B] = [Q].";
+	say "[A] mod [B] = [remainder after dividing A by B].";
+	end the story.
 
-Equ - D Fu
-	Q = A  B
- Q   ub, A   ub,  B   ub.
+Equation - Division Formula
+	Q = A / B
+where Q is a number, A is a number, and B is a number.
 
-T u  fu : c , E ,  qu,   qu. D u  z,          qu.
+This solution shows four syntaxes: mathematical operators, English operators, inline equations, and named equations. Division rounds toward zero, and the remainder has the same sign as the quotient.

@@ -1,3 +1,3 @@
 BEGIN
-    WRITE( "H !" )
+    WRITE( "Hello world!" );
 END

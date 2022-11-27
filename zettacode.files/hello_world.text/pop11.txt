@@ -1,1 +1,1 @@
-f('Ho wod!\')
+printf('Hello world!\n');

@@ -1,2 +1,2 @@
 
-vod m() w "Ho wod!"
+void main() writeln "Hello world!";

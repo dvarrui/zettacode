@@ -1,11 +1,11 @@
-T   u, b   b   c. F    f uu.
+There is no input, variables have to be set in code. Format is there only for output.
 
-  = -17
- b = 4
-c "+b = ".f(+b,"%1")
-c "-b = ".f(-b,"%1")
-c "*b = ".f(*b,"%1")
-c " DIV b = ".f(f(b),"%1")
-c " MOD b = ".f(  b,"%1")
-c "^b = ".f((,b),"%1")
+set a = -17
+set b = 4
+echo "a+b = ".format(a+b,"%1d")
+echo "a-b = ".format(a-b,"%1d")
+echo "a*b = ".format(a*b,"%1d")
+echo "a DIV b = ".format(floor(a/b),"%1d")
+echo "a MOD b = ".format(a mod b,"%1d")
+echo "a^b = ".format(pow(a,b),"%1d")
 

@@ -1,1 +1,1 @@
-ou "o wod!" d coo
+out "hello world!" endl console

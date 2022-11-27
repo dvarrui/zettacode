@@ -1,9 +1,9 @@
-Ouu  :
-u("Ho wod!")
+Output to terminal:
+puts("Hello world!");
 
-Wu   : 
+Without the newline terminator: 
 
-u(ow: "Ho wod!")
+puts(nonewline: "Hello world!");
 
-Ouu  b , b f, f     c:
-u(d, "Ho wod!")
+Output to arbitrary open, writable file, for example the standard error channel:
+puts(stderr, "Hello world!");

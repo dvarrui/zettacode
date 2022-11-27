@@ -1,16 +1,16 @@
-ELENA 4. :
-mo m'm
- 
+ELENA 4.x :
+import system'math;
+import extensions;
 
-ubc ()
+public program()
 {
-      := c.LT( I())
-     b := c.LT( I())
+    var a := console.loadLineTo(new Integer());
+    var b := console.loadLineTo(new Integer());
     
-    c.L(," + ",b," = ", + b)
-    c.L(," - ",b," = ", - b)
-    c.L(," * ",b," = ", * b)
-    c.L(,"  ",b," = ",  b)    uc  0
-    c.L(," % ",b," = ",.:b)  c  f f 
-    c.L(," ^ ",b," = ", ^ b)
+    console.printLine(a," + ",b," = ",a + b);
+    console.printLine(a," - ",b," = ",a - b);
+    console.printLine(a," * ",b," = ",a * b);
+    console.printLine(a," / ",b," = ",a / b);   // truncates towards 0
+    console.printLine(a," % ",b," = ",a.mod:b); // matches sign of first operand
+    console.printLine(a," ^ ",b," = ",a ^ b);
 }

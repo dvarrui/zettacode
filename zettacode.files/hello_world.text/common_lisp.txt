@@ -1,18 +1,18 @@
-(fom  "Ho wod!~%")
+(format t "Hello world!~%")
 
-O
+Or
 
-( "Ho wod!")
+(print "Hello world!")
 
-===A u===
-I u [:fz.ccu A CL 10.1]
+===Alternate solution===
+I use [https://franz.com/downloads/clp/survey Allegro CL 10.1]
 
 
- Pjc : H T
+;; Project : Hello world/Text
 
-(f  "~" "H !")
+(format t "~a" "Hello world!")
 
-Ouu:
+Output:
 
-H !
+Hello world!
 

@@ -1,2 +1,2 @@
-o mod o
- uSL "H !" ::: IO
+open monad io
+do putStrLn "Hello world!" ::: IO

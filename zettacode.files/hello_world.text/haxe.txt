@@ -1,1 +1,1 @@
-c("Ho wod!")
+trace("Hello world!");

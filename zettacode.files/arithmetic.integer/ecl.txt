@@ -1,33 +1,33 @@
 
-AcD(INTEGER A,INTEGER B) := FUNCTION
-  ADD       := A + B
-  SUBTRACT  := A - B
-  MULTIPLY  := A * B
-  INTDIVIDE := A DIV B INTEGER DIVISION
-  DIVIDE    := A  B    
-  R   := A % B
-  EXP       := POWER(A,B)
-  DS          := DATASET([{A,B,'A PLUS B :',ADD},
-                          {A,B,'A MINUS B :',SUBTRACT},
-			  {A,B,'A TIMES B :',MULTIPLY},
-			  {A,B,'A INT DIVIDE BY B :',INTDIVIDE},
-			  {A,B,'REMAINDER :',R},
-			  {A,B,'A DIVIDE BY B :',DIVIDE},
-			  {A,B,'A RAISED TO B:',EXP}],
-			  {INTEGER AV,INTEGER BV,STRING18 u,STRING })
+ArithmeticDemo(INTEGER A,INTEGER B) := FUNCTION
+  ADDit       := A + B;
+  SUBTRACTit  := A - B;
+  MULTIPLYit  := A * B;
+  INTDIVIDEit := A DIV B; //INTEGER DIVISION
+  DIVIDEit    := A / B;   //standard division
+  Remainder   := A % B;
+  EXPit       := POWER(A,B);
+  DS          := DATASET([{A,B,'A PLUS B is:',ADDit},
+                          {A,B,'A MINUS B is:',SUBTRACTit},
+			  {A,B,'A TIMES B is:',MULTIPLYit},
+			  {A,B,'A INT DIVIDE BY B is:',INTDIVIDEit},
+			  {A,B,'REMAINDER is:',Remainder},
+			  {A,B,'A DIVIDE BY B is:',DIVIDEit},
+			  {A,B,'A RAISED TO B:',EXPit}],
+			  {INTEGER AVal,INTEGER BVal,STRING18 valuetype,STRING val});
 										
-  RETURN DS
-  END
+  RETURN DS;
+  END;
 	
-AcD(1,1)
-AcD(2,2)
-AcD(50,5)
-AcD(10,3)
-AcD(-1,2)
+ArithmeticDemo(1,1);
+ArithmeticDemo(2,2);
+ArithmeticDemo(50,5);
+ArithmeticDemo(10,3);
+ArithmeticDemo(-1,2);
 	
-* 	NOTE:D b z fu    z u (0), 
-   	    “ b z” . 
-   	T    uc  b   jb. 
-   	T fu b c b c
-*
+/* 	NOTE:Division by zero defaults to generating a zero result (0), 
+   	rather than reporting a “divide by zero” error. 
+   	This avoids invalid or unexpected data aborting a long job. 
+   	This default behavior can be changed
+*/
 

@@ -1,4 +1,4 @@
-   
-"#!uocbk
+simply a single line
+"#!/usr/local/bin/kite
 
-"H !"|
+"Hello world!"|print;

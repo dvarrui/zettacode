@@ -1,1 +1,1 @@
-o.w( 'Ho wod!' )
+io.writeln( 'Hello world!' )

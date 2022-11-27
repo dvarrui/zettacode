@@ -1,5 +1,5 @@
-{{ |TBc}}
+{{works with|TinyBasic}}
 
-10 PRINT "H, W!"
+10 PRINT "Hello, World!"
 20 END
 

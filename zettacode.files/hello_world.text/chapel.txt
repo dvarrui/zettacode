@@ -1,1 +1,1 @@
-w("Ho wod!")
+writeln("Hello world!");

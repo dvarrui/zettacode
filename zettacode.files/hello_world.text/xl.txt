@@ -1,2 +1,2 @@
-u XL.UI.CONSOLE
-WL "H !"
+use XL.UI.CONSOLE
+WriteLn "Hello world!"

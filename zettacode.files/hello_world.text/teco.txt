@@ -1,2 +1,2 @@
-Ouu  . P   ^A  c-A,   c f b 'A',   $   ESC .
-^AHo wod!^A$$
+Outputting to terminal. Please note that ^A means control-A, not a caret followed by 'A', and that $ represent the ESC key.
+^AHello world!^A$$

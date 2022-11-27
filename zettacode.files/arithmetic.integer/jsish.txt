@@ -1,33 +1,33 @@
-"u c"
-* AcI,  J *
-  = c.u()
- u = .c(^\*([+-]?[0-9]+)\+([+-]?[0-9]+)\*)
-  = Nub(u[1])
- b = Nub(u[2])
+"use strict";
+/* Arthimetic/Integer, in Jsish */
+var line = console.input();
+var nums = line.match(/^\s*([+-]?[0-9]+)\s+([+-]?[0-9]+)\s*/);
+var a = Number(nums[1]);
+var b = Number(nums[2]);
 
-u("A  ", , ", B  ", b)
-u("Su               A + B  ",  + b)
-u("Dffc        A - B  ",  - b)
-u("Puc           A * B  ",  * b)
-u("I qu  A  B  ",   b | 0, " uc  0")
-u("R         A % B  ",  % b, "  f f ")
-u("E    A    B  ", M.(, b))
+puts("A is ", a, ", B is ", b);
+puts("Sum               A + B is ", a + b);
+puts("Difference        A - B is ", a - b);
+puts("Product           A * B is ", a * b);
+puts("Integer quotient  A / B is ", a / b | 0, " truncates toward 0");
+puts("Remainder         A % B is ", a % b, " sign follows first operand");
+puts("Exponentiation    A to the power B is ", Math.pow(a, b));
 
-*
+/*
 =!INPUTSTART!=
 7 4
 =!INPUTEND!=
-*
+*/
 
 
-*
+/*
 =!EXPECTSTART!=
-A   7 , B   4
-Su               A + B   11
-Dffc        A - B   3
-Puc           A * B   28
-I qu  A  B   1  uc  0
-R         A % B   3   f f 
-E    A    B   2401
+A is  7 , B is  4
+Sum               A + B is  11
+Difference        A - B is  3
+Product           A * B is  28
+Integer quotient  A / B is  1  truncates toward 0
+Remainder         A % B is  3  sign follows first operand
+Exponentiation    A to the power B is  2401
 =!EXPECTEND!=
-*
+*/

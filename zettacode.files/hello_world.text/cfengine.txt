@@ -1,11 +1,11 @@
-#!ubv cf-
-# u ---c   cf-
-#  uu   ccu c  u
-#   b .
-bu  
+#!/usr/bin/env cf-agent
+# without --no-lock option to cf-agent
+# this output will only occur once per minute
+# this is by design.
+bundle agent main
 {
-  :
-    "H !"
+  reports:
+    "Hello world!";
 }
 
-S :c.cf.cc. f   c   uc.
+See https://docs.cfengine.com/docs/master/examples.html for a more complete example and introduction.

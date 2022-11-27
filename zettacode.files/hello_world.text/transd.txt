@@ -1,2 +1,2 @@
 
-(ou "Ho, Wod!")
+(textout "Hello, World!")

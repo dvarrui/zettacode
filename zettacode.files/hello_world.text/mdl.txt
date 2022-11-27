@@ -1,2 +1,2 @@
-PRINC "Ho wod!"
-CRLF
+<PRINC "Hello world!">
+<CRLF>

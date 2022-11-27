@@ -1,2 +1,2 @@
-U  [[UNIX ]] u, f ' u  ubu,  c!c  f  u u qu.
-co Ho wod!
+Unlike other [[UNIX shell]] languages, fish doesn't support history substitution, so <code>!</code> is safe to use without quoting.
+echo Hello world!

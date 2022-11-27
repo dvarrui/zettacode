@@ -1,4 +1,4 @@
-(f P 6)
- ="u"  'H !'
-I  bjc- c,       bjc c  '''()''' :
- ="u" "H, W!".()
+(formerly Perl 6)
+<syntaxhighlight lang="raku" line>say 'Hello world!';
+In an object-oriented approach, the string is treated as an object calling its '''say()''' method:
+<syntaxhighlight lang="raku" line>"Hello, World!".say();

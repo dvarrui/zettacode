@@ -1,2 +1,2 @@
-fuco m()
- fuc "H !{}{}"
+function main()
+end function "Hello world!{d}{a}"

@@ -1,1 +1,1 @@
-~m  "Ho wod!"  ~
+~&amp;  "Hello world!"  ~

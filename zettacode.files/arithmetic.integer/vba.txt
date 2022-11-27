@@ -1,19 +1,19 @@
 
-'Ac - I
-Sub RAcI()
-D  A V,  A I, b A I
-O E Ru N
+'Arithmetic - Integer
+Sub RosettaArithmeticInt()
+Dim opr As Variant, a As Integer, b As Integer
+On Error Resume Next
 
- = CI(IuB("E f ", "XLSM | Ac"))
-b = CI(IuB("E c ", "XLSM | Ac"))
+a = CInt(InputBox("Enter first integer", "XLSM | Arithmetic"))
+b = CInt(InputBox("Enter second integer", "XLSM | Arithmetic"))
 
-Dbu.P " =" , "b=" b, bC
-F Ec  I S("+ - *  \  ^", " ")
-    Sc C 
-        C "":     Dbu.P "  b",  "" b,  M b
-        C "\":       Dbu.P " \ b",  "\" b,  \ b
-        C E:      Dbu.P " "  " b",   b, Eu(    b)
-    E Sc
-N 
-E Sub
+Debug.Print "a ="; a, "b="; b, vbCr
+For Each opr In Split("+ - * / \ mod ^", " ")
+    Select Case opr
+        Case "mod":     Debug.Print "a mod b", a; "mod"; b, a Mod b
+        Case "\":       Debug.Print "a \ b", a; "\"; b, a \ b
+        Case Else:      Debug.Print "a "; opr; " b", a; opr; b, Evaluate(a &amp; opr &amp; b)
+    End Select
+Next opr
+End Sub
 

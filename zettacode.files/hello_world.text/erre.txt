@@ -1,7 +1,7 @@
 
-! H W  ERRE u
+! Hello World in ERRE language
 PROGRAM HELLO
 BEGIN
-  PRINT("H !")
+  PRINT("Hello world!")
 END PROGRAM
 

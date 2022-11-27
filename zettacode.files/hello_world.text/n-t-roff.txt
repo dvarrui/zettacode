@@ -1,6 +1,6 @@
 
-T   uu, c  uc f u NROFF   uu    .  If u c u TROFF, u   c uu ub f    c  .
+To get text output, compile the source file using NROFF and set output to the text terminal.  If you compile using TROFF, you will get graphical output suitable for typesetting on a graphical typesetter/printer instead.
 
-Bcu .ROFF   cu f u,  j f u  c  b   uu   u.  Tf,    u  c c   .
+Because /.ROFF/ is a document formatting language, the majority of input is expected to be text to output onto a medium.  Therefore, there are no routines to explicitly call to print text.
 
- ="ff"H !
+<syntaxhighlight lang="n/t/roff">Hello world!

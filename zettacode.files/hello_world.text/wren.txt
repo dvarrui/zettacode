@@ -1,1 +1,1 @@
-Sm.("Ho wod!")
+System.print("Hello world!")

@@ -1,6 +1,6 @@
-GET "bd"
+GET "libhdr"
 
-LET () = VALOF
-{ f("H !")
+LET start() = VALOF
+{ writef("Hello world!")
   RESULTIS 0
 }

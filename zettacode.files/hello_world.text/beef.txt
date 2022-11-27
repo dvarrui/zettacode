@@ -1,10 +1,10 @@
- =cU S
-c HW {
-  c P
+<syntaxhighlight lang=csharp>Using System;
+namespace HelloWorld {
+  class Program
   {
-    c  M()
+    static void Main()
     {
-      C.W("H W!")
+      Console.Writeln("Hello World!");
     }
   }
 }

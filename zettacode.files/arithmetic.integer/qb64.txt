@@ -1,21 +1,21 @@
-''CBTJD'': 20200312
+''CBTJD'': 2020/03/12
 START:
-INPUT "E   (,b):" !, b!
-IF  = 0 THEN END
+INPUT "Enter two integers (a,b):"; a!, b!
+IF a = 0 THEN END
 IF b = 0 THEN
-    PRINT "Sc   z. Z   f Qu  R."
+    PRINT "Second integer is zero. Zero not allowed for Quotient or Remainder."
     GOTO START
 END IF
 PRINT
-PRINT "             Su = "  + b
-PRINT "      Dffc = "  - b
-PRINT "         Puc = "  * b
-' Nc  u f  INTEGER D "\"     u  "".
-PRINT "I Qu = "  \ b, , "* Ru  0."
-PRINT "       R = "  MOD b, , "* S c f ."
-PRINT "  E = "  ^ b
+PRINT "             Sum = "; a + b
+PRINT "      Difference = "; a - b
+PRINT "         Product = "; a * b
+' Notice the use of the INTEGER Divisor "\" as opposed to the regular divisor "/".
+PRINT "Integer Quotient = "; a \ b, , "* Rounds toward 0."
+PRINT "       Remainder = "; a MOD b, , "* Sign matches first operand."
+PRINT "  Exponentiation = "; a ^ b
 PRINT
-INPUT "A? (N)" $
-IF UCASE$($) = "Y" THEN CLS: GOTO START
+INPUT "Again? (y/N)"; a$
+IF UCASE$(a$) = "Y" THEN CLS: GOTO START
 CLS
 END

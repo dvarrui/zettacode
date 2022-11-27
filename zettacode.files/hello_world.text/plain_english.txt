@@ -1,7 +1,7 @@
-\T  Ho Wod w  CAL-4700 IDE.
-\... bc  c!
-T u:
-S u.
-W "H W!"   c.
-W f  c .
-Su .
+\This prints Hello World within the CAL-4700 IDE.
+\...and backslashes are comments!
+To run:
+Start up.
+Write "Hello World!" to the console.
+Wait for the escape key.
+Shut down.

@@ -1,2 +1,2 @@
-A   :.ccc.2012.
- Ho wod!
+As explained at https://www.ioccc.org/2012/tromp/hint.html
+ Hello world!

@@ -1,1 +1,1 @@
-"Ho wod!" u
+"Hello world!" puts

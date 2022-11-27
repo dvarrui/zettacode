@@ -1,9 +1,9 @@
-v  = Coo.dI
- b = C.I
+val a = Console.readInt
+val b = Console.readInt
  
- u =  + b    cu    u  cfu  S cc
-(" + b = " + u)
-(" - b = " + ( - b))
-(" * b = " + ( * b))
-("qu f   b = " + (  b))  uc  0
-(" f   b = " + ( % b))     f 
+val sum = a + b //integer addition is discouraged in print statements due to confusion with String concatenation
+println("a + b = " + sum)
+println("a - b = " + (a - b))
+println("a * b = " + (a * b))
+println("quotient of a / b = " + (a / b)) // truncates towards 0
+println("remainder of a / b = " + (a % b)) // same sign as first operand

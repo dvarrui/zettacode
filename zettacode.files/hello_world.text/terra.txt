@@ -1,6 +1,6 @@
-C = b.cudc("do.")
+C = terralib.includec("stdio.h")
 
- (c : ,  : )
-  C.f("H !\")
-  u 0
-
+terra hello(argc : int, argv : &amp;rawstring)
+  C.printf("Hello world!\n")
+  return 0
+end

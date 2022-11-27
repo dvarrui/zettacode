@@ -1,10 +1,10 @@
-I {
-    c f
-    c f
-      =
-     ub =
-     u =
-      =
-      =
-      =
-} f
+/arithInteger {
+   /x exch def
+   /y exch def
+   x y add =
+   x y sub =
+   x y mul =
+   x y idiv =
+   x y mod =
+   x y exp =
+} def

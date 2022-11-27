@@ -1,4 +1,4 @@
-{{ |Sf|2.+}}
-("Ho wod!")
-{{ |Sf|1.}}
-("Ho wod!")
+{{works with|Swift|2.x+}}
+print("Hello world!")
+{{works with|Swift|1.x}}
+println("Hello world!")

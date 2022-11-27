@@ -1,18 +1,18 @@
-'''Su:'''
-df mc = { , b -
-     """
-        + b =        ${} + ${b} = ${ + b}
-        - b =        ${} - ${b} = ${ - b}
-        * b =        ${} * ${b} = ${ * b}
-         b =        ${}  ${b} = ${  b}   !!! C  f !
-()(  b) = ()(${}  ${b}) = ${()(  b)}              !!! Tuc  f  fc
- .(b) =  ${}.(${b}) = ${.(b)}              !!! B  f uc , cu  
-        % b =        ${} % ${b} = ${ % b}
+'''Solution:'''
+def arithmetic = { a, b ->
+    println """
+       a + b =        ${a} + ${b} = ${a + b}
+       a - b =        ${a} - ${b} = ${a - b}
+       a * b =        ${a} * ${b} = ${a * b}
+       a / b =        ${a} / ${b} = ${a / b}   !!! Converts to floating point!
+(int)(a / b) = (int)(${a} / ${b}) = ${(int)(a / b)}              !!! Truncates downward after the fact
+ a.intdiv(b) =  ${a}.intdiv(${b}) = ${a.intdiv(b)}              !!! Behaves as if truncating downward, actual implementation varies
+       a % b =        ${a} % ${b} = ${a % b}
 
-E    b c   G, :
-       ** b =       ${} ** ${b} = ${ ** b}
+Exponentiation is also a base arithmetic operation in Groovy, so:
+      a ** b =       ${a} ** ${b} = ${a ** b}
 """
 }
 
-'''T:'''
-mc(5,3)
+'''Test:'''
+arithmetic(5,3)

@@ -2,6 +2,6 @@
     RETURNS(S VARCHAR(40))
   AS
   BEGIN
-    S = 'H !'
-    SUSPEND
+    S = 'Hello world!';
+    SUSPEND;
   END

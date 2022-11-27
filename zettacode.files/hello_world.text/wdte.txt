@@ -1,1 +1,1 @@
-o.w o.dou 'Ho wod!'
+io.writeln io.stdout 'Hello world!';

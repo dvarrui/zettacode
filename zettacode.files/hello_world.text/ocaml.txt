@@ -1,1 +1,1 @@
-_d "Ho wod!"
+print_endline "Hello world!"

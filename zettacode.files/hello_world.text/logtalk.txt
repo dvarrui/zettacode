@@ -1,7 +1,7 @@
-:- objc(o_wod).
+:- object(hello_world).
 
-    %  z1 c u  uc cu
-    %   bjc    :
-    :- z(('H !\')).
+    % the initialization/1 directive argument is automatically executed
+    % when the object is loaded into memory:
+    :- initialization(write('Hello world!\n')).
 
-:- _bjc.
+:- end_object.

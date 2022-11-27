@@ -1,7 +1,7 @@
-modu owod
- f
+module helloworld;
+extern printf;
 
-@I  [
-    f("H !")
-    u 0
+@Integer main [
+    printf("Hello world!");
+    return 0;
 ]

@@ -1,18 +1,18 @@
 
-	.c	"."
-	.b		_
-_:
-		4,%1			! 4  SYS_
-		1,%0			! 1  u
-		.,%1		!   buff
-		(.-.),%2	! 
-		8
+	.section	".text"
+	.global		_start
+_start:
+	mov	4,%g1			! 4 is SYS_write
+	mov	1,%o0			! 1 is stdout
+	set	.msg,%o1		! pointer to buffer
+	mov	(.msgend-.msg),%o2	! length
+	ta	8
 
-		1,%1			! 1  SYS_
-	c	%0			! u u  0
-		8
+	mov	1,%g1			! 1 is SYS_exit
+	clr	%o0			! return status is 0
+	ta	8
 
-.:
-	.c	"H !\"
-.:
+.msg:
+	.ascii	"Hello world!\n"
+.msgend:
 

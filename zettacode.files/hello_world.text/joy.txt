@@ -1,1 +1,1 @@
-"Ho wod!" uc.
+"Hello world!" putchars.

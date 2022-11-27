@@ -1,4 +1,4 @@
-m() {
-     b = 'H !'
-    ("$b")
+main() {
+    var bye = 'Hello world!';
+    print("$bye");
 }

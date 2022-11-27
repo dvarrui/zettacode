@@ -1,2 +1,2 @@
-U TMG:
-b: (( = { Ho, Wod! * } ))
+Unix TMG:
+begin: parse(( = { <Hello, World!> * } ));

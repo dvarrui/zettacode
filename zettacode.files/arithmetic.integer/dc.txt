@@ -1,10 +1,10 @@
-[E 2  o 1 .
-  U c  . E: 2 3
-  U uc f  . E: _10
-]P ? b 
-[: ]P  b +  z
-[ub: ]P  b -  z
-[u: ]P  b *  z
-[: ]P  b   z  [uc  z]z
-[: ]P  b %  z  [ c f ]z
-[: ]P  b ^  z
+[Enter 2 integers on 1 line.
+  Use whitespace to separate. Example: 2 3
+  Use underscore for negative integers. Example: _10
+]P ? sb sa
+[add: ]P la lb + p sz
+[sub: ]P la lb - p sz
+[mul: ]P la lb * p sz
+[div: ]P la lb / p sz  [truncates toward zero]sz
+[mod: ]P la lb % p sz  [sign matches first operand]sz
+[pow: ]P la lb ^ p sz

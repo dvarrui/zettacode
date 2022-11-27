@@ -1,1 +1,1 @@
-P "Ho wod!"
+Print "Hello world!"

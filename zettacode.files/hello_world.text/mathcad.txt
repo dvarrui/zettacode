@@ -1,3 +1,3 @@
-S   f c   Mc  (''A   Mc' cb uc c f  c'').  
-"Ho, Wod!"
-A  Mc P, Mc P E  Mc 15 ('' '')
+Simply type the following directly onto a Mathcad worksheet (''A worksheet is Mathcad's combined source code file &amp; console'').  
+"Hello, World!"
+Applies to Mathcad Prime, Mathcad Prime Express and Mathcad 15 (''and earlier'')

@@ -1,44 +1,44 @@
 
-# Mo of  o c  m o.
-# A u      u     c
-#   cu , ub, u, ,  .
+# Most of this long script is mere presentation.
+# All you really need to do is push two integers onto the stack
+# and then execute add, sub, mul, idiv, or pow.
 
-$CSc { # U ANSI  c
-  `\[2J\[11H'  fu
-} b f
+$ClearScreen { # Using ANSI terminal control
+  `\e[2J\e[1;1H' print flush
+} bind def
 
-$S { #  S -
-  `\' c  fu
-} b f
+$Say { # string Say -
+  `\n' cat print flush
+} bind def
 
-$SPb {
-`T    c    O,' S
-`\' u  ub f u cc, c' S
-`\' c A  B.\' S
-} b f
+$ShowPreamble {
+`To show how integer arithmetic in done in Onyx,' Say
+`we\'ll use two numbers of your choice, which' Say
+`we\'ll call A and B.\n' Say
+} bind def
 
-$P { # c:  --
-  u c   fu
-} f
+$Prompt { # stack: string --
+  stdout exch write pop flush
+} def
 
-$GI { # c:  -- 
-  u c `E  ' c c `: ' c
-  P    c  f
-} b f
+$GetInt { # stack: name -- integer
+  dup cvs `Enter integer ' exch cat `: ' cat
+  Prompt stdin readline pop cvx eval def
+} bind def
 
-$T { # c__ b_ T u_
-  A c ` ' B c ` ' 5 c  c `  ' 3 c c
-  A B  c  c `.' 3 c S
-} b f
+$Template { # arithmetic_operator_name label_string Template result_string
+  A cvs ` ' B cvs ` ' 5 ncat over cvs ` gives ' 3 ncat exch
+  A B dn cvx eval cvs `.' 3 ncat Say
+} bind def
 
-$SRu {
-  $ `A: ' T
-  $ub `Subc: ' T
-  $u `Muc: ' T
-  $ `D: ' T
-  `N   u f    u  z.' S
-  $ `E: ' T
-  `N   u f          ub.' S
-} b f
+$ShowResults {
+  $add `Addition: ' Template
+  $sub `Subtraction: ' Template
+  $mul `Multiplication: ' Template
+  $idiv `Division: ' Template
+  `Note that the result of integer division is rounded toward zero.' Say
+  $pow `Exponentiation: ' Template
+  `Note that the result of raising to a negative power always gives a real number.' Say
+} bind def
 
-CSc SPb $A GI $B GI SRu
+ClearScreen ShowPreamble $A GetInt $B GetInt ShowResults

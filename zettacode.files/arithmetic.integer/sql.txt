@@ -1,44 +1,44 @@
-{{ |Oc}}
+{{works with|Oracle}}
 
--- .q
--- T  SQL*u
+-- test.sql
+-- Tested in SQL*plus
 
- b 
+drop table test;
 
-c b  ( , b )
+create table test (a integer, b integer);
 
-   u ('A','B')
+insert into test values ('&amp;&amp;A','&amp;&amp;B');
 
-c
+commit;
 
-c -b ffc f 
+select a-b difference from test;
 
-c *b uc f 
+select a*b product from test;
 
-c uc(b) _qu f   
+select trunc(a/b) integer_quotient from test;  
 
-c (,b)  f 
+select mod(a,b) remainder from test;
 
-c (,b)  f 
-
-
-
-SQL @.q
-
-Tb .
+select power(a,b) exponentiation from test;
 
 
-Tb c.
 
-E u f : 3
-E u f b: 4
-   1:    u ('A','B')
-   1:    u ('3','4')
+SQL> @test.sql
 
-1  c.
+Table dropped.
 
 
-C c.
+Table created.
+
+Enter value for a: 3
+Enter value for b: 4
+old   1: insert into test values ('&amp;&amp;A','&amp;&amp;B')
+new   1: insert into test values ('3','4')
+
+1 row created.
+
+
+Commit complete.
 
 
 DIFFERENCE

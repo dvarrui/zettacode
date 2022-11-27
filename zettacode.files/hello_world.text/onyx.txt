@@ -1,1 +1,1 @@
-`Ho wod!\'  fu
+`Hello world!\n' print flush

@@ -1,5 +1,5 @@
-F :
- =" u"(H !)
-F :
+For typing:
+<syntaxhighlight lang="programming language">print(Hello world!)
+For importing:
 
-[(H !)]
+[print(Hello world!)]

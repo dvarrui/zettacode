@@ -1,7 +1,7 @@
 
- 
-cu b
-b
-uu "H !"
-
+program hello
+include library
+begin
+output "Hello world!"
+end
 

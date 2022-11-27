@@ -1,1 +1,1 @@
- =""H !
+<syntaxhighlight lang="ml/i">Hello world!

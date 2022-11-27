@@ -1,1 +1,1 @@
- 'Ho wod!'
+say 'Hello world!'

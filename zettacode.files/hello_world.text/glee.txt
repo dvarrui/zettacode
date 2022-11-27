@@ -1,13 +1,13 @@
-"Ho wod!"
+"Hello world!"
 
+or
 
+'Hello world!'
 
-'Ho wod!'
+or to display with double quotes
 
-    ub qu
+ '"Goodbye,World!"'
 
- '"Goodb,Wod!"'
+or to display with single quotes
 
-     qu
-
- "'Goodb,Wod!'"
+ "'Goodbye,World!'"

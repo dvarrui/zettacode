@@ -1,15 +1,15 @@
-# Mb ou d o mo  mmc fuco 
-# f Tc :
-# ("c  ::c::fuc")
+# Maybe you need to import the mathematical funcions 
+# from Tcl with:
+# eval("namespace path ::tcl::mathfunc");
 
- () {
-     , b 
-    u("E  :")
-     = ()(()) 
-    b = ()(()) 
-    u("${} + ${b} = ${+b}")
-    u("${} - ${b} = ${-b}")
-    u("${} * ${b} = ${*b}")
-    u("${}  ${b} = ${b},  ${%b}")
-    u("${}    f ${b} = ${()(,b)}")
+void main() {
+    int a, b; 
+    puts("Enter two integers:");
+    a = (int)(gets(stdin)); 
+    b = (int)(gets(stdin)); 
+    puts("${a} + ${b} = ${a+b}");
+    puts("${a} - ${b} = ${a-b}");
+    puts("${a} * ${b} = ${a*b}");
+    puts("${a} / ${b} = ${a/b}, remainder ${a%b}");
+    puts("${a} to the power of ${b} = ${(int)pow(a,b)}");
 }

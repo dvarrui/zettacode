@@ -1,21 +1,21 @@
 
-U  A CPC f:
+Using the Amstrad CPC firmware:
 
-o		$4000
+org		$4000
 
-_uu:	qu	$bb5
+txt_output:	equ	$bb5a
 
-		u	
-			,
+		push	hl
+		ld	hl,world
 
-:			,()
-		c	0
-		j	z,
-		c	_uu
-		c	
-		j	
+print:		ld	a,(hl)
+		cp	0
+		jr	z,end
+		call	txt_output
+		inc	hl
+		jr	print
 
-:			
-		
+end:		pop	hl
+		ret
 
-:		f	"H !\\\0"
+world:		defm	"Hello world!\r\n\0"

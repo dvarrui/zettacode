@@ -1,5 +1,5 @@
-T   Sc E Ru :
-"Ho wod!"
+To show in Script Editor Result pane:
+"Hello world!"
 
-T   Sc E E L :
-o "Ho wod!"
+To show in Script Editor Event Log pane:
+log "Hello world!"

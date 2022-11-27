@@ -1,5 +1,5 @@
-o Scc
-   M
-b
-  u ‹''H !''›
-
+theory Scratch
+  imports Main
+begin
+  value ‹''Hello world!''›
+end

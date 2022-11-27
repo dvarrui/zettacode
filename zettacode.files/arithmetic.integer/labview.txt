@@ -1,2 +1,2 @@
-{{VI }}b
-[[F:LbVIEW_Ac_I.]]
+{{VI snippet}}<br/>
+[[File:LabVIEW_Arithmetic_Integer.png]]

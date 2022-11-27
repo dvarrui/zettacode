@@ -1,4 +1,4 @@
-mo d::do::dou
+import std::stdio::stdout
 
-u.('H, !')
+stdout.print('Hello, world!')
 

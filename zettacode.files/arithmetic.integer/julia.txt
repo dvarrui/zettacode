@@ -1,4 +1,5 @@
-fuco mc ( = (I, d()), b = (I, d()))
-  f    [+,-,*,,]
-    (" $ b = $((,b))")
-  
+function arithmetic (a = parse(Int, readline()), b = parse(Int, readline()))
+  for op in  [+,-,*,div,rem]
+    println("a $op b = $(op(a,b))")
+  end
+end

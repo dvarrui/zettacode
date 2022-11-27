@@ -1,7 +1,7 @@
-mo d::o
+import std::io;
 
-f  () 
+fn int main() 
 {
-    ::("H, W!")
-    u 0
+    io::println("Hello, World!");
+    return 0;
 }

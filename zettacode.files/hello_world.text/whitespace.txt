@@ -1,1 +1,1 @@
-T   "H W" - -   [:cc.u.c.uc. Wc-b]
+There is a "Hello World" - example-program on the [http://compsoc.dur.ac.uk/whitespace/hworld.ws Whitespace-website]

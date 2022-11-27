@@ -1,3 +1,3 @@
-vod m(){
-	u.f("H !\")
+void main(){
+	stdout.printf("Hello world!\n");
 }

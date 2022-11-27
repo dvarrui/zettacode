@@ -1,1 +1,1 @@
-u("Ho wod!")
+puts("Hello world!")

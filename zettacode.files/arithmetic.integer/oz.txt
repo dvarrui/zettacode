@@ -1,19 +1,19 @@
-dc
-  SI = {N c $ f O.f O.  (:)}
+declare
+  StdIn = {New class $ from Open.file Open.text end init(name:stdin)}
 
-  fu {RI}
-     {S.I {SI S($)}}
-  
+  fun {ReadInt}
+     {String.toInt {StdIn getS($)}}
+  end
 
-  A = {RI}
-  B = {RI}
-
-  {FA
+  A = {ReadInt}
+  B = {ReadInt}
+in
+  {ForAll
    ["A+B = "#A+B
     "A-B = "#A-B
     "A*B = "#A*B
-    "AB = "#A  B  %% uc  0
-    " "#A  B  %%      A
-    "A^B = "#{P A B}
+    "A/B = "#A div B  %% truncates towards 0
+    "remainder "#A mod B  %% has the same sign as A
+    "A^B = "#{Pow A B}
    ]
-   S.If}
+   System.showInfo}

@@ -1,12 +1,12 @@
-{{ |Oc}}
-{{ |Db2 LUW}}
+{{works with|Oracle}}
+{{works with|Db2 LUW}}
 
-c 'H !'  f u
+select 'Hello world!' text from dual;
 
 
 
-SQLc 'H !'  f u
+SQL>select 'Hello world!' text from dual;
 TEXT
 ------------
-H !
+Hello world!
 

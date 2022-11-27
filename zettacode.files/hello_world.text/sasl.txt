@@ -1,4 +1,4 @@
-N            ub qu
+Note that a string starts with a single and ends with a double quote
 
-'H W!",
+'Hello World!",nl
 

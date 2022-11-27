@@ -1,14 +1,14 @@
 
-"H !"
+"Hello world!"
 
-S f      c b c :
+Some of the other ways this task can be attached are:
 
-`0: "H !\"
-
-
-: "H !"
+`0: "Hello world!\n"
 
 
+s: "Hello world!"
+s
 
-\c "H !"
+
+\echo "Hello world!"
 

@@ -1,4 +1,4 @@
-D     f  c.
-fuco m() {
-  K:L("H !")
+Displays it in a text file or console/terminal.
+function main() {
+  Konsol:Log("Hello world!")
 }

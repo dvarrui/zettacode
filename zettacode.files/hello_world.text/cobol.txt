@@ -1,22 +1,22 @@
-U f f.
-{{ |OCOBOL}}
-{{ |D E COBOL}}
+Using fixed format.
+{{works with|OpenCOBOL}}
+{{works with|Dell Enterprise COBOL}}
 
-	om-d. o.
-	cu .
-		 "H !".
-		 u.
+	program-id. hello.
+	procedure division.
+		display "Hello world!".
+		stop run.
 
-U  c u,    c bc   DISPLAY .
-{{ |GuCOBOL}}
+Using relaxed compilation rules, the hello program can become a single DISPLAY statement.
+{{works with|GnuCOBOL}}
 
-d"Ho, wod".
+display"Hello, world".
 
-$ cbc - -f- -f .cb
-.cb: 1: W: PROGRAM-ID   - u
-.cb: 1: W: PROCEDURE DIVISION   - u
+prompt$ cobc -x -frelax-syntax -free hello.cob
+hello.cob: 1: Warning: PROGRAM-ID header missing - assumed
+hello.cob: 1: Warning: PROCEDURE DIVISION header missing - assumed
 
-$ .
-H, 
+prompt$ ./hello
+Hello, world
 
-''N  COBOL c   DISPLAY   u  c bf  qu ,  qu b  c  c .  T fu   f      ,   f GuCOBOL   c c  cub.''
+''Note how COBOL can handle the DISPLAY reserved word without a space before the quoted string, the quote being a compile time scan delimiter.  The full stop period after the single statement is still mandatory, at least for GnuCOBOL and a clean compile to executable.''

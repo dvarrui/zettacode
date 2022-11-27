@@ -1,1 +1,1 @@
-$ w $ouu "Ho wod!"
+$ write sys$output "Hello world!"

@@ -1,21 +1,21 @@
 
-:-- 
+:set-state-ok t
 
-(fu --u ()
-   (- (_  )
-           (-bjc *-* )
-      (c ( _))
-      (- (_ b )
-              (-bjc *-* )
-         (c ( _))
-         (  b ))))
+(defun get-two-nums (state)
+   (mv-let (_ a state)
+           (read-object *standard-oi* state)
+      (declare (ignore _))
+      (mv-let (_ b state)
+              (read-object *standard-oi* state)
+         (declare (ignore _))
+         (mv a b state))))
 
-(fu -c ()
-   (- ( b )
-           (--u )
-      ( 
-          ($ (c "Su:        ~0~%" (+  b))
-                  (c "Dffc: ~0~%" (-  b))
-                  (c "Puc:    ~0~%" (*  b))
-                  (c "Qu:   ~0~%" (f  b))
-                  (c "R:  ~0~%" (  b))))))
+(defun integer-arithmetic (state)
+   (mv-let (a b state)
+           (get-two-nums state)
+      (mv state
+          (progn$ (cw "Sum:        ~x0~%" (+ a b))
+                  (cw "Difference: ~x0~%" (- a b))
+                  (cw "Product:    ~x0~%" (* a b))
+                  (cw "Quotient:   ~x0~%" (floor a b))
+                  (cw "Remainder:  ~x0~%" (mod a b))))))

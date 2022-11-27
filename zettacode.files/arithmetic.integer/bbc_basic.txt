@@ -1,9 +1,9 @@
-      INPUT "E  f : " f%
-      INPUT "E  c : " c%
+      INPUT "Enter the first integer: " first%
+      INPUT "Enter the second integer: " second%
       
-      PRINT "T u  "  f% + c%
-      PRINT "T ffc  "  f% - c%
-      PRINT "T uc  "  f% * c%
-      PRINT "T  qu  "  f% DIV c% " (u  0)"
-      PRINT "T   "  f% MOD c% " ( c f )"
-      PRINT "T f     f  c  "  f% ^ c%
+      PRINT "The sum is " ; first% + second%
+      PRINT "The difference is " ; first% - second%
+      PRINT "The product is " ; first% * second%
+      PRINT "The integer quotient is " ; first% DIV second% " (rounds towards 0)"
+      PRINT "The remainder is " ; first% MOD second% " (sign matches first operand)"
+      PRINT "The first raised to the power of the second is " ; first% ^ second%

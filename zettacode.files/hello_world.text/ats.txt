@@ -1,1 +1,1 @@
-mm m0 () =  "Ho wod!\"
+implement main0 () = print "Hello world!\n"

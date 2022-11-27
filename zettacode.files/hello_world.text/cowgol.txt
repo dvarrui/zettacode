@@ -1,4 +1,4 @@
-cud "cowo.co"
-("H !")
-_()
+include "cowgol.coh";
+print("Hello world!");
+print_nl();
 

@@ -1,8 +1,8 @@
-modu HoWod
+module HelloWorld
     {
-     u()
+    void run()
         {
-        @Ijc C c
-        c.("H W!")
+        @Inject Console console;
+        console.println("Hello World!");
         }
     }

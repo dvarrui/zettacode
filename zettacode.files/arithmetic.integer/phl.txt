@@ -1,20 +1,20 @@
 
-modu 
+module arith;
 
- f
- cf
+extern printf;
+extern scanf;
 
-@I  [
-	@P@I  = c(4)
-	@P@I b = c(4)
-	cf("% %", , b)
+@Integer main [
+	@Pointer<@Integer> a = alloc(4);
+	@Pointer<@Integer> b = alloc(4);
+	scanf("%i %i", a, b);
 	
-	f(" + b = %\", :: + b::)
-	f(" - b = %\", :: - b::)
-	f(" * b = %\", :: * b::)
-	f("  b = %\", ::  b::)
-	f(" % b = %\", :: % b::)
-	f(" ** b = %\", :: ** b::)
+	printf("a + b = %i\n", a::get + b::get);
+	printf("a - b = %i\n", a::get - b::get);
+	printf("a * b = %i\n", a::get * b::get);
+	printf("a / b = %i\n", a::get / b::get);
+	printf("a % b = %i\n", a::get % b::get);
+	printf("a ** b = %i\n", a::get ** b::get);
 	
-	u 0
+	return 0;
 ]

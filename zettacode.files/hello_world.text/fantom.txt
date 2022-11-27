@@ -1,10 +1,10 @@
 
 
-c HT
+class HelloText
 {
-  ubc c V  ()
+  public static Void main ()
   {
-    c ("H !")
+    echo ("Hello world!")
   }
 }
 

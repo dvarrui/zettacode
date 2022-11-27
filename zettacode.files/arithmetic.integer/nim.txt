@@ -1,25 +1,25 @@
-mo o, u
+import parseopt, strutils
+ 
+var 
+  opt: OptParser = initOptParser()
+  str = opt.cmdLineRest.split
+  a: int = 0
+  b: int = 0
+ 
+try:
+  a = parseInt(str[0])
+  b = parseInt(str[1])
+except ValueError:
+  quit("Invalid params. Two integers are expected.")
  
  
-  : OP = OP()
-   = .cLR.
-  :  = 0
-  b:  = 0
- 
-:
-   = I([0])
-  b = I([1])
-c VuE:
-  qu("I . T   c.")
- 
- 
-c("      : "  $)
-c("b      : "  $b)
-c(" + b  : "  $(+b))
-c(" - b  : "  $(-b))
-c(" * b  : "  $(*b))
-c("  b: "  $(  b)) #  u  z
-c("  b: "  $(  b)) # (  b)==() f ()!=(b)
-c(" ^ b  : "  $( ^ b))
+echo("a      : " &amp; $a)
+echo("b      : " &amp; $b)
+echo("a + b  : " &amp; $(a+b))
+echo("a - b  : " &amp; $(a-b))
+echo("a * b  : " &amp; $(a*b))
+echo("a div b: " &amp; $(a div b)) # div rounds towards zero
+echo("a mod b: " &amp; $(a mod b)) # sign(a mod b)==sign(a) if sign(a)!=sign(b)
+echo("a ^ b  : " &amp; $(a ^ b))
 
-Ecu: A 4 5
+Execute: Aritmint 4 5

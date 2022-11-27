@@ -1,5 +1,5 @@
 
-mo w..Sm
+import whiley.lang.System
 
- (S.C c):
-    c.u.("H !")
+method main(System.Console console):
+    console.out.println("Hello world!")

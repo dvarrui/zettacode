@@ -1,1 +1,1 @@
-dk("Ho wod!")
+andika("Hello world!")

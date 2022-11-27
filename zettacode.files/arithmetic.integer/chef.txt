@@ -1,37 +1,37 @@
 
-Numb Sou.
+Number Soup.
 
-O   u.
+Only reads single values.
 
-I.
-1  Nub
-3  W
-5  Su
+Ingredients.
+1 g Numbers
+3 g Water
+5 g Soup
 
-M.
-T Nub f f.
-T Su f f.
-Pu Nub  1  b.
-A Su   1  b.
-Pu c f  1  b  1 b .
-C 1  b.
-Pu Nub  1  b.
-R Su f 1  b.
-Pu c f  1  b  2 b .
-C 1  b.
-Pu Nub  1  b.
-Cb Su  1  b.
-Pu c f  1  b  3 b .
-C 1  b.
-Pu Nub  1  b.
-D Su  1  b.
-Pu c f  1  b  4 b .
-C 1  b.
-Pu W  1  b.
-Vb  Su.
-Cb Nub  1  b.
-Vb  Su u b.
-Pu c f  1  b  5 b .
-C 1  b.
+Method.
+Take Numbers from refrigerator.
+Take Soup from refrigerator.
+Put Numbers into 1st mixing bowl.
+Add Soup into the 1st mixing bowl.
+Pour contents of the 1st mixing bowl into 1st baking dish.
+Clean 1st mixing bowl.
+Put Numbers into 1st mixing bowl.
+Remove Soup from 1st mixing bowl.
+Pour contents of the 1st mixing bowl into 2nd baking dish.
+Clean 1st mixing bowl.
+Put Numbers into 1st mixing bowl.
+Combine Soup into 1st mixing bowl.
+Pour contents of the 1st mixing bowl into 3rd baking dish.
+Clean 1st mixing bowl.
+Put Numbers into 1st mixing bowl.
+Divide Soup into 1st mixing bowl.
+Pour contents of the 1st mixing bowl into 4th baking dish.
+Clean 1st mixing bowl.
+Put Water into 1st mixing bowl.
+Verb the Soup.
+Combine Numbers into 1st mixing bowl.
+Verb the Soup until verbed.
+Pour contents of the 1st mixing bowl into 5th baking dish.
+Clean 1st mixing bowl.
 
-S 5.
+Serves 5.

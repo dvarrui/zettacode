@@ -1,4 +1,4 @@
-fuc o m
+func hello <main>
 {
-   ("H !")
+   print("Hello world!")
 }

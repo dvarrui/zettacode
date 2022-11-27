@@ -1,8 +1,8 @@
 
-# cb
+#lang racket/base
 
-(f (c  )
-  (f ([ ( + - *  qu  u   c c)])
-    (f "~ = ~\" `(,(bjc- ) , ,) (  ))))
+(define (arithmetic x y)
+  (for ([op (list + - * / quotient remainder modulo max min gcd lcm)])
+    (printf "~s => ~s\n" `(,(object-name op) ,x ,y) (op x y))))
 
-(c 8 12)
+(arithmetic 8 12)

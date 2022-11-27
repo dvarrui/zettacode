@@ -1,20 +1,20 @@
-w Ad.T_Io
- A.I_T_IO
+with Ada.Text_Io;
+with Ada.Integer_Text_IO;
 
-cu I_Ac 
-   u A.T_IO
-   u A.I_T_I
+procedure Integer_Arithmetic is
+   use Ada.Text_IO;
+   use Ada.Integer_Text_Io;
 
-   A, B : I
-b
-   G(A)
-   G(B)
-   Pu_L("+b = "  I'I(A + B))
-   Pu_L("-b = "  I'I(A - B))
-   Pu_L("*b = "  I'I(A * B))
-   Pu_L("b = "  I'I(A  B))
-   Pu_L("  b = "  I'I(A  B)) -- S c B
-   Pu_L(" f b = "  I'I(A  B)) -- S c A
-   Pu_L("**b = "  I'I(A ** B))  
+   A, B : Integer;
+begin
+   Get(A);
+   Get(B);
+   Put_Line("a+b = " &amp; Integer'Image(A + B));
+   Put_Line("a-b = " &amp; Integer'Image(A - B));
+   Put_Line("a*b = " &amp; Integer'Image(A * B));
+   Put_Line("a/b = " &amp; Integer'Image(A / B));
+   Put_Line("a mod b = " &amp; Integer'Image(A mod B)); -- Sign matches B
+   Put_Line("remainder of a/b = " &amp; Integer'Image(A rem B)); -- Sign matches A
+   Put_Line("a**b = " &amp; Integer'Image(A ** B));  
 
- I_Ac
+end Integer_Arithmetic;

@@ -1,17 +1,17 @@
-OCoo()
+OpenConsole()
  
-Df , b
+Define a, b
 
-P("Nub 1: "):  = V(Iu())
-P("Nub 2: "): b = V(Iu())
+Print("Number 1: "): a = Val(Input())
+Print("Number 2: "): b = Val(Input())
 
-PN("Su:        " + S( + b))
-PN("Dffc: " + S( - b))
-PN("Puc:    " + S( * b))
-PN("Qu:   " + S(  b))  I  (u =uc)
-PN("R: " + S( % b))
-PN("P:      " + S(P(, b)))
+PrintN("Sum:        " + Str(a + b))
+PrintN("Difference: " + Str(a - b))
+PrintN("Product:    " + Str(a * b))
+PrintN("Quotient:   " + Str(a / b)) ; Integer division (rounding mode=truncate)
+PrintN("Remainder: " + Str(a % b))
+PrintN("Power:      " + Str(Pow(a, b)))
  
-Iu()
+Input()
  
-CC()
+CloseConsole()

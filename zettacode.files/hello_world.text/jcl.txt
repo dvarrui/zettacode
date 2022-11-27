@@ -1,1 +1,1 @@
-*MESSAGE Ho wod!
+/*MESSAGE Hello world!

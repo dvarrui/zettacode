@@ -1,47 +1,47 @@
 
- = (w_u("Numb 1: "))
- = (_u("Nub 2: "))
+x = int(raw_input("Number 1: "))
+y = int(raw_input("Number 2: "))
 
- "Su: %" % ( + )
- "Dffc: %" % ( - )
- "Puc: %" % ( * )
- "Qu: %" % (  )     #       f   .
-                                   # uc   f
- "R: %" % ( % )    #    c 
- "Qu: %  R: %" % (, )
- "P: %" % **
+print "Sum: %d" % (x + y)
+print "Difference: %d" % (x - y)
+print "Product: %d" % (x * y)
+print "Quotient: %d" % (x / y)     #  or x // y  for newer python versions.
+                                   # truncates towards negative infinity
+print "Remainder: %d" % (x % y)    # same sign as second operand
+print "Quotient: %d with Remainder: %d" % divmod(x, y)
+print "Power: %d" % x**y
 
-## O u     u    
-_u( )
+## Only used to keep the display up when the program ends
+raw_input( )
 
-N: I P3 ''_u()''  b   ''u()'' (  ''u()'' bu-   , u  cu u ''(u())''  u   ...  - ... b).  A  b  u    ''()'' c   '': ... c VuE:...'' cuc uc :
+Notes: In Python3 ''raw_input()'' will be renamed to ''input()'' (the old ''input()'' built-in will go away, though one could use ''eval(input())'' to emulate the old ... and ill-advised ... behavior).  Also a better program would wrap the attempted ''int()'' conversions in a ''try: ... except ValueError:...'' construct such as:
 
-df um(om):
-     Tu: #  ...
-        :
-             = (_u())
-        c VuE:
-             "Iu cu  b    . P  ."\
-            cu
-        b
-    u 
+def getnum(prompt):
+    while True: # retrying ...
+        try:
+            n = int(raw_input(prompt))
+        except ValueError:
+            print "Input could not be parsed as an integer. Please try again."\
+            continue
+        break
+    return n
 
- = u("Nub1: ")
- = u("Nub2: ")
+x = getnum("Number1: ")
+y = getnum("Number2: ")
 ...
 
-(I  '  cc  f  f  u  c  bc.  T  c u f c u u, bu      f cfu   f,   f  c   IPC c).
+(In general it's good practice to perform parsing of all input in exception handling blocks.  This is especially true of interactive user input, but also applies to data read from configuration and other files, and marshaled from other processes via any IPC mechanism).
 
-P    cu ''''  u b qu  . 
- qu,  = (355,113)
-G  qu f 3,    f 16. 
+Python also has the procedure ''divmod'' that returns both quotient and remainder. eg
+ quotient, remainder = divmod(355,113)
+Giving a quotient of 3, and a remainder of 16. 
 
-=== P 3.0 cb c ===
-df mc(, ):
-    f   "+ - *  % **".():
-         = "%() %() %()" % ()
-        ("%\= %" % (, ()))
+=== Python 3.0 compatible code ===
+def arithmetic(x, y):
+    for op in "+ - * // % **".split():
+        expr = "%(x)s %(op)s %(y)s" % vars()
+        print("%s\t=> %s" % (expr, eval(expr)))
 
 
-c(12, 8)
-c(u("Nub 1: "), u("Nub 2: "))
+arithmetic(12, 8)
+arithmetic(input("Number 1: "), input("Number 2: "))

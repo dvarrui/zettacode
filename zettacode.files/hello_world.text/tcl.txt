@@ -1,5 +1,5 @@
-Ouu  :
-u dou {Ho wod!}
+Output to terminal:
+puts stdout {Hello world!}
 
-Ouu  b , b f:
-u $fID {Ho wod!}
+Output to arbitrary open, writable file:
+puts $fileID {Hello world!}

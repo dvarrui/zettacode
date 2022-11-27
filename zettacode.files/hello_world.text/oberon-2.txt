@@ -1,11 +1,11 @@
 
-MODULE Gb
-IMPORT Ou
-  PROCEDURE W*
+MODULE Goodbye;
+IMPORT Out;
+  PROCEDURE World*;
   BEGIN
-    Ou.S("H !")Ou.L
-  END W
+    Out.String("Hello world!");Out.Ln
+  END World;
 BEGIN
-  W
-END Gb.
+  World;
+END Goodbye.
 

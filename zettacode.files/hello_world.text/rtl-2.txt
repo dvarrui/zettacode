@@ -1,12 +1,12 @@
- ="2"TITLE Gb W
+<syntaxhighlight lang="rtl/2">TITLE Goodbye World;
 
-LET NL=10
+LET NL=10;
 
-EXT PROC(REF ARRAY BYTE) TWRT
+EXT PROC(REF ARRAY BYTE) TWRT;
 
-ENT PROC INT RRJOB()
+ENT PROC INT RRJOB();
 
-    TWRT("H !#NL#")
-    RETURN(1)
+    TWRT("Hello world!#NL#");
+    RETURN(1);
 
-ENDPROC
+ENDPROC;

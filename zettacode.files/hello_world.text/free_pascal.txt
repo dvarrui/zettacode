@@ -1,21 +1,21 @@
 
-PROGRAM HW 
+PROGRAM HelloWorld ;
 
 {$APPTYPE CONSOLE}
 
 (*) 
 
-        :.fc..
+        https://www.freepascal.org/advantage.var
 
 (*)
 
 USES
 
-    c
+    crt;
 
 BEGIN
 
-  WL ( 'H !' ) 
+  WriteLn ( 'Hello world!' ) ;
 
 END.
 

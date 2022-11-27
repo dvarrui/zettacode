@@ -1,6 +1,6 @@
-c HoWod {
-    fuc  u:  {
-        ("H W!")
+script HelloWorld {
+    func main returns: int {
+        print("Hello World!")
     }
 }
 

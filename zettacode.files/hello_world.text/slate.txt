@@ -1,1 +1,1 @@
-fom: 'Ho wod!'.
+inform: 'Hello world!'.

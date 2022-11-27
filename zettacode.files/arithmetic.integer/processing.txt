@@ -1,7 +1,7 @@
-  = 7, b = 5
+int a = 7, b = 5;
 
-( + " + " + b + " = " + ( + b))
-( + " - " + b + " = " + ( - b))
-( + " * " + b + " = " + ( * b))
-( + "  " + b + " = " + (  b)) Ru  z
-( + " % " + b + " = " + ( % b)) S   f 
+println(a + " + " + b + " = " + (a + b));
+println(a + " - " + b + " = " + (a - b));
+println(a + " * " + b + " = " + (a * b));
+println(a + " / " + b + " = " + (a / b)); //Rounds towards zero
+println(a + " % " + b + " = " + (a % b)); //Same sign as first operand

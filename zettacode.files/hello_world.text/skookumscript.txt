@@ -1,3 +1,3 @@
-("Ho wod!")
-A f ju    SuIDE [:uc.cc3.0cc REPL]: 
-"Ho wod!"
+print("Hello world!")
+Alternatively if just typing in the SkookumIDE [http://skookumscript.com/docs/v3.0/ide/console/workspace/ REPL]: 
+"Hello world!"

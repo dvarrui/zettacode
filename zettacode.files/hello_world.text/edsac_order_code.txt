@@ -1,34 +1,34 @@
-T EDSAC   u -c . T  u    cu   cOc    c cc: f    b   qu qu. A   (u   ) u f      [[H L #EDSAC  c]].
-[ P HELLO WORLD ]
-[ A  f  EDSAC ]
-[ W  I O 2 ]
+The EDSAC did not support lower-case letters. The method used here is to include a separate <code>O</code> order to print each character: for short messages and labels this is quite adequate. A more general (though slightly more involved) solution for printing strings is given at [[Hello world/Line printer#EDSAC order code]].
+[ Print HELLO WORLD ]
+[ A program for the EDSAC ]
+[ Works with Initial Orders 2 ]
 
-T64K  [ S  :  64 ]
-GK    [ S b  ]
-O13@  [ Ec O  uu  ]
-O14@  [ cc. T uc ]
-O15@  [    ff ]
-O16@  [ (f  b )  ]
-O17@  [  cc    ]
-O18@  [  ]
+T64K  [ Set load point: address 64 ]
+GK    [ Set base address ]
+O13@  [ Each O order outputs one ]
+O14@  [ character. The numerical ]
+O15@  [ parameter gives the offset ]
+O16@  [ (from the base address) where ]
+O17@  [ the character to print is ]
+O18@  [ stored ]
 O19@
 O20@
 O21@  
 O22@
 O23@
 O24@
-ZF    [ S ]
-*F    [ Sf    ]
-HF    [ Cc  ]
+ZF    [ Stop ]
+*F    [ Shift to print letters ]
+HF    [ Character literals ]
 EF
 LF
 LF
 OF
-!F    [ Sc cc ]
+!F    [ Space character ]
 WF
 OF
 RF
 LF
 DF
-EZPF  [ S  b 
-           ]
+EZPF  [ Start program beginning at
+        the load point ]

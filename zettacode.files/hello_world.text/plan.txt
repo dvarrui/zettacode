@@ -1,10 +1,10 @@
-T  HELLO WORLD  ' c.
+This prints HELLO WORLD on operator's console.
 
 #STEER         LIST,BINARY
 #PROGRAM       HLWD
 #LOWER
 MSG1A          11HHELLO WORLD
-MSG1B          11MSG1A
+MSG1B          11/MSG1A
 #PROGRAM
 #ENTRY         0
       DISTY    MSG1B

@@ -1,10 +1,10 @@
--- X, Y: 2 db fd mmb, ow     cu GUI
- = (b("X").)
- = (b("Y").)
+-- X, Y: 2 editable field members, shown as sprites in the current GUI
+x = integer(member("X").text)
+y = integer(member("Y").text)
 
-u "Su: "       ,  + 
-u "Dffc: ",  - 
-u "Puc: "   ,  * 
-u "Qu: "  ,      -- Tuc  z
-u "R: " ,    -- Ru   f f 
-u "E: "  , (, )
+put "Sum: "       , x + y
+put "Difference: ", x - y
+put "Product: "   , x * y
+put "Quotient: "  , x / y   -- Truncated towards zero
+put "Remainder: " , x mod y -- Result has sign of left operand
+put "Exponent: "  , power(x, y)

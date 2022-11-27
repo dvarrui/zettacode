@@ -1,1 +1,1 @@
-PRINT "Ho Wod"
+PRINT "Hello World"

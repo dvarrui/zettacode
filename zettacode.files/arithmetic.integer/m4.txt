@@ -1,17 +1,17 @@
 
-Bcu f  cu u f M4,   u-u   c f. A  f c c b u:
-v(A+B)
-(A-B)
-(A*B)
-(AB)
-(A%B)
+Because of the particular nature of M4, the only user-input is the code itself. Anyway the following code can be used:
+eval(A+B)
+eval(A-B)
+eval(A*B)
+eval(A/B)
+eval(A%B)
 
-c    f, .. .4:
+once saved in a file, e.g. <tt>operations.m4</tt>:
 
-4 -DA=4 -DB=6 .4
+m4 -DA=4 -DB=6 operations.m4
 
- u   f '''':
+or using a sort of ''driver'':
 
-df(`A', 4)d
-f(`B', 6)
-cu(`.4')
+define(`A', 4)dnl
+define(`B', 6)dnl
+include(`operations.m4')

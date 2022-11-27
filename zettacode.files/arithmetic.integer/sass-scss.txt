@@ -1,36 +1,36 @@
 
 
-@fuc c($,$b) {
-	@u $ + $b, $ - $b, $ * $b, ($ - ($ % $b))$b, $ % $b
+@function arithmetic($a,$b) {
+	@return $a + $b, $a - $b, $a * $b, ($a - ($a % $b))/$b, $a % $b;
 }
 
-Wc u u : 
+Which you use with: 
 
-(c(10,3),1)
+nth(arithmetic(10,3),1);
 
-O c f  fuc :
+Or each of the functions separately:
 
-@fuc u($,$b) {
-	@u $ + $b
+@function sum($a,$b) {
+	@return $a + $b;
 }
 
-@fuc ffc($,$b) {
-	@u $ - $b
+@function difference($a,$b) {
+	@return $a - $b;
 }
 
-@fuc uc($,$b) {
-	@u $ * $b
+@function product($a,$b) {
+	@return $a * $b;
 }
 
-@fuc -($,$b) {
-	@u ($ - ($ % $b))$b
+@function integer-division($a,$b) {
+	@return ($a - ($a % $b))/$b;
 }
 
-@fuc ($,$b) {
-	@u $ % $b
+@function remainder($a,$b) {
+	@return $a % $b;
 }
 
-@fuc f-($,$b) {
-	@u $  $b
+@function float-division($a,$b) {
+	@return $a / $b;
 }
 

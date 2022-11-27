@@ -1,17 +1,17 @@
-#cud do.
-#cu b.
+#include <stdio.h>
+#include <stdlib.h>
 
- ( c, c *[])
+int main(int argc, char *argv[])
 {
-   , b
-  f (c  3) (1)
-  b = ([--c])
-  f (b == 0) (2)
-   = ([--c])
-  f("+b = %\", +b)
-  f("-b = %\", -b)
-  f("*b = %\", *b)
-  f("b = %\", b) * uc  0 ( C99) *
-  f("%%b = %\", %b) *    f  ( C99) *
-  u 0
+  int a, b;
+  if (argc < 3) exit(1);
+  b = atoi(argv[--argc]);
+  if (b == 0) exit(2);
+  a = atoi(argv[--argc]);
+  printf("a+b = %d\n", a+b);
+  printf("a-b = %d\n", a-b);
+  printf("a*b = %d\n", a*b);
+  printf("a/b = %d\n", a/b); /* truncates towards 0 (in C99) */
+  printf("a%%b = %d\n", a%b); /* same sign as first operand (in C99) */
+  return 0;
 }

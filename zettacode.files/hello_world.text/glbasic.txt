@@ -1,1 +1,1 @@
-STDOUT "Ho wod!"
+STDOUT "Hello world!"

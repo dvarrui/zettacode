@@ -1,1 +1,1 @@
-m.("Ho wod!")
+system.println("Hello world!")

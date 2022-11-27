@@ -1,1 +1,1 @@
-u$"Ho wod!"
+put$"Hello world!"

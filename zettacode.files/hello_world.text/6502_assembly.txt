@@ -1,22 +1,22 @@
- oodbwod. fo C= 8-b mc, c65 mb fom.
- S     f 256 cc  .
+; goodbyeworld.s for C= 8-bit machines, ca65 assembler format.
+; String printing limited to strings of 256 characters or less.
 
-_c	= $0		 C u.
-bu	= $ff2		 C64 KERNEL ROM, uu  cc  cu c.
-			 u $f f A 2, $ff3 (c)  $ff () f BBC.
-	.c
+a_cr	= $0d		; Carriage return.
+bsout	= $ffd2		; C64 KERNEL ROM, output a character to current device.
+			; use $fded for Apple 2, $ffe3 (ascii) or $ffee (raw) for BBC.
+	.code
 
-	 #0		 S  0  X .
-:
-	 ,	 G cc f .
-	bq 	 If    0 ' .
-	j bu	 Ouu cc. 
-			 Ic    cc.
-	b 	 R f  ' f  0.
-:
-			 Ru f ubu.
+	ldx #0		; Starting index 0 in X register.
+printnext:
+	lda text,x	; Get character from string.
+	beq done	; If we read a 0 we're done.
+	jsr bsout	; Output character. 
+	inx		; Increment index to next character.
+	bne printnext	; Repeat if index doesn't overflow to 0.
+done:
+	rts		; Return from subroutine.
 
-	.
+	.rodata
 
-:
-	.b	"H !", _c, 0
+text:
+	.byte	"Hello world!", a_cr, 0

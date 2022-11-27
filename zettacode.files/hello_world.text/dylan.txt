@@ -1,5 +1,5 @@
 
-u: -
+module: hello-world
 
-f-u("%\", "H !")
+format-out("%s\n", "Hello world!");
 

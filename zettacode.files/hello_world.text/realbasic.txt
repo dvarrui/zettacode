@@ -1,7 +1,7 @@
-{{ |REALbc|5.5}}
-T qu  c c.
+{{works with|REALbasic|5.5}}
+This requires a console application.
 
-Fuco Ru(()  S) A I
-  P "H !"
-  Qu
-E Fuc
+Function Run(args() as String) As Integer
+  Print "Hello world!"
+  Quit
+End Function

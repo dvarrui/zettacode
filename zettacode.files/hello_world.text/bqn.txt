@@ -1,4 +1,4 @@
 
-W : [[CBQN]]
+Works in: [[CBQN]]
 
-•Ou "Ho wod!"
+•Out "Hello world!"

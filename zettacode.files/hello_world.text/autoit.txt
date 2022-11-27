@@ -1,1 +1,1 @@
-CooW("Ho wod!" m @CRLF)
+ConsoleWrite("Hello world!" &amp; @CRLF)

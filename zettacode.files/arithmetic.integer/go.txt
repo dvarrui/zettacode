@@ -1,66 +1,66 @@
-======
-ck m
+===int===
+package main
 
- "f"
+import "fmt"
 
-fuc () {
-     , b 
-    f.P("  : ")
-    f.Sc(, b)
-    f.Pf("% + % = %\", , b, +b)
-    f.Pf("% - % = %\", , b, -b)
-    f.Pf("% * % = %\", , b, *b)
-    f.Pf("%  % = %\", , b, b)   uc  0
-    f.Pf("% %% % = %\", , b, %b)     f 
-       
+func main() {
+    var a, b int
+    fmt.Print("enter two integers: ")
+    fmt.Scanln(&amp;a, &amp;b)
+    fmt.Printf("%d + %d = %d\n", a, b, a+b)
+    fmt.Printf("%d - %d = %d\n", a, b, a-b)
+    fmt.Printf("%d * %d = %d\n", a, b, a*b)
+    fmt.Printf("%d / %d = %d\n", a, b, a/b)  // truncates towards 0
+    fmt.Printf("%d %% %d = %d\n", a, b, a%b) // same sign as first operand
+    // no exponentiation operator
 }
-{{u|E u}}
+{{out|Example run}}
 
-  : -5 3
+enter two integers: -5 3
 -5 + 3 = -2
 -5 - 3 = -8
 -5 * 3 = -15
--5  3 = -1
+-5 / 3 = -1
 -5 % 3 = -2
 
-===b.I===
-ck m
+===big.Int===
+package main
 
- (
-    "f"
-    "b"
+import (
+    "fmt"
+    "math/big"
 )
 
-fuc () {
-     , b, c b.I
-    f.P("  : ")
-    f.Sc(, b)
-    f.Pf("% + % = %\", , b, c.A(, b))
-    f.Pf("% - % = %\", , b, c.Sub(, b))
-    f.Pf("% * % = %\", , b, c.Mu(, b))
+func main() {
+    var a, b, c big.Int
+    fmt.Print("enter two integers: ")
+    fmt.Scan(&amp;a, &amp;b)
+    fmt.Printf("%d + %d = %d\n", &amp;a, &amp;b, c.Add(&amp;a, &amp;b))
+    fmt.Printf("%d - %d = %d\n", &amp;a, &amp;b, c.Sub(&amp;a, &amp;b))
+    fmt.Printf("%d * %d = %d\n", &amp;a, &amp;b, c.Mul(&amp;a, &amp;b))
 
-     Qu, R fuc   G   :
-     qu uc  0,
-       -z        f .
-    f.Pf("% qu % = %\", , b, c.Qu(, b))
-    f.Pf("%  % = %\", , b, c.R(, b))
+    // Quo, Rem functions work like Go operators on int:
+    // quo truncates toward 0,
+    // and a non-zero rem has the same sign as the first operand.
+    fmt.Printf("%d quo %d = %d\n", &amp;a, &amp;b, c.Quo(&amp;a, &amp;b))
+    fmt.Printf("%d rem %d = %d\n", &amp;a, &amp;b, c.Rem(&amp;a, &amp;b))
 
-     D, M fuc  Euc :
-      u  =   b   -,
-      f  =   b,  u     * +  = .
-    f.Pf("%  % = %\", , b, c.D(, b))
-    f.Pf("%  % = %\", , b, c.M(, b))
+    // Div, Mod functions do Euclidean division:
+    // the result m = a mod b is always non-negative,
+    // and for d = a div b, the results d and m give d*y + m = x.
+    fmt.Printf("%d div %d = %d\n", &amp;a, &amp;b, c.Div(&amp;a, &amp;b))
+    fmt.Printf("%d mod %d = %d\n", &amp;a, &amp;b, c.Mod(&amp;a, &amp;b))
 
-       ,   
+    // as with int, no exponentiation operator
 }
-{{u|E u}}
+{{out|Example run}}
 
-  : -5 3
+enter two integers: -5 3
 -5 + 3 = -2
 -5 - 3 = -8
 -5 * 3 = -15
--5 qu 3 = -1
--5  3 = -2
--5  3 = -2
--5  3 = 1
+-5 quo 3 = -1
+-5 rem 3 = -2
+-5 div 3 = -2
+-5 mod 3 = 1
 

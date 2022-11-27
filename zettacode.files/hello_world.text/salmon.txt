@@ -1,9 +1,9 @@
-"Ho wod!"!
+"Hello world!"!
 
+or
 
+print("Hello world!\n");
 
-("Ho wod!\")
+or
 
-
-
-dd_ouu.("Ho wod!\")
+standard_output.print("Hello world!\n");

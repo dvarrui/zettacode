@@ -1,1 +1,1 @@
- ="-2"10 ?="H !"
+<syntaxhighlight lang="vtl-2">10 ?="Hello world!"

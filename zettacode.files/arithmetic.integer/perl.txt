@@ -1,12 +1,12 @@
-{{ |P|5.}}
-m $ = 
- $b = 
+{{works with|Perl|5.x}}
+my $a = <>;
+my $b = <>;
 
-
-    "u:              ", $ + $b, "\",
-    "ffc:       ", $ - $b, "\",
-    "uc:          ", $ * $b, "\",
-    " qu: ", ($  $b), "\",
-    ":        ", $ % $b, "\",
-    ":         ", $ ** $b, "\"
-    
+print
+    "sum:              ", $a + $b, "\n",
+    "difference:       ", $a - $b, "\n",
+    "product:          ", $a * $b, "\n",
+    "integer quotient: ", int($a / $b), "\n",
+    "remainder:        ", $a % $b, "\n",
+    "exponent:         ", $a ** $b, "\n"
+    ;

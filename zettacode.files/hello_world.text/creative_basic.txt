@@ -1,13 +1,13 @@
- ="c bc"
+<syntaxhighlight lang="creative basic">
 OPENCONSOLE
 
-PRINT"H !"
+PRINT"Hello world!"
 
-'T  cu b f u.
-PRINT:PRINT:PRINT"P    ."
+'This line could be left out.
+PRINT:PRINT:PRINT"Press any key to end."
 
-'K  c f c      c b .
-DO:UNTIL INKEY$""
+'Keep the console from closing right away so the text can be read.
+DO:UNTIL INKEY$<>""
 
 CLOSECONSOLE
 

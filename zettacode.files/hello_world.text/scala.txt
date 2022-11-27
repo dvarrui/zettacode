@@ -1,19 +1,19 @@
-{{b|C}}
-===A c REPL u===
-A c u  [:..R%E2%80%93%E2%80%93_ REPL] c. T    REPL :
-("Ho wod!")
-===V J u===
-T   c   J u- b. '''N c'''.
-Sm.ou.("Ho wod!")
+{{libheader|Console}}
+===Ad hoc REPL solution===
+Ad hoc solution as [http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop REPL] script. Type this in a REPL session:
+println("Hello world!")
+===Via Java runtime===
+This is a call to the Java run-time library. '''Not recommended'''.
+System.out.println("Hello world!")
 
-===V Sc C API===
-T   c   Sc u- b. '''Rc'''.
-("Ho wod!")
+===Via Scala Console API===
+This is a call to the Scala run-time library. '''Recommended'''.
+println("Hello world!")
 
-===S    u===
-Coo.wE(Coo.ou) { Coo..("T o o dfu _ou_") }
-===L    u===
-  Coo.. ("E o dvd")
-  C.E(C.u)
-  C.. ("E ")
-  C.E(C.)  R  
+===Short term deviation to out===
+Console.withErr(Console.out) { Console.err.println("This goes to default _out_") }
+===Long term deviation to out===
+  Console.err.println ("Err not deviated")
+  Console.setErr(Console.out)
+  Console.err.println ("Err deviated")
+  Console.setErr(Console.err) // Reset to normal

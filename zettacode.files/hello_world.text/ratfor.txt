@@ -1,11 +1,11 @@
 
 
- 
+program hello
 
-(*,101)"H W"
-101 f(A)
+write(*,101)"Hello World"
+101 format(A)
 
-
+end
 
 
 

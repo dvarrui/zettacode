@@ -1,1 +1,1 @@
-cfouuHo wod!cfouu
+<cfoutput>Hello world!</cfoutput>

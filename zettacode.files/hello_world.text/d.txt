@@ -1,6 +1,6 @@
-{{ |D|2.0}}
-mo d.do
+{{works with|D|2.0}}
+import std.stdio;
 
- () {
-    ("H !")
+void main() {
+    writeln("Hello world!");
 }

@@ -1,10 +1,10 @@
 
-MODULE H
-	IMPORT Ou
+MODULE Hello;
+	IMPORT Out;
 	
-	PROCEDURE D*
+	PROCEDURE Do*;
 	BEGIN
-		Ou.S("H !") Ou.L
-	END D
-END H.
-Ru c ''H.D'' b c.
+		Out.String("Hello world!"); Out.Ln
+	END Do;
+END Hello.
+Run command ''Hello.Do'' by commander.

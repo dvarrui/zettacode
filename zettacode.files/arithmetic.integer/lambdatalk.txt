@@ -1,23 +1,23 @@
-T f Rc
+Translation of Racket
 
-{f c 
- {b {: :}
-  {S. {{b {: : :} 
-                  {b} :  :  : u {: : :}} : :}
-         + - *  %    =  }}}
-- c
+{def arithmetic 
+ {lambda {:x :y}
+  {S.map {{lambda {:x :y :op} 
+                  {br}applying :op on :x &amp; :y returns {:op :x :y}} :x :y}
+         + - * / % pow max min = > <}}}
+-> arithmetic
 
-{c 8 12}
-- 
- +  8  12 u 20 
- -  8  12 u -4 
- *  8  12 u 96 
-   8  12 u 0.6666666666666666 
- %  8  12 u 8 
-   8  12 u 68719476736 
-   8  12 u 12 
-   8  12 u 8 
- =  8  12 u f 
-   8  12 u f 
-   8  12 u u
+{arithmetic 8 12}
+-> 
+applying + on 8 &amp; 12 returns 20 
+applying - on 8 &amp; 12 returns -4 
+applying * on 8 &amp; 12 returns 96 
+applying / on 8 &amp; 12 returns 0.6666666666666666 
+applying % on 8 &amp; 12 returns 8 
+applying pow on 8 &amp; 12 returns 68719476736 
+applying max on 8 &amp; 12 returns 12 
+applying min on 8 &amp; 12 returns 8 
+applying = on 8 &amp; 12 returns false 
+applying > on 8 &amp; 12 returns false 
+applying < on 8 &amp; 12 returns true
 

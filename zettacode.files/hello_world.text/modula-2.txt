@@ -1,24 +1,24 @@
-MODULE Ho
-IMPORT IOu
+MODULE Hello;
+IMPORT InOut;
 
 BEGIN
-  IOu.WS('H !')
-  IOu.WL
-END H.
-==={{|TS Mu-2}}===
-{{ |TS (JPI) Mu-2 u DOSB-X}}
-Mu-2    bu- cu f IO. I, IO    b u. T   c f  u  b  f Mu-2. T u b    c IO u u  TS Mu-2   ff   ff cu f     u u.
+  InOut.WriteString('Hello world!');
+  InOut.WriteLn
+END Hello.
+==={{header|TopSpeed Modula-2}}===
+{{works with|TopSpeed (JPI) Modula-2 under DOSBox-X}}
+Modula-2 does not have built-in procedures for I/O. Instead, I/O is done via library modules. The names and contents of these modules vary between implementations of Modula-2. The solution below shows that the console I/O module supplied with TopSpeed Modula-2 has a different name and different procedures from the implementation in the previous solution.
 
-MODULE H
-IMPORT IO
+MODULE Hello;
+IMPORT IO;
 
 BEGIN
-  IO.WS('H !') IO.WL
+  IO.WrStr('Hello world!'); IO.WrLn;
 
-(* A ,   fu f Mu-2 *)
-  IO.WS("H")  (*    ub qu c b u *)
-  IO.WC(40C)     (* cc  ASCII c  40 c *)
-  IO.WS('!')
-  IO.WL()          (* cu   u: ()   *)
-END H.
+(* Another way, showing some features of Modula-2 *)
+  IO.WrStr("Hello");  (* either single or double quotes can be used *)
+  IO.WrChar(40C);     (* character whose ASCII code is 40 octal *)
+  IO.WrStr('world!');
+  IO.WrLn();          (* procedure with no arguments: () is optional *)
+END Hello.
 

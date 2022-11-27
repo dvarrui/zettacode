@@ -1,51 +1,51 @@
-VBSc' b   V. W  u     b c    f   .
+VBScript's variables are all Variants. What starts out as an integer may be converted to something else if the need arises.
 
-===I===
-oo c
- , b
-c.u. "A? "
- = c..
-c.u. "B? "
-b = c..
+===Implementation===
+option explicit
+dim a, b
+wscript.stdout.write "A? "
+a = wscript.stdin.readline
+wscript.stdout.write "B? "
+b = wscript.stdin.readline
 
- = (  )
-b = ( b )
+a = int( a )
+b = int( b )
 
-c.c " + b=",  + b
-c.c " - b=",  - b
-c.c " * b=",  * b
-c.c "  b=",   b
-c.c " \ b=",  \ b
-c.c "  b=",   b
-c.c " ^ b=",  ^ b
+wscript.echo "a + b=", a + b
+wscript.echo "a - b=", a - b
+wscript.echo "a * b=", a * b
+wscript.echo "a / b=", a / b
+wscript.echo "a \ b=", a \ b
+wscript.echo "a mod b=", a mod b
+wscript.echo "a ^ b=", a ^ b
 
-===A I===
-G   uu f   u. I b P .
-oo c
- , b
-c.u. "A? "
- = c..
-c.u. "B? "
-b = c..
+===Another Implementation===
+Gives the same output for the same input. Inspired by Python version.
+option explicit
+dim a, b
+wscript.stdout.write "A? "
+a = wscript.stdin.readline
+wscript.stdout.write "B? "
+b = wscript.stdin.readline
 
- = (  )
-b = ( b )
+a = int( a )
+b = int( b )
 
- 
-f c   ("+ - *  \  ^", " ")
-	c.c "",,"b=",( " "    " b")
+dim op
+for each op in split("+ - * / \ mod ^", " ")
+	wscript.echo "a",op,"b=",eval( "a " &amp; op &amp; " b")
+next
 
+===Invocation===
 
-===Ic===
-
-C:\fc.b
+C:\foo>arithmetic.vbs
 A? 45
 B? 11
- + b= 4511
- - b= 34
- * b= 495
-  b= 4.09090909090909
- \ b= 4
-  b= 1
- ^ b= 1.5322783012207E+18
+a + b= 4511
+a - b= 34
+a * b= 495
+a / b= 4.09090909090909
+a \ b= 4
+a mod b= 1
+a ^ b= 1.5322783012207E+18
 

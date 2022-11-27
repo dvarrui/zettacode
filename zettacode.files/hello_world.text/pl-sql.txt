@@ -1,21 +1,21 @@
-{{ |Oc}}
+{{works with|Oracle}}
 
- uu 
+set serveroutput on
 
 BEGIN
-  DBMS_OUTPUT.PUT_LINE('H !')
-END
+  DBMS_OUTPUT.PUT_LINE('Hello world!');
+END;
+/
 
 
 
+SQL> set serveroutput on
+SQL> 
+SQL> BEGIN
+  2    DBMS_OUTPUT.PUT_LINE('Hello world!');
+  3  END;
+  4  /
+Hello world!                                                                    
 
-SQL  uu 
-SQL 
-SQL BEGIN
-  2    DBMS_OUTPUT.PUT_LINE('H !')
-  3  END
-  4  
-H !                                                                    
-
-PLSQL cu uccfu c.
+PL/SQL procedure successfully completed.
 

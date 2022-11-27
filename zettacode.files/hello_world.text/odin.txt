@@ -1,6 +1,6 @@
-ck m
- "c:f"
+package main
+import "core:fmt"
 
- :: c() {
-  f.("H!")
+main :: proc() {
+  fmt.println("Hellope!");
 }

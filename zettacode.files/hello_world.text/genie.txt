@@ -1,4 +1,4 @@
 
-
-     "H !"
+init
+    print "Hello world!"
 

@@ -1,9 +1,9 @@
-c uc f  
-DC("AocCoo")
-FA, Gb`, W!, CONOUT$
-FRL, _, CONIN$, 1
-c u f  
-[qu W XP    V f W ´   "AcC" fuc]
-DC("AcCoo", "", -1)
-FA, Gb`, W!, CONOUT$
-SdIu Ho wod!{!}
+script launched from windows explorer
+DllCall("AllocConsole")
+FileAppend, Goodbye`, World!, CONOUT$
+FileReadLine, _, CONIN$, 1
+scripts run from shell 
+[requires Windows XP or higher; older Versions of Windows don´t have the "AttachConsole" function]
+DllCall("AttachConsole", "int", -1)
+FileAppend, Goodbye`, World!, CONOUT$
+SendInput Hello world!{!}

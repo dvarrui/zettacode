@@ -1,8 +1,8 @@
 
-c HW
-	**P "H !"**
+class HelloWorld
+	**Prints "Hello world!"**
 
-	 
+	on start
 
-		 "H !"
+		print "Hello world!"
 

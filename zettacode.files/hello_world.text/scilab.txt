@@ -1,1 +1,1 @@
-d("Ho wod!")
+disp("Hello world!");

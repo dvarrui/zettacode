@@ -1,11 +1,11 @@
- = .o_!.o_64
-b = ._!._64
+a = gets.not_nil!.to_i64
+b = gets.not_nil!.to_i64
 
-u "Su: #{ + b}"
-u "Dffc: #{ - b}"
-u "Puc: #{ * b}"
-u "Qu (f ): #{  b}"  #   u  f.
-u "Qu (f ): #{  b}"
-u "R: #{ % b}" # S f  c  f  c  (b).
-u "P: #{ ** b}"    # I c  b     .
+puts "Sum: #{a + b}"
+puts "Difference: #{a - b}"
+puts "Product: #{a * b}"
+puts "Quotient (float division): #{a / b}"  # / always returns a float.
+puts "Quotient (floor division): #{a // b}"
+puts "Remainder: #{a % b}" # Sign of remainder matches that of the second operand (b).
+puts "Power: #{a ** b}"    # Integers can only be raised to a positive exponent.
 

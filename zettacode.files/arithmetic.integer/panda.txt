@@ -1,2 +1,2 @@
-U fc    fuc f  ub  ub  u ub.
-=3 b=7 fuc:_bbf__umb_umb_umb =f.m.b '('  b ')' ' = ' f( b) 
+Use reflection to get all functions defined on numbers taking number and returning number.
+a=3 b=7 func:_bbf__number_number_number =>f.name.<b> '(' a b ')' ' => ' f(a b) nl

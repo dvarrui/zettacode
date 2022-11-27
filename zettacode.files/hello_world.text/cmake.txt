@@ -1,5 +1,5 @@
-m(STATUS "Ho wod!")
+message(STATUS "Hello world!")
 
-T uu
+This outputs
 
--- H !
+-- Hello world!

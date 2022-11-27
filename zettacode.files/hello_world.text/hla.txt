@@ -1,7 +1,7 @@
-om oodbWod
-#cu("b.f")
-b bW
+program goodbyeWorld;
+#include("stdlib.hhf")
+begin goodbyeWorld;
 
-  u.u( "H !"  )
+  stdout.put( "Hello world!" nl );
 
- bW
+end goodbyeWorld;

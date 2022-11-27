@@ -1,7 +1,7 @@
-T      . F,   bu :
+There are two ways to do this. First, with the builtin print:
 
-("Ho wod!")
+print("Hello world!")
 
-Sc, b u u c:
+Second, by using stdout directly:
 
-dou.("Ho wod!\")
+stdout.print("Hello world!\n")

@@ -1,26 +1,26 @@
-A uc  8-b-f. C  b INT, NINT, FLOOR, CEILING,  F IO
-DLG(Ed=A, Ed=B, TI='E umc A d B')
-WRITE(N) A, B
+All numeric is 8-byte-float. Conversions are by INT, NINT, FLOOR, CEILING, or Formatted IO
+DLG(Edit=A, Edit=B, TItle='Enter numeric A and B')
+WRITE(Name) A, B
 WRITE() '              A + B = ', A + B
 WRITE() '              A - B = ', A - B
 WRITE() '              A * B = ', A * B
-WRITE() '              A  B = ', A  B          !  uc
-WRITE() 'uc      A  B = ', INT(A  B)     ! uc  0
-WRITE() 'u     A  B = ', NINT(A  B)    ! uc   
-WRITE() 'u     A  B = ', FLOOR(A  B)   ! uc  u f
-WRITE() 'u u      A  B = ', CEILING(A  B) ! uc  u f
-WRITE() ' f  A  B = ', MOD(A, B)      !    A
-WRITE() 'A    f B = ', A ^ B
-WRITE() 'A    f B = ', A ** B
-A=5 B=-4
+WRITE() '              A / B = ', A / B          ! no truncation
+WRITE() 'truncate      A / B = ', INT(A / B)     ! truncates towards 0
+WRITE() 'round next    A / B = ', NINT(A / B)    ! truncates towards next integer
+WRITE() 'round down    A / B = ', FLOOR(A / B)   ! truncates towards minus infinity
+WRITE() 'round up      A / B = ', CEILING(A / B) ! truncates towards plus infinity
+WRITE() 'remainder of  A / B = ', MOD(A, B)      ! same sign as A
+WRITE() 'A to the power of B = ', A ^ B
+WRITE() 'A to the power of B = ', A ** B
+A=5; B=-4;
               A + B = 1 
               A - B = 9 
               A * B = -20 
-              A  B = -1.25 
-uc      A  B = -1 
-u     A  B = -1 
-u     A  B = -2 
-u u      A  B = -1 
- f  A  B = 1 
-A    f B = 16E-4 
-A    f B = 16E-4 
+              A / B = -1.25 
+truncate      A / B = -1 
+round next    A / B = -1 
+round down    A / B = -2 
+round up      A / B = -1 
+remainder of  A / B = 1 
+A to the power of B = 16E-4 
+A to the power of B = 16E-4 

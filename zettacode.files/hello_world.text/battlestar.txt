@@ -1,4 +1,4 @@
-!--- u C   ---
-co o = "Ho wod!\"
+<!--- supports C syntax highlighting --->
+const hello = "Hello world!\n"
 
-()
+print(hello)

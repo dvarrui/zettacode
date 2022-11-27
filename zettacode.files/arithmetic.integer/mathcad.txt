@@ -1,51 +1,51 @@
-T  b (f "T N" )     u     Mc  c   (, Mc 15, Mc P 6.0,  Mc P 6.0 E).   Mc' "b" fc   u   f    f  .  T  f  f b, u cc c   f, f z  bcu    c  .  M  u b   f b, fuc ( bu- fuc), ,    u (Mc   u-, SI-b qu ).  I      ''   b.
+The text below (from "Task Notes" onwards) is pretty well what you will see on a Mathcad worksheet across most versions (eg, Mathcad 15, Mathcad Prime 6.0, and Mathcad Prime 6.0 Express).   Mathcad's "whiteboard" interface allows the user to mix formatted text regions with formatted math regions.  Text region formatting is fairly arbitrary, individual characters can have their font, font size and bold/italic/underline settings set or changed at will.  Math regions use amendable styles to identify variables, functions (normally built-in functions), keywords, system words and units (Mathcad has a units-aware, SI-based quantity system).  It really is a simple as 'writing' on the whiteboard.
 
 ----
 
-'''T N'''
+'''Task Notes'''
 
-''F qu, c   u (..  z,   f, c.).''
+''For quotient, indicate how it rounds (e.g. towards zero, towards negative infinity, etc.).''
 
-T   qu fuc  Mc,  c .  W u qu b   f b u u b f, c u   f,  uc, c u  z.
+There is no quotient function in Mathcad, only complex division.  We emulate quotient by standard division followed by rounding using both floor, which rounds towards negative infinity, and trunc, which rounds towards zero.
 
-''F , c    c   f  f   f  c , f   ff.
+''For remainder, indicate whether its sign matches the sign of the first operand or of the second operand, if they are different.
 ''
-W u  Mc fuc (,), c u  u ,       . 
+We use the Mathcad function mod(x,y), which returns x modulo y, and has the same sign as x. 
 
-'''Iuc'''
+'''Instructions'''
 
-E   f u cc f I1  I2.
+Enter two integers of your choice for Int1 and Int2.
 
-(      f  'I1:= '  'I2:=' ,   f  ub  )
+(type into the right hand side of the 'Int1:= ' and 'Int2:=' statements, overwriting or modifying any numbers already there)
 
-'''I'''
+'''Implementation'''
 
-'''Mc Iu  Ouu'''
+'''Mathcad Input and Output'''
 
-Mc "" u  uu  c c    (" uc c"). 
+Mathcad "standard" input and output takes place directly on a worksheet ("program source code"). 
 
-'''Iu''':
+'''Inputs''':
 
-== '' u   u f := (f) ''
+== ''the user types in values after := (definition) operator''
 
-I O:  ''I1'':='''-8'''
+Integer One:  ''Int1'':='''-8'''
 
-I T:  ''I2'':='''3'''
+Integer Two:  ''Int2'':='''3'''
 
-'''Ru''':
+'''Results''':
 
-== ''Mc uc ccu   u f = (u) .''
+== ''Mathcad automatically calculates and displays results after = (evaluation) operator.''
 
-u              :  ''I1'' + ''I2'' = -5  
+sum              :  ''Int1'' + ''Int2'' = -5  
 
-ffc       :  ''I1'' - ''I2'' = -11
+difference       :  ''Int1'' - ''Int2'' = -11
 
-uc          :  ''I1'' · ''I2'' = -24
+product          :  ''Int1'' · ''Int2'' = -24
 
- qu :  f(''I1''÷''I2'')=-3     uc(I1÷I2)=-2  
+integer quotient :  floor(''Int1''÷''Int2'')=-3     trunc(Int1÷Int2)=-2  
 
-        :  (''I1'',''I2'')=-2
+remainder        :  mod(''Int1'',''Int2'')=-2
 
-   :  ''I1''u''I2''u=-512
+exponentiation   :  ''Int1''<sup>''Int2''</sup>=-512
 
 ----

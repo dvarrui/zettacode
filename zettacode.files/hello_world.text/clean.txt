@@ -1,1 +1,1 @@
-S = "Ho wod!"
+Start = "Hello world!"

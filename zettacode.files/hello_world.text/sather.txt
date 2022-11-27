@@ -1,5 +1,5 @@
-c GOODBYE_WORLD 
-   
-  #OUT+"H !\" 
-  
-
+class GOODBYE_WORLD is
+ main is 
+  #OUT+"Hello world!\n"; 
+ end; 
+end;

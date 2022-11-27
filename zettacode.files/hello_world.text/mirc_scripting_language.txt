@@ -1,1 +1,1 @@
-co - Ho wod!
+echo -ag Hello world!

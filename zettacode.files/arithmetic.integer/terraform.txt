@@ -1,33 +1,33 @@
-HCL '          c     c, bu      uu b bc u  ff.......
+HCL doesn't have an exponentiation operator and even integer division is contrived as shown in the code, but at least it prints the output variables alphabetically without any effort.......
 
-#Au, 15 Auu 2022
+#Aamrun, 15th August 2022
 
-b "" {
-   = ub
+variable "a" {
+  type = number
 }
 
-b "b" {
-   = ub
+variable "b" {
+  type = number
 }
 
-uu "Su" {
-  u = . + .b
+output "Sum" {
+  value = var.a + var.b
 }
 
-uu "Dffc" {
-  u = . - .b
+output "Difference" {
+  value = var.a - var.b
 }
 
-uu "Puc" {
-  u = . * .b
+output "Product" {
+  value = var.a * var.b
 }
 
-uu "Qu" {
-  u = f(.  .b)
+output "Quotient" {
+  value = floor(var.a / var.b)
 }
 
-uu "R" {
-  u = . % .b
+output "Remainder" {
+  value = var.a % var.b
 }
 
-T f fuc u   c  . Ic  uu   b :
+The floor function rounds to the closest lowest integer. Invocation and output are as below :

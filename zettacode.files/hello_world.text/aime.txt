@@ -1,11 +1,11 @@
-o_("Ho wod!\")
+o_text("Hello world!\n");
 
-:
+or:
 
-
-()
+integer
+main(void)
 {
-    _("H !\")
+    o_text("Hello world!\n");
 
-    u 0
+    return 0;
 }

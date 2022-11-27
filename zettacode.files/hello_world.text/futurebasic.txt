@@ -1,4 +1,4 @@
-wdow 1
- @"H !"
+window 1
+print @"Hello world!"
 
-HE
+HandleEvents

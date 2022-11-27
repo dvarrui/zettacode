@@ -1,1 +1,1 @@
-? co 'Ho wod!' ?
+<?hh echo 'Hello world!'; ?>

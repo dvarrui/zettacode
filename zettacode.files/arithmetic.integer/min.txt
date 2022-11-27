@@ -1,5 +1,5 @@
-{{ ||0.19.3}}
-(coc du - ' d "$1 - $2" w % u!) :ow
+{{works with|min|0.19.3}}
+(concat dup -> ' prepend "$1 -> $2" swap % puts!) :show
 
-("E  "  ) 2  ' 
-('+ '- '* ' ') qu- (' cc)  c
+("Enter an integer" ask int) 2 times ' prepend
+('+ '- '* 'div 'mod) quote-map ('show concat) map cleave

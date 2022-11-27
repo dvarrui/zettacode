@@ -1,7 +1,7 @@
-{{cc|HQ9+|uu ' c   ' qu (  bb cb f   ).}}
+{{incorrect|HQ9+|output isn't consistent with the task's requirements (and is probably incapable of solving the task).}}
 H
-*Tcc, HQ9+ c'  "H !"  bcu f  cfc.
-- H : P 'H W!'b
-- Q : Qub
-- 9 : P '99 B f B'b
-- + : Ic P (u!)
+*Technically, HQ9+ can't print "Hello world!" text because of its specification.
+- H : Print 'Hello World!'<br>
+- Q : Quine<br>
+- 9 : Print '99 Bottles of Beer'<br>
+- + : Increase Pointer (useless!)

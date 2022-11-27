@@ -1,35 +1,35 @@
-{{ |Db2 LUW}}
-W SQL :
- ="q "
-SELECT 'H !' AS  FROM b.u1
+{{works with|Db2 LUW}}
+With SQL only:
+<syntaxhighlight lang="sql pl">
+SELECT 'Hello world!' AS text FROM sysibm.sysdummy1;
 
-Ouu:
+Output:
 
-b2 -
-b2 = SELECT 'H !' AS  FROM b.u1
+db2 -t
+db2 => SELECT 'Hello world!' AS text FROM sysibm.sysdummy1;
 
 TEXT        
 ------------
-H !
+Hello world!
 
-  1 c() c.
+  1 record(s) selected.
 
 
-{{ |Db2 LUW}}  9.7  .
-W SQL PL:
- ="q "
-SET SERVEROUTPUT ON
+{{works with|Db2 LUW}} version 9.7 or higher.
+With SQL PL:
+<syntaxhighlight lang="sql pl">
+SET SERVEROUTPUT ON;
 
-CALL DBMS_OUTPUT.PUT_LINE('H !')
+CALL DBMS_OUTPUT.PUT_LINE('Hello world!');
 
-Ouu:
+Output:
 
-b2 -
-b2 = SET SERVEROUTPUT ON
-DB20000I  T SET SERVEROUTPUT c c uccfu.
-b2 = CALL DBMS_OUTPUT.PUT_LINE('H !')
+db2 -t
+db2 => SET SERVEROUTPUT ON
+DB20000I  The SET SERVEROUTPUT command completed successfully.
+db2 => CALL DBMS_OUTPUT.PUT_LINE('Hello world!')
 
-  Ru Su = 0
+  Return Status = 0
 
-H !
+Hello world!
 

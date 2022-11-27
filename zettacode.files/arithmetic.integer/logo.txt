@@ -1,11 +1,11 @@
-o o : :b
-  ( [ =] :)
-  ( [b =] :b)
-  ( [ + b =] : + :b)
-  ( [ - b =] : - :b)
-  ( [ * b =] : * :b)
-  ( [  b =]  :  :b)
-  ( [  b =] u : :b)
+to operate :a :b
+  (print [a =] :a)
+  (print [b =] :b)
+  (print [a + b =] :a + :b)
+  (print [a - b =] :a - :b)
+  (print [a * b =] :a * :b)
+  (print [a / b =] int :a / :b)
+  (print [a mod b =] modulo :a :b)
+end
 
-
-Ec f     f  (u, ffc, uc, qu). Su  uc c        u   (u 1 2 3). If      cc u    c  u    b  cc .
+Each infix operator also has a prefix synonym (sum, difference, product, quotient). Sum and product can also have arity greater than two when used in parentheses (sum 1 2 3). Infix operators in general have high precedence; you may need to enclose their arguments in parentheses to obtain the correct expression.

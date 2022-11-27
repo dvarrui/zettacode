@@ -1,2 +1,2 @@
 
-w('Ho wod!')
+write('Hello world!');

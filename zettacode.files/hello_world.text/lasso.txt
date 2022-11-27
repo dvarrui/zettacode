@@ -1,2 +1,2 @@
-A    uu uc.
-'Ho wod!'
+A plain string is output automatically.
+'Hello world!'

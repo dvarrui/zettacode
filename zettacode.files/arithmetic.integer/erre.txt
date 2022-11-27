@@ -2,19 +2,19 @@
 PROGRAM INTEGER_ARITHMETIC
 
 !
-! f c.
+! for rosettacode.org
 !
 
 !$INTEGER
 
 BEGIN
-  INPUT("E  ub ",A)
-  INPUT("E  ub ",B)
+  INPUT("Enter a number ",A)
+  INPUT("Enter another number ",B)
 
-  PRINT("A "A"+"B"="(A+B))
-  PRINT("Subc "A"-"B"="(A-B))
-  PRINT("Muc "A"*"B"="(A*B))
-  PRINT("I  "A""B"="(A DIV B))
-  PRINT("R  u "A""B"="(A MOD B))
-  PRINT("P "A"^"B"="(A^B))
+  PRINT("Addition ";A;"+";B;"=";(A+B))
+  PRINT("Subtraction ";A;"-";B;"=";(A-B))
+  PRINT("Multiplication ";A;"*";B;"=";(A*B))
+  PRINT("Integer division ";A;"div";B;"=";(A DIV B))
+  PRINT("Remainder or modulo ";A;"mod";B;"=";(A MOD B))
+  PRINT("Power ";A;"^";B;"=";(A^B))
 END PROGRAM

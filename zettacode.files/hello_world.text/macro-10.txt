@@ -1,23 +1,23 @@
- ="c-10"
+<syntaxhighlight lang="macro-10">
 
         TITLE HELLO
 
 COMMENT !
-  H-W , PDP-10 b u,  b j, 2022.
-           Ab: MACRO-10    O : TOPS-20
+  Hello-World program, PDP-10 assembly language, written by kjx, 2022.
+           Assembler: MACRO-10    Operating system: TOPS-20
 !
 
-        SEARCH MONSYM                      G bc  f -c.
+        SEARCH MONSYM                      ;Get symbolic names for system-calls.
 
-GO::    RESET%                             S c: Iz c.
+GO::    RESET%                             ;System call: Initialize process.
 
-        HRROI 1,[ASCIZ H W!]     Pu      1.
-        PSOUT%                             S c: P .
-        HALTF%                             S c: H .
+        HRROI 1,[ASCIZ /Hello World!/]     ;Put pointer to string into register 1.
+        PSOUT%                             ;System call: Print string.
+        HALTF%                             ;System call: Halt program.
 
-        JRST GO                            Uc ju  GO ( c 
-                                           u u  CONTINUE-c  
-                                              ).
+        JRST GO                            ;Unconditional jump to GO (in case the
+                                           ;user uses the CONTINUE-command while this
+                                           ;program is still loaded).
 
         END GO
 

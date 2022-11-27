@@ -1,33 +1,33 @@
 
-I qu (``) u  0.
+Integer quotient (`//`) rounds towards 0.
 
-R (``) c   f  f .
-
-
-
-___u(M, N, O) :-
-    E =.. [O, M, N],
-    Ru  E,
-    f('~ ~8| ~~', [E, Ru]).
-
-c_ :-
-    (M),
-    (N),
-    ( ___u(M, N), [+,-,*,,,^] ).
+Remainder (`rem`) matches the sign of its first operand.
 
 
 
-U u:
+print_expression_and_result(M, N, Operator) :-
+    Expression =.. [Operator, M, N],
+    Result is Expression,
+    format('~w ~8|is ~d~n', [Expression, Result]).
+
+arithmetic_integer :-
+    read(M),
+    read(N),
+    maplist( print_expression_and_result(M, N), [+,-,*,//,rem,^] ).
 
 
-?- c_.
+
+Use thus:
+
+
+?- arithmetic_integer.
 |: 5.
 |: 7.
-5+7      12
-5-7      -2
-5*7      35
-57     0
-5  7  5
-5^7      78125
-u.
+5+7     is 12
+5-7     is -2
+5*7     is 35
+5//7    is 0
+5 rem 7 is 5
+5^7     is 78125
+true.
 

@@ -1,29 +1,29 @@
 
-T U    c u c ,   , uc  ''''  u  f c ccu  qu:
+The Unix shell does not directly support arithmetic operations, so external tools, such as ''expr'' are used to perform arithmetic calculations when required:
 
-{{ |Bu S}}
-{{ |Aqu SH}}
-#!b
-   b
-c "+b     = "  ` $  +  $b`
-c "-b     = "  ` $  -  $b`
-c "*b     = "  ` $ \*  $b`
-c "b     = "  ` $    $b` # uc  0
-c "  b = "  ` $  %  $b` #    f 
+{{works with|Bourne Shell}}
+{{works with|Almquist SHell}}
+#!/bin/sh
+read a; read b;
+echo "a+b     = "  `expr $a  +  $b`
+echo "a-b     = "  `expr $a  -  $b`
+echo "a*b     = "  `expr $a \*  $b`
+echo "a/b     = "  `expr $a  /  $b` # truncates towards 0
+echo "a mod b = "  `expr $a  %  $b` # same sign as first operand
 
-N: U  ` (bcc ,  b   Bu    ''$(...)'' )  u    u   b    ffc  b . T c u     '''' c  u  qu    qu u  qu  c  ''*'' cc  ,    b "bb" --- f  f  ''*''   c cc.
+Notes: Using the ` (backtick operators, also available in most Bourne shells via the ''$(...)'' syntax) allows us to keep the results on their labels in the most efficient and portable way. The spaces around the operators in the ''expr'' command line arguments are required and the shell requires us to quote or escape the ''*'' character has shown, to prevent any possible "globbing" --- filename expansion of the ''*'' as a wildcard character.
 
-W SUS3  :
+With SUSv3 parameter expansions:
 
-{{ |Bu A SH|3.2}}
-{{ ||5.2.14}}
-{{ |Z SH}}
-#!b
-   b
-c "+b     = $((+b))"
-c "-b     = $((-b))"
-c "*b     = $((*b))"
-c "b     = $((b))" # uc  0
-c "  b = $((%b))" #    f 
+{{works with|Bourne Again SHell|3.2}}
+{{works with|pdksh|5.2.14}}
+{{works with|Z SHell}}
+#!/bin/sh
+read a; read b;
+echo "a+b     = $((a+b))"
+echo "a-b     = $((a-b))"
+echo "a*b     = $((a*b))"
+echo "a/b     = $((a/b))" # truncates towards 0
+echo "a mod b = $((a%b))" # same sign as first operand
 
-N: c   ''$((...))''     qu  ''$((...))'' c b   u  ub qu, bu  `...`  f  u  c  b   u  ub qu.
+Note: spaces inside the ''$((...))'' are optional and not required; the ''$((...))'' can be inside or outside the double quotes, but the `...` expressions from the previous example can also be inside or outside the double quotes.

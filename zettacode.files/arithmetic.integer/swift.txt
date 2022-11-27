@@ -1,11 +1,11 @@
 
-  = 6 
- b = 4
+let a = 6 
+let b = 4
 
-("u =\(+b)")
-("ffc = \(-b)")
-("uc = \(*b)")
-("I qu = \(b)")
-("R = (%b)")
-("N  f E")
+print("sum =\(a+b)")
+print("difference = \(a-b)")
+print("product = \(a*b)")
+print("Integer quotient = \(a/b)")
+print("Remainder = (a%b)")
+print("No operator for Exponential")
 

@@ -1,15 +1,15 @@
-I ANSI FORTRAN 77  :
+In ANSI FORTRAN 77 or later:
  INTEGER A, B
- PRINT *, 'T    ub  b  c',
-+         '   ENTER'
+ PRINT *, 'Type in two integer numbers separated by white space',
++         ' and press ENTER'
  READ *, A, B
  PRINT *, '   A + B = ', (A + B)
  PRINT *, '   A - B = ', (A - B)
  PRINT *, '   A * B = ', (A * B)
- PRINT *, '   A  B = ', (A  B)
+ PRINT *, '   A / B = ', (A / B)
  PRINT *, 'MOD(A,B) = ', MOD(A,B)
  PRINT *
- PRINT *, 'E u u   , ',
-+         '   c   F, ...'
+ PRINT *, 'Even though you did not ask, ',
++         'exponentiation is an intrinsic op in Fortran, so...'
  PRINT *, '  A ** B = ', (A ** B)
  END

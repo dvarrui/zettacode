@@ -1,5 +1,5 @@
-F :
- "Ho wod!"
-F :
+For typing:
+print "Hello world!"
+For importing:
 
-¶0¶ "H !"
+¶0¶print "Hello world!"

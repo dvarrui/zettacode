@@ -1,2 +1,2 @@
 
-1 ("Ho wod!")
+1 print("Hello world!");

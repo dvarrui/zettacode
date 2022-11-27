@@ -1,1 +1,1 @@
- "Ho wod!"
+println "Hello world!"

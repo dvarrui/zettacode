@@ -1,25 +1,25 @@
-F [[:O ( u)]]
+From [[wp:Oxygene (programming language)]]
 
-c HW
+namespace HelloWorld;
  
-fc
+interface
  
-
-  HC = c
-  ubc
-    c  M 
-  
+type
+  HelloClass = class
+  public
+    class method Main; 
+  end;
  
-
+implementation
  
-c  HC.M
-b
-  L('H !')
-
+class method HelloClass.Main;
+begin
+  writeLn('Hello world!');
+end;
  
-.
+end.
 
 
-HW.
-H !
+>HelloWorld.exe
+Hello world!
 

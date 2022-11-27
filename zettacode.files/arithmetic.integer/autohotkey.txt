@@ -1,20 +1,20 @@
-T qu u  0 f b u      f f  u  f . T  f          f  f  ().
-Gu, Add, Ed, v, 5
-Gu, A, E, b, -3
-Gu, A, Bu, Dfu, Cu
-Gu, S
-Ru
+The quotient rounds towards 0 if both inputs are integers or towards negative infinity if either input is floating point. The sign of the remainder is always the same as the sign of the first parameter (dividend).
+Gui, Add, Edit, va, 5
+Gui, Add, Edit, vb, -3
+Gui, Add, Button, Default, Compute
+Gui, Show
+Return
 
-BuCu:
-  Gu, Sub
-  MB,%
-  (J`"`"
-    "+" b " = " +b
-    "-" b " = " -b
-    "*" b " = " *b
-    "" b " = " b "  " M(,b)
-    "**" b " = " **b
+ButtonCompute:
+  Gui, Submit
+  MsgBox,%
+  (Join`s"`n"
+   a "+" b " = " a+b
+   a "-" b " = " a-b
+   a "*" b " = " a*b
+   a "//" b " = " a//b " remainder " Mod(a,b)
+   a "**" b " = " a**b
   )
- fu
-GuC:
-  EA
+; fallthrough
+GuiClose:
+  ExitApp

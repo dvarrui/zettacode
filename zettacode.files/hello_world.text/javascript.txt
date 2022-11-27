@@ -1,12 +1,12 @@
-docum.w("Ho wod!")
+document.write("Hello world!");
 
-{{ |NJS|0.2.5}}
-{{ |R}}
-{{ |SM}}
-('Ho wod!')
+{{works with|NJS|0.2.5}}
+{{works with|Rhino}}
+{{works with|SpiderMonkey}}
+print('Hello world!');
 
-{{ |JSc}}
-WSc.Eco("Ho wod!")
+{{works with|JScript}}
+WScript.Echo("Hello world!");
 
-{{ |N.j}}
-coo.o("Ho wod!")
+{{works with|Node.js}}
+console.log("Hello world!")

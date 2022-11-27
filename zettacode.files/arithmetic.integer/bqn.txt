@@ -1,17 +1,17 @@
-•Ou "E ub 1: "
- ← •BQN •GL @
-•Ou "E ub 2: "
-b ← •BQN •GL @
+•Out "Enter number 1: "
+a ← •BQN •GetLine @
+•Out "Enter number 2: "
+b ← •BQN •GetLine @
 
-•S  + b
-•S  - b
-•S  × b
-•S  ÷ b
-•S b | 
-•S  ⋆ b
-E ub 1:
+•Show a + b
+•Show a - b
+•Show a × b
+•Show a ÷ b
+•Show b | a
+•Show a ⋆ b
+Enter number 1:
 12
-E ub 2:
+Enter number 2:
 2
 14
 10

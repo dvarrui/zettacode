@@ -1,6 +1,5 @@
 require "colorize"
 require "fileutils"
-require "debug"
 require_relative "../version"
 
 module Zettacode

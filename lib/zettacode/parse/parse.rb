@@ -6,11 +6,12 @@ module Zettacode
   module Parse
     def self.call(filepath)
       raw_content, folder = read_content_from filepath
-      dirty_examples, dirty_global = scrap_examples_from raw_content
 
+      dirty_global = scrap_global_from raw_content
       global = clean_global dirty_global
       save_global global, to: folder
 
+      dirty_examples = scrap_examples_from raw_content
       examples = clean_examples dirty_examples
       save_examples examples, to: folder
     end
@@ -42,24 +43,18 @@ module Zettacode
     end
 
     def self.scrap_examples_from(content)
-      global = { task: nil, lines: [] }
       examples = []
       example = nil
       section = :skip
       content.split("\n").each do |line|
-        if section == :skip && line.strip.start_with?("<text bytes=")
-          section = :global
-          global[:taks] = line.split(">")&.last
-        elsif line.start_with? "=={{header|"
+        if line.start_with? "=={{header|"
           section = :code
           examples << example unless example.nil?
           example = {lang: line, code: []}
         elsif line.downcase.start_with? "{{out}}"
-          section = :out
-        elsif section == :out
+          section = :skip
+        elsif section == :skip
           next
-        elsif section == :global
-          global[:lines] << line
         elsif section == :code
           example[:code] << line
         else
@@ -67,7 +62,27 @@ module Zettacode
         end
       end
       examples << example
-      [examples, global]
+      examples
+    end
+
+    def self.scrap_global_from(content)
+      global = { task: nil, lines: [] }
+      section = :skip
+      content.split("\n").each do |line|
+        if section == :skip && line.strip.start_with?("<text bytes=")
+          section = :global
+          global[:taks] = line.split(">")&.last
+        elsif line.start_with? "=={{header|"
+          section = :end
+        elsif section == :global
+          global[:lines] << line
+        elsif section == :end
+          next
+        else
+          echo "ERROR", "XML malformed!"
+        end
+      end
+      global
     end
 
     def self.clean_global(dirty_global)

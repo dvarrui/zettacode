@@ -1,6 +1,7 @@
 require "colorize"
 require "fileutils"
 require "debug"
+require_relative "../version"
 
 module Zettacode
   module Parse
@@ -29,7 +30,7 @@ module Zettacode
       name.tr!("/", ".")
       name.tr!(" ", "_")
       name.downcase!
-      folder = File.join("files.zettacode", name)
+      folder = File.join(Zettacode::OUTPUT_FOLDER, name)
       FileUtils.mkdir(folder) unless Dir.exist? folder
       [content, folder]
     end

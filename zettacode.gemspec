@@ -28,9 +28,6 @@ Gem::Specification.new do |spec|
   spec.bindir = "bin"
   spec.executables << "zettacode"
   spec.executables << "zcode"
-  spec.executables << "zcode-scrap"
-  spec.executables << "zcode-parse"
-
   spec.require_paths = ["lib"]
 
   # spec.files = Dir.glob(File.join("lib", "**", "*.*"))

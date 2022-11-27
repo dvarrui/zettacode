@@ -1,0 +1,3 @@
+Note, that "Hello, World!" prints twice in interactive mode.
+One time as side-effect and one as the return value of echo.
+echo["Hello, World!"]

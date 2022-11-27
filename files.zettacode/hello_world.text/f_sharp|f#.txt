@@ -1,0 +1,3 @@
+printfn "%s" "Hello world!"
+or using .Net classes directly
+System.Console.WriteLine("Hello world!")

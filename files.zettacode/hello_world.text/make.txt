@@ -1,0 +1,9 @@
+Makefile contents:
+
+all:
+$(info Hello world!)
+
+Running make produces:
+
+Hello world!<br>
+make: Nothing to be done for `all'.

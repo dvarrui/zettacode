@@ -1,0 +1,6 @@
+'''Under normal circumstances, when delayed expansion is disabled'''
+echo Hello world!
+
+'''If delayed expansion is enabled, then the ! must be escaped twice'''
+setlocal enableDelayedExpansion
+echo Hello world!^^!

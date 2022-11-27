@@ -1,0 +1,21 @@
+{{works with|Oracle}}
+
+set serveroutput on
+
+BEGIN
+  DBMS_OUTPUT.PUT_LINE('Hello world!');
+END;
+/
+
+
+
+SQL> set serveroutput on
+SQL> 
+SQL> BEGIN
+  2    DBMS_OUTPUT.PUT_LINE('Hello world!');
+  3  END;
+  4  /
+Hello world!                                                                    
+
+PL/SQL procedure successfully completed.
+

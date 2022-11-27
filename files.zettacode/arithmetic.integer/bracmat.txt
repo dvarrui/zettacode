@@ -1,0 +1,19 @@
+The remainder returned by mod is non-negative. Furthermore, <code>div$(!a.!d)*!d+mod$(!a.!d):!a</code> for all integer <code>!a</code> and <code>!d</code>, <code>!d:~0</code>.
+  ( enter
+  =     put$"Enter two integer numbers, separated by space:"
+      &amp; get':(~/#?k_~/#?m|quit:?k)
+    |     out
+        $ "You must enter two integer numbers! Enter \"quit\" if you don't know how to do that."
+      &amp; !enter
+  )
+&amp; !enter
+&amp; !k:~quit
+&amp; out$("You entered" !k and !m ". Now look:")
+&amp; out$("Sum:" !k+!m)
+&amp; out$("Difference:" !k+-1*!m)
+&amp; out$("Product:" !k*!m)
+&amp; out$("Integer division:" div$(!k.!m))
+&amp; out$("Remainder:" mod$(!k.!m))
+&amp; out$("Exponentiation:" !k^!m)
+&amp; done;
+

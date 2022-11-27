@@ -1,0 +1,13 @@
+
+fn main() {
+   print!("Hello world!");
+}
+
+
+or
+
+
+fn main() {
+   println!("Hello world!");
+}
+

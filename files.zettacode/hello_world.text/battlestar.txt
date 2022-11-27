@@ -1,0 +1,4 @@
+<!--- supports C syntax highlighting --->
+const hello = "Hello world!\n"
+
+print(hello)

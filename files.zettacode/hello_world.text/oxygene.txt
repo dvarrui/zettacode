@@ -1,0 +1,25 @@
+From [[wp:Oxygene (programming language)]]
+
+namespace HelloWorld;
+ 
+interface
+ 
+type
+  HelloClass = class
+  public
+    class method Main; 
+  end;
+ 
+implementation
+ 
+class method HelloClass.Main;
+begin
+  writeLn('Hello world!');
+end;
+ 
+end.
+
+
+>HelloWorld.exe
+Hello world!
+

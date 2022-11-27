@@ -1,0 +1,4 @@
+
+import crack.io cout;
+cout `Hello world!\n`;
+

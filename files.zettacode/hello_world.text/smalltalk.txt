@@ -1,0 +1,4 @@
+Transcript show: 'Hello world!'; cr.
+
+{{works with|GNU Smalltalk}} (as does the above code)
+'Hello world!' printNl.

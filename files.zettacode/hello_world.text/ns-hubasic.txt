@@ -1,0 +1,6 @@
+<p>As lowercase characters are not offered in NS-HUBASIC, perhaps some flexibility in the task specification could be offered.</p>
+Using <code>?</code>:
+<syntaxhighlight lang="ns-hubasic">10 ? "HELLO WORLD!"
+
+Using <code>PRINT</code>:
+<syntaxhighlight lang="ns-hubasic">10 PRINT "HELLO WORLD!"

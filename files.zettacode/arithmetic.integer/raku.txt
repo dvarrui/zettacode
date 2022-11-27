@@ -1,0 +1,12 @@
+(formerly Perl 6)
+
+Note that <code>div</code> <b>requires</b> integer arguments. If you want integer division with other types, say <code>floor($a/$b)</code>.
+<syntaxhighlight lang="raku" line>my Int $a = get.floor;
+my Int $b = get.floor;
+
+say 'sum:              ', $a + $b;
+say 'difference:       ', $a - $b;
+say 'product:          ', $a * $b;
+say 'integer quotient: ', $a div $b;
+say 'remainder:        ', $a % $b;
+say 'exponentiation:   ', $a**$b;

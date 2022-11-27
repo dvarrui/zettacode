@@ -1,0 +1,4 @@
+(formerly Perl 6)
+<syntaxhighlight lang="raku" line>say 'Hello world!';
+In an object-oriented approach, the string is treated as an object calling its '''say()''' method:
+<syntaxhighlight lang="raku" line>"Hello, World!".say();

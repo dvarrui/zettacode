@@ -1,0 +1,5 @@
+{{works with|SIMULA-67}}
+BEGIN
+   OUTTEXT("Hello world!");
+   OUTIMAGE
+END

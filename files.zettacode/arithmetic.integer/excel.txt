@@ -1,0 +1,32 @@
+
+If the numbers are typed into cells A1 and B1
+
+For sum, type in C1
+
+=$A1+$B1
+
+
+For difference, type in D1
+
+=$A1-$B1
+
+
+For product, type in E1
+
+=$A1*$B1
+
+
+For quotient, type in F1
+
+=QUOTIENT($A1,$B1)
+
+
+For remainder, type in G1
+
+=MOD($A1,$B1)
+
+
+For exponentiation, type in H1
+
+=$A1^$B1
+

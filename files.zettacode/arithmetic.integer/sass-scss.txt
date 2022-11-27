@@ -1,0 +1,36 @@
+
+
+@function arithmetic($a,$b) {
+	@return $a + $b, $a - $b, $a * $b, ($a - ($a % $b))/$b, $a % $b;
+}
+
+Which you use with: 
+
+nth(arithmetic(10,3),1);
+
+Or each of the functions separately:
+
+@function sum($a,$b) {
+	@return $a + $b;
+}
+
+@function difference($a,$b) {
+	@return $a - $b;
+}
+
+@function product($a,$b) {
+	@return $a * $b;
+}
+
+@function integer-division($a,$b) {
+	@return ($a - ($a % $b))/$b;
+}
+
+@function remainder($a,$b) {
+	@return $a % $b;
+}
+
+@function float-division($a,$b) {
+	@return $a / $b;
+}
+

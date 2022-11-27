@@ -1,0 +1,4 @@
+{{works with|Node.js}}
+console.log "Hello world!"
+{{works with|Rhino engine}}
+print "Hello world!"

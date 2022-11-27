@@ -1,0 +1,5 @@
+<?php
+echo "Hello world!\n";
+?>
+Alternatively, any text outside of the <code><?php ?></code> tags will be automatically echoed:
+Hello world!

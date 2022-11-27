@@ -1,0 +1,5 @@
+
+<span style="color:#FF0000">பதிப்பி</span><span style="color:#CD5C5C">"வணக்கம் உலகம்!"</span><br />
+<span style="color:#FF0000">பதிப்பி</span><span style="color:#CD5C5C"> "Hello world!" </span><br />
+<span style="color:#FF0000">பதிப்பி</span><span style="color:#CD5C5C">"******* வணக்கம்! மீண்டும் சந்திப்போம் *******"</span><br />
+<span style="color:#8B0000">exit()</span>

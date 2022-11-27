@@ -1,0 +1,5 @@
+{{works with|min|0.19.3}}
+(concat dup -> ' prepend "$1 -> $2" swap % puts!) :show
+
+("Enter an integer" ask int) 2 times ' prepend
+('+ '- '* 'div 'mod) quote-map ('show concat) map cleave

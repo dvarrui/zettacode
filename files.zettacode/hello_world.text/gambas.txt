@@ -1,0 +1,6 @@
+'''[https://gambas-playground.proko.eu/?gist=d3a51f670e4eb0f793b513b14329be51 Click this link to run this code]'''
+Public Sub Main()
+
+PRINT "Hello world!"
+ 
+End

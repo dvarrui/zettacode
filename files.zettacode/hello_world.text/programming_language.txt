@@ -1,0 +1,5 @@
+For typing:
+<syntaxhighlight lang="programming language">print(Hello world!)
+For importing:
+
+[print(Hello world!)]

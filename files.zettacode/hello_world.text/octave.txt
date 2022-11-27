@@ -1,0 +1,5 @@
+disp("Hello world!");
+
+Or, using C-style function printf:
+
+printf("Hello world!");

@@ -1,0 +1,18 @@
+calc =:    + , - , * , <.@% , |~ , ^
+The function <code>calc</code> constructs a list of numeric results for this task. The implementation of integer division we use here (<code><.@%.</code>) rounds down (towards negative infinity), and this is compatible with the remainder implementation we use here.
+   17 calc 3
+20 14 51 5 2 4913
+
+The function <code>bia</code> assembles these results, textually:
+
+labels  =: ];.2 'Sum: Difference: Product: Quotient: Remainder: Exponentiation: '
+combine =: ,. ":@,.
+bia     =: labels combine calc
+
+   17 bia 3
+Sum:              20
+Difference:       14
+Product:          51
+Quotient:          5
+Remainder:         2
+Exponentiation: 4913

@@ -1,0 +1,6 @@
+
+(message "Hello world!")
+
+Alternatively, <code>princ</code> can be used:
+
+(princ "Hello world!\n")

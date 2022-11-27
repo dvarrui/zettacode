@@ -1,0 +1,13 @@
+
+class Hello
+{
+  static Main () : void
+  {
+    System.Console.WriteLine ("Hello world!");
+  }
+}
+
+Easier method:
+
+System.Console.WriteLine("Hello world!");
+

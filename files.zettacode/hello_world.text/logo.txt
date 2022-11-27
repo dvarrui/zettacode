@@ -1,0 +1,4 @@
+Print includes a line feed:
+print [Hello world!]
+Type does not:
+type [Hello world!]

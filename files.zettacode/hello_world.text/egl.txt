@@ -1,0 +1,9 @@
+{{works with|EDT}}
+{{works with|RBD}}
+
+program HelloWorld
+    function main()
+        SysLib.writeStdout("Hello world!");
+    end
+end
+

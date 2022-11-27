@@ -1,0 +1,4 @@
+simply a single line
+"#!/usr/local/bin/kite
+
+"Hello world!"|print;

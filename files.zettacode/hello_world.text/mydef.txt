@@ -1,0 +1,27 @@
+Run with: mydef_run hello.def
+Perl:
+$print Hello world
+
+C:
+
+module: c
+$print Hello world
+
+
+python:
+
+module: python
+$print Hello world
+
+
+JavaScript
+
+module: js
+$print "Hello world"
+
+
+go:
+
+module: go
+$print Hello world
+

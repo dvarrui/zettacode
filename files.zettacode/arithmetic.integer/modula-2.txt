@@ -1,0 +1,31 @@
+MODULE ints;
+
+IMPORT  InOut;
+
+VAR     a, b    : INTEGER;
+
+BEGIN
+  InOut.WriteString ("Enter two integer numbers : ");   InOut.WriteBf;
+  InOut.ReadInt (a);
+  InOut.ReadInt (b);
+  InOut.WriteString ("a + b   = ");  InOut.WriteInt (a + b, 9);    InOut.WriteLn;
+  InOut.WriteString ("a - b   = ");  InOut.WriteInt (a - b, 9);    InOut.WriteLn;
+  InOut.WriteString ("a * b   = ");  InOut.WriteInt (a * b, 9);    InOut.WriteLn;
+  InOut.WriteString ("a / b   = ");  InOut.WriteInt (a DIV b, 9);  InOut.WriteLn;
+  InOut.WriteString ("a MOD b = ");  InOut.WriteInt (a MOD b, 9);  InOut.WriteLn;
+  InOut.WriteLn;
+END ints.Producing:$$ ints
+Enter two integer numbers : 12 7
+a + b   =        19
+a - b   =         5
+a * b   =        84
+a / b   =         1
+a MOD b =         5
+
+$$ ints
+Enter two integer numbers : 123 -111
+a + b   =        12
+a - b   =       234
+a * b   =    -13653
+a / b   =        -1
+a MOD b =        12

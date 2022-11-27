@@ -1,0 +1,23 @@
+Straightforward:
+
+*`Hello, World!
+
+Less obvious way:
+
+>`ld!
+`
+ r
+  o
+   W
+    `
+     b` ,olleH`_
+
+Even less obvious, demonstrating the creation and execution order of instruction pointers, and the hexagonal layout of beeswax programs:
+
+r  l
+ l o
+  ``
+ol`*`,d!
+   ``
+   e H
+   W

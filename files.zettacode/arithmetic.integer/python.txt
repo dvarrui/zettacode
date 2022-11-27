@@ -1,0 +1,47 @@
+
+x = int(raw_input("Number 1: "))
+y = int(raw_input("Number 2: "))
+
+print "Sum: %d" % (x + y)
+print "Difference: %d" % (x - y)
+print "Product: %d" % (x * y)
+print "Quotient: %d" % (x / y)     #  or x // y  for newer python versions.
+                                   # truncates towards negative infinity
+print "Remainder: %d" % (x % y)    # same sign as second operand
+print "Quotient: %d with Remainder: %d" % divmod(x, y)
+print "Power: %d" % x**y
+
+## Only used to keep the display up when the program ends
+raw_input( )
+
+Notes: In Python3 ''raw_input()'' will be renamed to ''input()'' (the old ''input()'' built-in will go away, though one could use ''eval(input())'' to emulate the old ... and ill-advised ... behavior).  Also a better program would wrap the attempted ''int()'' conversions in a ''try: ... except ValueError:...'' construct such as:
+
+def getnum(prompt):
+    while True: # retrying ...
+        try:
+            n = int(raw_input(prompt))
+        except ValueError:
+            print "Input could not be parsed as an integer. Please try again."\
+            continue
+        break
+    return n
+
+x = getnum("Number1: ")
+y = getnum("Number2: ")
+...
+
+(In general it's good practice to perform parsing of all input in exception handling blocks.  This is especially true of interactive user input, but also applies to data read from configuration and other files, and marshaled from other processes via any IPC mechanism).
+
+Python also has the procedure ''divmod'' that returns both quotient and remainder. eg
+ quotient, remainder = divmod(355,113)
+Giving a quotient of 3, and a remainder of 16. 
+
+=== Python 3.0 compatible code ===
+def arithmetic(x, y):
+    for op in "+ - * // % **".split():
+        expr = "%(x)s %(op)s %(y)s" % vars()
+        print("%s\t=> %s" % (expr, eval(expr)))
+
+
+arithmetic(12, 8)
+arithmetic(input("Number 1: "), input("Number 2: "))

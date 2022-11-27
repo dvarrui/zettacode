@@ -1,0 +1,37 @@
+{{works with|gcc|4.0.1}}
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(void)
+{
+  printf("Hello world!\n");
+  return EXIT_SUCCESS;
+}
+Or:
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(void)
+{
+  puts("Hello world!");
+  return EXIT_SUCCESS;
+}
+Or, the eternal favourite :)
+
+#include<stdio.h>
+
+int main()
+{
+  printf("\nHello world!");
+  return 0;
+}
+
+or better yet...
+
+#include<stdio.h>
+
+int main()
+{
+	return printf("\nHello World!");
+}
+

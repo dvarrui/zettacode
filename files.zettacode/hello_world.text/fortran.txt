@@ -1,0 +1,16 @@
+{{works with|F77}}
+Simplest case - display using default formatting:
+
+print *,"Hello world!"
+
+Use explicit output format:
+
+100   format (5X,A,"!")
+      print 100,"Hello world!"
+
+Output to channels other than stdout goes like this:
+
+write (89,100) "Hello world!"
+
+uses the format given at label 100 to output to unit 89. If output unit with this number exists yet (no "<tt>OPEN</tt>" statement or processor-specific external unit setting), a new file will be created and the output sent there. On most UNIX/Linux systems that file will be named "<tt>fort.89</tt>".
+{{7*7}}

@@ -1,0 +1,21 @@
+All Scheme implementations display the value of the last evaluated expression before the program terminates.
+"Hello world!"
+
+The <tt>display</tt> and <tt>newline</tt> procedures are found in specific modules of the standard library in R6RS and R7RS.
+The previous standards have no concept of modules and the entirety of the standard library is loaded by default.
+
+===R5RS===
+(display "Hello world!")
+(newline)
+
+===R6RS===
+(import (rnrs base (6))
+        (rnrs io simple (6)))
+(display "Hello world!")
+(newline)
+
+===R7RS===
+(import (scheme base)
+        (scheme write))
+(display "Hello world!")
+(newline)

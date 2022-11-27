@@ -1,0 +1,9 @@
+"Hello world!"!
+
+or
+
+print("Hello world!\n");
+
+or
+
+standard_output.print("Hello world!\n");

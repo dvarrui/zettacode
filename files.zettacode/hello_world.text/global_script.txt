@@ -1,0 +1,3 @@
+
+This uses the <code>gsio</code> I/O operations, which are designed to be simple to implement on top of Haskell and simple to use.
+<syntaxhighlight lang="global script">λ _. print qq{Hello world!\n}

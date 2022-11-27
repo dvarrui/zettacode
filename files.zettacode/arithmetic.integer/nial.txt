@@ -1,0 +1,23 @@
+
+Example tested with Q'Nial7.
+
+Define new operator using an atlas of operators:
+     arithmetic is OP A B{[first,last,+,-,*,quotient,mod,power] A B}
+
+Test new operator:
+     -23 arithmetic 7
+-23 7 -16 -30 -161 -4 5 -3404825447
+
+Negative divisors are not accepted for integer quotient <code>quotient</code> or remainder <code>mod</code>, and in both cases the result is an error with the message <code>?negative divisor</code>.
+
+For <code>quotient</code>, if the divisor <code>B</code> is zero, the result is zero.
+
+For <code>mod</code>, if the divisor <code>B</code> is zero, the result is <code>A</code>.
+
+The quotient on division by a positive integer <code>B</code> is always an integer on the same side of the origin as <code>A</code>.
+
+Nial definition of <code>quotient</code>:
+
+A quotient B =f=  floor (A / B)
+
+<code>floor</code> rounds towards negative infinity (next lower integer).

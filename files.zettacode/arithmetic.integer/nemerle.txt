@@ -1,0 +1,18 @@
+Adapted nearly verbatim from C# solution above. Note that I've used the exponentiation operator (**), but Math.Pow() as used in the C# solution would also work.
+using System;
+ 
+class Program
+{
+    static Main(args : array[string]) : void
+    {
+        def a = Convert.ToInt32(args[0]);
+        def b = Convert.ToInt32(args[1]);
+ 
+        Console.WriteLine("{0} + {1} = {2}", a, b, a + b);
+        Console.WriteLine("{0} - {1} = {2}", a, b, a - b);
+        Console.WriteLine("{0} * {1} = {2}", a, b, a * b);
+        Console.WriteLine("{0} / {1} = {2}", a, b, a / b); // truncates towards 0
+        Console.WriteLine("{0} % {1} = {2}", a, b, a % b); // matches sign of first operand
+        Console.WriteLine("{0} ** {1} = {2}", a, b, a ** b);
+    }
+}

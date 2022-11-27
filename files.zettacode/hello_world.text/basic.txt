@@ -1,0 +1,14 @@
+{{works with|BASICA}}
+{{works with|Commodore BASIC}}
+{{works with|Locomotive Basic}}
+{{works with|M2000 Interpreter}}
+{{works with|MSX BASIC}}
+{{works with|Tiny BASIC}}
+10 print "Hello world!"
+
+{{works with|7Basic}}
+{{works with|BaCon}} [[Category:BaCon]]
+{{works with|QBasic}}
+{{works with|M2000 Interpreter}}
+{{works with|Script Basic}}
+PRINT "Hello world!"

@@ -1,0 +1,19 @@
+To keep the example simple, the word takes the two numbers from the stack.  '''/mod''' returns two results; the stack effect is ( a b -- a%b a/b ).
+: arithmetic ( a b -- )
+  cr ." a=" over . ." b=" dup .
+  cr ." a+b=" 2dup + .
+  cr ." a-b=" 2dup - .
+  cr ." a*b=" 2dup * .
+  cr ." a/b=" /mod .
+  cr ." a mod b = " . cr ;
+
+Different host systems have different native signed division behavior. ANS Forth defines two primitive double-precision signed division operations, from which the implementation may choose the most natural to implement the basic divide operations ( / , /mod , mod , */ ). This is partly due to differing specifications in the two previous standards, Forth-79 and Forth-83.
+
+FM/MOD ( d n -- mod div )   \ floored
+SM/REM ( d n -- rem div )   \ symmetric
+M* ( n n -- d )
+
+In addition, there are unsigned variants.
+
+UM/MOD ( ud u -- umod udiv )
+UM* ( u u -- ud )

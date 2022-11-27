@@ -1,0 +1,8 @@
+<syntaxhighlight lang="pl/i">
+get list (a, b);
+put skip list (a+b);
+put skip list (a-b);
+put skip list (a*b);
+put skip list (trunc(a/b)); /* truncates towards zero.       */
+put skip list (mod(a, b));  /* Remainder is always positive. */
+put skip list (rem(a, b));  /* Sign can be negative.         */

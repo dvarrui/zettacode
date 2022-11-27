@@ -1,0 +1,10 @@
+In &amp;ldquo;applicative&amp;rdquo; notation:
+{{extern "manool.org.18/std/0.3/all"} in WriteLine[Out; "Hello world!"]}
+OOPish notation (equivalent to the above, up to Abstract Syntax Tree):
+{{extern "manool.org.18/std/0.3/all"} in Out.WriteLine["Hello world!"]}
+LISPish notation (ditto):
+{{extern "manool.org.18/std/0.3/all"} in {WriteLine Out "Hello world!"}}
+Using a colon punctuator (ditto):
+{{extern "manool.org.18/std/0.3/all"} in: WriteLine Out "Hello world!"}
+Note that all semicolons, wherever allowed, are optional. The above example with all possible semicolons:
+{{extern; "manool.org.18/std/0.3/all"} in: WriteLine; Out; "Hello world!"}

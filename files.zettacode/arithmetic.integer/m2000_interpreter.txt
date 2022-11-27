@@ -1,0 +1,54 @@
+We can  use variables with %, which are double inside with no decimal part. These can have 17 digits. Also A%=1.5 make it 2, not 1. This has a tricky situation: A%=1/2 give 1 to A%. We can use FLOOR() or INT() is the same, or CEIL(), and there is a BANK() which is a Banker Round: BANK(2.5)=2 and BANK(3.5)=4.
+
+
+
+
+<syntaxhighlight lang="m2000 interpreter">
+MODULE LikeCommodoreBasic {
+      \\ ADDITION: EUCLIDEAN DIV# &amp; MOD# AND ** FOR POWER INCLUDING ^
+      10 INPUT "ENTER A NUMBER:"; A%
+      20 INPUT "ENTER ANOTHER NUMBER:"; B%
+      30 PRINT "ADDITION:";A%;"+";B%;"=";A%+B%
+      40 PRINT "SUBTRACTION:";A%;"-";B%;"=";A%-B%
+      50 PRINT "MULTIPLICATION:";A%;"*";B%;"=";A%*B%
+      60 PRINT "INTEGER DIVISION:";A%;"DIV";B%;"=";A% DIV B%
+      65 PRINT "INTEGER EUCLIDEAN DIVISION:";A%;"DIV";B%;"=";A% DIV# B%
+      70 PRINT "REMAINDER OR MODULO:";A%;"MOD";B%;"=";A% MOD B%
+      75 PRINT "EUCLIDEAN REMAINDER OR MODULO:";A%;"MOD#";B%;"=";A% MOD# B%
+      80 PRINT "POWER:";A%;"^";B%;"=";A%^B%
+      90 PRINT "POWER:";A%;"**";B%;"=";A%**B%
+}
+LikeCommodoreBasic
+
+
+Module IntegerTypes {
+      a=12% ' Integer 16 bit
+      b=12&amp; ' Long 32 bit
+      c=12@' Decimal (29 digits)
+      Def ExpType$(x)=Type$(x)
+      Print ExpType$(a+1)="Double"
+      Print ExpType$(a+1%)="Integer"
+      Print ExpType$(a div 5)="Double"
+      Print ExpType$(a div 5%)="Double"
+      Print ExpType$(a mod 5)="Double"
+      Print ExpType$(a mod 5%)="Double"
+      Print ExpType$(a**2)="Double"
+      
+      Print ExpType$(b+1)="Double"
+      Print ExpType$(b+1&amp;)="Long"
+      Print ExpType$(b div 5)="Double"
+      Print ExpType$(b div 5&amp;)="Double"
+      Print ExpType$(b mod 5)="Double"
+      Print ExpType$(b mod 5&amp;)="Double"
+      Print ExpType$(b**2)="Double"
+
+      Print ExpType$(c+1)="Decimal"
+      Print ExpType$(c+1@)="Decimal"
+      Print ExpType$(c div 5)="Decimal"
+      Print ExpType$(c div 5@)="Decimal"
+      Print ExpType$(c mod 5)="Decimal"
+      Print ExpType$(c mod 5@)="Decimal"     
+      Print ExpType$(c**2)="Double"
+}
+IntegerTypes
+

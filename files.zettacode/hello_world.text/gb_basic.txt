@@ -1,0 +1,1 @@
+<syntaxhighlight lang="gb basic">10 print "Hello world!"

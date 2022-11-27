@@ -1,0 +1,15 @@
+MODULE Arith EXPORTS Main;
+
+IMPORT IO, Fmt;
+
+VAR a, b: INTEGER;
+
+BEGIN
+  a := IO.GetInt();
+  b := IO.GetInt();
+  IO.Put("a+b = " &amp; Fmt.Int(a + b) &amp; "\n");
+  IO.Put("a-b = " &amp; Fmt.Int(a - b) &amp; "\n");
+  IO.Put("a*b = " &amp; Fmt.Int(a * b) &amp; "\n");
+  IO.Put("a DIV b = " &amp; Fmt.Int(a DIV b) &amp; "\n");
+  IO.Put("a MOD b = " &amp; Fmt.Int(a MOD b) &amp; "\n");
+END Arith.

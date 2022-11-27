@@ -1,0 +1,22 @@
+•Out "Enter number 1: "
+a ← •BQN •GetLine @
+•Out "Enter number 2: "
+b ← •BQN •GetLine @
+
+•Show a + b
+•Show a - b
+•Show a × b
+•Show a ÷ b
+•Show b | a
+•Show a ⋆ b
+Enter number 1:
+12
+Enter number 2:
+2
+14
+10
+24
+6
+0
+144
+

@@ -1,0 +1,4 @@
+{{works with|Swift|2.x+}}
+print("Hello world!")
+{{works with|Swift|1.x}}
+println("Hello world!")

@@ -1,0 +1,27 @@
+
+(define (arithmetic x y)
+  (for-each (lambda (op)
+              (write  (list op x y))
+              (display " => ")
+              (write ((eval op) x y))
+              (newline))
+            '(+ - * / quotient remainder modulo max min gcd lcm)))
+           
+(arithmetic 8 12)
+quotient - truncates towards 0
+remainder - same sign as first operand
+modulo - same sign as second operand
+ 
+  prints this:
+ 
+ (+ 8 12) => 20
+ (- 8 12) => -4
+ (* 8 12) => 96
+ (/ 8 12) => 2/3
+ (quotient 8 12) => 0
+ (remainder 8 12) => 8
+ (modulo 8 12) => 8
+ (max 8 12) => 12
+ (min 8 12) => 8
+ (gcd 8 12) => 4
+ (lcm 8 12) => 24

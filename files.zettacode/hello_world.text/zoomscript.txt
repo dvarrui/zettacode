@@ -1,0 +1,5 @@
+For typing:
+print "Hello world!"
+For importing:
+
+¶0¶print "Hello world!"

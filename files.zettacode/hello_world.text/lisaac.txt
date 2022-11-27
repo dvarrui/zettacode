@@ -1,0 +1,16 @@
+{{works with|Lisaac|0.13.1}}
+You can print to standard output in Lisaac by calling STRING.print or INTEGER.print:
+
+Section Header          // The Header section is required.
+  + name := GOODBYE;    // Define the name of this object.
+
+Section Public
+  - main <- ("Hello world!\n".print;);
+
+However, it may be more straightforward to use IO.print_string instead:
+
+Section Header          // The Header section is required.
+  + name := GOODBYE2;   // Define the name of this object.
+
+Section Public
+  - main <- (IO.put_string "Hello world!\n";);

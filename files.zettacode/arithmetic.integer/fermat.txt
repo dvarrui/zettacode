@@ -1,0 +1,10 @@
+Integer division rounds towards zero; remainders are always positive regardless of the signs of the numbers.
+
+?a;
+?b;
+!!('Sum:              a+b=',a+b);
+!!('Difference:       a-b=',a-b);
+!!('Product:          a*b=',a*b);
+!!('Integer quotient: a\b=',a\b);
+!!('Remainder:        a|b=',a|b);
+!!('Exponentiation:   a^b=',a^b);

@@ -1,0 +1,5 @@
+Output to terminal:
+puts stdout {Hello world!}
+
+Output to arbitrary open, writable file:
+puts $fileID {Hello world!}

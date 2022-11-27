@@ -1,0 +1,30 @@
+BEGIN{print "Hello world!"}
+
+
+"BEGIN" is a "special pattern" - code within "{}" is executed before the input file is read, even if there is no input. "END" is a similar pattern, for after completion of main processing.
+
+END {
+     print "Hello world!"
+    }
+
+
+For a file containing data, the work can be done in the "body". The "//" is "match anything" so gets the first data, the "exit" halts processing the file (any "END" would then be executed).  Or instead of //, simply 1 is true.
+
+//  { 
+    print "Hello world!" 
+    exit
+    }
+
+
+
+For a "single record" file.
+
+//  { 
+    print "Hello world!" 
+    }
+
+
+For a "single record" file containing - Hello world! -. The "default" action for a "pattern match" (the "/" and "/" define a "pattern" to match data) is to "print" the record.
+
+// 
+

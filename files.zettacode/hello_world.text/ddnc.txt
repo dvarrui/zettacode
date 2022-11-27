@@ -1,0 +1,40 @@
+
+DDNC can only output to a single 7-segment LED display digit, so first we must convert each character into its 7-segment equivalent numerical value.
+
+The three horizontal bars are assigned bits 6, 3, and 0 from top to bottom. The top two vertical bars are assigned bits 5 and 4 while the bottom two vertical bars are assigned bits 2 and 1 from left to right.
+
+Because DDNC can only interpret literals in decimal, each binary number was converted and stored in consecutive memory cells starting at cell 10.
+
+The code can be divided into three sections. The first stores the character numbers in order in an array. The second sets up the loop by loading a delay of 500 milliseconds to slot 3, the start address of the character array in memory to slot 2, and the number of times to loop (14) plus one to slot 5. The third section starts the loop of displaying the characters, waiting for the delay time, incrementing the pointer, decrementing the counter, and checking if the counter is negative to know whether to continue the loop.
+
+
+0 111 10
+0 15 11
+0 15 12
+0 31 13
+0 47 14
+0 59 15
+0 125 16
+0 3 17
+0 0 18
+0 63 19
+0 15 20
+0 12 21
+0 36 22
+0 31 23
+0 17 24
+
+0 500 3
+0 10 2
+0 15 5
+
+60 4
+2 2 1
+80 1
+72 3
+30 2
+31 5
+62 5
+61 4
+64
+

@@ -1,0 +1,13 @@
+===using SAY===
+/*REXX program to show a line of text.  */
+say 'Hello world!'
+
+===using SAY variable===
+/*REXX program to show a line of text.  */
+yyy = 'Hello world!'
+say yyy
+
+===using LINEOUT===
+/*REXX program to show a line of text.  */
+
+call lineout ,"Hello world!"

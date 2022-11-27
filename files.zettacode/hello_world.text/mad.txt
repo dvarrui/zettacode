@@ -1,0 +1,4 @@
+
+           VECTOR VALUES HELLO = $11HHELLO WORLD*$
+           PRINT FORMAT HELLO
+           END OF PROGRAM

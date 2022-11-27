@@ -1,0 +1,10 @@
+short version (without a function)
+
+io.format("Hello world!~n")
+
+complete version (put this in a file and compile it)
+
+@public 
+run = fn () {
+    io.format("Hello world!~n")
+}

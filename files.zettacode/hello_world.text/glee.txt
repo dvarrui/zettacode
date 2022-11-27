@@ -1,0 +1,13 @@
+"Hello world!"
+
+or
+
+'Hello world!'
+
+or to display with double quotes
+
+ '"Goodbye,World!"'
+
+or to display with single quotes
+
+ "'Goodbye,World!'"

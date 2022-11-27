@@ -1,0 +1,47 @@
+All operators automatically produce integers where appropriate &amp;nbsp; (up to twenty decimal digits in the program below),
+<br>or numbers in exponential format when necessary. &amp;nbsp; (The REXX default is &amp;nbsp; '''9''' &amp;nbsp; decimal digits.)
+
+For division that produces a floating point number, the result is rounded to the nearest number that can be expressed  
+<br>within the current number of decimal digits &amp;nbsp; (in the example program below, it is &amp;nbsp; '''20''' &amp;nbsp; decimal digits).
+/*REXX program obtains two integers from the C.L. (a prompt);  displays some operations.*/
+numeric digits 20                                /*#s are round at 20th significant dig.*/
+parse arg x y .                                  /*maybe the integers are on the  C.L.  */
+
+  do while \datatype(x,'W') | \datatype(y,'W')   /*both   X  and  Y   must be integers. */
+  say "─────Enter two integer values  (separated by blanks):"
+  parse pull x y .                               /*accept two thingys from command line.*/
+  end   /*while*/
+                                                 /* [↓]  perform this  DO  loop twice.  */
+     do j=1  for 2                               /*show  A  oper  B,   then  B  oper  A.*/
+     call show 'addition'          ,  "+",   x+y
+     call show 'subtraction'       ,  "-",   x-y
+     call show 'multiplication'    ,  "*",   x*y
+     call show 'int  division'     ,  "%",   x%y,  '    [rounds down]'
+     call show 'real division'     ,  "/",   x/y
+     call show 'division remainder',  "//",  x//y, '    [sign from 1st operand]'
+     call show 'power'             ,  "**",  x**y
+
+     parse value  x  y    with    y  x           /*swap the two values and perform again*/
+     if j==1  then say copies('═', 79)           /*display a fence after the 1st round. */
+     end   /*j*/
+exit                                             /*stick a fork in it,  we're all done. */
+/*──────────────────────────────────────────────────────────────────────────────────────*/
+show: parse arg c,o,#,?;   say right(c,25)' '  x  center(o,4)  y  " ───► "  #  ?;   return
+{{out|output|text=&amp;nbsp; when using the input of: &amp;nbsp; &amp;nbsp; <tt> 4 &amp;nbsp; -17 </tt>}}
+
+                 addition  4  +   -17  ───►  -13
+              subtraction  4  -   -17  ───►  21
+           multiplication  4  *   -17  ───►  -68
+            int  division  4  %   -17  ───►  0     [rounds down]
+            real division  4  /   -17  ───►  -0.23529411764705882353
+       division remainder  4  //  -17  ───►  4     [sign from 1st operand]
+                    power  4  **  -17  ───►  5.8207660913467407227E-11
+═══════════════════════════════════════════════════════════════════════════════
+                 addition  -17  +   4  ───►  -13
+              subtraction  -17  -   4  ───►  -21
+           multiplication  -17  *   4  ───►  -68
+            int  division  -17  %   4  ───►  -4     [rounds down]
+            real division  -17  /   4  ───►  -4.25
+       division remainder  -17  //  4  ───►  -1     [sign from 1st operand]
+                    power  -17  **  4  ───►  83521
+

@@ -1,0 +1,5 @@
+To show in Script Editor Result pane:
+"Hello world!"
+
+To show in Script Editor Event Log pane:
+log "Hello world!"

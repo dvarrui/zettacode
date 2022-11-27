@@ -1,0 +1,9 @@
+script launched from windows explorer
+DllCall("AllocConsole")
+FileAppend, Goodbye`, World!, CONOUT$
+FileReadLine, _, CONIN$, 1
+scripts run from shell 
+[requires Windows XP or higher; older Versions of Windows don´t have the "AttachConsole" function]
+DllCall("AttachConsole", "int", -1)
+FileAppend, Goodbye`, World!, CONOUT$
+SendInput Hello world!{!}

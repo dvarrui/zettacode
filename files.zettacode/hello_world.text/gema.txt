@@ -1,0 +1,5 @@
+Gema ia a preprocessor that reads an input file and writes an output file.
+This code will write "Hello world!' no matter what input is given.
+
+*= ! ignore off content of input
+\B=Hello world!\! ! Start output with this text.

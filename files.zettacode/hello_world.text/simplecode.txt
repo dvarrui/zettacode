@@ -1,0 +1,3 @@
+The letters are only outputted in uppercase in the running program. However, lowercase characters can be used in the code instead.
+dtxt
+Hello world!

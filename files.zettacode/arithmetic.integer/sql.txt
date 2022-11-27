@@ -1,0 +1,68 @@
+{{works with|Oracle}}
+
+-- test.sql
+-- Tested in SQL*plus
+
+drop table test;
+
+create table test (a integer, b integer);
+
+insert into test values ('&amp;&amp;A','&amp;&amp;B');
+
+commit;
+
+select a-b difference from test;
+
+select a*b product from test;
+
+select trunc(a/b) integer_quotient from test;  
+
+select mod(a,b) remainder from test;
+
+select power(a,b) exponentiation from test;
+
+
+
+SQL> @test.sql
+
+Table dropped.
+
+
+Table created.
+
+Enter value for a: 3
+Enter value for b: 4
+old   1: insert into test values ('&amp;&amp;A','&amp;&amp;B')
+new   1: insert into test values ('3','4')
+
+1 row created.
+
+
+Commit complete.
+
+
+DIFFERENCE
+----------
+        -1
+
+
+   PRODUCT
+----------
+        12
+
+
+INTEGER_QUOTIENT
+----------------
+               0
+
+
+ REMAINDER
+----------
+         3
+
+
+EXPONENTIATION
+--------------
+            81
+   
+

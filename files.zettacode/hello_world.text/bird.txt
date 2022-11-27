@@ -1,0 +1,6 @@
+It's not possible to print exclamation marks in [[Bird]] which is why it is not used in this example.
+use Console
+
+define Main
+    Console.Println "Hello world"
+end

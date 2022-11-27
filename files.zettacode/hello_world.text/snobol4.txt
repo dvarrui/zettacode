@@ -1,0 +1,3 @@
+Using CSnobol4 dialect
+    OUTPUT = "Hello world!"
+END

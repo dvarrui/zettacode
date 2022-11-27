@@ -1,0 +1,4 @@
+Refer also to the [[#REXX|Rexx]] and [[#NetRexx|NetRexx]] solutions.  Simple output is common to most Rexx dialects.
+/* Rexx */
+say 'Hello world!'
+

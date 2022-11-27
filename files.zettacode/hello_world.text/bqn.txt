@@ -1,0 +1,4 @@
+
+Works in: [[CBQN]]
+
+•Out "Hello world!"

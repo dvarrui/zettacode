@@ -1,0 +1,12 @@
+{{works with|Oracle}}
+{{works with|Db2 LUW}}
+
+select 'Hello world!' text from dual;
+
+
+
+SQL>select 'Hello world!' text from dual;
+TEXT
+------------
+Hello world!
+

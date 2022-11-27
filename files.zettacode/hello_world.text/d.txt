@@ -1,0 +1,6 @@
+{{works with|D|2.0}}
+import std.stdio;
+
+void main() {
+    writeln("Hello world!");
+}

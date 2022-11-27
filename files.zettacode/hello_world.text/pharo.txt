@@ -1,0 +1,4 @@
+"Comments are in double quotes"
+"Sending message printString to 'Hello World' string"
+
+'Hello World' printString

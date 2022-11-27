@@ -1,0 +1,9 @@
+
+from jinja2 import Template
+print(Template("Hello World!").render())
+
+A bit more convoluted, really using a template:
+
+from jinja2 import Template
+print(Template("Hello {{ something }}!").render(something="World"))
+

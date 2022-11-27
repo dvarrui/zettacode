@@ -1,0 +1,66 @@
+===int===
+package main
+
+import "fmt"
+
+func main() {
+    var a, b int
+    fmt.Print("enter two integers: ")
+    fmt.Scanln(&amp;a, &amp;b)
+    fmt.Printf("%d + %d = %d\n", a, b, a+b)
+    fmt.Printf("%d - %d = %d\n", a, b, a-b)
+    fmt.Printf("%d * %d = %d\n", a, b, a*b)
+    fmt.Printf("%d / %d = %d\n", a, b, a/b)  // truncates towards 0
+    fmt.Printf("%d %% %d = %d\n", a, b, a%b) // same sign as first operand
+    // no exponentiation operator
+}
+{{out|Example run}}
+
+enter two integers: -5 3
+-5 + 3 = -2
+-5 - 3 = -8
+-5 * 3 = -15
+-5 / 3 = -1
+-5 % 3 = -2
+
+===big.Int===
+package main
+
+import (
+    "fmt"
+    "math/big"
+)
+
+func main() {
+    var a, b, c big.Int
+    fmt.Print("enter two integers: ")
+    fmt.Scan(&amp;a, &amp;b)
+    fmt.Printf("%d + %d = %d\n", &amp;a, &amp;b, c.Add(&amp;a, &amp;b))
+    fmt.Printf("%d - %d = %d\n", &amp;a, &amp;b, c.Sub(&amp;a, &amp;b))
+    fmt.Printf("%d * %d = %d\n", &amp;a, &amp;b, c.Mul(&amp;a, &amp;b))
+
+    // Quo, Rem functions work like Go operators on int:
+    // quo truncates toward 0,
+    // and a non-zero rem has the same sign as the first operand.
+    fmt.Printf("%d quo %d = %d\n", &amp;a, &amp;b, c.Quo(&amp;a, &amp;b))
+    fmt.Printf("%d rem %d = %d\n", &amp;a, &amp;b, c.Rem(&amp;a, &amp;b))
+
+    // Div, Mod functions do Euclidean division:
+    // the result m = a mod b is always non-negative,
+    // and for d = a div b, the results d and m give d*y + m = x.
+    fmt.Printf("%d div %d = %d\n", &amp;a, &amp;b, c.Div(&amp;a, &amp;b))
+    fmt.Printf("%d mod %d = %d\n", &amp;a, &amp;b, c.Mod(&amp;a, &amp;b))
+
+    // as with int, no exponentiation operator
+}
+{{out|Example run}}
+
+enter two integers: -5 3
+-5 + 3 = -2
+-5 - 3 = -8
+-5 * 3 = -15
+-5 quo 3 = -1
+-5 rem 3 = -2
+-5 div 3 = -2
+-5 mod 3 = 1
+

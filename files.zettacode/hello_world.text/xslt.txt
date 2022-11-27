@@ -1,0 +1,5 @@
+With a literal newline:
+<xsl:text>Hello world!
+</xsl:text>
+Or, with an explicit newline:
+<xsl:text>Hello world!&amp;#xA;</xsl:text>

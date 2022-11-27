@@ -1,0 +1,2 @@
+For the particular nature of m4, this is simply:
+`Hello world!'

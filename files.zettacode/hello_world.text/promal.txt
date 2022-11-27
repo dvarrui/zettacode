@@ -1,0 +1,7 @@
+
+program hello
+include library
+begin
+output "Hello world!"
+end
+

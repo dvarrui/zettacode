@@ -1,0 +1,19 @@
+{{works with|Mono|1.2}}
+{{works with|Visual C sharp|Visual C#|2003}}
+namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            System.Console.WriteLine("Hello world!");
+        }
+    }
+}
+
+{{works with|Visual C sharp|Visual C#|9.0+}}
+C# 9.0 allows statements at the top level of a source file (a ''compilation_unit'' in the specification) between any using statements and namespace declarations. These statements become the program entry point and are placed in a method in a compiler-generated type.
+System.Console.WriteLine("Hello world!");
+or
+using System;
+Console.WriteLine("Hello world!");

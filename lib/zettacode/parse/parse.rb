@@ -17,14 +17,17 @@ module Zettacode
     end
 
     def self.read_content_from(filepath)
-      unless File.exist?(filepath)
-        echo "ERROR", "File not found! (#{filepath})"
+      if File.directory? filepath
+        echo "ERROR", "Can't parse directories!"
+        exit 1
+      elsif !File.exist?(filepath)
+        echo "ERROR", "File not found!"
         exit 1
       end
 
       echo "Parsing", filepath
       content = File.read(filepath)
-      title = /<title>([\w\d\s._-]+.[\w\d\s._-]+)<\/title>/
+      title = /<title>([\w\s.-]+.[\w\s.-]+)<\/title>/
       name = title.match(content).captures.first
       name.tr!("/", ".")
       name.tr!(" ", "_")
@@ -71,7 +74,7 @@ module Zettacode
         lines.each do |line|
           next if line == ""
           # &lt;syntaxhighlight lang="LANG"&gt;
-          filter = /&lt;syntaxhighlight\s+lang="([\w\d]+)"&gt;/
+          filter = /&lt;syntaxhighlight\s+lang="([\w]+)"&gt;/
           value = filter.match(line)&.captures&.first
           unless value.nil?
             syntax = value

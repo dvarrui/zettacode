@@ -32,18 +32,23 @@ Features:
 
 ## 1.2 Usage
 
-**Help**: `zettacode --help`, show command help.
+**Parse local XML files:**
 
-**Alias**: `zcode` is an alias of `zettacode`.
-
-**Parse**: How to parse local XML files.
 * Goto [RosettaCode](https://rosettacode.org/wiki/Special:Export) export page.
 * Add 1 page manually and export.
 * `zettacode --parse PATH/TO/XML/FILE`, execute Zettacode to parse XML file into code files.
 * The files are created in the `files.zettacode` folder.
 
-_**Scrap**: Remote web page will be scrapped directly on future versions._
+## 1.3 Functions
 
-## 1.3 Contributing
+| Command            | Description |
+| ------------------ | ----------- |
+| `zettacode --help` | show command help.
+| `zcode`            | Is an alias of `zettacode` command |
+| `zettacode --parse FILE` | Parse local XML file |
+
+> `zettacode --scrap`, Remote web page will be scrapped directly on **future versions**
+
+## 1.4 Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/dvarrui/zettacode.

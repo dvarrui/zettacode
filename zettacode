@@ -17,7 +17,9 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-if options[:parse]
+if options == {}
+  puts "Usage: zettacode -h"
+elsif options[:parse]
   Zettacode::Parse.call(ARGV.first || "NODATA")
 elsif options[:scrap]
   scrap = Zettacode::Scrap.new("config/scrap.yaml")

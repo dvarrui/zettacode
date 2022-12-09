@@ -1,6 +1,0 @@
-echo 'Hello world!'
-or
-print('Hello world!')
-or
-import io
-io.stdout.write('Hello world!')

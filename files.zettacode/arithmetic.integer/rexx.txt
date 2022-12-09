@@ -1,8 +1,8 @@
-All operators automatically produce integers where appropriate &amp;nbsp; (up to twenty decimal digits in the program below),
-<br>or numbers in exponential format when necessary. &amp;nbsp; (The REXX default is &amp;nbsp; '''9''' &amp;nbsp; decimal digits.)
+All operators automatically produce integers where appropriate &nbsp; (up to twenty decimal digits in the program below),
+<br>or numbers in exponential format when necessary. &nbsp; (The REXX default is &nbsp; '''9''' &nbsp; decimal digits.)
 
 For division that produces a floating point number, the result is rounded to the nearest number that can be expressed  
-<br>within the current number of decimal digits &amp;nbsp; (in the example program below, it is &amp;nbsp; '''20''' &amp;nbsp; decimal digits).
+<br>within the current number of decimal digits &nbsp; (in the example program below, it is &nbsp; '''20''' &nbsp; decimal digits).
 /*REXX program obtains two integers from the C.L. (a prompt);  displays some operations.*/
 numeric digits 20                                /*#s are round at 20th significant dig.*/
 parse arg x y .                                  /*maybe the integers are on the  C.L.  */
@@ -27,7 +27,7 @@ parse arg x y .                                  /*maybe the integers are on the
 exit                                             /*stick a fork in it,  we're all done. */
 /*──────────────────────────────────────────────────────────────────────────────────────*/
 show: parse arg c,o,#,?;   say right(c,25)' '  x  center(o,4)  y  " ───► "  #  ?;   return
-{{out|output|text=&amp;nbsp; when using the input of: &amp;nbsp; &amp;nbsp; <tt> 4 &amp;nbsp; -17 </tt>}}
+{{out|output|text=&nbsp; when using the input of: &nbsp; &nbsp; <tt> 4 &nbsp; -17 </tt>}}
 
                  addition  4  +   -17  ───►  -13
               subtraction  4  -   -17  ───►  21

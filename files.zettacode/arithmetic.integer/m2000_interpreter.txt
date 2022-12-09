@@ -5,7 +5,7 @@ We can  use variables with %, which are double inside with no decimal part. Thes
 
 <syntaxhighlight lang="m2000 interpreter">
 MODULE LikeCommodoreBasic {
-      \\ ADDITION: EUCLIDEAN DIV# &amp; MOD# AND ** FOR POWER INCLUDING ^
+      \\ ADDITION: EUCLIDEAN DIV# & MOD# AND ** FOR POWER INCLUDING ^
       10 INPUT "ENTER A NUMBER:"; A%
       20 INPUT "ENTER ANOTHER NUMBER:"; B%
       30 PRINT "ADDITION:";A%;"+";B%;"=";A%+B%
@@ -23,7 +23,7 @@ LikeCommodoreBasic
 
 Module IntegerTypes {
       a=12% ' Integer 16 bit
-      b=12&amp; ' Long 32 bit
+      b=12& ' Long 32 bit
       c=12@' Decimal (29 digits)
       Def ExpType$(x)=Type$(x)
       Print ExpType$(a+1)="Double"
@@ -35,11 +35,11 @@ Module IntegerTypes {
       Print ExpType$(a**2)="Double"
       
       Print ExpType$(b+1)="Double"
-      Print ExpType$(b+1&amp;)="Long"
+      Print ExpType$(b+1&)="Long"
       Print ExpType$(b div 5)="Double"
-      Print ExpType$(b div 5&amp;)="Double"
+      Print ExpType$(b div 5&)="Double"
       Print ExpType$(b mod 5)="Double"
-      Print ExpType$(b mod 5&amp;)="Double"
+      Print ExpType$(b mod 5&)="Double"
       Print ExpType$(b**2)="Double"
 
       Print ExpType$(c+1)="Decimal"

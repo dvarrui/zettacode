@@ -1,7 +1,0 @@
-{{works with|REALbasic|5.5}}
-This requires a console application.
-
-Function Run(args() as String) As Integer
-  Print "Hello world!"
-  Quit
-End Function

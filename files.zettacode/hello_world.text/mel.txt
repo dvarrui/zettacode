@@ -1,3 +1,0 @@
-proc helloWorld () {
-   print "Hello, world!\n";
-} 

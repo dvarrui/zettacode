@@ -1,5 +1,0 @@
-
-{{Works with|Frege|3.20.113}}
-
-module HelloWorld where
-main _ = println "Hello world!"

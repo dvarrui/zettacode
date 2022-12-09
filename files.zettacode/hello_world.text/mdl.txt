@@ -1,2 +1,0 @@
-<PRINC "Hello world!">
-<CRLF>

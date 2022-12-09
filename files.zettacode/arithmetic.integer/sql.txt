@@ -7,7 +7,7 @@ drop table test;
 
 create table test (a integer, b integer);
 
-insert into test values ('&amp;&amp;A','&amp;&amp;B');
+insert into test values ('&&A','&&B');
 
 commit;
 
@@ -32,7 +32,7 @@ Table created.
 
 Enter value for a: 3
 Enter value for b: 4
-old   1: insert into test values ('&amp;&amp;A','&amp;&amp;B')
+old   1: insert into test values ('&&A','&&B')
 new   1: insert into test values ('3','4')
 
 1 row created.

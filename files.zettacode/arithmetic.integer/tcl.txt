@@ -10,7 +10,7 @@ puts "$x / $y = [expr {$x / $y}]"
 puts "$x mod $y = [expr {$x % $y}]"
 puts "$x 'to the' $y = [expr {$x ** $y}]"
 
-Since Tcl doesn't really know about the "type" of a variable, the "<tt>expr</tt>" command is used to declare whatever follows as an "expression". This means there is no such thing as "integer arithmetic" and hence the kludge with <tt>int([gets&amp;nbsp;stdin])</tt>.
+Since Tcl doesn't really know about the "type" of a variable, the "<tt>expr</tt>" command is used to declare whatever follows as an "expression". This means there is no such thing as "integer arithmetic" and hence the kludge with <tt>int([gets&nbsp;stdin])</tt>.
 
 Often, these operations would be performed in a different way from what is shown here. For example, to increase the variable "x" by the value of the variable "y", one would write
 

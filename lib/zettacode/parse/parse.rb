@@ -45,14 +45,23 @@ module Zettacode
     def self.scrap_examples_from(content)
       examples = []
       example = nil
+      counter = 1
+      lang = "unkown"
       section = :skip
       content.split("\n").each do |line|
         if line.start_with? "=={{header|"
           section = :code
           examples << example unless example.nil?
-          example = {lang: line, code: []}
+          lang = line
+          counter = 1
+          example = {lang: lang, code: [], index: counter}
         elsif line.downcase.start_with? "{{out}}"
           section = :skip
+        elsif line.start_with? "=== "
+          section = :code
+          examples << example unless example.nil?
+          counter +=1
+          example = {lang: lang, code: [], index: counter}
         elsif section == :skip
           next
         elsif section == :code
@@ -96,6 +105,9 @@ module Zettacode
         lang = example[:lang][11, example[:lang].size - 15]
         filename = lang.tr(" ", "_").downcase
         filename.tr!("/", "-")
+        if example[:index] > 1
+          filename = "#{filename}_#{example[:index]}"
+        end
         syntax = nil
         lines = example[:code]
         raw = lines.join("\n")
@@ -119,6 +131,7 @@ module Zettacode
         end
 
         code = lines.join("\n")
+        code.gsub!("&amp;", "&")
         code.gsub!("&lt;/syntaxhighlight&gt;", "")
         code.gsub!("&lt;pre&gt;", "")
         code.gsub!("&lt;/pre&gt;", "")

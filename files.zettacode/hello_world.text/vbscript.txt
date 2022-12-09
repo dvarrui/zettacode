@@ -1,2 +1,0 @@
-{{works with|Windows Script Host|5.7}}
-WScript.Echo "Hello world!"

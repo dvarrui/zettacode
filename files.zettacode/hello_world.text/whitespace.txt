@@ -1,1 +1,0 @@
-There is a "Hello World" - example-program on the [http://compsoc.dur.ac.uk/whitespace/hworld.ws Whitespace-website]

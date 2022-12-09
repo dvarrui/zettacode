@@ -8,12 +8,12 @@ Public Sub Main()
   c = CInt(a)
   d = CInt(b)
 
-  Print "Sum: " &amp; (c + d)
-  Print "Difference:" &amp; (c - d)
-  Print "Product: " &amp; (c * d)
-  Print "Integer: " &amp; (c Div d)
-  Print "Remainder: " &amp; (c Mod d)
-  Print "Exponentiation: " &amp; (c ^ d)
+  Print "Sum: " & (c + d)
+  Print "Difference:" & (c - d)
+  Print "Product: " & (c * d)
+  Print "Integer: " & (c Div d)
+  Print "Remainder: " & (c Mod d)
+  Print "Exponentiation: " & (c ^ d)
 
 End
 

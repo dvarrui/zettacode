@@ -1,2 +1,0 @@
-<syntaxhighlight lang="wee basic">print 1 "Hello world!"
-end

@@ -8,7 +8,7 @@ a := scantokens s1;
 b := scantokens s2;
 
 def outp(expr op) =
-  message "a " &amp; op &amp; " b = " &amp; decimal(a scantokens(op) b) enddef;
+  message "a " & op & " b = " & decimal(a scantokens(op) b) enddef;
 
 outp("+");
 outp("-");

@@ -1,2 +1,0 @@
-Disp "Hello world!
-(Lowercase letters DO exist in TI-BASIC, though you need an assembly program to enable them.)

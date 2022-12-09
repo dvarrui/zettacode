@@ -27,7 +27,7 @@ fun main(args: Array<String>) {
         val d = Math.pow(a.toDouble(), b.toDouble())
         print("$a ^ $b = ")
         if (d % 1.0 == 0.0) {
-            if (d >= Long.MIN_VALUE.toDouble() &amp;&amp; d <= Long.MAX_VALUE.toDouble())
+            if (d >= Long.MIN_VALUE.toDouble() && d <= Long.MAX_VALUE.toDouble())
                 println("${d.toLong()}")
             else
                 println("out of range")

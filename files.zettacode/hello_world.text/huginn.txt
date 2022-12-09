@@ -1,8 +1,0 @@
-#! /bin/sh
-exec huginn --no-argv -E "${0}" "${@}"
-#! huginn
-
-main() {
-	print( "Hello World!\n" );
-	return ( 0 );
-}

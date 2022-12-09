@@ -1,3 +1,0 @@
-[Hello world!]p
-...or print a numerically represented string.
-5735816763073014741799356604682 P

@@ -13,13 +13,13 @@ except ValueError:
   quit("Invalid params. Two integers are expected.")
  
  
-echo("a      : " &amp; $a)
-echo("b      : " &amp; $b)
-echo("a + b  : " &amp; $(a+b))
-echo("a - b  : " &amp; $(a-b))
-echo("a * b  : " &amp; $(a*b))
-echo("a div b: " &amp; $(a div b)) # div rounds towards zero
-echo("a mod b: " &amp; $(a mod b)) # sign(a mod b)==sign(a) if sign(a)!=sign(b)
-echo("a ^ b  : " &amp; $(a ^ b))
+echo("a      : " & $a)
+echo("b      : " & $b)
+echo("a + b  : " & $(a+b))
+echo("a - b  : " & $(a-b))
+echo("a * b  : " & $(a*b))
+echo("a div b: " & $(a div b)) # div rounds towards zero
+echo("a mod b: " & $(a mod b)) # sign(a mod b)==sign(a) if sign(a)!=sign(b)
+echo("a ^ b  : " & $(a ^ b))
 
 Execute: Aritmint 4 5

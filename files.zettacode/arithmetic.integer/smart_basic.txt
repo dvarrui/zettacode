@@ -1,18 +1,18 @@
 INPUT "Enter first number.":first
 INPUT "Enter second number.":second
-PRINT "The sum of";first;"and";second;"is ";first+second&amp;"."
-PRINT "The difference between";first;"and";second;"is ";ABS(first-second)&amp;"."
-PRINT "The product of";first;"and";second;"is ";first*second&amp;"."
+PRINT "The sum of";first;"and";second;"is ";first+second&"."
+PRINT "The difference between";first;"and";second;"is ";ABS(first-second)&"."
+PRINT "The product of";first;"and";second;"is ";first*second&"."
 IF second THEN
-    PRINT "The integer quotient of";first;"and";second;"is ";INTEG(first/second)&amp;"."
+    PRINT "The integer quotient of";first;"and";second;"is ";INTEG(first/second)&"."
 ELSE
     PRINT "Division by zero not cool."
 ENDIF
-PRINT "The remainder being...";first%second&amp;"."
-PRINT STR$(first);"raised to the power of";second;"is ";first^second&amp;"."
+PRINT "The remainder being...";first%second&"."
+PRINT STR$(first);"raised to the power of";second;"is ";first^second&"."
 
 '''NOTES:''' Some curious aspects of smart BASIC to note in this code example:
 <ol>
 <li>In smart BASIC, The command INTEG is a true integer function providing only the value of the characteristic. The smart BASIC INT command calculates as a rounding function. This differs from some other versions of BASIC.</li>
-<li>smart BASIC automatically inserts spaces ahead of and behind numbers. This can cause unexpected formatting issues when combining output from numeric variables with text. In order to suppress the trailing space, you must use the ampersand (&amp;) to concatenate the numeric value with the following text (in this case, a period at the end of each sentence). In the case of leading spaces, you must convert the numeric value to text using the STR$ command (as with the last line of the code).
+<li>smart BASIC automatically inserts spaces ahead of and behind numbers. This can cause unexpected formatting issues when combining output from numeric variables with text. In order to suppress the trailing space, you must use the ampersand (&) to concatenate the numeric value with the following text (in this case, a period at the end of each sentence). In the case of leading spaces, you must convert the numeric value to text using the STR$ command (as with the last line of the code).
 </ol>

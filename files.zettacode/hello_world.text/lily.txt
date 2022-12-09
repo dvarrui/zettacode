@@ -1,7 +1,0 @@
-There are two ways to do this. First, with the builtin print:
-
-print("Hello world!")
-
-Second, by using stdout directly:
-
-stdout.print("Hello world!\n")

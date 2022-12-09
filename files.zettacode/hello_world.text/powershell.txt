@@ -1,4 +1,0 @@
-This example used to say that using ''Write-Host'' was good practice. This is not true - it should in fact be avoided in most cases. 
-
-See http://www.jsnover.com/blog/2013/12/07/write-host-considered-harmful/ (Jeffrey Snover is one of the creators of PowerShell).
-'Hello world!'

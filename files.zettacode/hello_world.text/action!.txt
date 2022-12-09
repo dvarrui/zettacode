@@ -1,3 +1,0 @@
-<syntaxhighlight lang="action!">Proc Main()
- Print("Hello world!")
-Return

@@ -7,9 +7,9 @@ VAR a, b: INTEGER;
 BEGIN
   a := IO.GetInt();
   b := IO.GetInt();
-  IO.Put("a+b = " &amp; Fmt.Int(a + b) &amp; "\n");
-  IO.Put("a-b = " &amp; Fmt.Int(a - b) &amp; "\n");
-  IO.Put("a*b = " &amp; Fmt.Int(a * b) &amp; "\n");
-  IO.Put("a DIV b = " &amp; Fmt.Int(a DIV b) &amp; "\n");
-  IO.Put("a MOD b = " &amp; Fmt.Int(a MOD b) &amp; "\n");
+  IO.Put("a+b = " & Fmt.Int(a + b) & "\n");
+  IO.Put("a-b = " & Fmt.Int(a - b) & "\n");
+  IO.Put("a*b = " & Fmt.Int(a * b) & "\n");
+  IO.Put("a DIV b = " & Fmt.Int(a DIV b) & "\n");
+  IO.Put("a MOD b = " & Fmt.Int(a MOD b) & "\n");
 END Arith.

@@ -33,7 +33,7 @@ b = int( b )
 
 dim op
 for each op in split("+ - * / \ mod ^", " ")
-	wscript.echo "a",op,"b=",eval( "a " &amp; op &amp; " b")
+	wscript.echo "a",op,"b=",eval( "a " & op & " b")
 next
 
 ===Invocation===

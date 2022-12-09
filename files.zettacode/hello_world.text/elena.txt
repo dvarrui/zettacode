@@ -1,5 +1,0 @@
-ELENA 4.x:
-public program()
-{
-    console.writeLine:"Hello world!"
-}

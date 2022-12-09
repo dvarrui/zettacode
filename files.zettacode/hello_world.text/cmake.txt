@@ -1,5 +1,0 @@
-message(STATUS "Hello world!")
-
-This outputs
-
--- Hello world!

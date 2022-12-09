@@ -35,13 +35,3 @@ y = getnum("Number2: ")
 Python also has the procedure ''divmod'' that returns both quotient and remainder. eg
  quotient, remainder = divmod(355,113)
 Giving a quotient of 3, and a remainder of 16. 
-
-=== Python 3.0 compatible code ===
-def arithmetic(x, y):
-    for op in "+ - * // % **".split():
-        expr = "%(x)s %(op)s %(y)s" % vars()
-        print("%s\t=> %s" % (expr, eval(expr)))
-
-
-arithmetic(12, 8)
-arithmetic(input("Number 1: "), input("Number 2: "))

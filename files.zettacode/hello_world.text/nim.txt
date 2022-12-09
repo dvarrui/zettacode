@@ -1,3 +1,0 @@
-echo("Hello world!")
-using <code>stdout</code>
-stdout.writeLine("Hello World!")

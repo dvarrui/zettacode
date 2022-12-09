@@ -12,7 +12,7 @@ For Each opr In Split("+ - * / \ mod ^", " ")
     Select Case opr
         Case "mod":     Debug.Print "a mod b", a; "mod"; b, a Mod b
         Case "\":       Debug.Print "a \ b", a; "\"; b, a \ b
-        Case Else:      Debug.Print "a "; opr; " b", a; opr; b, Evaluate(a &amp; opr &amp; b)
+        Case Else:      Debug.Print "a "; opr; " b", a; opr; b, Evaluate(a & opr & b)
     End Select
 Next opr
 End Sub

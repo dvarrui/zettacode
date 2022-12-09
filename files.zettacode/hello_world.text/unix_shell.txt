@@ -1,9 +1,0 @@
-{{works with|Bourne Shell}}
-#!/bin/sh
-echo "Hello world!"
-
-==={{header|C Shell}}===
-#!/bin/csh -f
-echo "Hello world!\!"
-
-We use \! to prevent history substitution. Plain ! at end of string seems to be safe, but we use \! to be sure.

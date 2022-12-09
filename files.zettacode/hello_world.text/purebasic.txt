@@ -1,5 +1,0 @@
-OpenConsole()
-PrintN("Hello world!")
-Input() ; Wait for enter
-using <code>Debug</code>
-Debug("Hello world!")

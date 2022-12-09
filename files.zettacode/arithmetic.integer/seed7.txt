@@ -10,11 +10,11 @@ const proc: main is func
     write("b = ");
     readln(b);
  
-    writeln("a + b = " <&amp; a + b);
-    writeln("a - b = " <&amp; a - b);
-    writeln("a * b = " <&amp; a * b);
-    writeln("a div b = " <&amp; a div b);    # Rounds towards zero
-    writeln("a rem b = " <&amp; a rem b);    # Sign of the first operand
-    writeln("a mdiv b = " <&amp; a mdiv b);  # Rounds towards negative infinity
-    writeln("a mod b = " <&amp; a mod b);    # Sign of the second operand
+    writeln("a + b = " <& a + b);
+    writeln("a - b = " <& a - b);
+    writeln("a * b = " <& a * b);
+    writeln("a div b = " <& a div b);    # Rounds towards zero
+    writeln("a rem b = " <& a rem b);    # Sign of the first operand
+    writeln("a mdiv b = " <& a mdiv b);  # Rounds towards negative infinity
+    writeln("a mod b = " <& a mod b);    # Sign of the second operand
   end func;
